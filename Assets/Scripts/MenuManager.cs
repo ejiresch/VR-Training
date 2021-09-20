@@ -7,7 +7,6 @@ public class MenuManager : MonoBehaviour
 {
     public void PressButton()
     {
-        TextMeshPro text = GetComponentInChildren<TextMeshPro>();
-        text.SetText("Button clicked");
+        Debug.Log("yes");
     }
 }
