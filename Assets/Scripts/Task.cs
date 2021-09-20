@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Task : MonoBehaviour
+public abstract class Task : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public string tName;
+    public string description;
+    public GameObject[] requiredTools;
+   
+    public virtual void StartTask()
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public abstract bool IsSuccessful();
 }

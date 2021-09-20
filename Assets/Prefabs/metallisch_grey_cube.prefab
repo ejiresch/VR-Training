@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 702547635130876862}
   - component: {fileID: 702547635130876863}
   - component: {fileID: 702547635130876860}
-  m_Layer: 0
-  m_Name: Cube
+  m_Layer: 9
+  m_Name: metallisch_grey_cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

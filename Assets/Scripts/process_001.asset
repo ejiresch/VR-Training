@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pName: Trachestomaweschsel
   description: Tracheostoma
-  toolList: []
+  toolList:
+  - {fileID: 333913377338763625, guid: 8b82dc2b0dbef414da2ff7176c9771c4, type: 3}
+  - {fileID: 333913377338763625, guid: 8b82dc2b0dbef414da2ff7176c9771c4, type: 3}
+  - {fileID: 702547635130876861, guid: 49a2447db2e53c446a383ed4613edfb0, type: 3}
+  taskList: []
