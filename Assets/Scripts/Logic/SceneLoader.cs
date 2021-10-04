@@ -16,10 +16,19 @@ public class SceneLoader : MonoBehaviour
             break;
         }
         toolList = selectedProcess.toolList;
+        Transform[] spawnPoints = ProcessHandler.Instance.GetSpawnPoints();
 
+        if(toolList.Length >= spawnPoints.Length)
+        {
+            Debug.LogError("Zu viele Tools, :(, die werdên nicht gespawned");
+            return;
+        }
+
+        int i = 1;
         foreach (GameObject p in toolList)
         {
-            Instantiate(p, new Vector3(Random.Range(-8f, 8f), 0, 0) , Quaternion.identity, this.gameObject.transform);
+            Instantiate(p, spawnPoints[i].position , Quaternion.identity, this.gameObject.transform);
+            i++;
         }
     }
     public List<GameObject> GetTaskList()

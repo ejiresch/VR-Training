@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tName: Simple Task
-  description: Dieser task ist ur ez
+  description: Black_Ball with Hwuite_Ball
   requiredTools: []
-  tool: {fileID: 333913377338763625, guid: 8b82dc2b0dbef414da2ff7176c9771c4, type: 3}
-  otherTool: {fileID: 1719841943095900161, guid: ee30cafe13938c34798ab00d4820921e,
+  tool: {fileID: 5287594558889245755, guid: e5fca962f9cbfb44f95528d579ea068d, type: 3}
+  otherTool: {fileID: 7228085617110046450, guid: 602eee7b2c4c49342bac7147da2706fb,
     type: 3}

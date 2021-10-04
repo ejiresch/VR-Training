@@ -24,7 +24,11 @@ public class TaskManager : MonoBehaviour
 
     public void HandleCollision(CollisionEvent ce)
     {
-        if (currentTask.IsSuccessful(ce)) currentTask =  NextTask();
+        if (currentTask.IsSuccessful(ce))
+        {
+            Task t = NextTask();
+            if (t != null) currentTask = t;
+        }
     }
 
     public void SetTaskList(List<GameObject> taskList)
