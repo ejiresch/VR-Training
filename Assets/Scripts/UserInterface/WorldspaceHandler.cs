@@ -19,8 +19,14 @@ public class WorldspaceHandler : MonoBehaviour
     public void NewTask(string taskdescription) // Wird von einer Methode in "Taskmanager" (oder so ka) ausgeführt.
     {
         this.FinishTask();
+        Debug.Log("Next task: " + taskdescription);
         StartCoroutine(StartNewTask(taskdescription));
 
+    }
+    public void StartTask(string taskdescription) // Wird von einer Methode in "Taskmanager" (oder so ka) ausgeführt.
+    {
+        Debug.Log("Start task: " + taskdescription);
+        StartCoroutine(StartNewTask(taskdescription));
     }
     public void FinishTask() // Stellt einen Task als fertig dar
     {

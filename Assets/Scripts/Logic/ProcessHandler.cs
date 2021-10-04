@@ -6,6 +6,7 @@ public class ProcessHandler : MonoBehaviour
 {
     [SerializeField] private SceneLoader sceneLoader;
     [SerializeField] private TaskManager taskManager;
+    [SerializeField] private UserInterfaceManager uiManager;
     [SerializeField] private GameObject spawnPoints;
     private static ProcessHandler _instance;
 
@@ -51,6 +52,11 @@ public class ProcessHandler : MonoBehaviour
     {
         sceneLoader.LoadProcess(pid);
         taskManager.SetTaskList(sceneLoader.GetTaskList());
+    }
+
+    public void UINextTask(string desc, bool isFirst)
+    {
+        uiManager.NewTask(desc, isFirst);
     }
 
     public Transform[] GetSpawnPoints()

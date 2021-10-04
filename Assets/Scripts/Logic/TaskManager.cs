@@ -9,7 +9,7 @@ public class TaskManager : MonoBehaviour
     /**
      * Returns the next Tasks and removes the Array index
     */
-    public Task NextTask()
+    public Task NextTask(bool isFirst)
     {
         if (taskList.Count <= 0)
         {
@@ -18,7 +18,7 @@ public class TaskManager : MonoBehaviour
         }
         Task task = taskList[0].GetComponent<Task>();
         taskList.RemoveAt(0);
-        Debug.Log(task.description);
+        ProcessHandler.Instance.UINextTask(task.description, isFirst);
         return task;
     }
 
@@ -26,7 +26,7 @@ public class TaskManager : MonoBehaviour
     {
         if (currentTask.IsSuccessful(ce))
         {
-            Task t = NextTask();
+            Task t = NextTask(false);
             if (t != null) currentTask = t;
         }
     }
@@ -34,7 +34,7 @@ public class TaskManager : MonoBehaviour
     public void SetTaskList(List<GameObject> taskList)
     {
         this.taskList = taskList;
-        this.currentTask = NextTask();
+        this.currentTask = NextTask(true);
     }
 
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4529476429821932939}
   - component: {fileID: 4529476429821932936}
   - component: {fileID: 4529476429821932933}
+  - component: {fileID: 1253349289}
   m_Layer: 0
   m_Name: ProcessHandler
   m_TagString: Untagged
@@ -47,6 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneLoader: {fileID: 4529476429821932936}
   taskManager: {fileID: 4529476429821932933}
+  uiManager: {fileID: 1253349289}
+  spawnPoints: {fileID: 0}
 --- !u!114 &4529476429821932936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,3 +77,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTask: {fileID: 0}
+--- !u!114 &1253349289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4529476429821932937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5da3b41323edac4459d7d906ee87753d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handler: {fileID: 0}
