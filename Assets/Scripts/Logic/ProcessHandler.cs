@@ -5,6 +5,7 @@ using UnityEngine;
 public class ProcessHandler : MonoBehaviour
 {
     [SerializeField] private SceneLoader sceneLoader;
+    [SerializeField] private TaskManager taskManager;
     private static ProcessHandler _instance;
 
     public static ProcessHandler Instance { get { return _instance; } }
@@ -33,14 +34,21 @@ public class ProcessHandler : MonoBehaviour
         
     }
 
+    public void EndOfTasks()
+    {
+        Debug.Log("Guys, I am logging off");
+    }
+
     public void ReportCollision(CollisionEvent ce)
     {
         Debug.Log(ce.First.name + " " + ce.Second.name);
+        taskManager.HandleCollision(ce);
     }
 
     // LoadScene is used to load a scene with an PID
     void LoadScene(string pid)
     {
         sceneLoader.LoadProcess(pid);
+        taskManager.SetTaskList(sceneLoader.GetTaskList());
     }
 }

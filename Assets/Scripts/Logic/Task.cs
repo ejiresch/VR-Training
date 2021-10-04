@@ -12,5 +12,5 @@ public abstract class Task : MonoBehaviour
     {
     }
 
-    public abstract bool IsSuccessful();
+    public abstract bool IsSuccessful(CollisionEvent ce);
 }
