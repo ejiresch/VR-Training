@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class UserInterfaceManager : MonoBehaviour
 {
-    public WorldspaceHandler handler;
+    public CorkboardHandler handler;
 
     public void NewTask(string taskdescription, bool isFirst) 
     {
-        if (isFirst) handler.StartTask(taskdescription);
+        if (isFirst) handler.FirstTask(taskdescription);
         else handler.NewTask(taskdescription);
     }
 }
