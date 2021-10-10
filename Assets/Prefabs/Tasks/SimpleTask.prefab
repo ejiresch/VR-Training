@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tName: Simple Task
-  description: Black_Ball with Hwuite_Ball
+  description: "Ber\xFChre den schwarzen Ball mit dem Wei\xDFen"
   requiredTools: []
   tool: {fileID: 5287594558889245755, guid: e5fca962f9cbfb44f95528d579ea068d, type: 3}
   otherTool: {fileID: 7228085617110046450, guid: 602eee7b2c4c49342bac7147da2706fb,

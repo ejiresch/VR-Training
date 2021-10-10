@@ -11,4 +11,9 @@ public class UserInterfaceManager : MonoBehaviour
         if (isFirst) handler.FirstTask(taskdescription);
         else handler.NewTask(taskdescription);
     }
+
+    public void EndOfTasks()
+    {
+        handler.FinishTask();
+    }
 }

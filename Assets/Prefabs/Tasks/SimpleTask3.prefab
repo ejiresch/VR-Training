@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tName: Simple Task
-  description: Green mit Blau yahoo
+  description: "Ber\xFChre den blauen Ball mit dem Gr\xFCnen"
   requiredTools: []
   tool: {fileID: 4002218373726441813, guid: 4d067809675ec214dbede72c4498de92, type: 3}
   otherTool: {fileID: 8760088756974696008, guid: d1faf66952b012740b02a5c3fc34b117,

@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tName: Simple Task
-  description: My Hands are shaking, but I'm still hitting headshots
+  description: "Werfe den Kegel mit dem wei\xDFen Ball ab"
   requiredTools: []
   tool: {fileID: 7228085617110046450, guid: 602eee7b2c4c49342bac7147da2706fb, type: 3}
   otherTool: {fileID: 3403242275559140183, guid: a4b4c749415b5b649ba4a1bbc680ed55,

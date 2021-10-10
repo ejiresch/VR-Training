@@ -39,6 +39,7 @@ public class ProcessHandler : MonoBehaviour
     public void EndOfTasks()
     {
         Debug.Log("Guys, I am logging off");
+        uiManager.EndOfTasks();
     }
 
     public void ReportCollision(CollisionEvent ce)
