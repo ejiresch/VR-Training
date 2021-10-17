@@ -59,4 +59,9 @@ public class ProcessHandler : MonoBehaviour
     {
         return spawnPoints.GetComponentsInChildren<Transform>();
     }
+
+    public TaskManager GetTaskManager()
+    {
+        return this.taskManager;
+    }
 }

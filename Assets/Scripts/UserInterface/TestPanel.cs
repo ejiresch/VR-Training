@@ -9,9 +9,9 @@ public class TestPanel : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    public void pressButton1()
+    public void NextTask()
     {
-
+        ProcessHandler.Instance.GetTaskManager().NextTask(false);
     }
     public void pressButton2()
     {
