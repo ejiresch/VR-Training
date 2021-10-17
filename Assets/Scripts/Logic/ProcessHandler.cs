@@ -9,7 +9,7 @@ public class ProcessHandler : MonoBehaviour
     [SerializeField] private UserInterfaceManager uiManager;
     [SerializeField] private GameObject spawnPoints;
     private static ProcessHandler _instance;
-
+    // Singleton
     public static ProcessHandler Instance { get { return _instance; } }
 
     private void Awake()
@@ -30,18 +30,13 @@ public class ProcessHandler : MonoBehaviour
         LoadScene("process_001");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // Called when all Tasks are over
     public void EndOfTasks()
     {
         Debug.Log("Guys, I am logging off");
         uiManager.EndOfTasks();
     }
-
+    // When a collision between two interactable objects happens, then this method gets called
     public void ReportCollision(CollisionEvent ce)
     {
         Debug.Log(ce.First.name + " " + ce.Second.name);
@@ -54,12 +49,12 @@ public class ProcessHandler : MonoBehaviour
         sceneLoader.LoadProcess(pid);
         taskManager.SetTaskList(sceneLoader.GetTaskList());
     }
-
+    // Calls the next tasks
     public void UINextTask(string desc, bool isFirst)
     {
         uiManager.NewTask(desc, isFirst);
     }
-
+    // Gets all Spawnpoints
     public Transform[] GetSpawnPoints()
     {
         return spawnPoints.GetComponentsInChildren<Transform>();

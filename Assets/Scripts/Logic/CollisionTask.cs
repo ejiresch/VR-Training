@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-
+// Describes a collision Task, where two objects have to collide to be completed
 public class CollisionTask : Task
 {
     public GameObject tool, otherTool;
-
+    // Checks the success condition
     public override bool IsSuccessful(CollisionEvent ce)
     {
         string firstToolName = ce.First.name.Replace("(Clone)", "");

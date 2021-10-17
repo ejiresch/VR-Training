@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class BallCollision : MonoBehaviour
-{
+// Objects that have this script, send reports upon colliding with other interactibles
+public class CollisionReport : MonoBehaviour
+{   
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.layer == 9)
