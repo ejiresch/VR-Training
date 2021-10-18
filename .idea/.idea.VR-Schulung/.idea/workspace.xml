@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73ed6eb4-e7da-4db6-abb0-084fc692fd09" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VR-Schulung/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR-Schulung/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VR-Schulung/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR-Schulung/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VR-Schulung/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR-Schulung/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tools.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SOs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Audiostuff.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Audiostuff.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +21,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@0.10.0-preview.7/Runtime/XR/XRRig.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.oculus@1.5.1/Runtime/OculusLoader.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1ytpBNOLlLdSHMf1VnKlsfKFAtk" />
   <component name="ProjectViewState">
@@ -57,6 +64,11 @@
       <updated>1633080607444</updated>
       <workItem from="1633080633101" duration="610000" />
       <workItem from="1633091806564" duration="609000" />
+      <workItem from="1633956627025" duration="612000" />
+      <workItem from="1633959596959" duration="13000" />
+      <workItem from="1633961973953" duration="94000" />
+      <workItem from="1633981104370" duration="17000" />
+      <workItem from="1633981643742" duration="634000" />
     </task>
     <servers />
   </component>
