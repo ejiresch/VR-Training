@@ -229,7 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8456235285000923176}
   m_Layer: 0
-  m_Name: Corkboard
+  m_Name: corkboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -444,7 +444,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8456235285196946971}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c28997a6d00f9294d938e8accfdeef4f, type: 3}
+  m_Script: {fileID: 11500000, guid: ff46aa69a42f24a30bb005173784a41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   task_text: {fileID: 8456235283864793110}

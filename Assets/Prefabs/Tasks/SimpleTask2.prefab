@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tName: Simple Task
-  description: "Werfe den Kegel mit dem wei\xDFen Ball ab"
+  description: Werfe den Kegel mit der Frau ab
   requiredTools: []
-  tool: {fileID: 7228085617110046450, guid: 602eee7b2c4c49342bac7147da2706fb, type: 3}
+  tool: {fileID: 4649503164186796255, guid: 58596e79a7b851040a1211e01c8e3819, type: 3}
   otherTool: {fileID: 3403242275559140183, guid: a4b4c749415b5b649ba4a1bbc680ed55,
     type: 3}
