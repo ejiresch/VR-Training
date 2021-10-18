@@ -31,6 +31,7 @@ public class SceneLoader : MonoBehaviour
             i++;
         }
     }
+    // Returns all Tasks in a List
     public List<GameObject> GetTaskList()
     {
         return selectedProcess.GetTasklist();

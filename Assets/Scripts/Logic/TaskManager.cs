@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// Class responsible for managing all Tasks
 public class TaskManager : MonoBehaviour
 {
     private List<GameObject> taskList;
@@ -21,7 +21,7 @@ public class TaskManager : MonoBehaviour
         ProcessHandler.Instance.UINextTask(task.description, isFirst);
         return task;
     }
-
+    // Gets invoked, when to Interactibles collide
     public void HandleCollision(CollisionEvent ce)
     {
         if (currentTask.IsSuccessful(ce))
@@ -30,7 +30,7 @@ public class TaskManager : MonoBehaviour
             if (t != null) currentTask = t;
         }
     }
-
+    // Sets the TaskList
     public void SetTaskList(List<GameObject> taskList)
     {
         this.taskList = taskList;
