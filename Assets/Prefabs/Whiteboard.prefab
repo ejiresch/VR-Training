@@ -270,7 +270,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cd7a66d950a0f1145943e7e12592d569, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -470,7 +470,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tasklist: []
-  task: {fileID: 281899072807158025, guid: e87f0e89cb7b5ef4cac91ed4bbb2cfa7, type: 3}
+  task_prefab: {fileID: 281899072807158025, guid: e87f0e89cb7b5ef4cac91ed4bbb2cfa7,
+    type: 3}
 --- !u!1 &7809434535861776741
 GameObject:
   m_ObjectHideFlags: 0

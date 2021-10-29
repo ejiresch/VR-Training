@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tName: Simple Task
-  description: "Ber\xFChre den schwarzen Ball mit der Person"
+  description: "Ber\xFChre den schwarzen Ball mit den Hals der Frau"
   requiredTools: []
   tool: {fileID: 5287594558889245755, guid: e5fca962f9cbfb44f95528d579ea068d, type: 3}
   otherTool: {fileID: 4649503164186796255, guid: 58596e79a7b851040a1211e01c8e3819,
