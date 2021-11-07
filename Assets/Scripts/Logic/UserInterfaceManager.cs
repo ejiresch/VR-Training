@@ -5,7 +5,7 @@ using UnityEngine;
 // Manages the UI
 public class UserInterfaceManager : MonoBehaviour
 {
-    public CorkboardHandler handler;
+    public WhiteboardHandler handler;
     // New Tasks are displayed in this method
     public void NewTask(string taskdescription, bool isFirst) 
     {
