@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &800085764344191565
+--- !u!1 &6213938921634095066
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 800085764344191555}
-  - component: {fileID: 800085764344191564}
+  - component: {fileID: 6213938921634095060}
+  - component: {fileID: 6213938921634095067}
   m_Layer: 0
-  m_Name: SimpleTask2
+  m_Name: NaseTask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &800085764344191555
+--- !u!4 &6213938921634095060
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800085764344191565}
+  m_GameObject: {fileID: 6213938921634095066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,21 +31,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &800085764344191564
+--- !u!114 &6213938921634095067
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800085764344191565}
+  m_GameObject: {fileID: 6213938921634095066}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f9522f7fb40b1f44995fd366083b091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tName: SpritzenTask
-  description: "Ber\xFChre die Frau mit der Spritze"
+  tName: Feuchte Nase Task
+  description: Bring die feuchte Nase an den Hals des Pazienten an
   requiredTools: []
-  tool: {fileID: 4649503164186796255, guid: 58596e79a7b851040a1211e01c8e3819, type: 3}
-  otherTool: {fileID: 5119784095115724615, guid: 2d38feab86c75744aaa6ef8c585d2e06,
+  tool: {fileID: 8907562860919515554, guid: 768faeebbbfd19647b4f0a4beb9cab6a, type: 3}
+  otherTool: {fileID: 3194533215394971378, guid: dc3a3d5119c8db340b8c6206fb5a826d,
     type: 3}
