@@ -13,8 +13,7 @@ public class WhiteboardHandler : MonoBehaviour
     private TextMeshProUGUI task_text_current; //text
     private SpriteRenderer checkmark_current; //bild
 
-    private float y_gap = 0.5f; // Y-Abstand zwischen den Tasks
-    private float maxTaskShown = 4; // Max anzahl an Tasks
+    private float maxTaskShown = 5; // Max anzahl an Tasks
 
     int i = 0; //test var
 
@@ -22,18 +21,18 @@ public class WhiteboardHandler : MonoBehaviour
     {
         if(task_current == null)
         {
-            FirstTask("Ja " + i);
+            FirstTask("jo " + i);
         }
         else
         {
-            NewTask("Trachealkompresse unter die Kanüle schieben " + i);
+            NewTask("Trachealkompresse unter die Kanüle schieben" + i);
         }
         i++;
     }
 
     public void FirstTask(string taskdescription) // Ersten Task erstellen
     {
-        task_current = Instantiate(task_prefab, transform);
+        task_current = Instantiate(task_prefab, transform.GetChild(0)); // Child(0) ist "Panel_White"
         tasklist.Add(task_current);
 
         task_text_current = tasklist[0].GetComponentInChildren<TextMeshProUGUI>();
@@ -48,15 +47,26 @@ public class WhiteboardHandler : MonoBehaviour
         StartCoroutine(TaskRotation(taskdescription));
     }
 
-    /*
-     * Verschiebung der Tasks und das anzeigen des neuen Tasks
-     */
-    IEnumerator TaskRotation(string taskdescription) 
+    IEnumerator TaskRotation(string taskdescription) // Verschiebung der Tasks und das anzeigen des neuen Tasks
     {
         yield return new WaitForSeconds(0.4f);
+        // Erstellung eines neuen Tasks
+        task_current = Instantiate(task_prefab, transform.GetChild(0));
+        task_current.SetActive(false);
+        tasklist.Add(task_current);
+        task_text_current = tasklist[tasklist.Count - 1].GetComponentInChildren<TextMeshProUGUI>();
+        checkmark_current = tasklist[tasklist.Count - 1].GetComponentInChildren<SpriteRenderer>();
+        task_text_current.SetText(taskdescription);
 
-        for (int i = tasklist.Count - 1; i >= 0; i--) // Verschiebung der Tasks auf der Y-Achse
+        // Verschiebung der Tasks auf der Y-Achse
+        for (int i = tasklist.Count - 2; i >= 0; i--) 
         {
+            /*
+             * y_gab: Y-Abstand zwischen den Tasks
+             * preferredHeight: Höhe des Textes
+             * 0.0065f -> Ideale Abstandgröße für preferredHeight = 1 (von mir selbst gewählter Wert)
+             */
+            float y_gap = task_text_current.preferredHeight * 0.0065f; 
             tasklist[i].transform.position -= new Vector3(0f, y_gap, 0f);
         }
         if(tasklist.Count >= maxTaskShown) // Wenn das maximum an Tasks erreicht ist, wir das älteste Element gelöscht
@@ -67,12 +77,7 @@ public class WhiteboardHandler : MonoBehaviour
 
         yield return new WaitForSeconds(0.4f);
 
-        // Erstellung eines neuen Tasks
-        task_current = Instantiate(task_prefab, transform); 
-        tasklist.Add(task_current);
-        task_text_current = tasklist[tasklist.Count - 1].GetComponentInChildren<TextMeshProUGUI>();
-        checkmark_current = tasklist[tasklist.Count - 1].GetComponentInChildren<SpriteRenderer>();
-        task_text_current.SetText(taskdescription);
+        task_current.SetActive(true);
     }
 
     public void FinishTask() // Stellt einen Task als fertig dar
