@@ -42,6 +42,11 @@ public class ProcessHandler : MonoBehaviour
         Debug.Log(ce.First.name + " " + ce.Second.name);
         taskManager.HandleCollision(ce);
     }
+    // When a collision between two interactable objects happens, then this method gets called
+    public void ReportRotationCollision(RotationCollisionEvent ce)
+    {
+        taskManager.HandleRotationCollision(ce);
+    }
 
     // LoadScene is used to load a scene with an PID
     void LoadScene(string pid)
