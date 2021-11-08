@@ -12,5 +12,12 @@ public abstract class Task : MonoBehaviour
     {
     }
     // Checks if Task is successful
-    public abstract bool IsSuccessful(CollisionEvent ce);
+    public virtual bool IsSuccessful(CollisionEvent ce)
+    {
+        return false;
+    }
+    public virtual bool IsSuccessful(RotationCollisionEvent ce)
+    {
+        return false;
+    }
 }

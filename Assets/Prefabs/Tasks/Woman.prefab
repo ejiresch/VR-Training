@@ -1,50 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4613227678546509152
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6290053977760941768}
-  - component: {fileID: 2429647444445626789}
-  m_Layer: 9
-  m_Name: HalsHitbox
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6290053977760941768
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4613227678546509152}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 48357423359809781}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2429647444445626789
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4613227678546509152}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.010266691
-  m_Height: 0.030892894
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.04427363, z: 0.00091088936}
 --- !u!1 &4649503164186796255
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,8 +13,7 @@ GameObject:
   - component: {fileID: 2626538451113350965}
   - component: {fileID: 5986966440631856848}
   - component: {fileID: 5986966440631856849}
-  - component: {fileID: -8529702030097995462}
-  - component: {fileID: 2319851774095630621}
+  - component: {fileID: 8559420991949636951}
   m_Layer: 9
   m_Name: Woman
   m_TagString: Untagged
@@ -78,7 +32,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.0710236, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_Children:
-  - {fileID: 6290053977760941768}
+  - {fileID: 3284213341130071459}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -223,21 +177,8 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
---- !u!114 &-8529702030097995462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4649503164186796255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10cb33a014348884694d852c224de204, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isGrabbed: 0
---- !u!64 &2319851774095630621
-MeshCollider:
+--- !u!65 &8559420991949636951
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -246,7 +187,82 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8321228449273736736, guid: 1542ab3dac92f44dba4fda31eb4757e7, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.113535665, y: 0.14162509, z: 0.01}
+  m_Center: {x: 0, y: 0, z: -0.005}
+--- !u!1001 &9214548231529864599
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 48357423359809781}
+    m_Modifications:
+    - target: {fileID: 3194533215394971378, guid: dc3a3d5119c8db340b8c6206fb5a826d,
+        type: 3}
+      propertyPath: m_Name
+      value: Tracheostomaloch
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0474
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8983409238260442391, guid: dc3a3d5119c8db340b8c6206fb5a826d, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: dc3a3d5119c8db340b8c6206fb5a826d, type: 3}
+--- !u!4 &3284213341130071459 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
+    type: 3}
+  m_PrefabInstance: {fileID: 9214548231529864599}
+  m_PrefabAsset: {fileID: 0}

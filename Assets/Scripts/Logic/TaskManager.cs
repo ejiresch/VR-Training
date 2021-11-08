@@ -30,6 +30,16 @@ public class TaskManager : MonoBehaviour
             if (t != null) currentTask = t;
         }
     }
+    // Gets invoked, when to Interactibles collide
+    public void HandleRotationCollision(RotationCollisionEvent ce)
+    {
+        Debug.Log("dasdasdw");
+        if (currentTask.IsSuccessful(ce))
+        {
+            Task t = NextTask(false);
+            if (t != null) currentTask = t;
+        }
+    }
     // Sets the TaskList
     public void SetTaskList(List<GameObject> taskList)
     {

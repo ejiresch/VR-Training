@@ -982,17 +982,58 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 7.025
       objectReference: {fileID: 0}
-    - target: {fileID: 2626538451113350965, guid: 58596e79a7b851040a1211e01c8e3819,
+    - target: {fileID: 2146653355179019717, guid: 58596e79a7b851040a1211e01c8e3819,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146653355179019717, guid: 58596e79a7b851040a1211e01c8e3819,
+        type: 3}
+      propertyPath: m_InteractionLayerMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146653355179019717, guid: 58596e79a7b851040a1211e01c8e3819,
+        type: 3}
+      propertyPath: m_ShowInteractableHoverMeshes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146653355179019717, guid: 58596e79a7b851040a1211e01c8e3819,
+        type: 3}
+      propertyPath: m_InteractableHoverMeshMaterial
       value: 
-      objectReference: {fileID: 2100000, guid: 03fa306be4bb4044d9f5773e99841403, type: 2}
+      objectReference: {fileID: 2100000, guid: fece405bda2aeba48a8143d12b6956c5, type: 2}
+    - target: {fileID: 3284213341130071459, guid: 58596e79a7b851040a1211e01c8e3819,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284213341130071459, guid: 58596e79a7b851040a1211e01c8e3819,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0477
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284213341130071459, guid: 58596e79a7b851040a1211e01c8e3819,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.004
+      objectReference: {fileID: 0}
     - target: {fileID: 4649503164186796255, guid: 58596e79a7b851040a1211e01c8e3819,
         type: 3}
       propertyPath: m_Name
       value: Woman
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5298195327446908152, guid: 58596e79a7b851040a1211e01c8e3819,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298195327446908152, guid: 58596e79a7b851040a1211e01c8e3819,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8703441200495921305, guid: 58596e79a7b851040a1211e01c8e3819, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 58596e79a7b851040a1211e01c8e3819, type: 3}
 --- !u!1001 &1578257885
 PrefabInstance:
