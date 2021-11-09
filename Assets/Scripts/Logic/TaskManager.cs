@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using development_a;
 using UnityEngine;
 // Class responsible for managing all Tasks
 public class TaskManager : MonoBehaviour
@@ -16,6 +17,12 @@ public class TaskManager : MonoBehaviour
             ProcessHandler.Instance.EndOfTasks();
             return null;
         }
+        
+        
+        // Sound abspielen, wenn Task abgeschlossen wurde
+        gameObject.GetComponent<SoundManager>().ManageSound("taskdone", true, 0);
+        
+        
         Task task = taskList[0].GetComponent<Task>();
         taskList.RemoveAt(0);
         ProcessHandler.Instance.UINextTask(task.description, isFirst);

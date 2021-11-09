@@ -14,9 +14,7 @@ namespace development_a {
      * @version 2021-10-18
      */
     public class SoundManager : MonoBehaviour {
-        // public AudioSource[] sources;
         public Sound[] sounds;
-        //public AudioMixerGroup output;
         public static SoundManager instance;
 
         /**
@@ -40,7 +38,6 @@ namespace development_a {
 
                 sound.source.clip = sound.clip;
                 sound.source.volume = sound.volume;
-                // sound.source.pitch = sound.pitch;
                 sound.source.loop = sound.loop;
             }
         }
@@ -60,7 +57,7 @@ namespace development_a {
                 Debug.LogError("Sound with given name " + name + "not found");
                 return;
             }
-
+            
             if (smoothnessSeconds > 0) {
                 if (play) StartCoroutine(s.SmoothPlay(smoothnessSeconds));
                 if (!play) StartCoroutine(s.SmoothStop(smoothnessSeconds));
