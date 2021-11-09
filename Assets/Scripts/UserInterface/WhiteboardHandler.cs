@@ -37,6 +37,7 @@ public class WhiteboardHandler : MonoBehaviour
 
         task_text_current = tasklist[0].GetComponentInChildren<TextMeshProUGUI>();
         checkmark_current = tasklist[0].GetComponentInChildren<SpriteRenderer>();
+        //tasklist[0].transform.position += new Vector3(0.3f, -0.36f, 0f);
 
         task_text_current.SetText(taskdescription);
     }
@@ -66,7 +67,9 @@ public class WhiteboardHandler : MonoBehaviour
              * preferredHeight: Höhe des Textes
              * 0.0065f -> Ideale Abstandgröße für preferredHeight = 1 (von mir selbst gewählter Wert)
              */
-            float y_gap = task_text_current.preferredHeight * 0.0065f; 
+            GameObject b = GameObject.Find("Board");
+            float y_gap = task_text_current.preferredHeight * 0.0085f * (b.transform.localScale.x/2.8f);
+            //tasklist[i].transform.position = tasklist[i + 1].transform.position;
             tasklist[i].transform.position -= new Vector3(0f, y_gap, 0f);
         }
         if(tasklist.Count >= maxTaskShown) // Wenn das maximum an Tasks erreicht ist, wir das älteste Element gelöscht
