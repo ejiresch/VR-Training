@@ -548,65 +548,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5632456975987860498, guid: cafb7f958cee04ba5b995783a60e8c98, type: 3}
---- !u!1 &746642643
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 746642645}
-  - component: {fileID: 746642644}
-  m_Layer: 0
-  m_Name: SoundManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &746642644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 746642643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ec4197a5980e4c94b142c6e0ef8b430, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: taskdone
-    clip: {fileID: 8300000, guid: 9d89ade6e2d66f848bf8ad85c6f5620a, type: 3}
-    volume: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: taskfailed
-    clip: {fileID: 8300000, guid: 4246787cdd32a5d498743ede748a2387, type: 3}
-    volume: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: click
-    clip: {fileID: 8300000, guid: f97f328e9062a814b93a5acdc3df43f5, type: 3}
-    volume: 0
-    loop: 0
-    source: {fileID: 0}
---- !u!4 &746642645
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 746642643}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1610782, y: -5.187672, z: 0.9364662}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &829506289
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -824,7 +765,7 @@ PrefabInstance:
     - target: {fileID: 3190795868549899988, guid: 4898f6618ecc0c3499acff05483fec96,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3190795868549899988, guid: 4898f6618ecc0c3499acff05483fec96,
         type: 3}
@@ -1378,6 +1319,40 @@ PrefabInstance:
       objectReference: {fileID: 7503443029610060502}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3aad0fe442fb5a3499590f29d410347f, type: 3}
+--- !u!1 &1927553955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4529476429821932937, guid: 3aad0fe442fb5a3499590f29d410347f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1927553954}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1927553956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927553955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec4197a5980e4c94b142c6e0ef8b430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: taskdone
+    clip: {fileID: 8300000, guid: 9d89ade6e2d66f848bf8ad85c6f5620a, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: taskfailed
+    clip: {fileID: 8300000, guid: 4246787cdd32a5d498743ede748a2387, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: click
+    clip: {fileID: 8300000, guid: f97f328e9062a814b93a5acdc3df43f5, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!1001 &1934093558
 PrefabInstance:
   m_ObjectHideFlags: 0
