@@ -67,8 +67,9 @@ public class WhiteboardHandler : MonoBehaviour
              * preferredHeight: Höhe des Textes
              * 0.0065f -> Ideale Abstandgröße für preferredHeight = 1 (von mir selbst gewählter Wert)
              */
-            GameObject b = GameObject.Find("Board");
-            float y_gap = task_text_current.preferredHeight * 0.0085f * (b.transform.localScale.x/2.8f);
+            GameObject board = GameObject.Find("Whiteboard_testing");
+            Debug.Log(board.transform.localScale.x);
+            float y_gap = task_text_current.preferredHeight * 0.0085f * (board.transform.localScale.x/2.8f);
             //tasklist[i].transform.position = tasklist[i + 1].transform.position;
             tasklist[i].transform.position -= new Vector3(0f, y_gap, 0f);
         }
