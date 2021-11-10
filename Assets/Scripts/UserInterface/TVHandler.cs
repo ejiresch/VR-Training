@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 //inspired by http://codesaying.com/playing-video-in-unity/
 
@@ -43,5 +44,9 @@ public class TVHandler : MonoBehaviour
     {
         // resume video
         vp.Play();
+    }
+    public void reset_Scene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
