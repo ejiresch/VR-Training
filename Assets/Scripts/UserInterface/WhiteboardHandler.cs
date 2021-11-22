@@ -14,6 +14,7 @@ public class WhiteboardHandler : MonoBehaviour
     private SpriteRenderer checkmark_current; //bild
 
     private float maxTaskShown = 5; // Max anzahl an Tasks
+    private int task_number = 1;
 
     int i = 0; //test var
 
@@ -39,13 +40,15 @@ public class WhiteboardHandler : MonoBehaviour
         checkmark_current = tasklist[0].GetComponentInChildren<SpriteRenderer>();
         //tasklist[0].transform.position += new Vector3(0.3f, -0.36f, 0f);
 
-        task_text_current.SetText(taskdescription);
+        task_text_current.SetText(task_number + ". " + taskdescription);
+        task_number++;
     }
 
     public void NewTask(string taskdescription) // Neuen Task erstellen
     {
         this.FinishTask();
-        StartCoroutine(TaskRotation(taskdescription));
+        StartCoroutine(TaskRotation(task_number + ". " + taskdescription));
+        task_number++;
     }
 
     IEnumerator TaskRotation(string taskdescription) // Verschiebung der Tasks und das anzeigen des neuen Tasks
@@ -65,11 +68,11 @@ public class WhiteboardHandler : MonoBehaviour
             /*
              * y_gab: Y-Abstand zwischen den Tasks
              * preferredHeight: Höhe des Textes
-             * 0.0065f -> Ideale Abstandgröße für preferredHeight = 1 (von mir selbst gewählter Wert)
+             * 0.0085f -> Ideale Abstandgröße für preferredHeight = 1 (von mir selbst gewählter Wert)
              */
-            GameObject board = GameObject.Find("Whiteboard_testing");
+            GameObject board = GameObject.Find("Board");
             Debug.Log(board.transform.localScale.x);
-            float y_gap = task_text_current.preferredHeight * 0.0085f * (board.transform.localScale.x/2.8f);
+            float y_gap = task_text_current.preferredHeight * 0.0085f * (board.transform.localScale.x/2.8f); // Durch die localScale kann ich die y_gap berechnen
             //tasklist[i].transform.position = tasklist[i + 1].transform.position;
             tasklist[i].transform.position -= new Vector3(0f, y_gap, 0f);
         }
