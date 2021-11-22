@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: dbd607423e3b8b2458a14a790a697b55
+guid: 4b3231c649ada2d48ae1647b0e5ed8a6
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: pCylinder4Shape_color_1
-    second: {fileID: 2800000, guid: 3740dbcfadafa6345be53e6b154b398a, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
