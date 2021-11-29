@@ -17,6 +17,7 @@ public class WhiteboardHandler : MonoBehaviour
     private int task_number = 1;
 
     int i = 0; //test var
+    public TextMeshProUGUI hud_text; //HUD testing
 
     public void pressButton()// Übungsmethode zum Testen
     {
@@ -38,7 +39,6 @@ public class WhiteboardHandler : MonoBehaviour
 
         task_text_current = tasklist[0].GetComponentInChildren<TextMeshProUGUI>();
         checkmark_current = tasklist[0].GetComponentInChildren<SpriteRenderer>();
-        //tasklist[0].transform.position += new Vector3(0.3f, -0.36f, 0f);
 
         task_text_current.SetText(task_number + ". " + taskdescription);
         task_number++;
@@ -71,9 +71,7 @@ public class WhiteboardHandler : MonoBehaviour
              * 0.0085f -> Ideale Abstandgröße für preferredHeight = 1 (von mir selbst gewählter Wert)
              */
             GameObject board = GameObject.Find("Board");
-            Debug.Log(board.transform.localScale.x);
             float y_gap = task_text_current.preferredHeight * 0.0085f * (board.transform.localScale.x/2.8f); // Durch die localScale kann ich die y_gap berechnen
-            //tasklist[i].transform.position = tasklist[i + 1].transform.position;
             tasklist[i].transform.position -= new Vector3(0f, y_gap, 0f);
         }
         if(tasklist.Count >= maxTaskShown) // Wenn das maximum an Tasks erreicht ist, wir das älteste Element gelöscht
@@ -85,6 +83,8 @@ public class WhiteboardHandler : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
 
         task_current.SetActive(true);
+
+        hud_text.gameObject.SetActive(false); // HUD testing
     }
 
     public void FinishTask() // Stellt einen Task als fertig dar
@@ -94,6 +94,9 @@ public class WhiteboardHandler : MonoBehaviour
         Color tmp = checkmark_current.GetComponent<SpriteRenderer>().color; // Änderung der opasity auf 1 -> 100%
         tmp.a = 1f;
         checkmark_current.GetComponent<SpriteRenderer>().color = tmp;
+
+        Debug.Log(hud_text.gameObject.active);
+        hud_text.gameObject.SetActive(true); // HUD testing
     }
     
 }

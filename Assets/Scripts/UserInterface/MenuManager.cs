@@ -2,29 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 /**
  * Hier stehen alle Methoden (für Buttons und Sonstiges), die das MainMenu braucht.
  */
 public class MenuManager : MonoBehaviour
 {
+    public GameObject warning_panel;
+
+    //public void OpenModeOptions()
+
     /* Methode für Button "Start" */
-    public void OpenModeOptions()
+    public void StartSimulation()//int whatMode
     {
-        Debug.Log("test");
-    }
-    public void StartSimulation(int whatMode)
-    {
-        // Will open the Main Scene
-        SceneManager.LoadScene("[NameOfScene]");
+        SceneManager.LoadScene(1);
     }
 
     /* Methode für Button "Exit" */
     public void OpenWarningPanel()
     {
-        // Will fog the Main menu and 2 Buttons with "yes" and "no" will appear
-
+        warning_panel.SetActive(true);
     }
     public void WarningMessage(bool answer)
     {
@@ -34,7 +31,7 @@ public class MenuManager : MonoBehaviour
         }
         else
         {
-            //Back to the Main Menu
+            warning_panel.SetActive(false);
         }
     }
     
