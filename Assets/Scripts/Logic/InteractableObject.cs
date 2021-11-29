@@ -10,11 +10,12 @@ public class InteractableObject : MonoBehaviour
     private LayerMask lmNotGrabbable = 0;
     private LayerMask lmGrabbable = ~0;
 
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.layer == 9)
         {
-            CollisionEvent ce = new CollisionEvent(this.gameObject, collision.gameObject);
+            CollisionEvent ce = new SimpleCollisionEvent(this.gameObject, collision.gameObject);
             ce.ReportCollision();
         }
     }
