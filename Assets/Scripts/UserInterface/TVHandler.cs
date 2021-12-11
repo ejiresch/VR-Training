@@ -12,6 +12,8 @@ public class TVHandler : MonoBehaviour
     public VideoClip clip1;
     public VideoClip clip2;
     public VideoClip clip3;
+    public VideoClip clip4;
+    public VideoClip clip5;
 
     public void startVideo(int index)
     {
@@ -32,6 +34,18 @@ public class TVHandler : MonoBehaviour
         {
             print("3 (play video3)");
             vp.clip = clip3;
+            vp.Play();
+        }
+        if (index == 4)
+        {
+            print("4 (play video4)");
+            vp.clip = clip4;
+            vp.Play();
+        }
+        if (index == 5)
+        {
+            print("5 (play video5)");
+            vp.clip = clip5;
             vp.Play();
         }
     }

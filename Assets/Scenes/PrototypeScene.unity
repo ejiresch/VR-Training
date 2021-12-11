@@ -459,6 +459,36 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 465756303}
+    - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: clip1
+      value: 
+      objectReference: {fileID: 32900000, guid: e1e1f59919652364c850f1724de8416e,
+        type: 3}
+    - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: clip2
+      value: 
+      objectReference: {fileID: 32900000, guid: f10fc4742d7a9af4aa1b514963f6989b,
+        type: 3}
+    - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: clip3
+      value: 
+      objectReference: {fileID: 32900000, guid: 112b0bacc75095e4fa8b5b53478eec90,
+        type: 3}
+    - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: clip4
+      value: 
+      objectReference: {fileID: 32900000, guid: 5b0c4937c8b14bc4c9e62e88db025f7c,
+        type: 3}
+    - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: clip5
+      value: 
+      objectReference: {fileID: 32900000, guid: 373d4c63902d3b845862022c1e6d9a71,
+        type: 3}
     - target: {fileID: 8656304804278921324, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_Name
