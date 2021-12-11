@@ -5,7 +5,7 @@ using UnityEngine;
 public class SceneLoader : MonoBehaviour
 {
     [SerializeField] private ProcessScriptableObject[] processes;
-    private GameObject[] toolList;
+    public List<GameObject> toolList = new List<GameObject>();
     private ProcessScriptableObject selectedProcess;
     // Uses the pid to load a certain Process
     public void LoadProcess(string pid)
@@ -15,19 +15,20 @@ public class SceneLoader : MonoBehaviour
             if (p.name.Contains(pid)) selectedProcess = p;
             break;
         }
-        toolList = selectedProcess.toolList;
+        GameObject[] tools = selectedProcess.toolList;
         Transform[] spawnPoints = ProcessHandler.Instance.GetSpawnPoints();
 
-        if(toolList.Length >= spawnPoints.Length)
+        if(tools.Length >= spawnPoints.Length)
         {
             Debug.LogError("Zu viele Tools, :(, die werdên nicht gespawned");
             return;
         }
 
         int i = 1;
-        foreach (GameObject p in toolList)
+
+        foreach (GameObject p in tools)
         {
-            Instantiate(p, spawnPoints[i].position , Quaternion.identity, this.gameObject.transform);
+            toolList.Add(Instantiate(p, spawnPoints[i].position , Quaternion.identity, this.gameObject.transform));
             i++;
         }
     }
@@ -35,5 +36,9 @@ public class SceneLoader : MonoBehaviour
     public List<GameObject> GetTaskList()
     {
         return selectedProcess.GetTasklist();
+    }
+    public List<GameObject> GetToolList()
+    {
+        return toolList;
     }
 }

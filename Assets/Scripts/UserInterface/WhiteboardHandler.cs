@@ -94,7 +94,7 @@ public class WhiteboardHandler : MonoBehaviour
         tmp.a = 1f;
         checkmark_current.GetComponent<SpriteRenderer>().color = tmp;
 
-        hud.ShowText(); // HUD testing
+        //hud.ShowText(); // HUD testing
     }
     
 }

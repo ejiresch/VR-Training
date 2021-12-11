@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5422200438664063557}
-  - component: {fileID: 5422200438664063562}
+  - component: {fileID: -6517911076770378075}
   m_Layer: 0
   m_Name: SimpleTask
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5422200438664063562
+--- !u!114 &-6517911076770378075
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,12 +40,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 5422200438664063563}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f9522f7fb40b1f44995fd366083b091, type: 3}
+  m_Script: {fileID: 11500000, guid: d6476568b40475a4a84f4e08225cf24e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tName: Simple Task
-  description: "Ber\xFChre den schwarzen Ball mit den Hals der Frau"
+  tName: Felix Tasks
+  description: "Beruhre den cube mit den wei\xDFen Ball"
   requiredTools: []
-  tool: {fileID: 5287594558889245755, guid: e5fca962f9cbfb44f95528d579ea068d, type: 3}
-  otherTool: {fileID: 4649503164186796255, guid: 58596e79a7b851040a1211e01c8e3819,
+  spawnedTools: []
+  connector: {fileID: 2793639469066661526, guid: 4f0a25f314021194b89320038e307719,
+    type: 3}
+  connectible: {fileID: 7228085617110046450, guid: 602eee7b2c4c49342bac7147da2706fb,
     type: 3}

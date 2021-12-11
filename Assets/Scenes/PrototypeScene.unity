@@ -163,6 +163,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnapZoneCube (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1939510658688700850, guid: a680170a267bb224b90b0e8317d161c0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1939510658688700863, guid: a680170a267bb224b90b0e8317d161c0,
         type: 3}
       propertyPath: m_RootOrder
@@ -548,6 +553,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnapZoneCube (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1939510658688700850, guid: a680170a267bb224b90b0e8317d161c0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1939510658688700863, guid: a680170a267bb224b90b0e8317d161c0,
         type: 3}
       propertyPath: m_RootOrder
@@ -749,6 +759,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SnapZoneCube (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939510658688700850, guid: a680170a267bb224b90b0e8317d161c0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1939510658688700863, guid: a680170a267bb224b90b0e8317d161c0,
         type: 3}
@@ -973,6 +988,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ValidColorGradient.key0.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722560672575975932, guid: 294cfcc6c57b99146b51002e0f44bb92,
+        type: 3}
+      propertyPath: m_OnSelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722560672575975932, guid: 294cfcc6c57b99146b51002e0f44bb92,
+        type: 3}
+      propertyPath: m_OnSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722560672575975932, guid: 294cfcc6c57b99146b51002e0f44bb92,
+        type: 3}
+      propertyPath: m_OnSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11500000, guid: 10cb33a014348884694d852c224de204,
+        type: 3}
+    - target: {fileID: 4722560672575975932, guid: 294cfcc6c57b99146b51002e0f44bb92,
+        type: 3}
+      propertyPath: m_OnSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4722560672731034189, guid: 294cfcc6c57b99146b51002e0f44bb92,
         type: 3}
@@ -1264,6 +1300,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnapZoneCube (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1939510658688700850, guid: a680170a267bb224b90b0e8317d161c0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1939510658688700863, guid: a680170a267bb224b90b0e8317d161c0,
         type: 3}
       propertyPath: m_RootOrder
@@ -1354,6 +1395,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnapZoneCube
       objectReference: {fileID: 0}
+    - target: {fileID: 1939510658688700850, guid: a680170a267bb224b90b0e8317d161c0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1939510658688700863, guid: a680170a267bb224b90b0e8317d161c0,
         type: 3}
       propertyPath: m_RootOrder
@@ -1443,6 +1489,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SnapZoneCube (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939510658688700850, guid: a680170a267bb224b90b0e8317d161c0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1939510658688700863, guid: a680170a267bb224b90b0e8317d161c0,
         type: 3}

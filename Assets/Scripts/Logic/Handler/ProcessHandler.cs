@@ -41,11 +41,16 @@ public class ProcessHandler : MonoBehaviour
     {
         taskManager.HandleCollision(ce);
     }
+    public void NextTask()
+    {
+        taskManager.NextTask(false);
+    }
 
     // LoadScene is used to load a scene with an PID
     void LoadScene(string pid)
     {
         sceneLoader.LoadProcess(pid);
+        taskManager.SetToolList(sceneLoader.GetToolList());
         taskManager.SetTaskList(sceneLoader.GetTaskList());
     }
     // Calls the next tasks

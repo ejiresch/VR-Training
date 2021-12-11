@@ -19,12 +19,20 @@ public class InteractableObject : MonoBehaviour
             ce.ReportCollision();
         }
     }
+    private void Update()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            OnDrop();
+        }
+    }
 
     public void SetGrabbable(bool grab)
     {
         XRGrabInteractable xrObject = gameObject.GetComponent<XRGrabInteractable>();
         xrObject.interactionLayerMask = grab ? lmGrabbable : lmNotGrabbable;
     }
+    public virtual void OnDrop() { }
 
     public bool GetIsGrabbed()
     {
@@ -34,5 +42,6 @@ public class InteractableObject : MonoBehaviour
     public void SetIsGrabbed(bool isg)
     {
         this.isGrabbed = isg;
+        if (!isg) OnDrop();
     }
 }

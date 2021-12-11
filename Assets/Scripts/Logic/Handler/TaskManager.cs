@@ -6,6 +6,7 @@ using UnityEngine;
 public class TaskManager : MonoBehaviour
 {
     private List<GameObject> taskList;
+    public List<GameObject> toolList;
     [SerializeField] private Task currentTask;
     /**
      * Returns the next Tasks and removes the Array index
@@ -23,18 +24,30 @@ public class TaskManager : MonoBehaviour
         gameObject.GetComponent<SoundManager>().ManageSound("taskdone", true, 0);
 
 
-        Task task = taskList[0].GetComponent<Task>();
-        taskList.RemoveAt(0);
+        Task task = StartNextTask();
         ProcessHandler.Instance.UINextTask(task.description, isFirst);
         return task;
     }
+    public Task StartNextTask()
+    {
+        GameObject task = Instantiate(taskList[0], this.transform.position, Quaternion.identity, this.transform);
+        Task t = task.GetComponent<Task>();
+        taskList.RemoveAt(0);
+        if (t != null)
+        {
+            t.SetSpawnTools(toolList.ToArray());
+            t.StartTask();
+            currentTask = t;
+        }
+        return t;
+    }
+
     // Gets invoked, when to Interactibles collide
     public void HandleCollision(CollisionEvent ce)
     {
         if (currentTask.IsSuccessful(ce))
         {
-            Task t = NextTask(false);
-            if (t != null) currentTask = t;
+            NextTask(false);
         }
     }
 
@@ -43,6 +56,10 @@ public class TaskManager : MonoBehaviour
     {
         this.taskList = taskList;
         this.currentTask = NextTask(true);
+    }
+    public void SetToolList(List<GameObject> toolList)
+    {
+        this.toolList = toolList;
     }
 
 }
