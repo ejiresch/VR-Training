@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 800085764344191555}
-  - component: {fileID: 800085764344191564}
+  - component: {fileID: -5917482985175895908}
   m_Layer: 0
   m_Name: SimpleTask2
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &800085764344191564
+--- !u!114 &-5917482985175895908
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,12 +40,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 800085764344191565}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f9522f7fb40b1f44995fd366083b091, type: 3}
+  m_Script: {fileID: 11500000, guid: d6476568b40475a4a84f4e08225cf24e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tName: SpritzenTask
-  description: "Ber\xFChre die Frau mit der Spritze"
+  tName: Wow
+  description: Kanuele mit Woman
   requiredTools: []
-  tool: {fileID: 4649503164186796255, guid: 58596e79a7b851040a1211e01c8e3819, type: 3}
-  otherTool: {fileID: 5119784095115724615, guid: 2d38feab86c75744aaa6ef8c585d2e06,
+  spawnedTools: []
+  connector: {fileID: 4649503164186796255, guid: 58596e79a7b851040a1211e01c8e3819,
+    type: 3}
+  connectible: {fileID: 4561207380521413469, guid: 59aa1cef234e6a249811214b7bb69fd7,
     type: 3}
