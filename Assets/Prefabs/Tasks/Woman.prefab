@@ -33,7 +33,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.0710236, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_Children:
-  - {fileID: 3284213341130071459}
+  - {fileID: 727759873002866823}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -205,74 +205,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrabbed: 1
   connectorActive: 0
-  anchorPoint: {fileID: 6031979901828408165}
---- !u!1001 &9214548231529864599
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 48357423359809781}
-    m_Modifications:
-    - target: {fileID: 3194533215394971378, guid: dc3a3d5119c8db340b8c6206fb5a826d,
-        type: 3}
-      propertyPath: m_Name
-      value: Tracheostomaloch
-      objectReference: {fileID: 0}
-    - target: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8983409238260442391, guid: dc3a3d5119c8db340b8c6206fb5a826d, type: 3}
-    - {fileID: 7073702636399235154, guid: dc3a3d5119c8db340b8c6206fb5a826d, type: 3}
-    - {fileID: 3919924291831980399, guid: dc3a3d5119c8db340b8c6206fb5a826d, type: 3}
-    - {fileID: 628709550622413487, guid: dc3a3d5119c8db340b8c6206fb5a826d, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: dc3a3d5119c8db340b8c6206fb5a826d, type: 3}
---- !u!1 &6031979901828408165 stripped
+  anchorPoint: {fileID: 0}
+--- !u!1 &6636222532015605328
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3194533215394971378, guid: dc3a3d5119c8db340b8c6206fb5a826d,
-    type: 3}
-  m_PrefabInstance: {fileID: 9214548231529864599}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &3284213341130071459 stripped
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 727759873002866823}
+  m_Layer: 9
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &727759873002866823
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5941224728594382900, guid: dc3a3d5119c8db340b8c6206fb5a826d,
-    type: 3}
-  m_PrefabInstance: {fileID: 9214548231529864599}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6636222532015605328}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0002, y: 0.0448, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 48357423359809781}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

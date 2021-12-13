@@ -47,7 +47,7 @@ MonoBehaviour:
   description: Kanuele mit Woman
   requiredTools: []
   spawnedTools: []
-  connector: {fileID: 4649503164186796255, guid: 58596e79a7b851040a1211e01c8e3819,
+  connector: {fileID: 5059998319463775711, guid: 675ffab1244991a4da9fe7d2eed5244f,
     type: 3}
-  connectible: {fileID: 4561207380521413469, guid: 59aa1cef234e6a249811214b7bb69fd7,
+  connectible: {fileID: 8907562860919515554, guid: 768faeebbbfd19647b4f0a4beb9cab6a,
     type: 3}

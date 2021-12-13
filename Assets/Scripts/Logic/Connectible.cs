@@ -13,7 +13,7 @@ public class Connectible : InteractableObject
         {
             Debug.Log(connector.gameObject.transform.position.magnitude);
             Debug.Log((this.gameObject.transform.position - connector.gameObject.transform.position).magnitude);
-            if ((this.gameObject.transform.position - connector.gameObject.transform.position).magnitude < 10) connector.Connect(this.gameObject);
+            if ((this.gameObject.transform.position - connector.gameObject.transform.position).magnitude < 0.7) connector.Connect(this.gameObject);
         }
     }
 }

@@ -46,6 +46,7 @@ MonoBehaviour:
   tName: Feuchte Nase Task
   description: Bring die feuchte Nase an den Hals des Patienten an
   requiredTools: []
-  tool: {fileID: 8907562860919515554, guid: 768faeebbbfd19647b4f0a4beb9cab6a, type: 3}
-  otherTool: {fileID: 3194533215394971378, guid: dc3a3d5119c8db340b8c6206fb5a826d,
+  spawnedTools: []
+  tool: {fileID: 6645954436737465285, guid: cc7554a1bbbb5a74f95193c95880e7ca, type: 3}
+  otherTool: {fileID: 8907562860919515554, guid: 768faeebbbfd19647b4f0a4beb9cab6a,
     type: 3}

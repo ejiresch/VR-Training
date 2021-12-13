@@ -47,7 +47,7 @@ MonoBehaviour:
   description: Beruhre kanuele mit manometer
   requiredTools: []
   spawnedTools: []
-  connector: {fileID: 4561207380521413469, guid: 59aa1cef234e6a249811214b7bb69fd7,
+  connector: {fileID: 4649503164186796255, guid: 58596e79a7b851040a1211e01c8e3819,
     type: 3}
-  connectible: {fileID: 5059998319463775711, guid: 675ffab1244991a4da9fe7d2eed5244f,
+  connectible: {fileID: 6645954436737465285, guid: cc7554a1bbbb5a74f95193c95880e7ca,
     type: 3}
