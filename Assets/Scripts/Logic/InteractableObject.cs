@@ -39,7 +39,7 @@ public class InteractableObject : MonoBehaviour
         return isGrabbed;
     }
 
-    public void SetIsGrabbed(bool isg)
+    public virtual void SetIsGrabbed(bool isg)
     {
         this.isGrabbed = isg;
         if (!isg) OnDrop();
