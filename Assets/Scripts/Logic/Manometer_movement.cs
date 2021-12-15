@@ -21,8 +21,24 @@ public class Manometer_movement : MonoBehaviour
     private void Toggle(InputAction.CallbackContext context)
     {
         bool isActive = !gameObject.activeSelf;
-        gameObject.SetActive(isActive);
+        //gameObject.SetActive(isActive);
+
+        if (isActive)
+        {
+            StartCoroutine(Druecken());
+        }
+        else
+        {
+            //StartCoroutine(Loslassen());
+        }
     }
 
-    
+    IEnumerator Druecken()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            nadel.transform.Rotate(new Vector3(0, 3, 0));
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
 }
