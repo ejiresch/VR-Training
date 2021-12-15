@@ -178,6 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrabbed: 0
   connector: {fileID: 0}
+  previewImage: {fileID: 7568908171968262963}
 --- !u!1001 &8907562861636656074
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -247,6 +248,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e83f1477bd1397f49bb57fe5301db0a8, type: 3}
+--- !u!1 &7568908171968262963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1338744308780017913, guid: e83f1477bd1397f49bb57fe5301db0a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 8907562861636656074}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7080214202421897609 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1864486360989626947, guid: e83f1477bd1397f49bb57fe5301db0a8,

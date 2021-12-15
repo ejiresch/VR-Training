@@ -189,8 +189,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e99d89fdffe5bd43b48a09a7e7be285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGrabbed: 0
+  isGrabbed: 1
   connectorActive: 0
+  preview: {fileID: 0}
   anchorPoint: {fileID: 3087443235250880707}
 --- !u!65 &4380310777721410934
 BoxCollider:
