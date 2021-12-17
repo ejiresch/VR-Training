@@ -13,7 +13,7 @@ public class ConnectionTask : Task
         if (connector != null && connectible != null)
         {
             connector.GetComponent<ConnectorObject>().connectorActive = true;
-            connectible.GetComponent<Connectible>().connector = connector.GetComponent<ConnectorObject>();
+            connectible.GetComponent<Connectible>().SetConnector(connector.GetComponent<ConnectorObject>());
         }
     }
     // Checks the success condition

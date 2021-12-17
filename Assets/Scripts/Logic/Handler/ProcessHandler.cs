@@ -34,7 +34,6 @@ public class ProcessHandler : MonoBehaviour
     // Called when all Tasks are over
     public void EndOfTasks()
     {
-        Debug.Log("Guys, I am logging off");
         uiManager.EndOfTasks();
     }
     // When a collision between two interactable objects happens, then this method gets called

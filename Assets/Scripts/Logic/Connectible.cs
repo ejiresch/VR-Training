@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Connectible : InteractableObject
 {
-    public ConnectorObject connector;
+    private ConnectorObject connector;
     public float distance = 0;
+    private float range = 0.15f;
 
     public override void OnDrop()
     {
         base.OnDrop();
         if (connector != null)
         {
-            if ((connector.GetAnchorPosition() - this.gameObject.transform.position).magnitude < 0.1f) connector.Connect(this.gameObject);
+            if ((connector.GetAnchorPosition() - this.gameObject.transform.position).magnitude < range) connector.Connect(this.gameObject);
         }
     }
     public override void SetIsGrabbed(bool isg)
@@ -20,9 +21,18 @@ public class Connectible : InteractableObject
         base.SetIsGrabbed(isg);
         if (connector != null)
         {
-            if (isg) StartCoroutine(CheckDistance());
+            if (isg)
+            {
+                StopCoroutine(CheckDistance());
+                StartCoroutine(CheckDistance());
+            }
             else connector.DestroyPreview();
         }
+    }
+    public void SetConnector(ConnectorObject connector)
+    {
+        this.connector = connector;
+        if (GetIsGrabbed() && connector != null) StartCoroutine(CheckDistance());
     }
     IEnumerator CheckDistance()
     {
@@ -30,7 +40,7 @@ public class Connectible : InteractableObject
         {
             if (connector != null)
             {
-                if ((connector.GetAnchorPosition() - this.gameObject.transform.position).magnitude < 0.1f)
+                if ((connector.GetAnchorPosition() - this.gameObject.transform.position).magnitude < range)
                 {
                     distance = (connector.GetAnchorPosition() - this.gameObject.transform.position).magnitude;
                     connector.Preview(this.gameObject);

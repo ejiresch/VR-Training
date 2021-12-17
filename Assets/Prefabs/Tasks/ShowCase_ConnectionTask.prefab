@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6213938921634095066
+--- !u!1 &800085764344191565
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6213938921634095060}
-  - component: {fileID: 6213938921634095067}
+  - component: {fileID: 800085764344191555}
+  - component: {fileID: -5917482985175895908}
   m_Layer: 0
-  m_Name: NaseTask
+  m_Name: ShowCase_ConnectionTask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6213938921634095060
+--- !u!4 &800085764344191555
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6213938921634095066}
+  m_GameObject: {fileID: 800085764344191565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,22 +31,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6213938921634095067
+--- !u!114 &-5917482985175895908
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6213938921634095066}
+  m_GameObject: {fileID: 800085764344191565}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f9522f7fb40b1f44995fd366083b091, type: 3}
+  m_Script: {fileID: 11500000, guid: d6476568b40475a4a84f4e08225cf24e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tName: Feuchte Nase Task
-  description: Bring die feuchte Nase an den Hals des Patienten an
+  tName: Showcase Task
+  description: "Bringe den wei\xDFen Ball an dem Manometer an"
   requiredTools: []
   spawnedTools: []
-  tool: {fileID: 6645954436737465285, guid: cc7554a1bbbb5a74f95193c95880e7ca, type: 3}
-  otherTool: {fileID: 8907562860919515554, guid: 768faeebbbfd19647b4f0a4beb9cab6a,
+  connector: {fileID: 4561207380521413469, guid: 59aa1cef234e6a249811214b7bb69fd7,
+    type: 3}
+  connectible: {fileID: 7228085617110046450, guid: 602eee7b2c4c49342bac7147da2706fb,
     type: 3}

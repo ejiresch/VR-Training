@@ -18,7 +18,6 @@ public class TaskManager : MonoBehaviour
             ProcessHandler.Instance.EndOfTasks();
             return null;
         }
-        Debug.Log("NEW TASKK");
         
         // Sound abspielen, wenn Task abgeschlossen wurde
         gameObject.GetComponent<SoundManager>().ManageSound("taskdone", true, 0);
@@ -37,6 +36,7 @@ public class TaskManager : MonoBehaviour
         {
             t.SetSpawnTools(toolList.ToArray());
             t.StartTask();
+            if(currentTask != null) Destroy(currentTask.gameObject);
             currentTask = t;
         }
         return t;
