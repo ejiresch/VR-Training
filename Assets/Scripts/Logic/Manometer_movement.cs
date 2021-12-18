@@ -6,39 +6,45 @@ using UnityEngine.InputSystem;
 public class Manometer_movement : MonoBehaviour
 {
     public GameObject nadel;
-    public InputActionReference toggleRef = null;
+    public InputActionReference toggleReferenceLeft = null;
+    public InputActionReference toggleReferenceRight = null;
 
+    private void Update()
+    {
+        if (nadel.transform.rotation.eulerAngles.y > 32f)
+        {
+            nadel.transform.Rotate(new Vector3(0, -23f * Time.deltaTime, 0));   // Druck entlassen
+        }  
+    }
     private void Awake()
     {
-        toggleRef.action.started += Toggle;
+        toggleReferenceLeft.action.started += Toggle;
+        toggleReferenceRight.action.started += Toggle;
     }
 
     private void OnDestroy()
     {
-        toggleRef.action.started -= Toggle;
-
+        toggleReferenceLeft.action.started -= Toggle;
+        toggleReferenceRight.action.started -= Toggle;
     }
     private void Toggle(InputAction.CallbackContext context)
     {
-        bool isActive = !gameObject.activeSelf;
-        //gameObject.SetActive(isActive);
-
-        if (isActive)
-        {
-            StartCoroutine(Druecken());
-        }
-        else
-        {
-            //StartCoroutine(Loslassen());
-        }
+        StopAllCoroutines();
+        StartCoroutine(Druecken());
     }
 
     IEnumerator Druecken()
     {
-        for (int i = 0; i < 10; i++)
+        if (this.GetComponent<Connectible>().GetIsGrabbed() == true || this.GetComponent<ConnectorObject>().GetIsGrabbed() == true)
         {
-            nadel.transform.Rotate(new Vector3(0, 3, 0));
-            yield return new WaitForSeconds(0.1f);
+            enabled = false; // stoppt Script, damit update-function gestoppt wird -> Druecken wird aber weiter ausgeführt (warum auch immer)
+            for (int i = 0; i < 50; i++)
+            {
+                if (nadel.transform.rotation.eulerAngles.y >= 330) { break; }
+                nadel.transform.Rotate(new Vector3(0, 1, 0));   // Druck hinzufügen
+                yield return new WaitForSeconds(0.007f);
+            }
+            enabled = true; // activates Script
         }
     }
 }

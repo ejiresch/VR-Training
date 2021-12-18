@@ -617,9 +617,17 @@
             "id": "5d9347a6-3327-48a7-a035-c0b0d0ae66cb",
             "actions": [
                 {
-                    "name": "Rotation",
+                    "name": "ManometerRotationRight",
                     "type": "Button",
                     "id": "2c8e18ac-83cb-4906-832b-88ebf20dfdbf",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ManometerRotationLeft",
+                    "type": "Button",
+                    "id": "6cff0a97-b57c-4cd1-a975-10b2cf5ea881",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -633,7 +641,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Rotation",
+                    "action": "ManometerRotationRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eeb6e8ef-29ed-4358-8665-230739e83687",
+                    "path": "<XRController>{LeftHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ManometerRotationLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
