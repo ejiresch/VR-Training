@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tName: Kanuele Task
-  description: Bringe die Kanuele an den Hals der Person an
+  description: Bringe die feuchte Nase an die Kanuele an
   requiredTools: []
   spawnedTools: []
   connector: {fileID: 6645954436737465285, guid: cc7554a1bbbb5a74f95193c95880e7ca,

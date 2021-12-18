@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tName: Kanuele Task
-  description: Bringe die Kanuele an den Hals der Person an
+  description: Bringe die Kanuele an den Hals des Patienten an
   requiredTools: []
   spawnedTools: []
   connector: {fileID: 4649503164186796255, guid: 58596e79a7b851040a1211e01c8e3819,

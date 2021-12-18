@@ -22,5 +22,5 @@ MonoBehaviour:
   - {fileID: 5119784095115724615, guid: 2d38feab86c75744aaa6ef8c585d2e06, type: 3}
   - {fileID: 8907562860919515554, guid: 768faeebbbfd19647b4f0a4beb9cab6a, type: 3}
   taskList:
-  - {fileID: 6213938921634095066, guid: 34e4b3757037b004da2b95d573860af2, type: 3}
   - {fileID: 5422200438664063563, guid: c2a49f0514f6aa44c9fbe0ee2660f2f7, type: 3}
+  - {fileID: 6213938921634095066, guid: 34e4b3757037b004da2b95d573860af2, type: 3}

@@ -20,7 +20,7 @@ public class ConnectorObject : InteractableObject
             connectible.GetComponent<InteractableObject>().SetGrabbable(false);
             connectible.transform.localPosition = new Vector3(0, 0, 0);
             connectible.transform.localEulerAngles = new Vector3(0, 0, 0);
-            Debug.Log(connectible.name + "  connects to  " + this.name);
+            connectible.GetComponent<Connectible>().SetConnected(true);
             ProcessHandler.Instance.NextTask();
             this.connectorActive = false;
             DestroyPreview();
