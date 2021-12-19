@@ -11,7 +11,7 @@ public class Manometer_movement : MonoBehaviour
 
     private void Update()
     {
-        if (nadel.transform.rotation.eulerAngles.y > 32f)
+        if (nadel.transform.localRotation.eulerAngles.y > 32f)
         {
             nadel.transform.Rotate(new Vector3(0, -23f * Time.deltaTime, 0));   // Druck entlassen
         }  
@@ -30,8 +30,8 @@ public class Manometer_movement : MonoBehaviour
     private void Toggle(InputAction.CallbackContext context)
     {
         StopAllCoroutines();
-        Debug.LogError("Toggle wird ausgefuehrt");
         StartCoroutine(Druecken());
+        GetComponent<PressObject>().Press();
     }
 
     IEnumerator Druecken()
@@ -41,12 +41,11 @@ public class Manometer_movement : MonoBehaviour
             enabled = false; // stoppt Script, damit update-function gestoppt wird -> Druecken wird aber weiter ausgeführt (warum auch immer)
             for (int i = 0; i < 50; i++)
             {
-                if (nadel.transform.rotation.eulerAngles.y >= 330) { break; }
+                if (nadel.transform.localRotation.eulerAngles.y >= 330) { break; }
                 nadel.transform.Rotate(new Vector3(0, 1, 0));   // Druck hinzufügen
                 yield return new WaitForSeconds(0.007f);
             }
             enabled = true; // activates Script
         }
-        GetComponent<PressObject>().Press();
     }
 }
