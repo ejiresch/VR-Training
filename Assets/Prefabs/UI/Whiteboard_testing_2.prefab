@@ -64,7 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Next Task
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cd7a66d950a0f1145943e7e12592d569, type: 2}
   m_sharedMaterial: {fileID: 5099360731432219088, guid: cd7a66d950a0f1145943e7e12592d569,
@@ -253,8 +253,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4087896408507959326}
-        m_MethodName: pressButton
+      - m_Target: {fileID: 0}
+        m_MethodName: NextTask
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -580,6 +580,7 @@ MonoBehaviour:
   tasklist: []
   task_prefab: {fileID: 281899072807158025, guid: c559dc39484daea4685b781038d4c65d,
     type: 3}
+  hud: {fileID: 0}
 --- !u!1 &9078696104679027536
 GameObject:
   m_ObjectHideFlags: 0
