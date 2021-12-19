@@ -217,13 +217,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6267127344903584240}
-  m_LocalRotation: {x: 0, y: 0.2190582, z: -0, w: 0.9757118}
+  m_LocalRotation: {x: 0, y: 0.21905437, z: 0, w: 0.9757127}
   m_LocalPosition: {x: -0.00017340481, y: 18.331861, z: -0.0006445646}
   m_LocalScale: {x: 0.1960088, y: 0.1960088, z: 0.1960088}
   m_Children: []
   m_Father: {fileID: 2554718766252682545}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 25.307, z: 0}
 --- !u!33 &8057888006478702242
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -313,7 +313,8 @@ GameObject:
   - component: {fileID: 5125735211489367024}
   - component: {fileID: 3167228986111525308}
   - component: {fileID: 4709502858514868941}
-  - component: {fileID: 33716288467019956}
+  - component: {fileID: 6876211362084341805}
+  - component: {fileID: 4408119505513732894}
   m_Layer: 0
   m_Name: Manometer
   m_TagString: Untagged
@@ -398,18 +399,7 @@ MonoBehaviour:
   m_OnSelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: SetIsGrabbed
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 33716288467019956}
+      - m_Target: {fileID: 6876211362084341805}
         m_MethodName: SetIsGrabbed
         m_Mode: 6
         m_Arguments:
@@ -423,18 +413,7 @@ MonoBehaviour:
   m_OnSelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: SetIsGrabbed
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6876211362084341805}
         m_MethodName: SetIsGrabbed
         m_Mode: 6
         m_Arguments:
@@ -487,7 +466,7 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
---- !u!114 &33716288467019956
+--- !u!114 &6876211362084341805
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -496,10 +475,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 7286607789552444731}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e99d89fdffe5bd43b48a09a7e7be285, type: 3}
+  m_Script: {fileID: 11500000, guid: 74e9a6723dd679f4a8dc3be608d5549a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isGrabbed: 0
-  connectorActive: 0
-  preview: {fileID: 0}
-  anchorPoint: {fileID: 6333060134285891841}
+--- !u!114 &4408119505513732894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7286607789552444731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f05948eb6ed98b94f8c4f9a28c185db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nadel: {fileID: 6267127344903584240}
+  toggleReferenceLeft: {fileID: -5006772094003406344, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  toggleReferenceRight: {fileID: -6674687402017633821, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}

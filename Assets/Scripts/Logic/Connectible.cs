@@ -10,6 +10,7 @@ public class Connectible : InteractableObject
     private float range = 0.15f;
     Dictionary<string, Color> originalColors = new Dictionary<string, Color>();
 
+    // Falls das Objekt losgelassen wird, wird diese Methode ausgefuehrt
     public override void OnDrop()
     {
         base.OnDrop();
@@ -22,6 +23,7 @@ public class Connectible : InteractableObject
             }
         }
     }
+    // Wird ausgefuehrt wenn das Objekt gehoben oder 
     public override void SetIsGrabbed(bool isg)
     {
         base.SetIsGrabbed(isg);

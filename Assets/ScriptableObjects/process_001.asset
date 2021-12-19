@@ -24,3 +24,4 @@ MonoBehaviour:
   taskList:
   - {fileID: 5422200438664063563, guid: c2a49f0514f6aa44c9fbe0ee2660f2f7, type: 3}
   - {fileID: 6213938921634095066, guid: 34e4b3757037b004da2b95d573860af2, type: 3}
+  - {fileID: 800085764344191565, guid: 75a45800d8784874388d239d18365702, type: 3}

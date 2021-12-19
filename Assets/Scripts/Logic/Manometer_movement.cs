@@ -30,12 +30,13 @@ public class Manometer_movement : MonoBehaviour
     private void Toggle(InputAction.CallbackContext context)
     {
         StopAllCoroutines();
+        Debug.LogError("Toggle wird ausgefuehrt");
         StartCoroutine(Druecken());
     }
 
     IEnumerator Druecken()
     {
-        if (this.GetComponent<Connectible>().GetIsGrabbed() == true || this.GetComponent<ConnectorObject>().GetIsGrabbed() == true)
+        if (this.GetComponent<InteractableObject>().GetIsGrabbed() == true)
         {
             enabled = false; // stoppt Script, damit update-function gestoppt wird -> Druecken wird aber weiter ausgeführt (warum auch immer)
             for (int i = 0; i < 50; i++)
@@ -46,5 +47,6 @@ public class Manometer_movement : MonoBehaviour
             }
             enabled = true; // activates Script
         }
+        GetComponent<PressObject>().Press();
     }
 }
