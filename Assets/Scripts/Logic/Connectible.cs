@@ -18,7 +18,6 @@ public class Connectible : InteractableObject
         {
             if ((connector.GetAnchorPosition() - this.gameObject.transform.position).magnitude < range)
             {
-                RestoreOriginalColor();
                 connector.Connect(this.gameObject);
             }
         }
@@ -31,28 +30,52 @@ public class Connectible : InteractableObject
         {
             if (isg)
             {
-                OutOfReachColor();
                 StopCoroutine(CheckDistance());
                 StartCoroutine(CheckDistance());
+                connector.StartPreview(this.gameObject);
             }
             else
             {
+                StopCoroutine(CheckDistance());
                 connector.DestroyPreview();
-                RestoreOriginalColor();
             }
         }
     }
     public void SetConnector(ConnectorObject connector)
     {
         this.connector = connector;
-        foreach (Renderer renderer in GetComponentsInChildren<Renderer>())
-        {
-            if(!originalColors.ContainsKey(renderer.name)) originalColors.Add(renderer.name, renderer.material.color);
-        }
-
         if (GetIsGrabbed() && connector != null) StartCoroutine(CheckDistance());
     }
-
+    public void SetConnected(bool connected)
+    {
+        this.connected = connected;
+    }
+    IEnumerator CheckDistance()
+    {
+        for(; GetIsGrabbed();)
+        {
+            if (connector != null)
+            {
+                if ((connector.GetAnchorPosition() - this.gameObject.transform.position).magnitude < range)
+                {
+                    if (!inReach)
+                    {
+                        connector.PreviewClose();
+                        inReach = true;
+                    }
+                }
+                else
+                {
+                    if (inReach)
+                    {
+                        connector.PreviewFar();
+                        inReach = false;
+                    }
+                }
+            }
+            yield return new WaitForEndOfFrame();
+        }
+    }
     public void OutOfReachColor()
     {
         if (!connected)
@@ -78,39 +101,6 @@ public class Connectible : InteractableObject
         foreach (Renderer renderer in GetComponentsInChildren<Renderer>())
         {
             renderer.material.color = originalColors[renderer.name];
-        }
-    }
-    public void SetConnected(bool connected)
-    {
-        this.connected = connected;
-        if (connected) RestoreOriginalColor();
-    }
-    IEnumerator CheckDistance()
-    {
-        for(; GetIsGrabbed();)
-        {
-            if (connector != null)
-            {
-                if ((connector.GetAnchorPosition() - this.gameObject.transform.position).magnitude < range)
-                {
-                    if (!inReach)
-                    {
-                        connector.Preview(this.gameObject);
-                        InReachColor();
-                        inReach = true;
-                    }
-                }
-                else
-                {
-                    if (inReach)
-                    {
-                        connector.DestroyPreview();
-                        OutOfReachColor();
-                        inReach = false;
-                    }
-                }
-            }
-            yield return new WaitForEndOfFrame();
         }
     }
 }

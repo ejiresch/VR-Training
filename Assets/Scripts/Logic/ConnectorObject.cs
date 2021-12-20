@@ -29,7 +29,7 @@ public class ConnectorObject : InteractableObject
         }
     }
 
-    public void Preview(GameObject prefab)
+    public void StartPreview(GameObject prefab)
     {
         if (preview == null)
         {
@@ -43,13 +43,30 @@ public class ConnectorObject : InteractableObject
                     Destroy(comp);
                 }
             }
-            foreach (Renderer renderer in preview.GetComponentsInChildren<Renderer>())
-            {
-                renderer.material = ProcessHandler.Instance.GetPreviewMaterial();
-            }
+            PreviewFar();
             preview.transform.parent = this.anchorPoint.transform;
             preview.transform.localPosition = new Vector3(0, 0, 0);
             preview.transform.localEulerAngles = new Vector3(0, 0, 0);
+        }
+    }
+    public void PreviewClose()
+    {
+        if (preview != null)
+        {
+            foreach (Renderer renderer in preview.GetComponentsInChildren<Renderer>())
+            {
+                renderer.material = ProcessHandler.Instance.GetClosePreviewMaterial();
+            }
+        }
+    }
+    public void PreviewFar()
+    {
+        if (preview != null)
+        {
+            foreach (Renderer renderer in preview.GetComponentsInChildren<Renderer>())
+            {
+                renderer.material = ProcessHandler.Instance.GetFarPreviewMaterial();
+            }
         }
     }
     public void DestroyPreview()

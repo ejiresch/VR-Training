@@ -8,7 +8,7 @@ public class ProcessHandler : MonoBehaviour
     [SerializeField] private TaskManager taskManager;
     [SerializeField] private UserInterfaceManager uiManager;
     [SerializeField] private GameObject spawnPoints;
-    [SerializeField] private Material previewMaterial;
+    [SerializeField] private Material closePreviewMaterial, farPreviewMaterial;
     private static ProcessHandler _instance;
     // Singleton
     public static ProcessHandler Instance { get { return _instance; } }
@@ -68,8 +68,12 @@ public class ProcessHandler : MonoBehaviour
     {
         return this.taskManager;
     }
-    public Material GetPreviewMaterial()
+    public Material GetClosePreviewMaterial()
     {
-        return this.previewMaterial;
+        return this.closePreviewMaterial;
+    }
+    public Material GetFarPreviewMaterial()
+    {
+        return this.farPreviewMaterial;
     }
 }
