@@ -7,7 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ConnectorObject : InteractableObject
 {
     public bool connectorActive = false;
-    public GameObject preview = null;
+    private GameObject preview = null;
     [SerializeField] private GameObject anchorPoint = null;
 
     public void Connect(GameObject connectible)
