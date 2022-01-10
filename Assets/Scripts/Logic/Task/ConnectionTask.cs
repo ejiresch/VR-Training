@@ -17,8 +17,5 @@ public class ConnectionTask : Task
         }
     }
     // Checks the success condition
-    public override bool IsSuccessful(CollisionEvent ce)
-    {
-        return false;
-    }
+    public override bool IsSuccessful(CollisionEvent ce) => false;
 }

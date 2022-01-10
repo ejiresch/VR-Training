@@ -36,7 +36,7 @@ public class TaskManager : MonoBehaviour
         {
             t.SetSpawnTools(toolList.ToArray());
             t.StartTask();
-            if(currentTask != null) Destroy(currentTask.gameObject);
+            if(currentTask != null) currentTask.FinishTask();
             currentTask = t;
         }
         return t;

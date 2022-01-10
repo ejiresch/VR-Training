@@ -9,6 +9,7 @@ public class ProcessHandler : MonoBehaviour
     [SerializeField] private UserInterfaceManager uiManager;
     [SerializeField] private GameObject spawnPoints;
     [SerializeField] private Material closePreviewMaterial, farPreviewMaterial;
+    [SerializeField] private GameObject tracheostomaCO, woman;
     private static ProcessHandler _instance;
     // Singleton
     public static ProcessHandler Instance { get { return _instance; } }
@@ -28,6 +29,7 @@ public class ProcessHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        woman.GetComponent<ConnectorObject>().ForceConnect(Instantiate(tracheostomaCO));
         LoadScene("process_001");
     }
 
