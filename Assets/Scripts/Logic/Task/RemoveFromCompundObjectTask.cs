@@ -10,12 +10,21 @@ public class RemoveFromCompundObjectTask : Task
     public override void StartTask()
     {
         base.StartTask();
+        CompundObject cO = ProcessHandler.Instance.GetCompoundObject().GetComponent<CompundObject>();
+        if (cO) compoundObject = cO.gameObject;
         objectToRemove = compoundObject.GetComponent<CompundObject>().GetPart();
-        if (objectToRemove == null)
+        if (objectToRemove)
+        {
+            CompundPart compP = objectToRemove.GetComponent<CompundPart>();
+            compP.SetGrabbable(true);
+            compP.SetIsGrabbed(true);
+            compP.SetTaskFocus(true);
+        }
+        else
         {
             Debug.LogError("Fix your task list");
+            Debug.Log(objectToRemove);
             return;
         }
-        objectToRemove.GetComponent<InteractableObject>().SetGrabbable(true);
     }
 }

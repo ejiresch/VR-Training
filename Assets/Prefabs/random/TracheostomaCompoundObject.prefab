@@ -616,7 +616,7 @@ GameObject:
   - component: {fileID: 6726500060187238031}
   - component: {fileID: 9158237926118261467}
   - component: {fileID: 6995734260089782936}
-  - component: {fileID: 6812507735012833884}
+  - component: {fileID: 1013986798778752053}
   m_Layer: 9
   m_Name: Nase
   m_TagString: Untagged
@@ -701,7 +701,7 @@ MonoBehaviour:
   m_OnSelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6812507735012833884}
+      - m_Target: {fileID: 0}
         m_MethodName: SetIsGrabbed
         m_Mode: 6
         m_Arguments:
@@ -715,7 +715,7 @@ MonoBehaviour:
   m_OnSelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6812507735012833884}
+      - m_Target: {fileID: 0}
         m_MethodName: SetIsGrabbed
         m_Mode: 6
         m_Arguments:
@@ -768,7 +768,7 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
---- !u!114 &6812507735012833884
+--- !u!114 &1013986798778752053
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -777,7 +777,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5691695567630034330}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 178b81e4f73788c4d891f3512fd1c661, type: 3}
+  m_Script: {fileID: 11500000, guid: c6bc8023a214abf45a696bc223578d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isGrabbed: 0
@@ -985,8 +985,7 @@ GameObject:
   - component: {fileID: 5188647114181191129}
   - component: {fileID: 2654805942450173845}
   - component: {fileID: 5654271457675320548}
-  - component: {fileID: 6003739285101147654}
-  - component: {fileID: 1104590005983092381}
+  - component: {fileID: 6607613293854725826}
   m_Layer: 0
   m_Name: kanuele
   m_TagString: Untagged
@@ -1071,7 +1070,7 @@ MonoBehaviour:
   m_OnSelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6003739285101147654}
+      - m_Target: {fileID: 0}
         m_MethodName: SetIsGrabbed
         m_Mode: 6
         m_Arguments:
@@ -1082,7 +1081,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1104590005983092381}
+      - m_Target: {fileID: 0}
         m_MethodName: SetIsGrabbed
         m_Mode: 6
         m_Arguments:
@@ -1096,7 +1095,7 @@ MonoBehaviour:
   m_OnSelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6003739285101147654}
+      - m_Target: {fileID: 0}
         m_MethodName: SetIsGrabbed
         m_Mode: 6
         m_Arguments:
@@ -1107,7 +1106,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6003739285101147654}
+      - m_Target: {fileID: 0}
         m_MethodName: SetIsGrabbed
         m_Mode: 6
         m_Arguments:
@@ -1160,7 +1159,7 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
---- !u!114 &6003739285101147654
+--- !u!114 &6607613293854725826
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1169,22 +1168,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7655197041730458386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 178b81e4f73788c4d891f3512fd1c661, type: 3}
+  m_Script: {fileID: 11500000, guid: c6bc8023a214abf45a696bc223578d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isGrabbed: 0
---- !u!114 &1104590005983092381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7655197041730458386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e99d89fdffe5bd43b48a09a7e7be285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isGrabbed: 0
-  connectorActive: 0
-  anchorPoint: {fileID: 1157463474548171940}

@@ -12,11 +12,12 @@ public class CompundObject : MonoBehaviour
     [SerializeField] private GameObject[] parts;
     private Queue<GameObject> objectQueue = new Queue<GameObject>();
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         foreach (GameObject go in parts) {
             go.GetComponent<InteractableObject>().SetGrabbable(false);
-            objectQueue.Enqueue(go); 
+            objectQueue.Enqueue(go);
+            Debug.Log("123");
         }
     }
 

@@ -18,4 +18,5 @@ public class CompundPart : InteractableObject
             ProcessHandler.Instance.NextTask();
         }
     }
+    public void SetTaskFocus(bool focus) => taskFocus = focus;
 }
