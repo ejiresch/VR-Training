@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class CompundPart : InteractableObject
 {
-    private bool taskFocus;
+    [SerializeField] private bool taskFocus;
     // Start is called before the first frame update
-    void Start()
-    {
-        taskFocus = false;
-    }
+    void Awake() => taskFocus = false;
     public override void OnDrop()
     {
         base.OnDrop();
