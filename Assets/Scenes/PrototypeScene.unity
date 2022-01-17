@@ -2923,9 +2923,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4529476429821932939, guid: 3aad0fe442fb5a3499590f29d410347f,
         type: 3}
+      propertyPath: woman
+      value: 
+      objectReference: {fileID: 2060500850}
+    - target: {fileID: 4529476429821932939, guid: 3aad0fe442fb5a3499590f29d410347f,
+        type: 3}
       propertyPath: spawnPoints
       value: 
       objectReference: {fileID: 7503443029610060502}
+    - target: {fileID: 4529476429821932939, guid: 3aad0fe442fb5a3499590f29d410347f,
+        type: 3}
+      propertyPath: tracheostomaCO
+      value: 
+      objectReference: {fileID: 1520135525941460286, guid: bf1ed372ab3f0e045a3a7b5929314ecf,
+        type: 3}
     - target: {fileID: 4529476429821932939, guid: 3aad0fe442fb5a3499590f29d410347f,
         type: 3}
       propertyPath: previewMaterial
@@ -3365,6 +3376,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1939510658688700863, guid: a680170a267bb224b90b0e8317d161c0,
     type: 3}
   m_PrefabInstance: {fileID: 2056652448}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2060500850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6117283350620791866, guid: be0707d502ba38845b74a9ed10d3cdb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 6446642696945815374}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &4991433274349570000 stripped
 MonoBehaviour:

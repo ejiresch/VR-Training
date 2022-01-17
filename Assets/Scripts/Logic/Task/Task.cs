@@ -33,4 +33,8 @@ public abstract class Task : MonoBehaviour
         }
         return null;
     }
+    public virtual void FinishTask()
+    {
+        Destroy(this);
+    }
 }

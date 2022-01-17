@@ -28,7 +28,16 @@ public class ConnectorObject : InteractableObject
             Destroy(this);
         }
     }
-
+    public void ForceConnect(GameObject connectible)
+    {
+        connectible.transform.parent = this.anchorPoint.transform;
+        connectible.GetComponent<Rigidbody>().isKinematic = true;
+        foreach(Rigidbody child in connectible.GetComponentsInChildren<Rigidbody>()) child.isKinematic = true;
+        //connectible.GetComponent<Collider>().enabled = false;
+        //connectible.GetComponent<InteractableObject>().SetGrabbable(false);
+        connectible.transform.localPosition = new Vector3(0, 0, 0);
+        connectible.transform.localEulerAngles = new Vector3(0, 0, 0);
+    }
     public void StartPreview(GameObject prefab)
     {
         if (preview == null)

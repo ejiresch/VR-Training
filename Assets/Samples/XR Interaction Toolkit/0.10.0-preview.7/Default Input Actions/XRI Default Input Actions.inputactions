@@ -631,6 +631,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "RIght",
+                    "type": "Button",
+                    "id": "0f7ab71e-fd25-49cf-a534-175942990fb6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -653,6 +661,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "ManometerRotationLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3dafef35-2ffe-44c1-8230-7fccc8d912cb",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RIght",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

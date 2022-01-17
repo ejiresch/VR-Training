@@ -9,6 +9,7 @@ public class ProcessHandler : MonoBehaviour
     [SerializeField] private UserInterfaceManager uiManager;
     [SerializeField] private GameObject spawnPoints;
     [SerializeField] private Material closePreviewMaterial, farPreviewMaterial;
+    [SerializeField] private GameObject tracheostomaCO, woman;
     private static ProcessHandler _instance;
     // Singleton
     public static ProcessHandler Instance { get { return _instance; } }
@@ -28,6 +29,8 @@ public class ProcessHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        tracheostomaCO = Instantiate(tracheostomaCO);
+        woman.GetComponent<ConnectorObject>().ForceConnect(tracheostomaCO);
         LoadScene("process_001");
     }
 
@@ -59,21 +62,10 @@ public class ProcessHandler : MonoBehaviour
         uiManager.NewTask(desc, isFirst);
     }
     // Gets all Spawnpoints
-    public Transform[] GetSpawnPoints()
-    {
-        return spawnPoints.GetComponentsInChildren<Transform>();
-    }
+    public Transform[] GetSpawnPoints() => spawnPoints.GetComponentsInChildren<Transform>();
 
-    public TaskManager GetTaskManager()
-    {
-        return this.taskManager;
-    }
-    public Material GetClosePreviewMaterial()
-    {
-        return this.closePreviewMaterial;
-    }
-    public Material GetFarPreviewMaterial()
-    {
-        return this.farPreviewMaterial;
-    }
+    public TaskManager GetTaskManager() => this.taskManager;
+    public Material GetClosePreviewMaterial() => this.closePreviewMaterial;
+    public Material GetFarPreviewMaterial() => this.farPreviewMaterial;
+    public GameObject GetCompoundObject() => this.tracheostomaCO;
 }
