@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 /* Behandelt alle Methoden die für das whiteboard notwendig sind */
 public class WhiteboardHandler : MonoBehaviour
@@ -17,6 +18,7 @@ public class WhiteboardHandler : MonoBehaviour
     private int task_number = 1;
 
     public HUDHandler hud;
+    public ProcessHandler phandler; // für Buttons
 
     int i = 0; //test var
 
@@ -96,5 +98,16 @@ public class WhiteboardHandler : MonoBehaviour
 
         hud.ShowText(); // HUD testing
     }
-    
+    // Buttons: 
+    public void ReingebenStarten()
+    {
+        phandler.SetProcessIndex(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void RausnehmenStarten()
+    {
+        phandler.SetProcessIndex(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
 }
