@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class HUDHandler : MonoBehaviour
 {
@@ -28,5 +29,10 @@ public class HUDHandler : MonoBehaviour
             hud_text.color = new Color(hud_text.color.r, hud_text.color.g, hud_text.color.b, hud_text.color.a - value);
             yield return new WaitForSeconds(wait);
         }
+    }
+
+    public void ShowWarning()
+    {
+        // Zeigt eine Warnung unten rechts des HUDs => "Beide Hände benutzen"
     }
 }

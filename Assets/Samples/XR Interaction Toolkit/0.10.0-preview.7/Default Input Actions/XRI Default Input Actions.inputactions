@@ -639,6 +639,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "ShowControls",
+                    "type": "Button",
+                    "id": "ddabb8e4-c6e6-4aa7-959b-e9b64a4d6c98",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -672,6 +680,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "RIght",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bbd18882-76c3-48e8-9068-6c12728057ba",
+                    "path": "<OculusTouchController>{LeftHand}/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShowControls",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
