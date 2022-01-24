@@ -1475,6 +1475,60 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 32900000, guid: 373d4c63902d3b845862022c1e6d9a71,
         type: 3}
+    - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: clip6hinein
+      value: 
+      objectReference: {fileID: 32900000, guid: 3ea1cfe573d8a3348a4b111c6b10d196,
+        type: 3}
+    - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: clip7hinein
+      value: 
+      objectReference: {fileID: 32900000, guid: 0144c1817f3688f4bb2674f52dc6db50,
+        type: 3}
+    - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: clip8hinein
+      value: 
+      objectReference: {fileID: 32900000, guid: 82167257f789be641a3cbc918f877502,
+        type: 3}
+    - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: clip9hinein
+      value: 
+      objectReference: {fileID: 32900000, guid: 78d06ed15709ecf4081b31899ecb75f1,
+        type: 3}
+    - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: clip10hinein
+      value: 
+      objectReference: {fileID: 32900000, guid: 904fe775f5902724cb82603c66f16f57,
+        type: 3}
+    - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: clip11hinein
+      value: 
+      objectReference: {fileID: 32900000, guid: 051dd592a81e96447a7e4163365d9d0a,
+        type: 3}
+    - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: clip12hinein
+      value: 
+      objectReference: {fileID: 32900000, guid: cf9fe4538338a1b4e8b77e27dc0d0e23,
+        type: 3}
+    - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: clip13hinein
+      value: 
+      objectReference: {fileID: 32900000, guid: 9deaefb3da49c3b4fbb6c0fccdd52d5a,
+        type: 3}
+    - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: clip14hinein
+      value: 
+      objectReference: {fileID: 32900000, guid: 7f3b9b5a4c64d484aadb9beef07d8d98,
+        type: 3}
     - target: {fileID: 8656304804278921324, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_Name
