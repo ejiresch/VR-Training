@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8754685957678997294}
   - component: {fileID: 8754685957678997295}
   m_Layer: 0
-  m_Name: PlaceholderTasky
+  m_Name: BandoeffnenTask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tName: PlaceHodl
-  description: PlaceHolderTask
+  description: "\xD6ffnen Sie das Band"
   requiredTools: []
   spawnedTools: []
   toggleReferenceRight: {fileID: 8217438855327660710, guid: c348712bda248c246b8c49b3db54643f,

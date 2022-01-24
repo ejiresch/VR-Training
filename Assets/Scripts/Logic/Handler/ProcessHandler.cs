@@ -11,6 +11,7 @@ public class ProcessHandler : MonoBehaviour
     [SerializeField] private Material closePreviewMaterial, farPreviewMaterial;
     [SerializeField] private GameObject tracheostomaCO, woman;
     private static ProcessHandler _instance;
+    private string ppKey = "Process_Index";
     // Singleton
     public static ProcessHandler Instance { get { return _instance; } }
 
@@ -29,9 +30,19 @@ public class ProcessHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tracheostomaCO = Instantiate(tracheostomaCO);
-        woman.GetComponent<ConnectorObject>().ForceConnect(tracheostomaCO);
-        LoadScene("process_001");
+        int pi = 0;
+        if (PlayerPrefs.HasKey(ppKey)) pi = PlayerPrefs.GetInt(ppKey);
+        else PlayerPrefs.SetInt(ppKey, 0);
+        if (pi == 0)
+        {
+            tracheostomaCO = Instantiate(tracheostomaCO);
+            woman.GetComponent<ConnectorObject>().ForceConnect(tracheostomaCO);
+            LoadScene("process_001");
+        }
+        else
+        {
+            LoadScene("process_001_02");
+        }
     }
 
     // Called when all Tasks are over
@@ -61,6 +72,7 @@ public class ProcessHandler : MonoBehaviour
     {
         uiManager.NewTask(desc, isFirst);
     }
+    public void SetProcessIndex(int i) => PlayerPrefs.SetInt(ppKey, i);
     // Gets all Spawnpoints
     public Transform[] GetSpawnPoints() => spawnPoints.GetComponentsInChildren<Transform>();
 
@@ -68,4 +80,5 @@ public class ProcessHandler : MonoBehaviour
     public Material GetClosePreviewMaterial() => this.closePreviewMaterial;
     public Material GetFarPreviewMaterial() => this.farPreviewMaterial;
     public GameObject GetCompoundObject() => this.tracheostomaCO;
+    public string GetPlayerPrefsProcessIndexKey() => ppKey;
 }
