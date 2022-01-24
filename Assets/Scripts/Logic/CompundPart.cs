@@ -12,7 +12,10 @@ public class CompundPart : InteractableObject
         base.OnDrop();
         if (taskFocus)
         {
+            Debug.Log("NextTAsk");
             ProcessHandler.Instance.NextTask();
+            taskFocus = false;
+            GetComponent<Rigidbody>().isKinematic = false;
         }
     }
     public void SetTaskFocus(bool focus) => taskFocus = focus;

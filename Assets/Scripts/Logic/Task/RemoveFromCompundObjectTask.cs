@@ -17,7 +17,7 @@ public class RemoveFromCompundObjectTask : Task
         {
             CompundPart compP = objectToRemove.GetComponent<CompundPart>();
             compP.SetGrabbable(true);
-            compP.SetIsGrabbed(true);
+            //compP.SetIsGrabbed(true);
             compP.SetTaskFocus(true);
         }
         else

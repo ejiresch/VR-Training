@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8dde782ad63195c468031cd616cfe950, type: 3}
-  m_Name: process_001
+  m_Name: process_001_02
   m_EditorClassIdentifier: 
   pName: Trachestomaweschsel
   description: Tracheostoma
@@ -22,8 +22,6 @@ MonoBehaviour:
   - {fileID: 5119784095115724615, guid: 2d38feab86c75744aaa6ef8c585d2e06, type: 3}
   - {fileID: 8907562860919515554, guid: 768faeebbbfd19647b4f0a4beb9cab6a, type: 3}
   taskList:
-  - {fileID: 1240576535742193631, guid: 1574f9e2156f513489857c9c60fc62b7, type: 3}
-  - {fileID: 1240576535742193631, guid: 1574f9e2156f513489857c9c60fc62b7, type: 3}
   - {fileID: 8754685957678997292, guid: dfd35d0d7d194044ba8f9a681c473efe, type: 3}
   - {fileID: 8754685957678997292, guid: dfd35d0d7d194044ba8f9a681c473efe, type: 3}
   - {fileID: 8754685957678997292, guid: dfd35d0d7d194044ba8f9a681c473efe, type: 3}
