@@ -4509,20 +4509,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vp: {fileID: 9037734624902900563}
-  clip1heraus: {fileID: 0}
-  clip2heraus: {fileID: 0}
-  clip3heraus: {fileID: 0}
-  clip4heraus: {fileID: 0}
-  clip5heraus: {fileID: 0}
-  clip6hinein: {fileID: 0}
-  clip7hinein: {fileID: 0}
-  clip8hinein: {fileID: 0}
-  clip9hinein: {fileID: 0}
-  clip10hinein: {fileID: 0}
-  clip11hinein: {fileID: 0}
-  clip12hinein: {fileID: 0}
-  clip13hinein: {fileID: 0}
-  clip14hinein: {fileID: 0}
+  clip1heraus: {fileID: 32900000, guid: e1e1f59919652364c850f1724de8416e, type: 3}
+  clip2heraus: {fileID: 32900000, guid: f10fc4742d7a9af4aa1b514963f6989b, type: 3}
+  clip3heraus: {fileID: 32900000, guid: 112b0bacc75095e4fa8b5b53478eec90, type: 3}
+  clip4heraus: {fileID: 32900000, guid: 5b0c4937c8b14bc4c9e62e88db025f7c, type: 3}
+  clip5heraus: {fileID: 32900000, guid: 373d4c63902d3b845862022c1e6d9a71, type: 3}
+  clip6hinein: {fileID: 32900000, guid: 3ea1cfe573d8a3348a4b111c6b10d196, type: 3}
+  clip7hinein: {fileID: 32900000, guid: 0144c1817f3688f4bb2674f52dc6db50, type: 3}
+  clip8hinein: {fileID: 32900000, guid: 82167257f789be641a3cbc918f877502, type: 3}
+  clip9hinein: {fileID: 32900000, guid: 78d06ed15709ecf4081b31899ecb75f1, type: 3}
+  clip10hinein: {fileID: 32900000, guid: 904fe775f5902724cb82603c66f16f57, type: 3}
+  clip11hinein: {fileID: 32900000, guid: 051dd592a81e96447a7e4163365d9d0a, type: 3}
+  clip12hinein: {fileID: 32900000, guid: cf9fe4538338a1b4e8b77e27dc0d0e23, type: 3}
+  clip13hinein: {fileID: 32900000, guid: 9deaefb3da49c3b4fbb6c0fccdd52d5a, type: 3}
+  clip14hinein: {fileID: 32900000, guid: 7f3b9b5a4c64d484aadb9beef07d8d98, type: 3}
 --- !u!1 &8656304803956472372
 GameObject:
   m_ObjectHideFlags: 0
