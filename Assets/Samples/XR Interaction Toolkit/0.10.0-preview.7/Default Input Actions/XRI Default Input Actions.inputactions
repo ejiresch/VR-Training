@@ -641,9 +641,17 @@
                     "interactions": ""
                 },
                 {
-                    "name": "ShowControls",
+                    "name": "ShowControlsRight",
                     "type": "Button",
                     "id": "ddabb8e4-c6e6-4aa7-959b-e9b64a4d6c98",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ShowControlsLeft",
+                    "type": "Button",
+                    "id": "d05f0ddc-335e-4b37-b0cd-9b7d8be2acf8",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -686,11 +694,22 @@
                 {
                     "name": "",
                     "id": "bbd18882-76c3-48e8-9068-6c12728057ba",
-                    "path": "<OculusTouchController>{LeftHand}/start",
+                    "path": "<XRController>{RightHand}/secondaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ShowControls",
+                    "action": "ShowControlsRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1cbbb36e-8f7e-46cd-a2e0-5df6300c0448",
+                    "path": "<XRController>{LeftHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShowControlsLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
