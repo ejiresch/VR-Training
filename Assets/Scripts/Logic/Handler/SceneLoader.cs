@@ -12,8 +12,11 @@ public class SceneLoader : MonoBehaviour
     {
         foreach(ProcessScriptableObject p in processes)
         {
-            if (p.name.Contains(pid)) selectedProcess = p;
-            break;
+            if (p.name.Equals(pid))
+            {
+                selectedProcess = p;
+                break;
+            }
         }
         GameObject[] tools = selectedProcess.toolList;
         Transform[] spawnPoints = ProcessHandler.Instance.GetSpawnPoints();

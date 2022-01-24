@@ -101,12 +101,12 @@ public class WhiteboardHandler : MonoBehaviour
     // Buttons: 
     public void ReingebenStarten()
     {
-        phandler.SetProcessIndex(1);
+        ProcessHandler.Instance.SetProcessIndex(1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void RausnehmenStarten()
     {
-        phandler.SetProcessIndex(0);
+        ProcessHandler.Instance.SetProcessIndex(0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

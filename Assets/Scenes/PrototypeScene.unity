@@ -1086,7 +1086,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4991433274349570000}
-        m_MethodName: rausnehmen_starten
+        m_MethodName: RausnehmenStarten
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3258,7 +3258,18 @@ PrefabInstance:
       objectReference: {fileID: 4991433274349570000}
     - target: {fileID: 4529476429821932936, guid: 3aad0fe442fb5a3499590f29d410347f,
         type: 3}
+      propertyPath: processes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4529476429821932936, guid: 3aad0fe442fb5a3499590f29d410347f,
+        type: 3}
       propertyPath: processes.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: dc09295f0b127ac47a9b21ff96c7300c,
+        type: 2}
+    - target: {fileID: 4529476429821932936, guid: 3aad0fe442fb5a3499590f29d410347f,
+        type: 3}
+      propertyPath: processes.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: a1bc367d975b0894cb460080b234b14d,
         type: 2}
@@ -4182,7 +4193,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4991433274349570000}
-        m_MethodName: reingeben_starten
+        m_MethodName: ReingebenStarten
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4292,7 +4303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &4846203761416958755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4427,6 +4438,7 @@ MonoBehaviour:
   task_prefab: {fileID: 281899072807158025, guid: c559dc39484daea4685b781038d4c65d,
     type: 3}
   hud: {fileID: 1394060205}
+  phandler: {fileID: 0}
 --- !u!1 &5034668979887970172
 GameObject:
   m_ObjectHideFlags: 0
