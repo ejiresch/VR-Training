@@ -16,7 +16,7 @@ public class VibrationManager : MonoBehaviour
             clip.WriteSample(i % 50 == 0 ? (byte)255 : (byte)0);
         }
         OVRHaptics.LeftChannel.Preempt(clip);
-        Debug.Log("sollte vibriert haben.");
+        //Debug.Log("sollte vibriert haben.");
     }
 
     // Update is called once per frame
