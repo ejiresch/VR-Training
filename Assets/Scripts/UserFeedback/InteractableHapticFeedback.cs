@@ -6,7 +6,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 //Quellen: 
 //https://learn.unity.com/tutorial/customizing-interactables-in-xr-interaction-toolkit#602ed568edbc2a2625047887
-//https://docs.unity3d.com/Manual/xr_input.html#Haptics
 //https://www.youtube.com/watch?v=G3vKyFXjk1I&ab_channel=DanielStringer (ab 4:43)
 
 
