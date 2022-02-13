@@ -17,7 +17,7 @@ TagManager:
   - Player
   - Interactable
   - UI_not_interactable
-  - 
+  - PostProcessingLayer
   - 
   - 
   - 
