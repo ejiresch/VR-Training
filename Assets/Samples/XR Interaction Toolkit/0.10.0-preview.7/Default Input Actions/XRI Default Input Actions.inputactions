@@ -647,14 +647,6 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
-                },
-                {
-                    "name": "ShowControlsLeft",
-                    "type": "Button",
-                    "id": "d05f0ddc-335e-4b37-b0cd-9b7d8be2acf8",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -699,17 +691,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "ShowControlsRight",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1cbbb36e-8f7e-46cd-a2e0-5df6300c0448",
-                    "path": "<XRController>{LeftHand}/secondaryButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ShowControlsLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

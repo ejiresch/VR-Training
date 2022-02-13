@@ -10,18 +10,15 @@ public class HandHandler : MonoBehaviour
     public GameObject right_ray_interactor; // on default enabled
     public GameObject left_ray_interactor; // on default enabled
     public InputActionReference toggleReferenceControl_right = null;
-    public InputActionReference toggleReferenceControl_left = null;
 
     private void Awake()
     {
         toggleReferenceControl_right.action.started += ShowControls;
-        toggleReferenceControl_left.action.started += ShowControls;
     }
 
     private void OnDestroy()
     {
         toggleReferenceControl_right.action.started -= ShowControls;
-        toggleReferenceControl_left.action.started -= ShowControls;
     }
     public void ShowControls(InputAction.CallbackContext context)
     {
