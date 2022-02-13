@@ -2018,7 +2018,7 @@ Transform:
   - {fileID: 863444595}
   - {fileID: 1524967099}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &607938277 stripped
 GameObject:
@@ -2462,7 +2462,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1260543783
 MonoBehaviour:
@@ -4333,8 +4333,6 @@ MonoBehaviour:
   left_ray_interactor: {fileID: 1579730245}
   toggleReferenceControl_right: {fileID: 4423545729029184309, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  toggleReferenceControl_left: {fileID: -5006772094003406344, guid: c348712bda248c246b8c49b3db54643f,
-    type: 3}
 --- !u!224 &4846203761416958761
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4567,7 +4565,7 @@ PrefabInstance:
     - target: {fileID: 6589509890244883104, guid: afeb2a85c81aefa4aa876904cacac303,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6589509890244883104, guid: afeb2a85c81aefa4aa876904cacac303,
         type: 3}
