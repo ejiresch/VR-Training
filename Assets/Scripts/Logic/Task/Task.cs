@@ -6,11 +6,12 @@ public abstract class Task : MonoBehaviour
 {
     public string tName;
     public string description;
-    public GameObject[] requiredTools;
     public GameObject[] spawnedTools;
+    public bool warningMessage = false;
     // Gets called when Task is started
     public virtual void StartTask()
     {
+        if(warningMessage) ProcessHandler.Instance.ShowWarning();
     }
     public void SetSpawnTools(GameObject[] toolList)
     {

@@ -17,4 +17,8 @@ public class UserInterfaceManager : MonoBehaviour
     {
         handler.FinishTask();
     }
+    public void ShowWarning()
+    {
+        // Wird aufgerufen, wenn UI Beide Haende benutzen anzeigen soll
+    }
 }
