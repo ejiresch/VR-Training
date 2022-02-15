@@ -17,8 +17,6 @@ public class WhiteboardHandler : MonoBehaviour
     private float maxTaskShown = 5; // Max anzahl an Tasks
     private int task_number = 1;
 
-    public HUDHandler hud;
-
     int i = 0; //test var
 
     public void pressButton()// Übungsmethode zum Testen
@@ -84,8 +82,6 @@ public class WhiteboardHandler : MonoBehaviour
         Color tmp = checkmark_current.GetComponent<SpriteRenderer>().color; // Änderung der opasity auf 1 -> 100%
         tmp.a = 1f;
         checkmark_current.GetComponent<SpriteRenderer>().color = tmp;
-
-        hud.ShowText(); // HUD testing
     }
     // Buttons: 
     public void ReingebenStarten()

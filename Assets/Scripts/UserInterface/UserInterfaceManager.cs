@@ -5,20 +5,26 @@ using UnityEngine;
 // Manages the UI
 public class UserInterfaceManager : MonoBehaviour
 {
-    public WhiteboardHandler handler;
+    public WhiteboardHandler wbh;
+    public HUDHandler hudh;
+    public HandHandler hh;
     // New Tasks are displayed in this method
-    public void NewTask(string taskdescription, bool isFirst) 
+    public void NewTask(string taskdescription, bool isFirst)
     {
-        if (isFirst) handler.FirstTask(taskdescription);
-        else handler.NewTask(taskdescription);
+        if (isFirst) wbh.FirstTask(taskdescription);
+        else
+        {
+            wbh.NewTask(taskdescription);
+            hudh.ShowText(); // Anzeige von "Aufgabe abgeschlossen"
+        }
     }
     // When all tasks are over
     public void EndOfTasks()
     {
-        handler.FinishTask();
+        wbh.FinishTask();
     }
-    public void ShowWarning()
+    public void ShowWarning() // Wird aufgerufen, wenn UI Beide Haende benutzen anzeigen soll
     {
-        // Wird aufgerufen, wenn UI Beide Haende benutzen anzeigen soll
+        hh.Warning();
     }
 }

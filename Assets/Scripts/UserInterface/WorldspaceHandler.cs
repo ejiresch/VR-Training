@@ -19,11 +19,11 @@ public class WorldspaceHandler : MonoBehaviour
     {
         toggleReferenceControl.action.started += ShowControls;
     }
-
     private void OnDestroy()
     {
         toggleReferenceControl.action.started -= ShowControls;
     }
+
     public void ShowControls(InputAction.CallbackContext context)
     {
         controls.transform.position = camera.transform.position + (camera.transform.forward * 2);
@@ -31,4 +31,6 @@ public class WorldspaceHandler : MonoBehaviour
         bool isActive = !controls.activeSelf;
         controls.SetActive(isActive);
     }
+
+    
 }

@@ -30,9 +30,4 @@ public class HUDHandler : MonoBehaviour
             yield return new WaitForSeconds(wait);
         }
     }
-
-    public void ShowWarning()
-    {
-        // Zeigt eine Warnung unten rechts des HUDs => "Beide Hände benutzen"
-    }
 }

@@ -274,7 +274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1919296409511327427}
   m_Layer: 0
-  m_Name: Whiteboard_final 1
+  m_Name: Whiteboard_v4 (current)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -465,7 +465,7 @@ GameObject:
   - component: {fileID: 3955653635167335598}
   - component: {fileID: 6910659227706002828}
   m_Layer: 5
-  m_Name: WorldSpace_WB
+  m_Name: WhiteboardHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -587,7 +587,6 @@ MonoBehaviour:
   tasklist: []
   task_prefab: {fileID: 281899072807158025, guid: c559dc39484daea4685b781038d4c65d,
     type: 3}
-  hud: {fileID: 0}
 --- !u!1 &6335367201243071990
 GameObject:
   m_ObjectHideFlags: 0
