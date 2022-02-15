@@ -18,7 +18,6 @@ public class WhiteboardHandler : MonoBehaviour
     private int task_number = 1;
 
     public HUDHandler hud;
-    public ProcessHandler phandler; // für Buttons
 
     int i = 0; //test var
 
@@ -37,8 +36,9 @@ public class WhiteboardHandler : MonoBehaviour
 
     public void FirstTask(string taskdescription) // Ersten Task erstellen
     {
-        task_current = Instantiate(task_prefab, transform.GetChild(0)); // Child(0) ist "Panel_White"
+        task_current = Instantiate(task_prefab, transform.GetChild(1)); // Child(1) ist "Vertical_Layout_Group"
         tasklist.Add(task_current);
+        task_current.transform.position -= new Vector3(0f, 0.05f, 0f);
 
         task_text_current = tasklist[0].GetComponentInChildren<TextMeshProUGUI>();
         checkmark_current = tasklist[0].GetComponentInChildren<SpriteRenderer>();
@@ -58,29 +58,18 @@ public class WhiteboardHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(0.4f);
         // Erstellung eines neuen Tasks
-        task_current = Instantiate(task_prefab, transform.GetChild(0));
+        task_current = Instantiate(task_prefab, transform.GetChild(1));
+
         task_current.SetActive(false);
         tasklist.Add(task_current);
         task_text_current = tasklist[tasklist.Count - 1].GetComponentInChildren<TextMeshProUGUI>();
         checkmark_current = tasklist[tasklist.Count - 1].GetComponentInChildren<SpriteRenderer>();
         task_text_current.SetText(taskdescription);
 
-        // Verschiebung der Tasks auf der Y-Achse
-        for (int i = tasklist.Count - 2; i >= 0; i--) 
-        {
-            /*
-             * y_gab: Y-Abstand zwischen den Tasks
-             * preferredHeight: Höhe des Textes
-             * 0.0085f -> Ideale Abstandgröße für preferredHeight = 1 (von mir selbst gewählter Wert)
-             */
-            GameObject board = GameObject.Find("Board");
-            float y_gap = task_text_current.preferredHeight * 0.0085f * (board.transform.localScale.x/2.8f); // Durch die localScale kann ich die y_gap berechnen
-            tasklist[i].transform.position -= new Vector3(0f, y_gap, 0f);
-        }
-        if(tasklist.Count >= maxTaskShown) // Wenn das maximum an Tasks erreicht ist, wir das älteste Element gelöscht
+        if (tasklist.Count >= maxTaskShown) // Wenn das maximum an Tasks erreicht ist, wir das älteste Element gelöscht
         {
             Destroy(tasklist[0]);
-            tasklist.Remove(tasklist[0]); 
+            tasklist.Remove(tasklist[0]);
         }
 
         yield return new WaitForSeconds(0.4f);
