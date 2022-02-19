@@ -7,10 +7,10 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ConnectorObject : InteractableObject
 {
     public bool connectorActive = false;
-    private GameObject preview = null;
-    [SerializeField] private GameObject anchorPoint = null;
+    public GameObject preview = null;
+    public GameObject anchorPoint = null;
 
-    public void Connect(GameObject connectible)
+    public virtual void Connect(GameObject connectible)
     {
         if (!connectible.GetComponent<InteractableObject>().GetIsGrabbed() && connectorActive && this.GetIsGrabbed())
         {
@@ -38,7 +38,8 @@ public class ConnectorObject : InteractableObject
         connectible.transform.localPosition = new Vector3(0, 0, 0);
         connectible.transform.localEulerAngles = new Vector3(0, 0, 0);
     }
-    public void StartPreview(GameObject prefab)
+    public virtual void Disconnect(){}
+    public virtual void StartPreview(GameObject prefab)
     {
         if (preview == null)
         {

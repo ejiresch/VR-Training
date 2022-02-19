@@ -16,7 +16,7 @@ MonoBehaviour:
   description: Tracheostoma
   toolList:
   - {fileID: 6645954436737465285, guid: cc7554a1bbbb5a74f95193c95880e7ca, type: 3}
-  - {fileID: 7286607789552444731, guid: 1d27e64ed3efe6f45ac30464f7dfb1c9, type: 3}
+  - {fileID: 4561207380521413469, guid: 59aa1cef234e6a249811214b7bb69fd7, type: 3}
   - {fileID: 7228085617110046450, guid: 602eee7b2c4c49342bac7147da2706fb, type: 3}
   - {fileID: 2793639469066661526, guid: 4f0a25f314021194b89320038e307719, type: 3}
   - {fileID: 5119784095115724615, guid: 2d38feab86c75744aaa6ef8c585d2e06, type: 3}

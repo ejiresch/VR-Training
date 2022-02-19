@@ -49,6 +49,7 @@ MonoBehaviour:
   parts:
   - {fileID: 5766007287988627784}
   - {fileID: 7655197041730458386}
+  grabbablePart: {fileID: 5691635717697086461}
 --- !u!54 &1205632461314612460
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -144,7 +145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 2654805942450173845}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 55
@@ -392,11 +394,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: russische_cuffline
       objectReference: {fileID: 0}
+    - target: {fileID: 6449500811354043858, guid: 6985f75a48005564696a0309cb280463,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 24.575424
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449500811354043858, guid: 6985f75a48005564696a0309cb280463,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -21.798182
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449500811354043858, guid: 6985f75a48005564696a0309cb280463,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -21.319677
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6985f75a48005564696a0309cb280463, type: 3}
 --- !u!4 &306149632031973274 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5581736208263592738, guid: 6985f75a48005564696a0309cb280463,
+    type: 3}
+  m_PrefabInstance: {fileID: 5281005982072005816}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5691635717697086461 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 555392401902913349, guid: 6985f75a48005564696a0309cb280463,
     type: 3}
   m_PrefabInstance: {fileID: 5281005982072005816}
   m_PrefabAsset: {fileID: 0}

@@ -10,6 +10,7 @@ using UnityEngine;
 public class CompundObject : MonoBehaviour
 {
     [SerializeField] private GameObject[] parts;
+    [SerializeField] private GameObject grabbablePart;
     private Queue<GameObject> objectQueue = new Queue<GameObject>();
     // Start is called before the first frame update
     void Awake()
@@ -17,7 +18,6 @@ public class CompundObject : MonoBehaviour
         foreach (GameObject go in parts) {
             go.GetComponent<InteractableObject>().SetGrabbable(false);
             objectQueue.Enqueue(go);
-            Debug.Log("123");
         }
     }
 
@@ -29,6 +29,10 @@ public class CompundObject : MonoBehaviour
     {
         if(objectQueue.Count>0) return objectQueue.Dequeue();
         return null;
+    }
+    public GameObject GetGrabbable()
+    {
+        return grabbablePart;
     }
 }
     

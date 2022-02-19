@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8754685957678997292
+--- !u!1 &6704540191847829557
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8754685957678997294}
-  - component: {fileID: -1449340739496869756}
+  - component: {fileID: 6704540191847829563}
+  - component: {fileID: 3728825678651864283}
   m_Layer: 0
-  m_Name: LuftziehenTask
+  m_Name: Kanuele_ConnectionTask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8754685957678997294
+--- !u!4 &6704540191847829563
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8754685957678997292}
+  m_GameObject: {fileID: 6704540191847829557}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-1449340739496869756
+--- !u!114 &3728825678651864283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8754685957678997292}
+  m_GameObject: {fileID: 6704540191847829557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5621105e3bed5334a9f4351b773339c4, type: 3}
+  m_Script: {fileID: 11500000, guid: d6476568b40475a4a84f4e08225cf24e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tName: cuffline
-  description: cuffline connection task
+  tName: Kanuele Task
+  description: Bringe die Kanuele an den Hals des Patienten an
   spawnedTools: []
-  warningMessage: 0
-  connector: {fileID: 4561207380521413469, guid: 59aa1cef234e6a249811214b7bb69fd7,
+  warningMessage: 1
+  connector: {fileID: 6117283350620791866, guid: be0707d502ba38845b74a9ed10d3cdb5,
+    type: 3}
+  connectible: {fileID: 6645954436737465285, guid: cc7554a1bbbb5a74f95193c95880e7ca,
     type: 3}

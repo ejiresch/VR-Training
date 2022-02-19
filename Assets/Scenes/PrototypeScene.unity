@@ -4340,6 +4340,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Woman(Clone)
       objectReference: {fileID: 0}
+    - target: {fileID: 6446642697175066525, guid: be0707d502ba38845b74a9ed10d3cdb5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.00181
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446642697175066525, guid: be0707d502ba38845b74a9ed10d3cdb5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.03723
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446642697175066525, guid: be0707d502ba38845b74a9ed10d3cdb5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00363
+      objectReference: {fileID: 0}
     - target: {fileID: 6894769581116210816, guid: be0707d502ba38845b74a9ed10d3cdb5,
         type: 3}
       propertyPath: m_RootOrder

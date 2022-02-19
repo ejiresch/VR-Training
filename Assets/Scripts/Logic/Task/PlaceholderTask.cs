@@ -22,7 +22,6 @@ public class PlaceholderTask : Task
     private void Toggle(InputAction.CallbackContext context)
     {
         ProcessHandler.Instance.NextTask();
-        Debug.Log("NEXTT TASSK");
     }
 
 }

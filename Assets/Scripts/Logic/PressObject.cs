@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PressObject : InteractableObject
+public class PressObject : MonoBehaviour
 {
     private bool pressable = false;
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Manometer_movement : MonoBehaviour
+public class Manometer_movement : PressObject
 {
     public GameObject nadel;
     public InputActionReference toggleReferenceLeft = null;
@@ -31,17 +31,22 @@ public class Manometer_movement : MonoBehaviour
     {
         StopAllCoroutines();
         StartCoroutine(Druecken());
-        GetComponent<PressObject>().Press();
     }
 
     IEnumerator Druecken()
     {
-        if (this.GetComponent<InteractableObject>().GetIsGrabbed() == true)
+        if (this.GetComponent<InteractableObject>().GetIsGrabbed())
         {
             enabled = false; // stoppt Script, damit update-function gestoppt wird -> Druecken wird aber weiter ausgeführt (warum auch immer)
             for (int i = 0; i < 50; i++)
             {
                 if (nadel.transform.localRotation.eulerAngles.y >= 330) { break; }
+                if(nadel.transform.localRotation.eulerAngles.y >= 140)
+                {
+                    Press();
+                    GetComponent<ConnectorObject>().Disconnect();
+                    break;
+                }
                 nadel.transform.Rotate(new Vector3(0, 1, 0));   // Druck hinzufügen
                 yield return new WaitForSeconds(0.007f);
             }
