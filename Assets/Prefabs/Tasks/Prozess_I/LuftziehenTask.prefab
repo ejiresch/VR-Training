@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tName: cuffline
-  description: cuffline connection task
+  description: Verbinde die Cuffline mit dem Manometer
   spawnedTools: []
   warningMessage: 0
   connector: {fileID: 4561207380521413469, guid: 59aa1cef234e6a249811214b7bb69fd7,
