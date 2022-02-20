@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5041774881525576369}
   - component: {fileID: 6220132261816945061}
-  - component: {fileID: 8364193463463007729}
   - component: {fileID: 7646789195251307954}
   - component: {fileID: 367442370628012831}
+  - component: {fileID: 3314281783499225890}
   m_Layer: 9
   m_Name: Nase
   m_TagString: Untagged
@@ -51,20 +51,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &8364193463463007729
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5041774881525576368}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 2.3088064
-  m_Height: 4.686459
-  m_Direction: 1
-  m_Center: {x: 0.06944895, y: 0.16159606, z: 0}
 --- !u!114 &7646789195251307954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +164,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrabbed: 0
   taskFocus: 0
+--- !u!65 &3314281783499225890
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5041774881525576368}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.8799515, y: 2.9684796, z: 3.007081}
+  m_Center: {x: -0.011953528, y: 0.9842398, z: -0.14005157}
 --- !u!1001 &2144089203851191037
 PrefabInstance:
   m_ObjectHideFlags: 0

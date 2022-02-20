@@ -39,8 +39,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1415054557887046879}
-  - component: {fileID: 6816037873830809326}
-  - component: {fileID: 2858241121412160662}
+  - component: {fileID: 5903382520277256337}
+  - component: {fileID: 7308165751450822706}
   m_Layer: 0
   m_Name: Line
   m_TagString: Untagged
@@ -62,7 +62,25 @@ Transform:
   m_Father: {fileID: 5581736208263592738}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!120 &6816037873830809326
+--- !u!114 &5903382520277256337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66217188279932053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1ca9a0bfe18e64dad6a4247a5e2c11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPoint: {fileID: 1900563636}
+  endPoint: {fileID: 6350957793181829800}
+  ropesections: 15
+  gravity: -0.000981
+  ropeNodeLength: 0.005
+  ropeWidth: 0.002
+--- !u!120 &7308165751450822706
 LineRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -80,7 +98,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7569e8f1dcded4f43bb1c0eb985f0666, type: 2}
+  - {fileID: 2100000, guid: 4cedfb7669a20b544afccf6393e5d169, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -101,12 +119,10 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 1, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Positions: []
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.002
+    widthMultiplier: 1
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -157,23 +173,8 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 0
+  m_UseWorldSpace: 1
   m_Loop: 0
---- !u!114 &2858241121412160662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 66217188279932053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1a86830e89792f499fb782bdc9bb921, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  connector: {fileID: 1900563635}
-  connectee: {fileID: 5299592522299463716}
-  lineRenderer: {fileID: 6816037873830809326}
 --- !u!1 &502723470026389108
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +379,7 @@ Rigidbody:
   m_GameObject: {fileID: 555392401902913349}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1.1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -397,10 +398,10 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 24.575424, y: -21.798182, z: -21.319677}
   serializedVersion: 2
-  m_Spring: 5000
-  m_Damper: 1000
-  m_MinDistance: 3
-  m_MaxDistance: 3.1
+  m_Spring: 1000
+  m_Damper: 100
+  m_MinDistance: 0
+  m_MaxDistance: 0.1
   m_Tolerance: 0.025
   m_BreakForce: Infinity
   m_BreakTorque: Infinity

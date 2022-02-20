@@ -27,11 +27,14 @@ public class CuffllineConnectionObject : ConnectorObject
     public override void Disconnect()
     {
         base.Disconnect();
-        GameObject child = anchorPoint.transform.GetChild(0).gameObject;
-        if (child)
+        if (anchorPoint.transform.childCount > 0)
         {
-            child.transform.parent = previousParent;
-            child.GetComponent<Rigidbody>().isKinematic = false;
+            GameObject child = anchorPoint.transform.GetChild(0).gameObject;
+            if (child)
+            {
+                child.transform.parent = previousParent;
+                child.GetComponent<Rigidbody>().isKinematic = false;
+            }
         }
     }
     public override void StartPreview(GameObject prefab)

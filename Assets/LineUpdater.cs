@@ -13,8 +13,6 @@ public class LineUpdater : MonoBehaviour
         this.transform.position = new Vector3(0, 0, 0);
         this.transform.localScale = new Vector3(1, 1, 1);
         this.transform.eulerAngles = new Vector3(0, 0, 0);
-        connectee.transform.parent.GetComponent<Rigidbody>().isKinematic = false;
-
     }
     private void Update()
     {

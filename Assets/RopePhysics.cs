@@ -27,6 +27,7 @@ public class RopePhysics : MonoBehaviour
             nodes.Add(new RopeNode(ropeNodePos));
             ropeNodePos.y -= ropeNodeLength;
         }
+        endPoint.transform.parent.GetComponent<Rigidbody>().isKinematic = false;
     }
 
     // Update is called once per frame
