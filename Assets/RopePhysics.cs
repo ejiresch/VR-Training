@@ -47,7 +47,7 @@ public class RopePhysics : MonoBehaviour
             positions[i] = nodes[i].pos;
         }
 
-        lineRenderer.numPositions = positions.Length;
+        lineRenderer.positionCount = positions.Length;
         lineRenderer.SetPositions(positions);
     }
 
