@@ -14,11 +14,16 @@ public class WhiteboardHandler : MonoBehaviour
     private TextMeshProUGUI task_text_current; //text
     private SpriteRenderer checkmark_current; //bild
 
-    private float maxTaskShown = 5; // Max anzahl an Tasks
-    private int task_number = 1;
+    private float maxTaskShown; // Max anzahl an Tasks
+    private int task_number;
 
     int i = 0; //test var
 
+    public void Start()
+    {
+        maxTaskShown = 5;
+        task_number = 1;
+    }
     public void pressButton()// Übungsmethode zum Testen
     {
         if(task_current == null)
