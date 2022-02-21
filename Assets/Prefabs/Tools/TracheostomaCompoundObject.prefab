@@ -396,6 +396,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6449500811354043858, guid: 6985f75a48005564696a0309cb280463,
         type: 3}
+      propertyPath: m_Spring
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449500811354043858, guid: 6985f75a48005564696a0309cb280463,
+        type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 24.575424
       objectReference: {fileID: 0}
