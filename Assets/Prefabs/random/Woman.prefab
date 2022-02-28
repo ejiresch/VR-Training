@@ -448,13 +448,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6984476698350360282}
-  m_LocalRotation: {x: 0.70487535, y: 0.000055072822, z: -0.0040770127, w: 0.70931953}
-  m_LocalPosition: {x: 0.0001, y: -0.0179, z: 0.0076}
+  m_LocalRotation: {x: 0.7503798, y: -0.0006614996, z: -0.0044424515, w: 0.6609916}
+  m_LocalPosition: {x: 0.0001, y: -0.0175, z: 0.0046}
   m_LocalScale: {x: 0.0044154543, y: 0.0034486395, z: 0.0034486388}
   m_Children: []
   m_Father: {fileID: 96345417738598959}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 89.51501, y: -41.977, z: -42.312}
+  m_LocalEulerAnglesHint: {x: 82.740005, y: -176.57901, z: -176.886}
 --- !u!33 &1500725488834342375
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -525,8 +525,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.4202336, y: -3.2993665, z: -0.6060233}
-    m_Extent: {x: 4.363097, y: 3.4523778, z: 6.322025}
+    m_Center: {x: 0.19614482, y: -0.7156211, z: 0.1253643}
+    m_Extent: {x: 3.6087863, y: 1.5201036, z: 5.077289}
   m_DirtyAABB: 0
 --- !u!183 &4322556980396188652
 Cloth:
@@ -556,7 +556,9 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
+  - maxDistance: 0
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 0
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -564,11 +566,9 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
+  - maxDistance: 0
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
+  - maxDistance: 0
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
