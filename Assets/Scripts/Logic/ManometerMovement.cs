@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Manometer_movement : PressObject
+public class ManometerMovement : PressObject
 {
     public GameObject nadel;
     public InputActionReference toggleReferenceLeft = null;
