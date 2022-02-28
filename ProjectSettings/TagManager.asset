@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Warning
+  - CompoundGrabbablePart
   layers:
   - Default
   - TransparentFX

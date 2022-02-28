@@ -9,7 +9,7 @@ public class CufflineConnectionTask : Task
     {
         base.StartTask();
         connector = base.FindTool(connector.name);
-        GameObject connectible = ProcessHandler.Instance.GetCompoundObject().GetComponent<CompundObject>().GetGrabbable();
+        GameObject connectible = GameObject.FindGameObjectWithTag("CompoundGrabbablePart");
         if (connector != null && connectible != null)
         {
             connector.GetComponent<ConnectorObject>().connectorActive = true;

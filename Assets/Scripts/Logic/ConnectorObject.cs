@@ -16,7 +16,8 @@ public class ConnectorObject : InteractableObject
         {
             connectible.transform.parent = this.anchorPoint.transform;
             connectible.GetComponent<Rigidbody>().isKinematic = true;
-            connectible.GetComponent<Collider>().enabled = false;
+            //connectible.GetComponent<Collider>().enabled = false;
+            foreach (Collider collider in connectible.GetComponentsInChildren<Collider>()) collider.enabled = false;
             connectible.GetComponent<InteractableObject>().SetGrabbable(false);
             connectible.transform.localPosition = new Vector3(0, 0, 0);
             connectible.transform.localEulerAngles = new Vector3(0, 0, 0);
