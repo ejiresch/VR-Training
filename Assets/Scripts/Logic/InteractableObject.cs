@@ -19,13 +19,6 @@ public class InteractableObject : MonoBehaviour
             ce.ReportCollision();
         }
     }
-    private void Update()
-    {
-        if (Input.GetButtonDown("Jump"))
-        {
-            OnDrop();
-        }
-    }
 
     public void SetGrabbable(bool grab)
     {

@@ -633,9 +633,25 @@
                     "interactions": ""
                 },
                 {
+                    "name": "Left",
+                    "type": "Button",
+                    "id": "7d22830b-d67a-4488-b233-77dea9a420bf",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
                     "name": "RIght",
                     "type": "Button",
                     "id": "0f7ab71e-fd25-49cf-a534-175942990fb6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "PlaceHolderRight",
+                    "type": "Button",
+                    "id": "e8d77c4b-437e-47db-8009-194be955b22f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -674,8 +690,8 @@
                 },
                 {
                     "name": "",
-                    "id": "3dafef35-2ffe-44c1-8230-7fccc8d912cb",
-                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "id": "860cc802-8e7e-4850-a01a-b79911757834",
+                    "path": "<XRController>{RightHand}/gripPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -691,6 +707,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "ShowControlsRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1395fba0-9c12-457b-8a0e-387a06c1af96",
+                    "path": "<XRController>{LeftHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a104101d-056d-4975-88f5-8a2d08c9f41b",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlaceHolderRight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

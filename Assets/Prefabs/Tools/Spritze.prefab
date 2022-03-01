@@ -211,7 +211,8 @@ MonoBehaviour:
   isGrabbed: 0
   connectorActive: 0
   preview: {fileID: 0}
-  anchorPoint: {fileID: 1535393618452758304}
+  anchorPoints:
+  - {fileID: 1535393618452758304}
 --- !u!114 &3171862544218224998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,10 +225,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e72e57053b765e4ba6a809b0f73d79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toggleReferenceLeft: {fileID: -5006772094003406344, guid: c348712bda248c246b8c49b3db54643f,
+  toggleReferenceLeft: {fileID: 8217438855327660710, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  toggleReferenceRight: {fileID: -6674687402017633821, guid: c348712bda248c246b8c49b3db54643f,
+  toggleReferenceRight: {fileID: 8939289509126937741, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
+  reingepumpt: 0
 --- !u!1001 &2566622094869265065
 PrefabInstance:
   m_ObjectHideFlags: 0

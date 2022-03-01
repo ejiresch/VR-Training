@@ -7,7 +7,7 @@ public class SpritzePressObject : PressObject
 {
     public InputActionReference toggleReferenceLeft = null;
     public InputActionReference toggleReferenceRight = null;
-    private bool reingepumpt = false;
+    public bool reingepumpt = false;
 
     private void Awake()
     {
@@ -32,6 +32,9 @@ public class SpritzePressObject : PressObject
             //  hier wird rausgepumpt und task beendet
             Press();
             GetComponent<ConnectorObject>().Disconnect();
+            GameObject temp = GameObject.FindGameObjectWithTag("CompoundGrabbablePart").transform.parent.parent.gameObject;
+            temp.GetComponent<InteractableObject>().SetGrabbable(true);
+            temp.GetComponent<Rigidbody>().isKinematic = false;
         }
     }
 }

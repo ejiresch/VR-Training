@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tName: PlaceHodl
   description: Entsorgen Sie den Muell
-  requiredTools: []
   spawnedTools: []
-  toggleReferenceRight: {fileID: 8217438855327660710, guid: c348712bda248c246b8c49b3db54643f,
+  warningMessage: 0
+  toggleReferenceRight: {fileID: -6606467506871176741, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}

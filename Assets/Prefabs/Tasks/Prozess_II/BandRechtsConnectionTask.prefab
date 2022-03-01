@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &630474244228897186
+--- !u!1 &1325155203522021057
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 630474244228897184}
-  - component: {fileID: 630474244228897185}
+  - component: {fileID: 1325155203522021071}
+  - component: {fileID: 4067882422550854124}
   m_Layer: 0
-  m_Name: BandAnKanueleTask
+  m_Name: BandRechtsConnectionTask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &630474244228897184
+--- !u!4 &1325155203522021071
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630474244228897186}
+  m_GameObject: {fileID: 1325155203522021057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &630474244228897185
+--- !u!114 &4067882422550854124
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630474244228897186}
+  m_GameObject: {fileID: 1325155203522021057}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c96c630a8d5530468786e9c19e030b9, type: 3}
+  m_Script: {fileID: 11500000, guid: d6476568b40475a4a84f4e08225cf24e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tName: PlaceHodl
-  description: Bringen Sie das Band an
+  tName: RechtesBandConnection
+  description: "Bringe das rechte Band auf die Kan\xFCle an"
   spawnedTools: []
   warningMessage: 0
-  toggleReferenceRight: {fileID: -6606467506871176741, guid: c348712bda248c246b8c49b3db54643f,
+  connector: {fileID: 6645954436737465285, guid: cc7554a1bbbb5a74f95193c95880e7ca,
+    type: 3}
+  connectible: {fileID: 8740253547829732437, guid: 2f9b8cbb2e8c1a74cb22b79e057b381a,
     type: 3}

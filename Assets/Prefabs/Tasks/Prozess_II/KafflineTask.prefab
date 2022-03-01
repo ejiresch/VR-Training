@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 630474244228897184}
   - component: {fileID: 630474244228897185}
   m_Layer: 0
-  m_Name: BandoeffnenTask
+  m_Name: KafflineTask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tName: PlaceHodl
   description: "\xD6ffnen Sie das Band"
-  requiredTools: []
   spawnedTools: []
-  toggleReferenceRight: {fileID: 8217438855327660710, guid: c348712bda248c246b8c49b3db54643f,
+  warningMessage: 0
+  toggleReferenceRight: {fileID: -6606467506871176741, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}

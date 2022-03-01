@@ -387,7 +387,8 @@ MonoBehaviour:
   isGrabbed: 1
   connectorActive: 0
   preview: {fileID: 0}
-  anchorPoint: {fileID: 6446642697175066524}
+  anchorPoints:
+  - {fileID: 6446642697175066524}
 --- !u!114 &9141143649450466410
 MonoBehaviour:
   m_ObjectHideFlags: 0
