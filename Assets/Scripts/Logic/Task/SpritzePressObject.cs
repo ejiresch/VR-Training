@@ -9,7 +9,12 @@ public class SpritzePressObject : PressObject
     public InputActionReference toggleReferenceRight = null;
     public bool reingepumpt = false;
     public GameObject kolben;
+    private Animator anim;
 
+    private void Start()
+    {
+        anim = this.gameObject.GetComponent<Animator>();
+    }
     private void Awake()
     {
         toggleReferenceLeft.action.started += Toggle;
@@ -41,29 +46,14 @@ public class SpritzePressObject : PressObject
      */
     IEnumerator Reinpumpen()
     {
-
-        if (this.GetComponent<InteractableObject>().GetIsGrabbed())
-        {
-            for (int i = 0; i < 50; i++)
-            {
-                kolben.transform.localPosition -= new Vector3(0, 0.05f, 0);
-                if (kolben.transform.localPosition.y < 6) { break; }
-                yield return new WaitForSeconds(0.008f);
-            }
-            reingepumpt = true;
-        }
+        anim.SetTrigger("reinpumpen");
+        yield return new WaitForSeconds(1.1f);
+        reingepumpt = true;
     }
     IEnumerator Rauspumpen()
     {
-        if (this.GetComponent<InteractableObject>().GetIsGrabbed())
-        {
-            for (int i = 0; i < 50; i++)
-            {
-                kolben.transform.position += new Vector3(0, 0.05f, 0);
-                if (kolben.transform.position.y > 9) { break; }
-                yield return new WaitForSeconds(0.008f);
-            }
-            Press();
-        }
+        anim.SetTrigger("rauspumpen");
+        yield return new WaitForSeconds(1.1f);
+        Press();
     }
 }
