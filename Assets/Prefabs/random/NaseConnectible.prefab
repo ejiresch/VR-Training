@@ -360,11 +360,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8907562860919515555}
   - component: {fileID: 7510781412955099831}
-  - component: {fileID: 5366719635970002659}
   - component: {fileID: 6086374046142795424}
   - component: {fileID: 7775482885223183972}
+  - component: {fileID: 1720377495785699873}
   m_Layer: 9
-  m_Name: Nase
+  m_Name: NaseConnectible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -401,20 +401,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &5366719635970002659
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8907562860919515554}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 2.3088064
-  m_Height: 4.686459
-  m_Direction: 1
-  m_Center: {x: 0.06944895, y: 0.16159606, z: 0}
 --- !u!114 &6086374046142795424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,4 +513,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrabbed: 0
-  distance: 0
+  numGrabbed: 0
+--- !u!65 &1720377495785699873
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8907562860919515554}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.096781, y: 4.569505, z: 3.550968}
+  m_Center: {x: 0.13530618, y: 0.18748902, z: -0.27494448}
