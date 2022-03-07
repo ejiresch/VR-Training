@@ -23,23 +23,22 @@ public class SpritzePressObject : PressObject
     }
     private void Toggle(InputAction.CallbackContext context)
     {
-        if (!reingepumpt)
-        {
-            //  hier wird reingepumpt
-            reingepumpt = true;
-            StartCoroutine(Reinpumpen());
-        }
-        else
-        {
-            //  hier wird rausgepumpt und task beendet
-            StartCoroutine(Rauspumpen());
-            Press();
-            GetComponent<ConnectorObject>().Disconnect();
-            GameObject temp = GameObject.FindGameObjectWithTag("CompoundGrabbablePart").transform.parent.parent.gameObject;
-            temp.GetComponent<InteractableObject>().SetGrabbable(true);
-            temp.GetComponent<Rigidbody>().isKinematic = false;
-        }
+        if (!pressable) return;
+        if (!reingepumpt) StartCoroutine(Reinpumpen());
+        else StartCoroutine(Rauspumpen());
     }
+    public override void Press()
+    {
+        if (!pressable) return;
+        GetComponent<ConnectorObject>().Disconnect();   //disconnect object
+        GameObject temp = GameObject.FindGameObjectWithTag("CompoundGrabbablePart").transform.parent.parent.gameObject;
+        temp.GetComponent<InteractableObject>().SetGrabbable(true);
+        temp.GetComponent<Rigidbody>().isKinematic = false;
+        base.Press();   //next task
+    }
+    /**
+     * FELIX ANIMATIONS
+     */
     IEnumerator Reinpumpen()
     {
 
@@ -65,7 +64,6 @@ public class SpritzePressObject : PressObject
                 yield return new WaitForSeconds(0.008f);
             }
             Press();
-            GetComponent<ConnectorObject>().Disconnect();
         }
     }
 }

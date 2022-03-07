@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Connectible : InteractableObject
 {
-    private ConnectorObject connector;
+    private ConnectorObject connector = null;
     private bool inReach = false;
     private bool connected = false;
     private float range = 0.15f;
