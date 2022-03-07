@@ -641,7 +641,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "RIght",
+                    "name": "PlaceholderRight",
                     "type": "Button",
                     "id": "0f7ab71e-fd25-49cf-a534-175942990fb6",
                     "expectedControlType": "Button",
@@ -649,7 +649,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "PlaceHolderRight",
+                    "name": "triggerPress",
                     "type": "Button",
                     "id": "e8d77c4b-437e-47db-8009-194be955b22f",
                     "expectedControlType": "Button",
@@ -695,7 +695,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "RIght",
+                    "action": "PlaceholderRight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -728,7 +728,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "PlaceHolderRight",
+                    "action": "triggerPress",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
