@@ -45,18 +45,17 @@ public class ConnectorObject : InteractableObject
         connectible.transform.localPosition = new Vector3(0, 0, 0);
         connectible.transform.localEulerAngles = new Vector3(0, 0, 0);
     }
-    public virtual void Disconnect() => Debug.LogError("Disconnected");
+    public virtual void Disconnect() => Debug.Log("Disconnected");
     public virtual void StartPreview(GameObject prefab)
     {
         if (preview == null)
         {
             preview = Instantiate(prefab);
             preview.GetComponent<InteractableObject>().SetGrabbable(false);
-            DestroyImmediate(preview.GetComponent<XRGrabInteractable>());
-            Destroy(preview.GetComponent<Rigidbody>());
+            preview.GetComponent<Rigidbody>().isKinematic = true;
             foreach (Component comp in preview.GetComponents<Component>())
             {
-                if (!(comp is Transform))
+                if (!(comp is Transform) && !(comp is Rigidbody))
                 {
                     Destroy(comp);
                 }

@@ -47,15 +47,16 @@ public class CuffllineConnectionObject : ConnectorObject
         {
             preview = Instantiate(prefab);
             preview.GetComponent<InteractableObject>().SetGrabbable(false);
-            DestroyImmediate(preview.GetComponent<XRGrabInteractable>());
+            preview.GetComponent<Rigidbody>().isKinematic = true;
             Destroy(preview.GetComponent<Joint>());
             foreach (Component comp in preview.GetComponents<Component>())
             {
-                if (!(comp is Transform) && !(comp is MeshRenderer) && !(comp is MeshFilter))
+                if (!(comp is Transform) && !(comp is MeshRenderer) && !(comp is MeshFilter) && !(comp is Rigidbody))
                 {
                     Destroy(comp);
                 }
             }
+            foreach (Collider collider in preview.GetComponentsInChildren<Collider>()) Destroy(collider);
             PreviewFar();
             preview.transform.parent = anchorQueue.Peek().transform;
             preview.transform.localPosition = new Vector3(0, 0, 0);

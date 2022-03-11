@@ -8,7 +8,7 @@ public class Connectible : InteractableObject
     private bool inReach = false;
     private bool connected = false;
     private float range = 0.15f;
-    public int numGrabbed = 0;
+    private int numGrabbed = 0;
     Dictionary<string, Color> originalColors = new Dictionary<string, Color>();
 
     // Falls das Objekt losgelassen wird, wird diese Methode ausgefuehrt
@@ -50,6 +50,7 @@ public class Connectible : InteractableObject
     public void SetConnector(ConnectorObject connector)
     {
         this.connector = connector;
+        this.SetGrabbable(true);
         if (GetIsGrabbed() && connector != null)
         {
             connector.StartPreview(this.gameObject);

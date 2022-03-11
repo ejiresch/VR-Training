@@ -5,8 +5,7 @@ using UnityEngine.InputSystem;
 
 public class SpritzePressObject : PressObject
 {
-    public InputActionReference toggleReferenceLeft = null;
-    public InputActionReference toggleReferenceRight = null;
+    public InputActionReference toggleReference = null;
     public bool reingepumpt = false;
     public GameObject kolben;
     private Animator anim;
@@ -17,14 +16,12 @@ public class SpritzePressObject : PressObject
     }
     private void Awake()
     {
-        toggleReferenceLeft.action.started += Toggle;
-        toggleReferenceRight.action.started += Toggle;
+        toggleReference.action.started += Toggle;
     }
 
     private void OnDestroy()
     {
-        toggleReferenceLeft.action.started -= Toggle;
-        toggleReferenceRight.action.started -= Toggle;
+        toggleReference.action.started -= Toggle;
     }
     private void Toggle(InputAction.CallbackContext context)
     {

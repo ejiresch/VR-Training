@@ -6,8 +6,7 @@ using UnityEngine.InputSystem;
 public class ManometerMovement : PressObject
 {
     public GameObject nadel;
-    public InputActionReference toggleReferenceLeft = null;
-    public InputActionReference toggleReferenceRight = null;
+    public InputActionReference toggleReference= null;
 
     private void Update()
     {
@@ -18,14 +17,12 @@ public class ManometerMovement : PressObject
     }
     private void Awake()
     {
-        toggleReferenceLeft.action.started += Toggle;
-        toggleReferenceRight.action.started += Toggle;
+        toggleReference.action.started += Toggle;
     }
 
     private void OnDestroy()
     {
-        toggleReferenceLeft.action.started -= Toggle;
-        toggleReferenceRight.action.started -= Toggle;
+        toggleReference.action.started -= Toggle;
     }
     private void Toggle(InputAction.CallbackContext context)
     {
