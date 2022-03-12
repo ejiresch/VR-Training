@@ -3968,7 +3968,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1033817471
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5935,10 +5935,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1919296409632327036, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -0.2086693
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919296409632327036, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0377
+      objectReference: {fileID: 0}
     - target: {fileID: 1919296409632327039, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
       propertyPath: m_Spacing
-      value: -0.04
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 3955653633778729388, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}

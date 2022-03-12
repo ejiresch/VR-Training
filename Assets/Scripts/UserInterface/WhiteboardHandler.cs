@@ -14,32 +14,40 @@ public class WhiteboardHandler : MonoBehaviour
     private TextMeshProUGUI task_text_current; //text
     private SpriteRenderer checkmark_current; //bild
 
-    private float maxTaskShown = 5; // Max anzahl an Tasks
+    private float maxTaskShown = 4; // Max anzahl an Tasks
     private int task_number = 1;
 
-    int i = 0; //test var
+    float i; //test var
 
     public void pressButton()// Übungsmethode zum Testen
     {
-        if(task_current == null)
+        i = Random.Range(0, 10);
+
+        if (i < 3.33f)
         {
-            FirstTask("jo " + i);
+            NewTask("Trachealkompresse mit");
+        }
+        else if (i < 6.66f)
+        {
+            NewTask("Trachealkompresse mit Manometer verbinden");
         }
         else
         {
-            NewTask("Trachealkompresse unter die Kanüle schieben" + i);
+            NewTask("s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s");
         }
-        i++;
     }
 
     public void FirstTask(string taskdescription) // Ersten Task erstellen
     {
         task_current = Instantiate(task_prefab, transform.GetChild(1)); // Child(1) ist "Vertical_Layout_Group"
         tasklist.Add(task_current);
-        task_current.transform.position -= new Vector3(0f, 0.05f, 0f);
 
         task_text_current = tasklist[0].GetComponentInChildren<TextMeshProUGUI>();
         checkmark_current = tasklist[0].GetComponentInChildren<SpriteRenderer>();
+
+        Color tmp = checkmark_current.GetComponent<SpriteRenderer>().color; // Änderung der opasity auf 0 -> 0%
+        tmp.a = 0f;
+        checkmark_current.GetComponent<SpriteRenderer>().color = tmp;
 
         task_text_current.SetText(task_number + ". " + taskdescription);
         task_number++;
@@ -64,7 +72,11 @@ public class WhiteboardHandler : MonoBehaviour
         checkmark_current = tasklist[tasklist.Count - 1].GetComponentInChildren<SpriteRenderer>();
         task_text_current.SetText(taskdescription);
 
-        if (tasklist.Count >= maxTaskShown) // Wenn das maximum an Tasks erreicht ist, wir das älteste Element gelöscht
+        Color tmp = checkmark_current.GetComponent<SpriteRenderer>().color; // Änderung der opasity auf 0 -> 0%
+        tmp.a = 0f;
+        checkmark_current.GetComponent<SpriteRenderer>().color = tmp;
+
+        if (tasklist.Count > maxTaskShown) // Wenn das maximum an Tasks erreicht ist, wir das älteste Element gelöscht
         {
             Destroy(tasklist[0]);
             tasklist.Remove(tasklist[0]);
