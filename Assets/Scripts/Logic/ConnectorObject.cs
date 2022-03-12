@@ -45,7 +45,7 @@ public class ConnectorObject : InteractableObject
         connectible.transform.localPosition = new Vector3(0, 0, 0);
         connectible.transform.localEulerAngles = new Vector3(0, 0, 0);
     }
-    public virtual void Disconnect() => Debug.Log("Disconnected");
+    public virtual void Disconnect() { }
     public virtual void StartPreview(GameObject prefab)
     {
         if (preview == null)

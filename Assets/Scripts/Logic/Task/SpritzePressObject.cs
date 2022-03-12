@@ -50,7 +50,7 @@ public class SpritzePressObject : PressObject
     IEnumerator Rauspumpen()
     {
         anim.SetTrigger("rauspumpen");
-        yield return new WaitForSeconds(1.1f);
+        yield return new WaitForSeconds(1.3f);
         Press();
     }
 }
