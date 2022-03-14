@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+/**
+ * Does not support multiple anchorPoints !!!
+ */
 public class CuffllineConnectionObject : ConnectorObject
 {
     private Transform previousParent;
@@ -11,7 +14,7 @@ public class CuffllineConnectionObject : ConnectorObject
         if (!connectible.GetComponent<InteractableObject>().GetIsGrabbed() && connectorActive && this.GetIsGrabbed())
         {
             previousParent = connectible.transform.parent;
-            connectible.transform.parent = this.anchorPoint.transform;
+            connectible.transform.parent = anchorQueue.Peek().transform;
             connectible.GetComponent<Rigidbody>().isKinematic = true;
             connectible.GetComponent<Collider>().enabled = false;
             connectible.GetComponent<InteractableObject>().SetGrabbable(false);
@@ -27,6 +30,7 @@ public class CuffllineConnectionObject : ConnectorObject
     public override void Disconnect()
     {
         base.Disconnect();
+        GameObject anchorPoint = anchorQueue.Peek();
         if (anchorPoint.transform.childCount > 0)
         {
             GameObject child = anchorPoint.transform.GetChild(0).gameObject;
@@ -43,17 +47,18 @@ public class CuffllineConnectionObject : ConnectorObject
         {
             preview = Instantiate(prefab);
             preview.GetComponent<InteractableObject>().SetGrabbable(false);
-            DestroyImmediate(preview.GetComponent<XRGrabInteractable>());
+            preview.GetComponent<Rigidbody>().isKinematic = true;
             Destroy(preview.GetComponent<Joint>());
             foreach (Component comp in preview.GetComponents<Component>())
             {
-                if (!(comp is Transform) && !(comp is MeshRenderer) && !(comp is MeshFilter))
+                if (!(comp is Transform) && !(comp is MeshRenderer) && !(comp is MeshFilter) && !(comp is Rigidbody))
                 {
                     Destroy(comp);
                 }
             }
+            foreach (Collider collider in preview.GetComponentsInChildren<Collider>()) Destroy(collider);
             PreviewFar();
-            preview.transform.parent = this.anchorPoint.transform;
+            preview.transform.parent = anchorQueue.Peek().transform;
             preview.transform.localPosition = new Vector3(0, 0, 0);
             preview.transform.localEulerAngles = new Vector3(0, 0, 0);
         }

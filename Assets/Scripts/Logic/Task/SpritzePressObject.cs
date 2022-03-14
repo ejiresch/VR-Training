@@ -5,33 +5,52 @@ using UnityEngine.InputSystem;
 
 public class SpritzePressObject : PressObject
 {
-    public InputActionReference toggleReferenceLeft = null;
-    public InputActionReference toggleReferenceRight = null;
-    private bool reingepumpt = false;
+    public InputActionReference toggleReference = null;
+    public bool reingepumpt = false;
+    public GameObject kolben;
+    private Animator anim;
 
+    private void Start()
+    {
+        anim = this.gameObject.GetComponent<Animator>();
+    }
     private void Awake()
     {
-        toggleReferenceLeft.action.started += Toggle;
-        toggleReferenceRight.action.started += Toggle;
+        toggleReference.action.started += Toggle;
     }
 
     private void OnDestroy()
     {
-        toggleReferenceLeft.action.started -= Toggle;
-        toggleReferenceRight.action.started -= Toggle;
+        toggleReference.action.started -= Toggle;
     }
     private void Toggle(InputAction.CallbackContext context)
     {
-        if (!reingepumpt)
-        {
-            //  hier wird reingepumpt
-            reingepumpt = true;
-        }
-        else
-        {
-            //  hier wird rausgepumpt und task beendet
-            Press();
-            GetComponent<ConnectorObject>().Disconnect();
-        }
+        if (!pressable) return;
+        if (!reingepumpt) StartCoroutine(Reinpumpen());
+        else StartCoroutine(Rauspumpen());
+    }
+    public override void Press()
+    {
+        if (!pressable) return;
+        GetComponent<ConnectorObject>().Disconnect();   //disconnect object
+        GameObject temp = GameObject.FindGameObjectWithTag("CompoundGrabbablePart").transform.parent.parent.gameObject;
+        temp.GetComponent<InteractableObject>().SetGrabbable(true);
+        temp.GetComponent<Rigidbody>().isKinematic = false;
+        base.Press();   //next task
+    }
+    /**
+     * FELIX ANIMATIONS
+     */
+    IEnumerator Reinpumpen()
+    {
+        anim.SetTrigger("reinpumpen");
+        yield return new WaitForSeconds(1.1f);
+        reingepumpt = true;
+    }
+    IEnumerator Rauspumpen()
+    {
+        anim.SetTrigger("rauspumpen");
+        yield return new WaitForSeconds(1.3f);
+        Press();
     }
 }

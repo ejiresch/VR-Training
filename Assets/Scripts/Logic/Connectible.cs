@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Connectible : InteractableObject
 {
-    private ConnectorObject connector;
+    private ConnectorObject connector = null;
     private bool inReach = false;
     private bool connected = false;
     private float range = 0.15f;
+    private int numGrabbed = 0;
     Dictionary<string, Color> originalColors = new Dictionary<string, Color>();
 
     // Falls das Objekt losgelassen wird, wird diese Methode ausgefuehrt
@@ -33,22 +34,33 @@ public class Connectible : InteractableObject
                 StopCoroutine(CheckDistance());
                 StartCoroutine(CheckDistance());
                 connector.StartPreview(this.gameObject);
+                numGrabbed++;
             }
             else
             {
-                StopCoroutine(CheckDistance());
-                connector.DestroyPreview();
+                numGrabbed--;
+                if (numGrabbed == 0)
+                {
+                    StopCoroutine(CheckDistance());
+                    connector.DestroyPreview();
+                }
             }
         }
     }
     public void SetConnector(ConnectorObject connector)
     {
         this.connector = connector;
-        if (GetIsGrabbed() && connector != null) StartCoroutine(CheckDistance());
+        this.SetGrabbable(true);
+        if (GetIsGrabbed() && connector != null)
+        {
+            connector.StartPreview(this.gameObject);
+            StartCoroutine(CheckDistance());
+        }
     }
     public void SetConnected(bool connected)
     {
         this.connected = connected;
+        StopAllCoroutines();
     }
     IEnumerator CheckDistance()
     {

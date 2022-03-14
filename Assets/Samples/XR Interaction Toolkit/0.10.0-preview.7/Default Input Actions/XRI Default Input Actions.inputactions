@@ -617,25 +617,33 @@
             "id": "5d9347a6-3327-48a7-a035-c0b0d0ae66cb",
             "actions": [
                 {
-                    "name": "ManometerRotationRight",
+                    "name": "SpritzePress",
                     "type": "Button",
-                    "id": "2c8e18ac-83cb-4906-832b-88ebf20dfdbf",
+                    "id": "7d22830b-d67a-4488-b233-77dea9a420bf",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 },
                 {
-                    "name": "ManometerRotationLeft",
+                    "name": "ManometerPress",
                     "type": "Button",
-                    "id": "6cff0a97-b57c-4cd1-a975-10b2cf5ea881",
+                    "id": "07ba5539-1d14-4933-a912-6adf152d256d",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 },
                 {
-                    "name": "RIght",
+                    "name": "PlaceholderRight",
                     "type": "Button",
                     "id": "0f7ab71e-fd25-49cf-a534-175942990fb6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "triggerPress",
+                    "type": "Button",
+                    "id": "e8d77c4b-437e-47db-8009-194be955b22f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -652,34 +660,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "4d4aacb5-4155-460b-9b81-35e795f13f7a",
+                    "id": "860cc802-8e7e-4850-a01a-b79911757834",
                     "path": "<XRController>{RightHand}/gripPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ManometerRotationRight",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "eeb6e8ef-29ed-4358-8665-230739e83687",
-                    "path": "<XRController>{LeftHand}/gripPressed",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ManometerRotationLeft",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3dafef35-2ffe-44c1-8230-7fccc8d912cb",
-                    "path": "<XRController>{RightHand}/triggerPressed",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "RIght",
+                    "action": "PlaceholderRight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -691,6 +677,61 @@
                     "processors": "",
                     "groups": "",
                     "action": "ShowControlsRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1395fba0-9c12-457b-8a0e-387a06c1af96",
+                    "path": "<XRController>{LeftHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpritzePress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b8d9b13e-6bf1-4386-9f80-d166e983e20e",
+                    "path": "<XRController>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpritzePress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a104101d-056d-4975-88f5-8a2d08c9f41b",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "triggerPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "77d7183c-18a6-44cb-9236-5afebad6ab2d",
+                    "path": "<XRController>{LeftHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ManometerPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aa80b12a-ced8-4096-b235-8467bd435c45",
+                    "path": "<XRController>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ManometerPress",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

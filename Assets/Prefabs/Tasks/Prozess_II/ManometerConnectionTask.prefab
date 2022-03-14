@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &630474244228897186
+--- !u!1 &6263077601889866318
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 630474244228897184}
-  - component: {fileID: 630474244228897185}
+  - component: {fileID: 6263077601889866316}
+  - component: {fileID: 4933385380102589926}
   m_Layer: 0
-  m_Name: BandAnKanueleTask
+  m_Name: LuftziehenTask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &630474244228897184
+--- !u!4 &6263077601889866316
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630474244228897186}
+  m_GameObject: {fileID: 6263077601889866318}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,21 +31,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &630474244228897185
+--- !u!114 &4933385380102589926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630474244228897186}
+  m_GameObject: {fileID: 6263077601889866318}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c96c630a8d5530468786e9c19e030b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 5621105e3bed5334a9f4351b773339c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tName: PlaceHodl
-  description: Bringen Sie das Band an
+  tName: cuffline
+  description: Verbinde die Cuffline mit dem Manometer
   spawnedTools: []
   warningMessage: 0
-  toggleReferenceRight: {fileID: -6606467506871176741, guid: c348712bda248c246b8c49b3db54643f,
+  connector: {fileID: 4561207380521413469, guid: 59aa1cef234e6a249811214b7bb69fd7,
     type: 3}

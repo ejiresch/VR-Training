@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tName: PlaceHodl
   description: "\xD6ffnen Sie das Band"
-  requiredTools: []
   spawnedTools: []
+  warningMessage: 0
   toggleReferenceRight: {fileID: 8217438855327660710, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}

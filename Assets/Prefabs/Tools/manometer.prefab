@@ -360,7 +360,8 @@ MonoBehaviour:
   isGrabbed: 0
   connectorActive: 0
   preview: {fileID: 0}
-  anchorPoint: {fileID: 4652459016098776535}
+  anchorPoints:
+  - {fileID: 4652459016098776535}
 --- !u!114 &1346873332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,10 +374,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f05948eb6ed98b94f8c4f9a28c185db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pressable: 0
   nadel: {fileID: 4722615117423879462}
-  toggleReferenceLeft: {fileID: -5006772094003406344, guid: c348712bda248c246b8c49b3db54643f,
-    type: 3}
-  toggleReferenceRight: {fileID: -6674687402017633821, guid: c348712bda248c246b8c49b3db54643f,
+  toggleReference: {fileID: -3624616657726735963, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
 --- !u!136 &1971720246265520870
 CapsuleCollider:

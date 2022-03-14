@@ -8,12 +8,12 @@ public class WorldspaceHandler : MonoBehaviour
     public GameObject controls;
     public InputActionReference toggleReferenceControl = null;
 
-    public GameObject camera;
+    public GameObject goCamera;
     Quaternion cameraStartRotation;
 
     public void Start()
     {
-        cameraStartRotation = camera.transform.rotation;
+        cameraStartRotation = goCamera.transform.rotation;
     }
     private void Awake()
     {
@@ -26,8 +26,8 @@ public class WorldspaceHandler : MonoBehaviour
 
     public void ShowControls(InputAction.CallbackContext context)
     {
-        controls.transform.position = camera.transform.position + (camera.transform.forward * 2);
-        controls.transform.eulerAngles += new Vector3(0, camera.transform.rotation.y, 0);
+        controls.transform.position = goCamera.transform.position + (goCamera.transform.forward * 2);
+        controls.transform.eulerAngles += new Vector3(0, goCamera.transform.rotation.y, 0);
         bool isActive = !controls.activeSelf;
         controls.SetActive(isActive);
     }

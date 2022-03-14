@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PressObject : MonoBehaviour
 {
-    private bool pressable = false;
+    public bool pressable = false;
 
-    public void Press()
+    public virtual void Press()
     {
         if (pressable)
         {

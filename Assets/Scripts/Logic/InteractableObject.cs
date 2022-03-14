@@ -10,23 +10,6 @@ public class InteractableObject : MonoBehaviour
     private LayerMask lmNotGrabbable = 0;
     private LayerMask lmGrabbable = ~0;
 
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.layer == 9)
-        {
-            CollisionEvent ce = new SimpleCollisionEvent(this.gameObject, collision.gameObject);
-            ce.ReportCollision();
-        }
-    }
-    private void Update()
-    {
-        if (Input.GetButtonDown("Jump"))
-        {
-            OnDrop();
-        }
-    }
-
     public void SetGrabbable(bool grab)
     {
         XRGrabInteractable xrObject = gameObject.GetComponent<XRGrabInteractable>();
