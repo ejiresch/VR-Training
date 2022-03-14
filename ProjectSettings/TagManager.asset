@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Warning
   - CompoundGrabbablePart
+  - Hand
   layers:
   - Default
   - TransparentFX
