@@ -55,6 +55,15 @@ public class RopePhysics : MonoBehaviour
     private void FixedUpdate()
     {
         UpdateRopeSimulation();
+
+        RopeNode firstNode = nodes[0];
+        firstNode.pos = startPoint.position;
+        nodes[0] = firstNode;
+
+        RopeNode lastNode = nodes[nodes.Count - 1];
+        /*lastNode.pos = endPoint.position;*/
+        endPoint.position = lastNode.pos;
+        nodes[nodes.Count - 1] = lastNode;
     }
 
     private void UpdateRopeSimulation()
@@ -62,15 +71,6 @@ public class RopePhysics : MonoBehaviour
         Vector3 gravity = new Vector3(0f, this.gravity, 0f);
 
         float t = Time.fixedDeltaTime;
-
-        RopeNode firstNode = nodes[0];
-        firstNode.pos = startPoint.position;
-        nodes[0] = firstNode;
-
-        RopeNode lastNode = nodes[nodes.Count - 1];
-        lastNode.pos = endPoint.position;
-        nodes[nodes.Count - 1] = lastNode;
-        
 
         for (int i = 1; i < nodes.Count; i++)
         {
@@ -111,17 +111,22 @@ public class RopePhysics : MonoBehaviour
 
             Vector3 change = changeDir * distError;
 
-            if (i != 0)
+            if (i != 0 && i+1 != nodes.Count - 1)
             {
                 bot.pos += change * ropeNodeLength;
                 nodes[i + 1] = bot;
                 top.pos -= change * ropeNodeLength;
                 nodes[i] = top;
             }
-            else
+            else if( i == 0)
             {
                 bot.pos += change;
                 nodes[i + 1] = bot;
+            }
+            else
+            {
+                top.pos -= change;
+                nodes[i] = top;
             }
         }
     }
