@@ -72,9 +72,9 @@ public class ProcessHandler : MonoBehaviour
     {
         uiManager.NewTask(desc, isFirst);
     }
-    public void ShowWarning()
+    public void ShowWarning(int warningIndex)
     {
-        uiManager.ShowWarning();
+        uiManager.ShowWarning(warningIndex);
     }
     public void SetProcessIndex(int i) => PlayerPrefs.SetInt(ppKey, i);
     // Gets all Spawnpoints
