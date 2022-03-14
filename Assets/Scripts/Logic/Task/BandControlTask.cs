@@ -8,6 +8,7 @@ public class BandControlTask : Task
     [SerializeField] private GameObject bandLinks, bandRechts;
     [SerializeField] private InputActionReference toggleReference = null;
     [SerializeField] private float range = 0.1f;
+    [SerializeField] private bool inReverse = false;
     private Animator[] animators;
     private Vector3 centerVector;
     private GameObject[] hands;
@@ -38,8 +39,11 @@ public class BandControlTask : Task
         handsCenter /= hands.Length;
         if (Vector3.Distance(handsCenter, centerVector) <= range)
         {
-            bandLinks.transform.Rotate(new Vector3(220, 0, 0));
-            bandRechts.transform.Rotate(new Vector3(130, 180, 0));
+            if (!inReverse)
+            {
+                bandLinks.transform.Rotate(new Vector3(220, 0, 0));
+                bandRechts.transform.Rotate(new Vector3(130, 180, 0));
+            }
             foreach (Animator anime in animators) anime.SetTrigger("biegen");
             ProcessHandler.Instance.NextTask();
         }

@@ -633,6 +633,14 @@
                     "interactions": ""
                 },
                 {
+                    "name": "MakeAWish1",
+                    "type": "Button",
+                    "id": "876ba9b3-a31b-41c3-97bb-a86ee76e6e41",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
                     "name": "ManometerPress",
                     "type": "Button",
                     "id": "07ba5539-1d14-4933-a912-6adf152d256d",
@@ -773,6 +781,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "MakeAWish",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8758d977-9886-459e-a733-b407b8323748",
+                    "path": "<XRController>{LeftHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MakeAWish1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c89bfa7e-64ee-4268-a1fc-4677a5067992",
+                    "path": "<XRController>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MakeAWish1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

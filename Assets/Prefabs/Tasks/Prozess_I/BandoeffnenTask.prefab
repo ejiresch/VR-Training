@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8754685957678997294}
-  - component: {fileID: 8754685957678997295}
+  - component: {fileID: 2236122687761801263}
   m_Layer: 0
   m_Name: BandoeffnenTask
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8754685957678997295
+--- !u!114 &2236122687761801263
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,12 +40,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 8754685957678997292}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c96c630a8d5530468786e9c19e030b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 208c635f15abb2d4c9f67959fb5ad3e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tName: PlaceHodl
-  description: "\xD6ffnen Sie das Band"
+  tName: Open_Mid
+  description: "\xD6ffnen Sie das Band mit beiden H\xE4nden"
   spawnedTools: []
   warningMessage: 0
-  toggleReferenceRight: {fileID: 8217438855327660710, guid: c348712bda248c246b8c49b3db54643f,
+  bandLinks: {fileID: 8740253547829732437, guid: 06e1a4916e0f21c48b6f7daea1c79dc5,
     type: 3}
+  bandRechts: {fileID: 8740253547829732437, guid: 2f9b8cbb2e8c1a74cb22b79e057b381a,
+    type: 3}
+  toggleReference: {fileID: -2151653975123427833, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  range: 0.1
+  inReverse: 1
