@@ -91,9 +91,27 @@ public class WhiteboardHandler : MonoBehaviour
     {
         task_text_current.color = new Color(0, 255, 0, 255); //Textfarbe auf grün
 
-        Color tmp = checkmark_current.GetComponent<SpriteRenderer>().color; // Änderung der opasity auf 1 -> 100%
+        Color tmp = checkmark_current.GetComponent<SpriteRenderer>().color; // Änderung der opasity des checkmarks auf 1 -> 100%
         tmp.a = 1f;
         checkmark_current.GetComponent<SpriteRenderer>().color = tmp;
+    }
+
+    public void ShowEndMessage()
+    {
+        task_current = Instantiate(task_prefab, transform.GetChild(1));
+        task_current.SetActive(false);
+        tasklist.Add(task_current);
+
+        task_text_current = tasklist[tasklist.Count - 1].GetComponentInChildren<TextMeshProUGUI>();
+        task_text_current.color = new Color(0, 255, 0, 255); //Textfarbe auf grün
+        checkmark_current = tasklist[tasklist.Count - 1].GetComponentInChildren<SpriteRenderer>();
+        task_text_current.SetText("Alle Aufgaben abgeschlossen");
+        if (tasklist.Count > maxTaskShown) // Wenn das maximum an Tasks erreicht ist, wir das älteste Element gelöscht
+        {
+            Destroy(tasklist[0]);
+            tasklist.Remove(tasklist[0]);
+        }
+        task_current.SetActive(true);
     }
     // Buttons: 
     public void ReingebenStarten()
