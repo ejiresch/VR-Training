@@ -10,20 +10,12 @@ public abstract class Task : MonoBehaviour
     public bool warningMessage_0 = false;
     public bool warningMessage_1 = false;
     // Gets called when Task is started
-<<<<<<< Updated upstream
     public virtual void StartTask()
     {
         if(warningMessage_0) ProcessHandler.Instance.ShowWarning(0);
         if(warningMessage_1) ProcessHandler.Instance.ShowWarning(1);
     }
-    public void SetSpawnTools(GameObject[] toolList)
-    {
-        spawnedTools = toolList;
-    }
-=======
-    public virtual void StartTask() { if (warningMessage) ProcessHandler.Instance.ShowWarning(); }
     public void SetSpawnTools(GameObject[] toolList) => spawnedTools = toolList;
->>>>>>> Stashed changes
     // Checks if Task is successful
     public virtual bool IsSuccessful(CollisionEvent ce) => false;
     public virtual bool IsSuccessful(RotationCollisionEvent ce) => false;
