@@ -11,9 +11,11 @@ public class TVHandler : MonoBehaviour
 {
     public VideoPlayer vp;
     public List<VideoClip> clips;
+    public GameObject splash;
 
     public void startVideo(int index)
     {
+        splash.SetActive(false);
         // start video with index
         vp.clip = clips[index-1];
         vp.Play();

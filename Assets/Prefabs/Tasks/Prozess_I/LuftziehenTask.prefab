@@ -47,5 +47,5 @@ MonoBehaviour:
   description: Verbinde die Cuffline mit dem Manometer
   spawnedTools: []
   warningMessage: 0
-  connector: {fileID: 4561207380521413469, guid: 59aa1cef234e6a249811214b7bb69fd7,
+  connector: {fileID: 3392461571748585169, guid: 681e19e80d10b454eac2703fdb3aa6d1,
     type: 3}
