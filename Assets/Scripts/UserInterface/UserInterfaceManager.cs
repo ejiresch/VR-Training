@@ -22,6 +22,7 @@ public class UserInterfaceManager : MonoBehaviour
     public void EndOfTasks()
     {
         wbh.FinishTask();
+        wbh.ShowEndMessage();
     }
     public void ShowWarning(int warningIndex) // Wird aufgerufen, wenn UI Beide Haende benutzen anzeigen soll
     {
