@@ -19,7 +19,7 @@ public class HandHandler : MonoBehaviour
     Image warning_sign;
     Image warning_image;
 
-    public void Start() // For Warning
+    private void Awake()
     {
         warning_texts[0] = warning.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
         warning_texts[1] = warning.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>();
@@ -30,9 +30,7 @@ public class HandHandler : MonoBehaviour
         warning_texts[1].color = new Color(warning_texts[1].color.r, warning_texts[1].color.g, warning_texts[1].color.b, 0);
         warning_sign.color = new Color(warning_sign.color.r, warning_sign.color.g, warning_sign.color.b, 0);
         warning_image.color = new Color(warning_image.color.r, warning_image.color.g, warning_image.color.b, 0);
-    }
-    private void Awake()
-    {
+
         toggleReferenceControl_right.action.started += ShowControls;
     }
 

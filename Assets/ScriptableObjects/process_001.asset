@@ -18,7 +18,6 @@ MonoBehaviour:
   - {fileID: 6645954436737465285, guid: cc7554a1bbbb5a74f95193c95880e7ca, type: 3}
   - {fileID: 4561207380521413469, guid: 59aa1cef234e6a249811214b7bb69fd7, type: 3}
   - {fileID: 7228085617110046450, guid: 602eee7b2c4c49342bac7147da2706fb, type: 3}
-  - {fileID: 2793639469066661526, guid: 4f0a25f314021194b89320038e307719, type: 3}
   - {fileID: 3392461571748585169, guid: 681e19e80d10b454eac2703fdb3aa6d1, type: 3}
   - {fileID: 8907562860919515554, guid: 768faeebbbfd19647b4f0a4beb9cab6a, type: 3}
   taskList:
