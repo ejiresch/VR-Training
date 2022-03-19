@@ -14,15 +14,15 @@ public class UserInterfaceManager : MonoBehaviour
         if (isFirst) wbh.FirstTask(taskdescription);
         else
         {
-            wbh.NewTask(taskdescription);
+            StartCoroutine(wbh.TaskRotation(taskdescription));
+            //wbh.NewTask_2(taskdescription, false);
             hudh.ShowText(); // Anzeige von "Aufgabe abgeschlossen"
         }
     }
     // When all tasks are over
     public void EndOfTasks()
     {
-        wbh.FinishTask();
-        wbh.ShowEndMessage();
+        StartCoroutine(wbh.ShowEndMessage_2());
     }
     public void ShowWarning(int warningIndex) // Wird aufgerufen, wenn UI Beide Haende benutzen anzeigen soll
     {

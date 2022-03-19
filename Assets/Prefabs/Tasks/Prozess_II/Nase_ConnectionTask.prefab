@@ -46,8 +46,8 @@ MonoBehaviour:
   tName: Kanuele Task
   description: Bringe die feuchte Nase an die Kanuele an
   spawnedTools: []
-  warningMessage_0: 0
-  warningMessage_1: 1
+  warningMessage_BeideHaende: 0
+  warningMessage_KanueleFesthalten: 1
   connector: {fileID: 6645954436737465285, guid: cc7554a1bbbb5a74f95193c95880e7ca,
     type: 3}
   connectible: {fileID: 8907562860919515554, guid: 768faeebbbfd19647b4f0a4beb9cab6a,

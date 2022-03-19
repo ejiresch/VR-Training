@@ -45,7 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tName: Danke Mann
   description: Nehmen Sie die feuchte Nase von der Person ab
-  requiredTools: []
   spawnedTools: []
+  warningMessage_BeideHaende: 1
+  warningMessage_KanueleFesthalten: 0
   compoundObject: {fileID: 1520135525941460286, guid: bf1ed372ab3f0e045a3a7b5929314ecf,
     type: 3}

@@ -17,59 +17,26 @@ public class WhiteboardHandler : MonoBehaviour
     private float maxTaskShown = 4; // Max anzahl an Tasks
     private int task_number = 1;
 
-    float i; //test var
-
-    public void pressButton()// Übungsmethode zum Testen
+    public void FirstTask(string taskdescription) // Ersten Task erstellen
     {
-        i = Random.Range(0, 10);
-
-        if (i < 3.33f)
+        this.NewTask(task_number + ". " + taskdescription, true);
+        task_current.SetActive(true);
+    }
+    public void NewTask(string taskdescription, bool first) // Neuen Task erstellen
+    {
+        task_current = Instantiate(task_prefab, transform.GetChild(1));
+        task_current.SetActive(false);
+        tasklist.Add(task_current);
+        if (first)
         {
-            NewTask("Trachealkompresse mit");
-        }
-        else if (i < 6.66f)
-        {
-            NewTask("Trachealkompresse mit Manometer verbinden");
+            task_text_current = tasklist[0].GetComponentInChildren<TextMeshProUGUI>();
+            checkmark_current = tasklist[0].GetComponentInChildren<SpriteRenderer>();
         }
         else
         {
-            NewTask("s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s s");
+            task_text_current = tasklist[tasklist.Count - 1].GetComponentInChildren<TextMeshProUGUI>();
+            checkmark_current = tasklist[tasklist.Count - 1].GetComponentInChildren<SpriteRenderer>();
         }
-    }
-
-    public void FirstTask(string taskdescription) // Ersten Task erstellen
-    {
-        task_current = Instantiate(task_prefab, transform.GetChild(1)); // Child(1) ist "Vertical_Layout_Group"
-        tasklist.Add(task_current);
-
-        task_text_current = tasklist[0].GetComponentInChildren<TextMeshProUGUI>();
-        checkmark_current = tasklist[0].GetComponentInChildren<SpriteRenderer>();
-
-        Color tmp = checkmark_current.GetComponent<SpriteRenderer>().color; // Änderung der opasity auf 0 -> 0%
-        tmp.a = 0f;
-        checkmark_current.GetComponent<SpriteRenderer>().color = tmp;
-
-        task_text_current.SetText(task_number + ". " + taskdescription);
-        task_number++;
-    }
-
-    public void NewTask(string taskdescription) // Neuen Task erstellen
-    {
-        this.FinishTask();
-        StartCoroutine(TaskRotation(task_number + ". " + taskdescription));
-        task_number++;
-    }
-
-    IEnumerator TaskRotation(string taskdescription) // Verschiebung der Tasks und das anzeigen des neuen Tasks
-    {
-        yield return new WaitForSeconds(0.4f);
-        // Erstellung eines neuen Tasks
-        task_current = Instantiate(task_prefab, transform.GetChild(1));
-
-        task_current.SetActive(false);
-        tasklist.Add(task_current);
-        task_text_current = tasklist[tasklist.Count - 1].GetComponentInChildren<TextMeshProUGUI>();
-        checkmark_current = tasklist[tasklist.Count - 1].GetComponentInChildren<SpriteRenderer>();
         task_text_current.SetText(taskdescription);
 
         Color tmp = checkmark_current.GetComponent<SpriteRenderer>().color; // Änderung der opasity auf 0 -> 0%
@@ -81,12 +48,20 @@ public class WhiteboardHandler : MonoBehaviour
             Destroy(tasklist[0]);
             tasklist.Remove(tasklist[0]);
         }
+        task_number++;
+    }
+    public IEnumerator TaskRotation(string taskdescription) // Verschiebung der Tasks und das anzeigen des neuen Tasks
+    {
+        this.FinishTask();
+
+        yield return new WaitForSeconds(0.4f);
+
+        this.NewTask(task_number + ". " + taskdescription, false);
 
         yield return new WaitForSeconds(0.4f);
 
         task_current.SetActive(true);
     }
-
     public void FinishTask() // Stellt einen Task als fertig dar
     {
         task_text_current.color = new Color(0, 255, 0, 255); //Textfarbe auf grün
@@ -95,23 +70,20 @@ public class WhiteboardHandler : MonoBehaviour
         tmp.a = 1f;
         checkmark_current.GetComponent<SpriteRenderer>().color = tmp;
     }
-
-    public void ShowEndMessage()
+    public IEnumerator ShowEndMessage_2()
     {
-        task_current = Instantiate(task_prefab, transform.GetChild(1));
-        task_current.SetActive(false);
-        tasklist.Add(task_current);
+        this.FinishTask();
 
-        task_text_current = tasklist[tasklist.Count - 1].GetComponentInChildren<TextMeshProUGUI>();
-        task_text_current.color = new Color(0, 255, 0, 255); //Textfarbe auf grün
-        checkmark_current = tasklist[tasklist.Count - 1].GetComponentInChildren<SpriteRenderer>();
-        task_text_current.SetText("Alle Aufgaben abgeschlossen");
-        if (tasklist.Count > maxTaskShown) // Wenn das maximum an Tasks erreicht ist, wir das älteste Element gelöscht
-        {
-            Destroy(tasklist[0]);
-            tasklist.Remove(tasklist[0]);
-        }
+        yield return new WaitForSeconds(0.4f);
+
+        this.NewTask("Alles fertig, Herzlichen Glückwunsch!", false);
+
+        yield return new WaitForSeconds(0.4f);
+
         task_current.SetActive(true);
+
+        this.FinishTask();
+        
     }
     // Buttons: 
     public void ReingebenStarten()
