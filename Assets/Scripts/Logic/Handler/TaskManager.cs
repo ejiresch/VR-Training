@@ -59,7 +59,7 @@ public class TaskManager : MonoBehaviour
     }
     public void SetToolList(List<GameObject> toolList)
     {
-        toolList.Add(GameObject.Find("Woman(Clone)"));
+        toolList.Add(ProcessHandler.Instance.GetWoman());
         this.toolList = toolList;
     }
 

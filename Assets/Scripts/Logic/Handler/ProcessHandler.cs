@@ -84,5 +84,6 @@ public class ProcessHandler : MonoBehaviour
     public Material GetClosePreviewMaterial() => this.closePreviewMaterial;
     public Material GetFarPreviewMaterial() => this.farPreviewMaterial;
     public GameObject GetCompoundObject() => this.tracheostomaCO;
+    public GameObject GetWoman() => this.woman;
     public string GetPlayerPrefsProcessIndexKey() => ppKey;
 }
