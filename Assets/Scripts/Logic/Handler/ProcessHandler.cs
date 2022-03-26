@@ -49,13 +49,7 @@ public class ProcessHandler : MonoBehaviour
     public void EndOfTasks()
     {
         uiManager.EndOfTasks();
-    }
-    // When a collision between two interactable objects happens, then this method gets called
-    public void ReportCollision(CollisionEvent ce)
-    {
-        taskManager.HandleCollision(ce);
-    }
-    public void NextTask()
+    }    public void NextTask()
     {
         taskManager.NextTask(false);
     }

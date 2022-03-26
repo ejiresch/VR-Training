@@ -11,9 +11,4 @@ public class PressTask : Task
         pressObject = base.FindTool(pressObject.name);
         pressObject.GetComponent<PressObject>().SetPressable(true);
     }
-    // Checks the success condition
-    public override bool IsSuccessful(CollisionEvent ce)
-    {
-        return false;
-    }
 }

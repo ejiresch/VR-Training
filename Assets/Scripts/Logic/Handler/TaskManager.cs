@@ -42,15 +42,6 @@ public class TaskManager : MonoBehaviour
         return t;
     }
 
-    // Gets invoked, when to Interactibles collide
-    public void HandleCollision(CollisionEvent ce)
-    {
-        if (currentTask.IsSuccessful(ce))
-        {
-            NextTask(false);
-        }
-    }
-
     // Sets the TaskList
     public void SetTaskList(List<GameObject> taskList)
     {

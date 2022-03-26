@@ -16,6 +16,4 @@ public class CufflineConnectionTask : Task
             connectible.GetComponent<Connectible>().SetConnector(connector.GetComponent<ConnectorObject>());
         }
     }
-    // Checks the success condition
-    public override bool IsSuccessful(CollisionEvent ce) => false;
 }

@@ -12,9 +12,4 @@ public class TouchTask : Task
         touchTarget = base.FindTool(touchTarget.name);
         touchObject.GetComponent<TouchObject>().SetTouchTarget(touchTarget);
     }
-    // Checks the success condition
-    public override bool IsSuccessful(CollisionEvent ce)
-    {
-        return false;
-    }
 }

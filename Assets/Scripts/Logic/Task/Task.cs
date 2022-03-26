@@ -16,9 +16,7 @@ public abstract class Task : MonoBehaviour
         if(warningMessage_KanueleFesthalten) ProcessHandler.Instance.ShowWarning(1);
     }
     public void SetSpawnTools(GameObject[] toolList) => spawnedTools = toolList;
-    // Checks if Task is successful
-    public virtual bool IsSuccessful(CollisionEvent ce) => false;
-    public virtual bool IsSuccessful(RotationCollisionEvent ce) => false;
+
     public GameObject FindTool(string prefabName)
     {
         for (int i = 0; i < spawnedTools.Length; i++)
