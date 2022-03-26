@@ -13,28 +13,28 @@ public class TVHandler : MonoBehaviour
     public List<VideoClip> clips;
     public GameObject splash;
 
-    public void startVideo(int index)
+    public void StartVideo(int index)
     {
         splash.SetActive(false);
         // start video with index
         vp.clip = clips[index-1];
         vp.Play();
     }
-    public void stopVideo()
+    public void StopVideo()
     {
         // stop video
         vp.Pause();
     }
-    public void resumeVideo()
+    public void ResumeVideo()
     {
         // resume video
         vp.Play();
     }
-    public void resetScene()
+    public void ResetScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    public void changeButtonColor(GameObject button)
+    public void ChangeButtonColor(GameObject button) // Ändert die Farbe des Buttons auf Grün
     {
         var colors = button.gameObject.GetComponent<Button>().colors;
         colors.normalColor = new Color(0.5f, 1, 0.5f);

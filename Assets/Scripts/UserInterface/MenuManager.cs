@@ -3,23 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/**
- * Hier stehen alle Methoden (für Buttons und Sonstiges), die das MainMenu braucht.
- */
+/* Hier stehen alle Methoden (für Buttons und Sonstiges), die das MainMenu braucht. */
 public class MenuManager : MonoBehaviour
 {
     public GameObject warning_panel;
 
-    //public void OpenModeOptions()
-
-    /* Methode für Button "Start" */
-    public void StartSimulation()//int whatMode
+    
+    public void StartSimulation() // Methode für Button "Start" 
     {
         SceneManager.LoadScene(1);
     }
-
-    /* Methode für Button "Exit" */
-    public void OpenWarningPanel()
+    public void OpenWarningPanel() // Methode für Button "Exit"
     {
         warning_panel.SetActive(true);
     }
@@ -34,6 +28,4 @@ public class MenuManager : MonoBehaviour
             warning_panel.SetActive(false);
         }
     }
-    
-
 }

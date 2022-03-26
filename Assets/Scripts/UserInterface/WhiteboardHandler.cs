@@ -4,15 +4,15 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-/* Behandelt alle Methoden die für das whiteboard notwendig sind */
+/* Behandelt alle Methoden die für das Whiteboard notwendig sind */
 public class WhiteboardHandler : MonoBehaviour
 {
     public List<GameObject> tasklist;
     public GameObject task_prefab;
 
     private GameObject task_current; // derzeitiger Task
-    private TextMeshProUGUI task_text_current; //text
-    private SpriteRenderer checkmark_current; //bild
+    private TextMeshProUGUI task_text_current; // text vom Task
+    private SpriteRenderer checkmark_current; // checkmark-bild vom Task
 
     private float maxTaskShown = 4; // Max anzahl an Tasks
     private int task_number = 1;
@@ -53,16 +53,14 @@ public class WhiteboardHandler : MonoBehaviour
     public IEnumerator TaskRotation(string taskdescription) // Verschiebung der Tasks und das anzeigen des neuen Tasks
     {
         this.FinishTask();
-
         yield return new WaitForSeconds(0.4f);
 
         this.NewTask(task_number + ". " + taskdescription, false);
 
         yield return new WaitForSeconds(0.4f);
-
         task_current.SetActive(true);
     }
-    public void FinishTask() // Stellt einen Task als fertig dar
+    public void FinishTask() // Stellt den derzeitigen Task als fertig dar
     {
         task_text_current.color = new Color(0, 255, 0, 255); //Textfarbe auf grün
 
@@ -70,28 +68,24 @@ public class WhiteboardHandler : MonoBehaviour
         tmp.a = 1f;
         checkmark_current.GetComponent<SpriteRenderer>().color = tmp;
     }
-    public IEnumerator ShowEndMessage_2()
+    public IEnumerator ShowEndMessage_2() // Anzeige "Alles fertig,...". wenn alle Aufgaben abgeschlossen wurden
     {
         this.FinishTask();
-
         yield return new WaitForSeconds(0.4f);
 
         this.NewTask("Alles fertig, Herzlichen Glückwunsch!", false);
 
         yield return new WaitForSeconds(0.4f);
-
         task_current.SetActive(true);
-
         this.FinishTask();
-        
     }
     // Buttons: 
-    public void ReingebenStarten()
+    public void ReingebenStarten() // Starten den "Reingeben" Workflow durch Button "Reingeben starten"
     {
         ProcessHandler.Instance.SetProcessIndex(1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    public void RausnehmenStarten()
+    public void RausnehmenStarten() // Starten den "Rausnehmen" Workflow durch Button "Rausnehmen starten"
     {
         ProcessHandler.Instance.SetProcessIndex(0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

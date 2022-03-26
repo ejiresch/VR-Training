@@ -2,25 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Manages the UI
+/* Schnittstelle zwischen Prozesshandler und UI Scripts */
 public class UserInterfaceManager : MonoBehaviour
 {
     public WhiteboardHandler wbh;
     public HUDHandler hudh;
     public HandHandler hh;
-    // New Tasks are displayed in this method
-    public void NewTask(string taskdescription, bool isFirst)
+    public void NewTask(string taskdescription, bool isFirst) // Wird aufgerufen, wenn ein neuer Task gestartet wird
     {
         if (isFirst) wbh.FirstTask(taskdescription);
         else
         {
             StartCoroutine(wbh.TaskRotation(taskdescription));
-            //wbh.NewTask_2(taskdescription, false);
             hudh.ShowText(); // Anzeige von "Aufgabe abgeschlossen"
         }
     }
-    // When all tasks are over
-    public void EndOfTasks()
+    public void EndOfTasks()  // Wird aufgerufen, wenn alle Tasks beendet wurden
     {
         StartCoroutine(wbh.ShowEndMessage_2());
     }
