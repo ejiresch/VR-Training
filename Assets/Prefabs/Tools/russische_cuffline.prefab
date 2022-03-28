@@ -77,8 +77,8 @@ MonoBehaviour:
   startPoint: {fileID: 1900563636}
   endPoint: {fileID: 6350957793181829800}
   ropesections: 15
-  gravity: -0.000981
-  ropeNodeLength: 0.005
+  gravity: -0.981
+  ropeNodeLength: 0.05
   ropeWidth: 0.002
 --- !u!120 &7308165751450822706
 LineRenderer:

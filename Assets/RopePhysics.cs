@@ -9,8 +9,8 @@ public class RopePhysics : MonoBehaviour
     public Transform endPoint;
     public int ropesections = 15;
     public float gravity = -9.81f;
-    public float ropeNodeLength = 0.005f;
-    public float ropeWidth = 0.002f;
+    public float ropeNodeLength = 0.5f;
+    public float ropeWidth = 0.2f;
 
     private List<RopeNode> nodes = new List<RopeNode>();
     private LineRenderer lineRenderer;
@@ -24,20 +24,39 @@ public class RopePhysics : MonoBehaviour
 
         for (int i = 0; i < ropesections; i++)
         {
-            GameObject node = Instantiate(new GameObject(),ropeNodePos, Quaternion.identity, transform);
-            node.AddComponent<SphereCollider>().radius = ropeWidth * 50;
-            node.AddComponent<Rigidbody>().useGravity = false;
-            RopeNode n = new RopeNode(ropeNodePos, node);
-            nodes.Add(n);
+            RopeNode n = new RopeNode(ropeNodePos);
             ropeNodePos.y -= ropeNodeLength;
+            nodes.Add(n);
         }
-        //endPoint.transform.parent.GetComponent<Rigidbody>().isKinematic = false;
+        endPoint.transform.parent.GetComponent<Rigidbody>().isKinematic = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        UpdateRopeSimulation();
+
+        RopeNode firstNode = nodes[0];
+        firstNode.pos = startPoint.position;
+        nodes[0] = firstNode;
+
+        for (int i = 0; i < 60; i++)
+        {
+            MaximumStretch();
+        }
+
+        for (int i = 0; i < 20; i++)
+        {
+            AdjustCollision();
+        }
+
         DisplayRope();
+
+        RopeNode lastNode = nodes[nodes.Count - 1];
+        lastNode.pos = endPoint.position;
+        /*endPoint.position = lastNode.pos; */
+        nodes[nodes.Count - 1] = lastNode;
     }
 
     private void DisplayRope()
@@ -49,7 +68,7 @@ public class RopePhysics : MonoBehaviour
 
         for (int i = 0; i < nodes.Count; i++)
         {
-            positions[i] = nodes[i].go.transform.position;
+            positions[i] = nodes[i].pos;
         }
 
         lineRenderer.positionCount = positions.Length;
@@ -58,46 +77,47 @@ public class RopePhysics : MonoBehaviour
 
     private void FixedUpdate()
     {
-        UpdateRopeSimulation();
-        UpdateColliders();
-
-        RopeNode firstNode = nodes[0];
-        firstNode.pos = startPoint.position;
-        nodes[0] = firstNode;
-
-        RopeNode lastNode = nodes[nodes.Count - 1];
-        lastNode.pos = endPoint.position;
-        /*endPoint.position = lastNode.pos; */
-        nodes[nodes.Count - 1] = lastNode;
     }
 
     private void UpdateRopeSimulation()
     {
         Vector3 gravity = new Vector3(0f, this.gravity, 0f);
-
-        float t = Time.fixedDeltaTime;
+        float t = Time.deltaTime;
 
         for (int i = 1; i < nodes.Count; i++)
         {
+
             RopeNode current = nodes[i];
             Vector3 vel = current.pos - current.oldPos;
             current.oldPos = current.pos;
-            if (!current.collided)
-            {
-                current.pos += vel;
-                current.pos += gravity * t;
-            }
-            else
-            {
-                Vector3 v = current.pos - current.go.transform.position;
-                current.pos += v;
-            }
+            Vector3 newPos = current.pos + vel;
+            newPos += gravity * t;
+            current.pos = newPos;
             nodes[i] = current;
         }
+    }
 
-        for (int i = 0; i < 20; i++)
+    private void AdjustCollision()
+    {
+        for(int i = 2; i < nodes.Count; i++)
         {
-            MaximumStretch();
+
+            if (i == nodes.Count - 2)
+                break;
+
+            RopeNode current = nodes[i];
+
+            Collider[] colliders = Physics.OverlapSphere(current.pos, ropeWidth / 2f);
+
+            foreach (Collider c in colliders)
+            {
+                Debug.Log(c.transform.name);
+                Vector3 cCenter = c.transform.position;
+                Vector3 cDirection = cCenter - current.pos;
+                current.pos -= cDirection.normalized * 0.1f * Time.deltaTime;
+                nodes[i] = current;
+                break;
+            }
         }
     }
 
@@ -144,27 +164,15 @@ public class RopePhysics : MonoBehaviour
         }
     }
 
-    public void UpdateColliders()
-    {
-        for (int i = 0; i < nodes.Count; i++)
-        {
-            nodes[i].go.transform.position = nodes[i].pos;
-        }
-    }
-
     public struct RopeNode
     {
         public Vector3 pos;
         public Vector3 oldPos;
-        public GameObject go;
-        public bool collided;
 
-        public RopeNode(Vector3 pos, GameObject go)
+        public RopeNode(Vector3 pos)
         {
             this.pos = pos;
             this.oldPos = pos;
-            this.go = go;
-            this.collided = false;
         }
 
     }
