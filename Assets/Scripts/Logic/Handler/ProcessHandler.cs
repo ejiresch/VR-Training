@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 // Class responsible for loading Assets and assigning Tasks to the Task-Manager 
+// Also provides References to important GameObjects
 public class ProcessHandler : MonoBehaviour
 {
     [SerializeField] private SceneLoader sceneLoader;
@@ -12,9 +13,8 @@ public class ProcessHandler : MonoBehaviour
     [SerializeField] private GameObject tracheostomaCO, woman;
     private static ProcessHandler _instance;
     private string ppKey = "Process_Index";
-    // Singleton
+    // Singleton Instanz
     public static ProcessHandler Instance { get { return _instance; } }
-
     private void Awake()
     {
         if(_instance != null && _instance != this)
@@ -49,7 +49,9 @@ public class ProcessHandler : MonoBehaviour
     public void EndOfTasks()
     {
         uiManager.EndOfTasks();
-    }    public void NextTask()
+    }    
+    // Wird beim Anfang der naechsten Task aufgerufen
+    public void NextTask()
     {
         taskManager.NextTask(false);
     }
@@ -66,14 +68,16 @@ public class ProcessHandler : MonoBehaviour
     {
         uiManager.NewTask(desc, isFirst);
     }
+    // Shows a Warning, given by index
     public void ShowWarning(int warningIndex)
     {
         uiManager.ShowWarning(warningIndex);
     }
+    // Setzt den Prozessindex in den Player-Index
     public void SetProcessIndex(int i) => PlayerPrefs.SetInt(ppKey, i);
     // Gets all Spawnpoints
     public Transform[] GetSpawnPoints() => spawnPoints.GetComponentsInChildren<Transform>();
-
+    // Getter Methoden
     public TaskManager GetTaskManager() => this.taskManager;
     public Material GetClosePreviewMaterial() => this.closePreviewMaterial;
     public Material GetFarPreviewMaterial() => this.farPreviewMaterial;

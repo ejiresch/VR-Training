@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// Task welche ein CompoundPart von einem CompoundObject entfernen soll
+// Somit wird das beim Auseinanderbauen verwendet
 public class RemoveFromCompundObjectTask : Task
 {
     [SerializeField] private GameObject compoundObject;
     private GameObject objectToRemove;
-    // Start is called before the first frame update
+    // Wird beim Start der Task ausgefuehrt
     public override void StartTask()
     {
         base.StartTask();
@@ -17,14 +18,7 @@ public class RemoveFromCompundObjectTask : Task
         {
             CompundPart compP = objectToRemove.GetComponent<CompundPart>();
             compP.SetGrabbable(true);
-            //compP.SetIsGrabbed(true);
             compP.SetTaskFocus(true);
-        }
-        else
-        {
-            Debug.LogError("Fix your task list");
-            Debug.Log(objectToRemove);
-            return;
         }
     }
 }

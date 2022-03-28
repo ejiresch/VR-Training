@@ -23,7 +23,6 @@ public class SceneLoader : MonoBehaviour
 
         if(tools.Length >= spawnPoints.Length)
         {
-            Debug.LogError("Zu viele Tools, :(, die werdên nicht gespawned");
             return;
         }
 
@@ -40,6 +39,7 @@ public class SceneLoader : MonoBehaviour
     {
         return selectedProcess.GetTasklist();
     }
+    // Returns all Tools
     public List<GameObject> GetToolList()
     {
         return toolList;

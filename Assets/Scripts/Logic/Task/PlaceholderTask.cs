@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// Placeholder Task, lediglich fuer Placeholder sinnvoll
+// Wird bei Tastendruck beendet
 public class PlaceholderTask : Task
 {
     public InputActionReference toggleReferenceRight = null;

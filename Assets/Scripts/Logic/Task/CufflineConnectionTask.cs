@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Eine Connection Task, welche spezifisch fuer die Verbindung mit der Cuffline zustaendig ist
 public class CufflineConnectionTask : Task
 {
     public GameObject connector;
+    // Wird beim Start der Task ausgefuehrt
     public override void StartTask()
     {
         base.StartTask();

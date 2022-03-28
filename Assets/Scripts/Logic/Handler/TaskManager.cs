@@ -27,6 +27,7 @@ public class TaskManager : MonoBehaviour
         ProcessHandler.Instance.UINextTask(task.description, isFirst);
         return task;
     }
+    // Startet die naechste Task
     public Task StartNextTask()
     {
         GameObject task = Instantiate(taskList[0], this.transform.position, Quaternion.identity, this.transform);
@@ -48,6 +49,7 @@ public class TaskManager : MonoBehaviour
         this.taskList = taskList;
         this.currentTask = NextTask(true);
     }
+    // Setzt die Tool-Liste im Task-Manager
     public void SetToolList(List<GameObject> toolList)
     {
         toolList.Add(ProcessHandler.Instance.GetWoman());
