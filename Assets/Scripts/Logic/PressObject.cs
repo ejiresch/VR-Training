@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// Definiert ein Objekt, welches gedrueckt werden muss
 public class PressObject : MonoBehaviour
 {
     public bool pressable = false;
-
+    // Soll von Unterklassen aufgerufen werden wenn die Task beendet werden soll
     public virtual void Press()
     {
         if (pressable)
@@ -14,7 +14,7 @@ public class PressObject : MonoBehaviour
             pressable = false;
         }
     }
-
+    // Ob das Objekt drueckbar sein soll
     public void SetPressable(bool pressable)
     {
         this.pressable = pressable;

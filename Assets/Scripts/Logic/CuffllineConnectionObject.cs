@@ -4,11 +4,13 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 /**
+ * Stellt eine Alternative zum ConnectorObject dar und wird bei der Verbindung mit der Cuffline verwendet
  * Does not support multiple anchorPoints !!!
  */
 public class CuffllineConnectionObject : ConnectorObject
 {
     private Transform previousParent;
+    // Verbindet ein Connectible mit dem Objekt am definiertem Anchorpoint
     public override void Connect(GameObject connectible)
     {
         if (!connectible.GetComponent<InteractableObject>().GetIsGrabbed() && connectorActive && this.GetIsGrabbed())
@@ -26,8 +28,8 @@ public class CuffllineConnectionObject : ConnectorObject
             DestroyPreview();
             GetComponent<PressObject>().SetPressable(true);
         }
-
     }
+    // Entfernt angehaengte Objekte
     public override void Disconnect()
     {
         base.Disconnect();
@@ -42,6 +44,7 @@ public class CuffllineConnectionObject : ConnectorObject
             }
         }
     }
+    // Startet den Preview (Rote Vorzeige)
     public override void StartPreview(GameObject prefab)
     {
         if (preview == null)

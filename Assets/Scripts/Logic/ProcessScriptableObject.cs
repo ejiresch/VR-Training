@@ -8,7 +8,6 @@ public class ProcessScriptableObject : ScriptableObject
     public string pName;
     public string description;
     public GameObject[] toolList;
-    //TODO: 
 
     [SerializeField] private GameObject[] taskList;
 
