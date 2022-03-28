@@ -19,7 +19,7 @@ public class UserInterfaceManager : MonoBehaviour
     }
     public void EndOfTasks()  // Wird aufgerufen, wenn alle Tasks beendet wurden
     {
-        StartCoroutine(wbh.ShowEndMessage_2());
+        StartCoroutine(wbh.ShowEndMessage());
     }
     public void ShowWarning(int warningIndex) // Wird aufgerufen, wenn UI Beide Haende benutzen anzeigen soll
     {

@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class WhiteboardHandler : MonoBehaviour
 {
     public List<GameObject> tasklist;
-    public GameObject task_prefab;
+    public GameObject task_prefab; // Prefab fürs Task-UI Element
 
     private GameObject task_current; // derzeitiger Task
     private TextMeshProUGUI task_text_current; // text vom Task
@@ -68,7 +68,7 @@ public class WhiteboardHandler : MonoBehaviour
         tmp.a = 1f;
         checkmark_current.GetComponent<SpriteRenderer>().color = tmp;
     }
-    public IEnumerator ShowEndMessage_2() // Anzeige "Alles fertig,...". wenn alle Aufgaben abgeschlossen wurden
+    public IEnumerator ShowEndMessage() // Anzeige "Alles fertig,...". wenn alle Aufgaben abgeschlossen wurden
     {
         this.FinishTask();
         yield return new WaitForSeconds(0.4f);

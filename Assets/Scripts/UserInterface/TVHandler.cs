@@ -13,6 +13,9 @@ public class TVHandler : MonoBehaviour
     public List<VideoClip> clips;
     public GameObject splash;
 
+    public Color selectedColor = new Color(0.5f, 1, 0.5f);
+    public Color highlightedColor = new Color(0.3f, 1, 0.3f);
+
     public void StartVideo(int index)
     {
         splash.SetActive(false);
@@ -37,10 +40,10 @@ public class TVHandler : MonoBehaviour
     public void ChangeButtonColor(GameObject button) // Ändert die Farbe des Buttons auf Grün
     {
         var colors = button.gameObject.GetComponent<Button>().colors;
-        colors.normalColor = new Color(0.5f, 1, 0.5f);
-        colors.pressedColor = new Color(0.5f, 1, 0.5f);
-        colors.selectedColor = new Color(0.5f, 1, 0.5f);
-        colors.highlightedColor = new Color(0.3f, 1, 0.3f);
+        colors.normalColor = selectedColor;
+        colors.pressedColor = selectedColor;
+        colors.selectedColor = selectedColor;
+        colors.highlightedColor = highlightedColor;
         button.gameObject.GetComponent<Button>().colors = colors;
     }
 }
