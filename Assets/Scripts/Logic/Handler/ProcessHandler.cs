@@ -49,7 +49,9 @@ public class ProcessHandler : MonoBehaviour
     public void EndOfTasks()
     {
         uiManager.EndOfTasks();
-    }    public void NextTask()
+    }    
+    // Wird beim Anfang der naechsten Task aufgerufen
+    public void NextTask()
     {
         taskManager.NextTask(false);
     }
