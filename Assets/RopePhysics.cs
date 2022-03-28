@@ -22,12 +22,16 @@ public class RopePhysics : MonoBehaviour
 
         Vector3 ropeNodePos = startPoint.position;
 
-        for(int i = 0; i < ropesections; i++)
+        for (int i = 0; i < ropesections; i++)
         {
-            nodes.Add(new RopeNode(ropeNodePos));
+            GameObject node = Instantiate(new GameObject(),ropeNodePos, Quaternion.identity, transform);
+            node.AddComponent<SphereCollider>().radius = ropeWidth * 50;
+            node.AddComponent<Rigidbody>().useGravity = false;
+            RopeNode n = new RopeNode(ropeNodePos, node);
+            nodes.Add(n);
             ropeNodePos.y -= ropeNodeLength;
         }
-        endPoint.transform.parent.GetComponent<Rigidbody>().isKinematic = false;
+        //endPoint.transform.parent.GetComponent<Rigidbody>().isKinematic = false;
     }
 
     // Update is called once per frame
@@ -45,7 +49,7 @@ public class RopePhysics : MonoBehaviour
 
         for (int i = 0; i < nodes.Count; i++)
         {
-            positions[i] = nodes[i].pos;
+            positions[i] = nodes[i].go.transform.position;
         }
 
         lineRenderer.positionCount = positions.Length;
@@ -55,14 +59,15 @@ public class RopePhysics : MonoBehaviour
     private void FixedUpdate()
     {
         UpdateRopeSimulation();
+        UpdateColliders();
 
         RopeNode firstNode = nodes[0];
         firstNode.pos = startPoint.position;
         nodes[0] = firstNode;
 
         RopeNode lastNode = nodes[nodes.Count - 1];
-        /*lastNode.pos = endPoint.position;*/
-        endPoint.position = lastNode.pos;
+        lastNode.pos = endPoint.position;
+        /*endPoint.position = lastNode.pos; */
         nodes[nodes.Count - 1] = lastNode;
     }
 
@@ -77,8 +82,16 @@ public class RopePhysics : MonoBehaviour
             RopeNode current = nodes[i];
             Vector3 vel = current.pos - current.oldPos;
             current.oldPos = current.pos;
-            current.pos += vel;
-            current.pos += gravity * t;
+            if (!current.collided)
+            {
+                current.pos += vel;
+                current.pos += gravity * t;
+            }
+            else
+            {
+                Vector3 v = current.pos - current.go.transform.position;
+                current.pos += v;
+            }
             nodes[i] = current;
         }
 
@@ -93,7 +106,7 @@ public class RopePhysics : MonoBehaviour
         for (int i = 0; i < nodes.Count - 1; i++)
         {
             RopeNode top = nodes[i];
-            RopeNode bot = nodes[i+1];
+            RopeNode bot = nodes[i + 1];
 
             float dist = (top.pos - bot.pos).magnitude;
             float distError = Mathf.Abs(dist - ropeNodeLength);
@@ -111,14 +124,14 @@ public class RopePhysics : MonoBehaviour
 
             Vector3 change = changeDir * distError;
 
-            if (i != 0 && i+1 != nodes.Count - 1)
+            if (i != 0 && i + 1 != nodes.Count - 1)
             {
                 bot.pos += change * ropeNodeLength;
                 nodes[i + 1] = bot;
                 top.pos -= change * ropeNodeLength;
                 nodes[i] = top;
             }
-            else if( i == 0)
+            else if (i == 0)
             {
                 bot.pos += change;
                 nodes[i + 1] = bot;
@@ -131,17 +144,27 @@ public class RopePhysics : MonoBehaviour
         }
     }
 
+    public void UpdateColliders()
+    {
+        for (int i = 0; i < nodes.Count; i++)
+        {
+            nodes[i].go.transform.position = nodes[i].pos;
+        }
+    }
+
     public struct RopeNode
     {
         public Vector3 pos;
         public Vector3 oldPos;
+        public GameObject go;
+        public bool collided;
 
-        public static readonly RopeNode zero = new RopeNode(Vector3.zero);
-           
-        public RopeNode(Vector3 pos)
+        public RopeNode(Vector3 pos, GameObject go)
         {
             this.pos = pos;
             this.oldPos = pos;
+            this.go = go;
+            this.collided = false;
         }
 
     }
