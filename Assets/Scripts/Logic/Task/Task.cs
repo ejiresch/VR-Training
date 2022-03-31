@@ -32,5 +32,5 @@ public abstract class Task : MonoBehaviour
         return null;
     }
     // Wird am Ende der Task aufgerufen
-    public virtual void FinishTask() => Destroy(this);
+    public virtual void FinishTask() => Destroy(this.gameObject);
 }

@@ -13,6 +13,7 @@ public class ConnectorObject : InteractableObject
     public bool connectorActive = false;
     public GameObject preview = null;
     public GameObject[] anchorPoints;
+    // Order of the AnchorPoints
     public Queue<GameObject> anchorQueue;
     // Wird am Anfang ausgefuehrt
     public void Awake()
@@ -58,6 +59,7 @@ public class ConnectorObject : InteractableObject
             preview.GetComponent<Rigidbody>().isKinematic = true;
             foreach (Component comp in preview.GetComponents<Component>())
             {
+                // Rigidbody must not be destroyed, else crashes
                 if (!(comp is Transform) && !(comp is Rigidbody))
                 {
                     Destroy(comp);

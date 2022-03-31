@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// Object that can be connected to a ConnectorObject
 public class Connectible : InteractableObject
 {
     private ConnectorObject connector = null;
@@ -62,6 +62,7 @@ public class Connectible : InteractableObject
         this.connected = connected;
         StopAllCoroutines();
     }
+    // On each Frame check if the Connectible Object is in Range of the ConnectorObject
     IEnumerator CheckDistance()
     {
         for(; GetIsGrabbed();)

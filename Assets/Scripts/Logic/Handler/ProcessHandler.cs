@@ -28,6 +28,7 @@ public class ProcessHandler : MonoBehaviour
     }
 
     // Start is called before the first frame update
+    // Load one of two processes based on Playerpref
     void Start()
     {
         int pi = 0;
@@ -51,6 +52,7 @@ public class ProcessHandler : MonoBehaviour
         uiManager.EndOfTasks();
     }    
     // Wird beim Anfang der naechsten Task aufgerufen
+    // Muss vom aktuellen Task beim Abschluss aufgerufen werden!
     public void NextTask()
     {
         taskManager.NextTask(false);

@@ -7,7 +7,7 @@ public class TaskManager : MonoBehaviour
 {
     private List<GameObject> taskList;
     public List<GameObject> toolList;
-    [SerializeField] private Task currentTask;
+    private Task currentTask;
     /**
      * Returns the next Tasks and removes the Array index
     */

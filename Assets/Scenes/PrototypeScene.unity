@@ -1989,8 +1989,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 74683679835923129, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartVideo
+      objectReference: {fileID: 0}
+    - target: {fileID: 74683679835923129, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: changeButtonColor
+      value: ChangeButtonColor
       objectReference: {fileID: 0}
     - target: {fileID: 74683679835923129, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2064,8 +2069,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 947733990640752269, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartVideo
+      objectReference: {fileID: 0}
+    - target: {fileID: 947733990640752269, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: changeButtonColor
+      value: ChangeButtonColor
       objectReference: {fileID: 0}
     - target: {fileID: 947733990640752269, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2139,8 +2149,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2533057164040633212, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartVideo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533057164040633212, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: changeButtonColor
+      value: ChangeButtonColor
       objectReference: {fileID: 0}
     - target: {fileID: 2533057164040633212, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2209,8 +2224,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3242952232548459712, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartVideo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3242952232548459712, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: changeButtonColor
+      value: ChangeButtonColor
       objectReference: {fileID: 0}
     - target: {fileID: 3242952232548459712, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2279,8 +2299,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3562964322213959998, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartVideo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3562964322213959998, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: changeButtonColor
+      value: ChangeButtonColor
       objectReference: {fileID: 0}
     - target: {fileID: 3562964322213959998, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2349,8 +2374,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3679347666342851975, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartVideo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3679347666342851975, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: changeButtonColor
+      value: ChangeButtonColor
       objectReference: {fileID: 0}
     - target: {fileID: 3679347666342851975, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2424,8 +2454,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5388462133794410894, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartVideo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388462133794410894, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: changeButtonColor
+      value: ChangeButtonColor
       objectReference: {fileID: 0}
     - target: {fileID: 5388462133794410894, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2494,8 +2529,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5708354540568806117, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartVideo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708354540568806117, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: changeButtonColor
+      value: ChangeButtonColor
       objectReference: {fileID: 0}
     - target: {fileID: 5708354540568806117, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2589,8 +2629,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6977657248931794774, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartVideo
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977657248931794774, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: changeButtonColor
+      value: ChangeButtonColor
       objectReference: {fileID: 0}
     - target: {fileID: 6977657248931794774, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2654,8 +2699,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7087034267691414045, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartVideo
+      objectReference: {fileID: 0}
+    - target: {fileID: 7087034267691414045, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: changeButtonColor
+      value: ChangeButtonColor
       objectReference: {fileID: 0}
     - target: {fileID: 7087034267691414045, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2724,8 +2774,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8410292636061208432, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartVideo
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410292636061208432, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: changeButtonColor
+      value: ChangeButtonColor
       objectReference: {fileID: 0}
     - target: {fileID: 8410292636061208432, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2814,8 +2869,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8410292636473887070, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartVideo
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410292636473887070, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: changeButtonColor
+      value: ChangeButtonColor
       objectReference: {fileID: 0}
     - target: {fileID: 8410292636473887070, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2884,8 +2944,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8532654975561290865, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartVideo
+      objectReference: {fileID: 0}
+    - target: {fileID: 8532654975561290865, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: changeButtonColor
+      value: ChangeButtonColor
       objectReference: {fileID: 0}
     - target: {fileID: 8532654975561290865, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -3118,8 +3183,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9195739566731304521, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartVideo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9195739566731304521, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: changeButtonColor
+      value: ChangeButtonColor
       objectReference: {fileID: 0}
     - target: {fileID: 9195739566731304521, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
