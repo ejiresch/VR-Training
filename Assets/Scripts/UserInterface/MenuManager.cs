@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     public GameObject warning_panel;
+    public GameObject main_page;
 
     
     public void StartSimulation() // Methode für Button "Start" 
@@ -16,6 +17,7 @@ public class MenuManager : MonoBehaviour
     public void OpenWarningPanel() // Methode für Button "Exit"
     {
         warning_panel.SetActive(true);
+        main_page.SetActive(false);
     }
     public void WarningMessage(bool answer)
     {
@@ -26,6 +28,7 @@ public class MenuManager : MonoBehaviour
         else
         {
             warning_panel.SetActive(false);
+            main_page.SetActive(true);
         }
     }
 }
