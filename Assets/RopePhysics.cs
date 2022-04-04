@@ -84,7 +84,6 @@ public class RopePhysics : MonoBehaviour
 
         for (int i = 1; i < nodes.Count; i++)
         {
-
             RopeNode current = nodes[i];
             Vector3 vel = current.pos - current.oldPos;
             current.oldPos = current.pos;
@@ -109,7 +108,6 @@ public class RopePhysics : MonoBehaviour
 
             foreach (Collider c in colliders)
             {
-                Debug.Log(c.transform.name);
                 Vector3 cCenter = c.transform.position;
                 Vector3 cDirection = cCenter - current.pos;
                 current.pos -= cDirection.normalized * Time.deltaTime;
