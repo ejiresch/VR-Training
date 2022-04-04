@@ -59,6 +59,7 @@ public class RopePhysics : MonoBehaviour
         nodes[nodes.Count - 1] = lastNode;
     }
 
+    // Setzt die Punkte der LineRenderer Component und updatet die Positionen der Punkte
     private void DisplayRope()
     {
         lineRenderer.startWidth = ropeWidth;
@@ -75,10 +76,7 @@ public class RopePhysics : MonoBehaviour
         lineRenderer.SetPositions(positions);
     }
 
-    private void FixedUpdate()
-    {
-    }
-
+    // Methode, welche die Punkte anhand der Position und der vorherigen Position berechnet
     private void UpdateRopeSimulation()
     {
         Vector3 gravity = new Vector3(0f, this.gravity, 0f);
@@ -121,6 +119,7 @@ public class RopePhysics : MonoBehaviour
         }
     }
 
+    // setzt die Länge der Positionen auf die angegeben Ropelength
     private void MaximumStretch()
     {
         for (int i = 0; i < nodes.Count - 1; i++)
@@ -164,6 +163,7 @@ public class RopePhysics : MonoBehaviour
         }
     }
 
+    // Stellt die Nodes des Ropes dar und speichert die momentane sowie die vorherige Position
     public struct RopeNode
     {
         public Vector3 pos;
