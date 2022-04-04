@@ -8,11 +8,13 @@ public class MenuManager : MonoBehaviour
 {
     public GameObject warning_panel;
     public GameObject main_page;
+    public GameObject control_page;
 
-    
+
     public void StartSimulation() // Methode für Button "Start" 
     {
-        SceneManager.LoadScene(1);
+        main_page.SetActive(false);
+        control_page.SetActive(true);
     }
     public void OpenWarningPanel() // Methode für Button "Exit"
     {
@@ -29,6 +31,18 @@ public class MenuManager : MonoBehaviour
         {
             warning_panel.SetActive(false);
             main_page.SetActive(true);
+        }
+    }
+    public void ControllerbelegungButtons(bool answer)
+    {
+        if (answer == true)
+        {
+            SceneManager.LoadScene(1);
+        }
+        else
+        {
+            main_page.SetActive(true);
+            control_page.SetActive(false);
         }
     }
 }

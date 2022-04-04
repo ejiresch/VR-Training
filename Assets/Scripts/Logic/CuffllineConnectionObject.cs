@@ -16,7 +16,6 @@ public class CuffllineConnectionObject : ConnectorObject
         if (!connectible.GetComponent<InteractableObject>().GetIsGrabbed() && connectorActive && this.GetIsGrabbed())
         {
             previousParent = connectible.transform.parent;
-            Debug.Log(previousParent.name);
             connectible.transform.parent = anchorQueue.Peek().transform;
             connectible.GetComponent<Rigidbody>().isKinematic = true;
             connectible.GetComponent<Collider>().enabled = false;
