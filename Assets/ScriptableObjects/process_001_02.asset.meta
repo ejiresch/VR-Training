@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+<<<<<<< Updated upstream
+guid: a1bc367d975b0894cb460080b234b14d
+NativeFormatImporter:
+=======
+<<<<<<< HEAD:Assets/Animations.meta
+guid: 24ad69aa5edf5344f970ddab97a5e0d6
+folderAsset: yes
+DefaultImporter:
+=======
+guid: a1bc367d975b0894cb460080b234b14d
+NativeFormatImporter:
+>>>>>>> 134f5e01e76b4a77f1746eaf3f644af1af9c942d:Assets/ScriptableObjects/process_001_02.asset.meta
+>>>>>>> Stashed changes
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
