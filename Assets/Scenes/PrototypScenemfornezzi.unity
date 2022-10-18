@@ -5184,10 +5184,26 @@ PrefabInstance:
       propertyPath: handler
       value: 
       objectReference: {fileID: 4991433274349570000}
+    - target: {fileID: 4529476429821932933, guid: 3aad0fe442fb5a3499590f29d410347f,
+        type: 3}
+      propertyPath: oma
+      value: 
+      objectReference: {fileID: 2060500850}
+    - target: {fileID: 4529476429821932933, guid: 3aad0fe442fb5a3499590f29d410347f,
+        type: 3}
+      propertyPath: woman
+      value: 
+      objectReference: {fileID: 2060500850}
+    - target: {fileID: 4529476429821932933, guid: 3aad0fe442fb5a3499590f29d410347f,
+        type: 3}
+      propertyPath: compoundObject
+      value: 
+      objectReference: {fileID: 1520135525941460286, guid: bf1ed372ab3f0e045a3a7b5929314ecf,
+        type: 3}
     - target: {fileID: 4529476429821932936, guid: 3aad0fe442fb5a3499590f29d410347f,
         type: 3}
       propertyPath: processes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4529476429821932936, guid: 3aad0fe442fb5a3499590f29d410347f,
         type: 3}
@@ -5200,6 +5216,12 @@ PrefabInstance:
       propertyPath: processes.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: a1bc367d975b0894cb460080b234b14d,
+        type: 2}
+    - target: {fileID: 4529476429821932936, guid: 3aad0fe442fb5a3499590f29d410347f,
+        type: 3}
+      propertyPath: processes.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: b851747833787ae40b689dc95d624fa0,
         type: 2}
     - target: {fileID: 4529476429821932937, guid: 3aad0fe442fb5a3499590f29d410347f,
         type: 3}
@@ -5860,6 +5882,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1919296408374491062, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1919296409511327426, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
       propertyPath: m_Name
@@ -5934,6 +5961,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Spacing
       value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319591711218430115, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3955653633778729388, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}

@@ -7,7 +7,9 @@ public class TaskManager : MonoBehaviour
 {
     private List<GameObject> taskList;
     public List<GameObject> toolList;
+    private GameObject compoundObject;
     private Task currentTask;
+    public GameObject woman;
     /**
      * Returns the next Tasks and removes the Array index
     */
@@ -52,8 +54,15 @@ public class TaskManager : MonoBehaviour
     // Setzt die Tool-Liste im Task-Manager
     public void SetToolList(List<GameObject> toolList)
     {
-        toolList.Add(ProcessHandler.Instance.GetWoman());
         this.toolList = toolList;
     }
-
+    public void SetCompoundObject(GameObject compoundObject)
+    {
+        this.compoundObject = compoundObject;
+    }
+    public GameObject GetCompoundObject()
+    {
+        return this.compoundObject;
+    }
+    public GameObject GetWoman() => this.woman;
 }

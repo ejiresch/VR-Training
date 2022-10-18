@@ -90,5 +90,9 @@ public class WhiteboardHandler : MonoBehaviour
         ProcessHandler.Instance.SetProcessIndex(0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
+    public void StartProcess(int pid)
+    {
+        ProcessHandler.Instance.SetProcessIndex(pid);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

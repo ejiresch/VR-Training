@@ -10,7 +10,6 @@ public class ProcessHandler : MonoBehaviour
     [SerializeField] private UserInterfaceManager uiManager;
     [SerializeField] private GameObject spawnPoints;
     [SerializeField] private Material closePreviewMaterial, farPreviewMaterial;
-    [SerializeField] private GameObject tracheostomaCO, woman;
     private static ProcessHandler _instance;
     private string ppKey = "Process_Index";
     // Singleton Instanz
@@ -34,16 +33,7 @@ public class ProcessHandler : MonoBehaviour
         int pi = 0;
         if (PlayerPrefs.HasKey(ppKey)) pi = PlayerPrefs.GetInt(ppKey);
         else PlayerPrefs.SetInt(ppKey, 0);
-        if (pi == 0)
-        {
-            tracheostomaCO = Instantiate(tracheostomaCO);
-            woman.GetComponent<ConnectorObject>().ForceConnect(tracheostomaCO);
-            LoadScene("process_001");
-        }
-        else
-        {
-            LoadScene("process_001_02");
-        }
+        LoadScene(pi);
     }
 
     // Called when all Tasks are over
@@ -59,7 +49,7 @@ public class ProcessHandler : MonoBehaviour
     }
 
     // LoadScene is used to load a scene with an PID
-    void LoadScene(string pid)
+    void LoadScene(int pid)
     {
         sceneLoader.LoadProcess(pid);
         taskManager.SetToolList(sceneLoader.GetToolList());
@@ -83,7 +73,11 @@ public class ProcessHandler : MonoBehaviour
     public TaskManager GetTaskManager() => this.taskManager;
     public Material GetClosePreviewMaterial() => this.closePreviewMaterial;
     public Material GetFarPreviewMaterial() => this.farPreviewMaterial;
-    public GameObject GetCompoundObject() => this.tracheostomaCO;
-    public GameObject GetWoman() => this.woman;
+    public GameObject GetCompoundObject() => taskManager.GetCompoundObject();
     public string GetPlayerPrefsProcessIndexKey() => ppKey;
+    public void SetCompoundOb(GameObject compoundObject)
+    {
+        taskManager.SetCompoundObject(compoundObject);
+    }
+    public GameObject GetWoman() => taskManager.GetWoman();
 }

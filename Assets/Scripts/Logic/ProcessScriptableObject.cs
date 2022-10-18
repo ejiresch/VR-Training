@@ -8,7 +8,7 @@ public class ProcessScriptableObject : ScriptableObject
     public string pName;
     public string description;
     public GameObject[] toolList;
-
+    public GameObject compoundOb;
     [SerializeField] private GameObject[] taskList;
 
     /**
@@ -25,5 +25,11 @@ public class ProcessScriptableObject : ScriptableObject
     public List<GameObject> GetTasklist()
     {
         return new List<GameObject>(taskList);
+    }
+    public GameObject GetCompound()
+    {
+        if (compoundOb != null)
+            return compoundOb;
+        return null;
     }
 }

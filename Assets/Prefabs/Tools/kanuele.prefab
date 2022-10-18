@@ -26,7 +26,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.1564345, z: 0, w: 0.98768836}
   m_LocalPosition: {x: 11.06, y: 2.55, z: -2.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6645954436737465284}
   m_RootOrder: 2
@@ -61,7 +60,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4225154029821941760}
   - {fileID: 619853505970384464}
@@ -106,44 +104,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 0
-  m_InteractionLayers:
-    m_Bits: 0
-  m_SelectMode: 0
-  m_CustomReticle: {fileID: 0}
-  m_FirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FirstSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Activated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Deactivated:
-    m_PersistentCalls:
-      m_Calls: []
   m_OnFirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnLastHoverExited:
     m_PersistentCalls:
       m_Calls: []
   m_OnHoverEntered:
@@ -152,11 +113,13 @@ MonoBehaviour:
   m_OnHoverExited:
     m_PersistentCalls:
       m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
   m_OnSelectEntered:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7302028714749927121}
-        m_TargetAssemblyTypeName: 
         m_MethodName: SetIsGrabbed
         m_Mode: 6
         m_Arguments:
@@ -168,7 +131,6 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 4130891288885884490}
-        m_TargetAssemblyTypeName: 
         m_MethodName: SetIsGrabbed
         m_Mode: 6
         m_Arguments:
@@ -183,7 +145,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7302028714749927121}
-        m_TargetAssemblyTypeName: 
         m_MethodName: SetIsGrabbed
         m_Mode: 6
         m_Arguments:
@@ -195,7 +156,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 7302028714749927121}
-        m_TargetAssemblyTypeName: 
         m_MethodName: SetIsGrabbed
         m_Mode: 6
         m_Arguments:
@@ -215,13 +175,10 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+  m_CustomReticle: {fileID: 0}
   m_AttachTransform: {fileID: 0}
   m_AttachEaseInTime: 0.15
   m_MovementType: 0
-  m_VelocityDamping: 1
-  m_VelocityScale: 1
-  m_AngularVelocityDamping: 1
-  m_AngularVelocityScale: 1
   m_TrackPosition: 1
   m_SmoothPosition: 0
   m_SmoothPositionAmount: 5
@@ -249,9 +206,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   m_ThrowVelocityScale: 1.5
   m_ThrowAngularVelocityScale: 1
-  m_ForceGravityOnDetach: 0
+  m_GravityOnDetach: 0
   m_RetainTransformParent: 1
-  m_AttachPointCompatibilityMode: 0
 --- !u!114 &7302028714749927121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,7 +268,6 @@ Transform:
   m_LocalRotation: {x: -0.09334956, y: 0.13784605, z: 0.58390903, w: 0.7945657}
   m_LocalPosition: {x: -1.58, y: 3.63, z: 0.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 619853505970384464}
   m_RootOrder: 5
@@ -357,7 +312,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.1564345, z: 0, w: 0.98768836}
   m_LocalPosition: {x: -16.66, y: 2.55, z: 6.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6645954436737465284}
   m_RootOrder: 3
@@ -389,7 +343,6 @@ Transform:
   m_LocalRotation: {x: -0.01302111, y: 0.0602813, z: 0.20165542, w: 0.9775131}
   m_LocalPosition: {x: -0.21, y: 0.61, z: 0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 619853505970384464}
   m_RootOrder: 6
@@ -434,7 +387,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.1564345, z: 0, w: 0.98768836}
   m_LocalPosition: {x: -2.09, y: 1.27, z: 2.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6645954436737465284}
   m_RootOrder: 4
