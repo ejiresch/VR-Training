@@ -9,7 +9,7 @@ public class TaskManager : MonoBehaviour
     public List<GameObject> toolList;
     private GameObject compoundObject;
     private Task currentTask;
-    public GameObject woman;
+    private GameObject woman;
     /**
      * Returns the next Tasks and removes the Array index
     */

@@ -23,6 +23,8 @@ MonoBehaviour:
   - {fileID: 8907562860919515554, guid: 768faeebbbfd19647b4f0a4beb9cab6a, type: 3}
   - {fileID: 8991949586336640730, guid: 5587ac2bf6eb04a489fe644e96d7becb, type: 3}
   - {fileID: 4561207380521413469, guid: 59aa1cef234e6a249811214b7bb69fd7, type: 3}
+  compoundOb: {fileID: 0}
+  woman: {fileID: 6117283350620791866, guid: be0707d502ba38845b74a9ed10d3cdb5, type: 3}
   taskList:
   - {fileID: 3682690017009728010, guid: d58dfe9cf257ad34d84a800c9ba92731, type: 3}
   - {fileID: 1325155203522021057, guid: cd359c1d72f1e5144bc4bd6188cb34e6, type: 3}

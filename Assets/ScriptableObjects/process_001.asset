@@ -22,6 +22,7 @@ MonoBehaviour:
   - {fileID: 8907562860919515554, guid: 768faeebbbfd19647b4f0a4beb9cab6a, type: 3}
   compoundOb: {fileID: 1520135525941460286, guid: bf1ed372ab3f0e045a3a7b5929314ecf,
     type: 3}
+  woman: {fileID: 6117283350620791866, guid: be0707d502ba38845b74a9ed10d3cdb5, type: 3}
   taskList:
   - {fileID: 1240576535742193631, guid: 1574f9e2156f513489857c9c60fc62b7, type: 3}
   - {fileID: 8754685957678997292, guid: dfd35d0d7d194044ba8f9a681c473efe, type: 3}

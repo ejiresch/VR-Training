@@ -9,6 +9,7 @@ public class ProcessScriptableObject : ScriptableObject
     public string description;
     public GameObject[] toolList;
     public GameObject compoundOb;
+    public GameObject woman; 
     [SerializeField] private GameObject[] taskList;
 
     /**
@@ -30,6 +31,12 @@ public class ProcessScriptableObject : ScriptableObject
     {
         if (compoundOb != null)
             return compoundOb;
+        return null;
+    }
+    public GameObject GetWoman()
+    {
+        if(woman != null)
+            return woman;
         return null;
     }
 }

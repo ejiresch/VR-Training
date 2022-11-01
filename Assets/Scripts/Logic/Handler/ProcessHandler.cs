@@ -9,6 +9,7 @@ public class ProcessHandler : MonoBehaviour
     [SerializeField] private TaskManager taskManager;
     [SerializeField] private UserInterfaceManager uiManager;
     [SerializeField] private GameObject spawnPoints;
+    [SerializeField] private GameObject patientSpawn;
     [SerializeField] private Material closePreviewMaterial, farPreviewMaterial;
     private static ProcessHandler _instance;
     private string ppKey = "Process_Index";
@@ -70,6 +71,7 @@ public class ProcessHandler : MonoBehaviour
     // Gets all Spawnpoints
     public Transform[] GetSpawnPoints() => spawnPoints.GetComponentsInChildren<Transform>();
     // Getter Methoden
+    public Transform GetPatientSpawn() => patientSpawn.transform;
     public TaskManager GetTaskManager() => this.taskManager;
     public Material GetClosePreviewMaterial() => this.closePreviewMaterial;
     public Material GetFarPreviewMaterial() => this.farPreviewMaterial;
@@ -79,5 +81,5 @@ public class ProcessHandler : MonoBehaviour
     {
         taskManager.SetCompoundObject(compoundObject);
     }
-    public GameObject GetWoman() => taskManager.GetWoman();
+    
 }

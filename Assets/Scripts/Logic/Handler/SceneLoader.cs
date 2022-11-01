@@ -21,9 +21,10 @@ public class SceneLoader : MonoBehaviour
         }
         
         GameObject[] tools = selectedProcess.toolList;
-        GameObject woman = ProcessHandler.Instance.GetWoman();
+        Transform patientSpawn = ProcessHandler.Instance.GetPatientSpawn();
         GameObject com = selectedProcess.GetCompound();
-        if(com != null)
+        GameObject woman = Instantiate(selectedProcess.GetWoman(),patientSpawn); 
+        if (com != null)
         {
             GameObject inst = Instantiate(com);
             woman.GetComponent<ConnectorObject>().ForceConnect(inst);
