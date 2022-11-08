@@ -16,6 +16,7 @@ public class WhiteboardHandler : MonoBehaviour
 
     private float maxTaskShown = 4; // Max anzahl an Tasks
     private int task_number = 1;
+    private int processGroup = 1;
 
     public void FirstTask(string taskdescription) // Ersten Task erstellen
     {
@@ -79,20 +80,9 @@ public class WhiteboardHandler : MonoBehaviour
         task_current.SetActive(true);
         this.FinishTask();
     }
-    // Buttons: 
-    public void ReingebenStarten() // Starten den "Reingeben" Workflow durch Button "Reingeben starten"
+    public void StartProcess(string pid)
     {
-        ProcessHandler.Instance.SetProcessIndex(1);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-    public void RausnehmenStarten() // Starten den "Rausnehmen" Workflow durch Button "Rausnehmen starten"
-    {
-        ProcessHandler.Instance.SetProcessIndex(0);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-    public void StartProcess(int pid)
-    {
-        ProcessHandler.Instance.SetProcessIndex(pid);
+        ProcessHandler.Instance.SetProcessIndex(int.Parse(processGroup.ToString() + pid));
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

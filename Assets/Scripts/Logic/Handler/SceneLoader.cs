@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 // Loads needed Processes and Assets into the Scene
@@ -13,7 +14,9 @@ public class SceneLoader : MonoBehaviour
 
         foreach(ProcessScriptableObject p in processes)
         {
-            if (p.name.Contains(pid.ToString()))
+            string[] temp = p.name.Split('_');
+            Debug.Log(temp);
+            if (int.Parse(temp[1] + temp[2]) == pid)
             {
                 selectedProcess = p;
                 break;
