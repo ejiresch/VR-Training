@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 286347593575785693}
   - component: {fileID: -5768325757548857712}
   m_Layer: 0
-  m_Name: SpritzeInWasseerStecken
+  m_Name: SpritzeInWasseerStecken 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,6 +48,7 @@ MonoBehaviour:
   spawnedTools: []
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0
-  connector: {fileID: 1730068104923229836, guid: fc071747dc513604b815cb78a1153ae1,
+  connector: {fileID: 5664044047155542320, guid: 8cdace87b38db8544b76b0f00c414df6,
     type: 3}
-  connectible: {fileID: 0}
+  connectible: {fileID: 2643211117516195472, guid: fd774015a27765d46b78099198c04afd,
+    type: 3}

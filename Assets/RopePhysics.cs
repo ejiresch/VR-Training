@@ -111,7 +111,7 @@ public class RopePhysics : MonoBehaviour
 
             foreach (Collider c in colliders)
             {
-                Debug.Log(c.transform.name);
+                //Debug.Log(c.transform.name);
                 Vector3 cCenter = c.transform.position;
                 Vector3 cDirection = cCenter - current.pos;
                 current.pos -= cDirection.normalized * 0.1f * Time.deltaTime;
