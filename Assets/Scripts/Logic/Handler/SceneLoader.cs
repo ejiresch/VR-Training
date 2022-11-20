@@ -15,7 +15,6 @@ public class SceneLoader : MonoBehaviour
         foreach(ProcessScriptableObject p in processes)
         {
             string[] temp = p.name.Split('_');
-            Debug.Log(temp);
             if (int.Parse(temp[1] + temp[2]) == pid)
             {
                 selectedProcess = p;
@@ -31,7 +30,7 @@ public class SceneLoader : MonoBehaviour
         {
             GameObject inst = Instantiate(com);
             woman.GetComponent<ConnectorObject>().ForceConnect(inst);
-            ProcessHandler.Instance.SetCompoundOb(com);
+            ProcessHandler.Instance.SetCompoundOb(inst);
         }
         toolList.Add(woman);
         Transform[] spawnPoints = ProcessHandler.Instance.GetSpawnPoints();

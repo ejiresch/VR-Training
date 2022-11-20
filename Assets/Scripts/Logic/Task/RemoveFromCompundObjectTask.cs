@@ -14,6 +14,7 @@ public class RemoveFromCompundObjectTask : Task
         CompundObject cO = ProcessHandler.Instance.GetCompoundObject().GetComponent<CompundObject>();
         if (cO) compoundObject = cO.gameObject;
         objectToRemove = compoundObject.GetComponent<CompundObject>().GetPart();
+
         if (objectToRemove)
         {
             CompundPart compP = objectToRemove.GetComponent<CompundPart>();

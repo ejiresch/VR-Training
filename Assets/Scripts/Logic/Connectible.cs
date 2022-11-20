@@ -14,6 +14,7 @@ public class Connectible : InteractableObject
     // Falls das Objekt losgelassen wird, wird diese Methode ausgefuehrt
     public override void OnDrop()
     {
+        Debug.Log("fick dich du hurtensohn");
         base.OnDrop();
         if (connector != null)
         {
@@ -65,8 +66,10 @@ public class Connectible : InteractableObject
     // On each Frame check if the Connectible Object is in Range of the ConnectorObject
     IEnumerator CheckDistance()
     {
+        
         for(; GetIsGrabbed();)
         {
+            Debug.Log("Hello");
             if (connector != null)
             {
                 if ((connector.GetAnchorPosition() - this.gameObject.transform.position).magnitude < range)

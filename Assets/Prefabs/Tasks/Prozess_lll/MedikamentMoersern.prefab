@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 286347593575785693}
-  - component: {fileID: -5768325757548857712}
+  - component: {fileID: 9114685020849744236}
   m_Layer: 0
-  m_Name: SpritzeInWasseerStecken 1
+  m_Name: MedikamentMoersern
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-5768325757548857712
+--- !u!114 &9114685020849744236
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,15 +40,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 9182968463707594753}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6476568b40475a4a84f4e08225cf24e, type: 3}
+  m_Script: {fileID: 11500000, guid: 51180cd14b8120a4fa83c95d1f24ed57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tName: Spritze in Wasser
-  description: Stecke die Spritze in das Wasser im Glas
+  tName: 
+  description: "Zermahle das Medikament im M\xF6rser"
   spawnedTools: []
-  warningMessage_BeideHaende: 0
+  warningMessage_BeideHaende: 1
   warningMessage_KanueleFesthalten: 0
-  connector: {fileID: 5664044047155542320, guid: 8cdace87b38db8544b76b0f00c414df6,
+  touchObject: {fileID: 25342028895097354, guid: b3971484ff98fa24e848c124755ef131,
     type: 3}
-  connectible: {fileID: 1537094888625865418, guid: fd774015a27765d46b78099198c04afd,
+  touchTarget: {fileID: 3945274505655888449, guid: 350189746fcf57646a19e51b7549d64d,
     type: 3}

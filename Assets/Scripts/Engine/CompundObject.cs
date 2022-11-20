@@ -11,6 +11,7 @@ public class CompundObject : MonoBehaviour
 {
     [SerializeField] private GameObject[] parts;
     [SerializeField] private GameObject grabbablePart;
+    public bool IsActive;
     private Queue<GameObject> objectQueue = new Queue<GameObject>();
     // Start is called before the first frame update
     void Awake()
@@ -19,6 +20,7 @@ public class CompundObject : MonoBehaviour
             go.GetComponent<InteractableObject>().SetGrabbable(false);
             objectQueue.Enqueue(go);
         }
+        IsActive = true;
     }
 
     /**
@@ -27,7 +29,7 @@ public class CompundObject : MonoBehaviour
      */
     public GameObject GetPart()
     {
-        if(objectQueue.Count>0) return objectQueue.Dequeue();
+        if (objectQueue.Count>0) return objectQueue.Dequeue();
         return null;
     }
     public GameObject GetGrabbable()

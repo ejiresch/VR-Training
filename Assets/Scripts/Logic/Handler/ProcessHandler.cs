@@ -31,7 +31,7 @@ public class ProcessHandler : MonoBehaviour
     // Load one of two processes based on Playerpref
     void Start()
     {
-        int pi = 0;
+        int pi = 101;
         if (PlayerPrefs.HasKey(ppKey)) pi = PlayerPrefs.GetInt(ppKey);
         else PlayerPrefs.SetInt(ppKey, 0);
         LoadScene(pi);

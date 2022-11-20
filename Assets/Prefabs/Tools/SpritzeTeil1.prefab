@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9190835412584607940}
   - component: {fileID: 7902063664315983487}
   - component: {fileID: -6671483963046198419}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpritzeTeil1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178b81e4f73788c4d891f3512fd1c661, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGrabbed: 1
+  isGrabbed: 0
 --- !u!54 &7902063664315983487
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -151,7 +151,8 @@ GameObject:
   - component: {fileID: 4706387108396657336}
   - component: {fileID: 2708472563920121162}
   - component: {fileID: 4507616290705457112}
-  m_Layer: 0
+  - component: {fileID: 3510683477183744782}
+  m_Layer: 9
   m_Name: Spritze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +167,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5801064623823305012}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.675541, y: 7.074343, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1389852426128782390}
@@ -199,7 +200,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 7397659539795428015, guid: 9c68a2ca1e040c94398c308bf7549f7f, type: 3}
-  - {fileID: 5561349426305759274, guid: 9c68a2ca1e040c94398c308bf7549f7f, type: 3}
+  - {fileID: 7397659539795428015, guid: 9c68a2ca1e040c94398c308bf7549f7f, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -220,3 +221,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3510683477183744782
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5801064623823305012}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.068529084, y: 0.12370458, z: 0.052261937}
+  m_Center: {x: 0.00028348155, y: -0.0000000018626451, z: 0}
