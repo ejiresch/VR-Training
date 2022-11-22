@@ -24,8 +24,13 @@ public class ConnectorObject : InteractableObject
     // Verbindet ein Connectible mit dem Objekt am definiertem Anchorpoint
     public virtual void Connect(GameObject connectible)
     {
+
+        Debug.Log(!connectible.GetComponent<InteractableObject>().GetIsGrabbed());
+        Debug.Log(this.GetIsGrabbed());
+        Debug.Log(connectorActive);
         if (!connectible.GetComponent<InteractableObject>().GetIsGrabbed() && connectorActive && this.GetIsGrabbed())
         {
+            Debug.Log("ertzu");
             connectible.transform.parent = anchorQueue.Dequeue().transform;
             connectible.GetComponent<Rigidbody>().isKinematic = true;
             foreach (Collider collider in connectible.GetComponentsInChildren<Collider>()) collider.enabled = false;
