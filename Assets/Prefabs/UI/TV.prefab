@@ -2328,7 +2328,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8656304803806084701}
-        m_MethodName: startVideo
+        m_MethodName: StartVideo
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
