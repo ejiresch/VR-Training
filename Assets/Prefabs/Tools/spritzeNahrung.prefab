@@ -106,8 +106,8 @@ GameObject:
   - component: {fileID: 2435644995057024249}
   - component: {fileID: 3315117513698023584}
   - component: {fileID: 8301435877491144619}
-  - component: {fileID: -271569497934628218}
   - component: {fileID: -3215566763138138225}
+  - component: {fileID: 3811366977213384902}
   m_Layer: 0
   m_Name: spritzeNahrung
   m_TagString: Untagged
@@ -258,19 +258,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrabbed: 0
---- !u!114 &-271569497934628218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1808612825705206197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e9a6723dd679f4a8dc3be608d5549a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pressable: 0
 --- !u!95 &-3215566763138138225
 Animator:
   serializedVersion: 3
@@ -290,6 +277,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3811366977213384902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808612825705206197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e72e57053b765e4ba6a809b0f73d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressable: 0
+  toggleReference: {fileID: 8939289509126937741, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  reingepumpt: 0
+  nurRauspumpen: 0
+  kolben: {fileID: 2363475940048908635}
 --- !u!1 &2363475940048908635
 GameObject:
   m_ObjectHideFlags: 0

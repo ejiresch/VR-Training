@@ -43,8 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a840d0651ac490b4ea1f4cbc61e1c97e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tName: 
-  description: 
+  tName: 'Spritze von Sonde trennen '
+  description: Trenne die Spritze von der Sonde
   spawnedTools: []
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0
