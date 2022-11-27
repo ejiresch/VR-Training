@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 6117283350620791863}
   - component: {fileID: 9141143649450466410}
   m_Layer: 0
-  m_Name: Woman
+  m_Name: womanSonde
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -688,13 +688,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6446642697175066524}
-  m_LocalRotation: {x: -0.9856965, y: 0.025240103, z: -0.01681857, w: -0.16577855}
-  m_LocalPosition: {x: 0.0049857507, y: 0.0679, z: -0.03208205}
+  m_LocalRotation: {x: -0.09498692, y: 0.022778101, z: 0.020027112, w: -0.99501634}
+  m_LocalPosition: {x: 0.0076, y: 0.0723, z: -0.0027}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5550153729032182459}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -70.801, y: -175.13501, z: 177.53001}
+  m_LocalEulerAnglesHint: {x: 169.157, y: -182.868, z: 177.422}
 --- !u!1 &6803777022223959597
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,8 +892,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: -0.13437796, y: -2.07312, z: 0.09743929}
-    m_Extent: {x: 4.224195, y: 2.07312, z: 5.098182}
+    m_Center: {x: -0.108487606, y: -2.0072684, z: 0.12218523}
+    m_Extent: {x: 4.2316637, y: 2.0184045, z: 5.122185}
   m_DirtyAABB: 0
 --- !u!183 &4322556980396188652
 Cloth:

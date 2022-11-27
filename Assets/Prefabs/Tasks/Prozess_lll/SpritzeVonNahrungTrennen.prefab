@@ -48,4 +48,5 @@ MonoBehaviour:
   spawnedTools: []
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0
-  compoundObject: {fileID: 0}
+  compoundObject: {fileID: 1628752821488307906, guid: d82683b4b9052bd408daffc9ea017df8,
+    type: 3}

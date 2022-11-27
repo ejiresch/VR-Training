@@ -15,6 +15,7 @@ public class ConnectorObject : InteractableObject
     public GameObject[] anchorPoints;
     // Order of the AnchorPoints
     public Queue<GameObject> anchorQueue;
+    private Transform previousParent;
     // Wird am Anfang ausgefuehrt
     public void Awake()
     {
@@ -25,13 +26,12 @@ public class ConnectorObject : InteractableObject
     public virtual void Connect(GameObject connectible)
     {
 
-        Debug.Log(!connectible.GetComponent<InteractableObject>().GetIsGrabbed());
-        Debug.Log(this.GetIsGrabbed());
-        Debug.Log(connectorActive);
         if (!connectible.GetComponent<InteractableObject>().GetIsGrabbed() && connectorActive && this.GetIsGrabbed())
         {
             Debug.Log("ertzu");
+            previousParent = connectible.transform.parent;
             connectible.transform.parent = anchorQueue.Dequeue().transform;
+            anchorQueue.Enqueue(connectible);
             connectible.GetComponent<Rigidbody>().isKinematic = true;
             foreach (Collider collider in connectible.GetComponentsInChildren<Collider>()) collider.enabled = false;
             connectible.GetComponent<InteractableObject>().SetGrabbable(false);
@@ -53,7 +53,20 @@ public class ConnectorObject : InteractableObject
         connectible.transform.localEulerAngles = new Vector3(0, 0, 0);
     }
     // Kann implementiert werden um Objekte wieder zu entfernen
-    public virtual void Disconnect() { }
+    public virtual void Disconnect() {
+        GameObject anchorPoint = anchorQueue.Peek();
+        if (anchorPoint.transform.childCount > 0)
+        {
+            GameObject child = anchorPoint.transform.gameObject;
+            if (child)
+            {
+                child.transform.parent = previousParent;
+                child.GetComponent<Rigidbody>().isKinematic = false;
+                child.GetComponentInChildren<BoxCollider>().enabled = true;
+                child.GetComponent<XRBaseInteractable>().interactionLayerMask = ~0;
+            }
+        }
+    }
     // Startet den Preview (Rote Vorzeige)
     public virtual void StartPreview(GameObject prefab)
     {

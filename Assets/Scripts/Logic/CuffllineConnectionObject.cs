@@ -32,7 +32,7 @@ public class CuffllineConnectionObject : ConnectorObject
     // Entfernt angehaengte Objekte
     public override void Disconnect()
     {
-        base.Disconnect();
+        //base.Disconnect();
         GameObject anchorPoint = anchorQueue.Peek();
         if (anchorPoint.transform.childCount > 0)
         {

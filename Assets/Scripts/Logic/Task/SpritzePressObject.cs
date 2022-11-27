@@ -9,6 +9,7 @@ public class SpritzePressObject : PressObject
     public InputActionReference toggleReference = null;
     public bool reingepumpt = false;
     public bool nurRauspumpen = false;
+    public bool nurReinpumpen = false;
     public GameObject kolben;
     private Animator anim;
 
@@ -29,7 +30,14 @@ public class SpritzePressObject : PressObject
     public override void Press()
     {
         if (!pressable) return;
-        GetComponent<ConnectorObject>().Disconnect();   //disconnect object
+        try
+        {
+            GetComponent<ConnectorObject>().Disconnect();   //disconnect object
+        }
+        catch
+        {
+            GetComponent<Connectible>().GetConnector().Disconnect(); //disconnect object
+        }   //disconnect object
         if (!nurRauspumpen)
         {
             GameObject temp = GameObject.FindGameObjectWithTag("CompoundGrabbablePart").transform.parent.parent.gameObject;
@@ -40,12 +48,18 @@ public class SpritzePressObject : PressObject
     }
     IEnumerator Reinpumpen() // Start der "Reinpumpen" Animation
     {
+        Debug.Log("ReinPump");
         anim.SetTrigger("reinpumpen");
         yield return new WaitForSeconds(1.1f);
         reingepumpt = true;
+        if (nurReinpumpen)
+        {
+            Press();
+        }
     }
     IEnumerator Rauspumpen() // Start der "Rauspumpen" Animation
     {
+        Debug.Log("RausPump");
         anim.SetTrigger("rauspumpen");
         yield return new WaitForSeconds(1.3f);
         Press();

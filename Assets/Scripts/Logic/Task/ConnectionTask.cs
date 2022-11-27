@@ -13,8 +13,6 @@ public class ConnectionTask : Task
         connectible = base.FindTool(connectible.name);
         if (connector != null && connectible != null)
         {
-            Debug.Log(connectible);
-            Debug.Log(connectible.GetComponent<Connectible>());
             connector.GetComponent<ConnectorObject>().connectorActive = true;
             connectible.GetComponent<Connectible>().SetConnector(connector.GetComponent<ConnectorObject>());
             

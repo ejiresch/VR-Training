@@ -117,4 +117,8 @@ public class Connectible : InteractableObject
             renderer.material.color = originalColors[renderer.name];
         }
     }
+    public ConnectorObject GetConnector()
+    {
+        return connector;
+    }
 }

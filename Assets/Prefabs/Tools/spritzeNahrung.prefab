@@ -294,6 +294,7 @@ MonoBehaviour:
     type: 3}
   reingepumpt: 0
   nurRauspumpen: 0
+  nurReinpumpen: 1
   kolben: {fileID: 2363475940048908635}
 --- !u!1 &2363475940048908635
 GameObject:
