@@ -206,7 +206,7 @@ MonoBehaviour:
   isGrabbed: 1
   connectorActive: 0
   preview: {fileID: 0}
-  anchorPoint: {fileID: 6636222532015605328}
+  anchorPoints: []
 --- !u!1 &6636222532015605328
 GameObject:
   m_ObjectHideFlags: 0
