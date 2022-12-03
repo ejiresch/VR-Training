@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51180cd14b8120a4fa83c95d1f24ed57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tName: 
+  tName: Medikament zermahlen
   description: "Zermahle das Medikament im M\xF6rser"
   spawnedTools: []
   warningMessage_BeideHaende: 1
