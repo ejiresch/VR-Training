@@ -9,6 +9,7 @@ public class ProcessScriptableObject : ScriptableObject
     public string description;
     public GameObject[] toolList;
     public GameObject compoundOb;
+    [Tooltip("Patienten Modell welches für den Prozess verwendet werden soll.")]
     public GameObject woman; 
     [SerializeField] private GameObject[] taskList;
 

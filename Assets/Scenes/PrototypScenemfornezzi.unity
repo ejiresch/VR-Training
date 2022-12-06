@@ -1044,6 +1044,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.115336254, z: 2}
   m_Center: {x: -0.000000029802322, y: 0.0038385335, z: -0.00000011920929}
+--- !u!1 &316434716 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3817081561980334014, guid: 8432a4407adb54806944bc9e714a497b,
+    type: 3}
+  m_PrefabInstance: {fileID: 358692091}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &328261036
 GameObject:
   m_ObjectHideFlags: 0
@@ -4171,36 +4177,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944758320}
   m_CullTransparentMesh: 0
---- !u!1 &971577354
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 971577355}
-  m_Layer: 0
-  m_Name: PatientSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &971577355
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971577354}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.745, y: -5.438, z: 0.743}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1034266108 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4722560673839502967, guid: 294cfcc6c57b99146b51002e0f44bb92,
@@ -4912,17 +4888,17 @@ PrefabInstance:
     - target: {fileID: 4722560672731034191, guid: 294cfcc6c57b99146b51002e0f44bb92,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 200
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4722560672731034191, guid: 294cfcc6c57b99146b51002e0f44bb92,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 200
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4722560672731034191, guid: 294cfcc6c57b99146b51002e0f44bb92,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 200
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4722560672731034191, guid: 294cfcc6c57b99146b51002e0f44bb92,
         type: 3}
@@ -5586,7 +5562,7 @@ PrefabInstance:
         type: 3}
       propertyPath: patientSpawn
       value: 
-      objectReference: {fileID: 971577354}
+      objectReference: {fileID: 316434716}
     - target: {fileID: 4529476429821932939, guid: 3aad0fe442fb5a3499590f29d410347f,
         type: 3}
       propertyPath: tracheostomaCO

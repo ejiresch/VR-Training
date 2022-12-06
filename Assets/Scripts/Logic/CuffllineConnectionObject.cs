@@ -9,7 +9,6 @@ using UnityEngine.XR.Interaction.Toolkit;
  */
 public class CuffllineConnectionObject : ConnectorObject
 {
-    private Transform previousParent;
     // Verbindet ein Connectible mit dem Objekt am definiertem Anchorpoint
     public override void Connect(GameObject connectible)
     {
