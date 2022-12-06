@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -15,7 +16,8 @@ public class ConnectorObject : InteractableObject
     public GameObject[] anchorPoints;
     // Order of the AnchorPoints
     public Queue<GameObject> anchorQueue;
-    private Transform previousParent;
+    protected Transform previousParent;
+    public bool resetOnTaskCompletion = false;
     // Wird am Anfang ausgefuehrt
     public void Awake()
     {
@@ -28,10 +30,8 @@ public class ConnectorObject : InteractableObject
 
         if (!connectible.GetComponent<InteractableObject>().GetIsGrabbed() && connectorActive && this.GetIsGrabbed())
         {
-            Debug.Log("ertzu");
             previousParent = connectible.transform.parent;
             connectible.transform.parent = anchorQueue.Dequeue().transform;
-            anchorQueue.Enqueue(connectible);
             connectible.GetComponent<Rigidbody>().isKinematic = true;
             foreach (Collider collider in connectible.GetComponentsInChildren<Collider>()) collider.enabled = false;
             connectible.GetComponent<InteractableObject>().SetGrabbable(false);
@@ -57,13 +57,26 @@ public class ConnectorObject : InteractableObject
         GameObject anchorPoint = anchorQueue.Peek();
         if (anchorPoint.transform.childCount > 0)
         {
-            GameObject child = anchorPoint.transform.gameObject;
-            if (child)
+            GameObject go = anchorPoint.transform.gameObject;
+            if (go)
             {
-                child.transform.parent = previousParent;
-                child.GetComponent<Rigidbody>().isKinematic = false;
-                child.GetComponentInChildren<BoxCollider>().enabled = true;
-                child.GetComponent<XRBaseInteractable>().interactionLayerMask = ~0;
+                try
+                {
+                    ResetManager resetm;
+                    if (resetm = go.GetComponent<ResetManager>())
+                    {
+                        resetm.ResetComp();
+                    }
+                    go.transform.parent = previousParent;
+                    go.GetComponent<Rigidbody>().isKinematic = false;
+                    go.GetComponentInChildren<BoxCollider>().enabled = true;
+                    go.GetComponent<XRBaseInteractable>().interactionLayerMask = ~0;
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError("" + e.Source);
+                }
+
             }
         }
     }

@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 8301435877491144619}
   - component: {fileID: -3215566763138138225}
   - component: {fileID: 3811366977213384902}
+  - component: {fileID: -2985972233971972348}
   m_Layer: 0
   m_Name: spritzeNahrung
   m_TagString: Untagged
@@ -296,6 +297,20 @@ MonoBehaviour:
   nurRauspumpen: 0
   nurReinpumpen: 1
   kolben: {fileID: 2363475940048908635}
+--- !u!114 &-2985972233971972348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808612825705206197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 876195facae4e4746804b9dc183c37a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetTargetList:
+  - {fileID: 0}
 --- !u!1 &2363475940048908635
 GameObject:
   m_ObjectHideFlags: 0

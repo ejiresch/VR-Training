@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 /* Ist für die Spritze Animation zuständig */
+[RequireComponent(typeof(ResetManager))]
 public class SpritzePressObject : PressObject
 {
     public InputActionReference toggleReference = null;
     public bool reingepumpt = false;
     public bool nurRauspumpen = false;
     public bool nurReinpumpen = false;
+    public bool disconnectOnCompletion = false;
     public GameObject kolben;
     private Animator anim;
 
@@ -17,6 +20,18 @@ public class SpritzePressObject : PressObject
     {
         anim = this.gameObject.GetComponent<Animator>();
         if (nurRauspumpen) StartCoroutine(Reinpumpen());
+        if (PlayerPrefs.GetInt("resetCommand") == 1)
+        {
+            if (this.gameObject.GetComponent<ResetManager>())
+            {
+                this.gameObject.GetComponent<ResetManager>().Register(this);
+            }
+            else
+            {
+                Debug.LogError("Kein ReserManager am GameObject");
+            }
+        }
+        
     }
     private void Awake() => toggleReference.action.started += Toggle;
 
@@ -30,14 +45,17 @@ public class SpritzePressObject : PressObject
     public override void Press()
     {
         if (!pressable) return;
-        try
+        if (disconnectOnCompletion)
         {
-            GetComponent<ConnectorObject>().Disconnect();   //disconnect object
+            try
+            {
+                GetComponent<ConnectorObject>().Disconnect();   //disconnect object
+            }
+            catch
+            {
+                GetComponent<Connectible>().GetConnector().Disconnect(); //disconnect object
+            }   //disconnect object
         }
-        catch
-        {
-            GetComponent<Connectible>().GetConnector().Disconnect(); //disconnect object
-        }   //disconnect object
         if (!nurRauspumpen)
         {
             GameObject temp = GameObject.FindGameObjectWithTag("CompoundGrabbablePart").transform.parent.parent.gameObject;
@@ -48,10 +66,10 @@ public class SpritzePressObject : PressObject
     }
     IEnumerator Reinpumpen() // Start der "Reinpumpen" Animation
     {
-        Debug.Log("ReinPump");
         anim.SetTrigger("reinpumpen");
         yield return new WaitForSeconds(1.1f);
         reingepumpt = true;
+
         if (nurReinpumpen)
         {
             Press();
@@ -59,9 +77,13 @@ public class SpritzePressObject : PressObject
     }
     IEnumerator Rauspumpen() // Start der "Rauspumpen" Animation
     {
-        Debug.Log("RausPump");
+       
         anim.SetTrigger("rauspumpen");
         yield return new WaitForSeconds(1.3f);
         Press();
+    }
+    public void ResetTool()
+    {
+        Debug.Log("RESET");
     }
 }
