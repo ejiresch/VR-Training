@@ -24,7 +24,6 @@ MonoBehaviour:
   woman: {fileID: 6117283350620791866, guid: 7e5492e767ac00a499e7ef8cad3514fa, type: 3}
   taskList:
   - {fileID: 9182968463707594753, guid: 668cabc5006089d47bfda95d6d20e828, type: 3}
-  - {fileID: 9182968463707594753, guid: 9feb45916f15de34f8be0f6931f399b3, type: 3}
   - {fileID: 9182968463707594753, guid: 978ba64c831edd84ab04b398c5a647e6, type: 3}
   - {fileID: 9182968463707594753, guid: e60ed14b715b02448be35163ed1ace1e, type: 3}
   - {fileID: 9182968463707594753, guid: 432861628e1dc9948a566d90bb41b3ce, type: 3}

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -6893912807770209140}
   - component: {fileID: 7380393181222143872}
   - component: {fileID: 2702807384468502384}
+  - component: {fileID: 3933042243836497155}
   m_Layer: 0
   m_Name: stoessel
   m_TagString: Untagged
@@ -198,7 +199,21 @@ BoxCollider:
   m_GameObject: {fileID: 25342028895097354}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.043793455, y: 0.11918259, z: 0.04379346}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!64 &3933042243836497155
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25342028895097354}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8638599120701810851, guid: 130439067edcc474486c3e711a359168, type: 3}

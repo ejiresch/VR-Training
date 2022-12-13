@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -8414280114625071811}
   - component: {fileID: -7465796942792055806}
   - component: {fileID: 2356478411391737305}
+  - component: {fileID: 637518376644928342}
   m_Layer: 9
   m_Name: glas
   m_TagString: Untagged
@@ -101,6 +102,7 @@ MonoBehaviour:
   preview: {fileID: 0}
   anchorPoints:
   - {fileID: 6502274121403170401}
+  resetOnTaskCompletion: 0
 --- !u!54 &-8414280114625071811
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -113,7 +115,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -225,10 +227,24 @@ BoxCollider:
   m_GameObject: {fileID: 5664044047155542320}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.04313518, y: 0.07568024, z: 0.04315511}
   m_Center: {x: 0.00000970345, y: 0.0403483, z: 0.00000026170164}
+--- !u!64 &637518376644928342
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5664044047155542320}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8188846882738213437, guid: 921707eeeaead3e4589ad14dd9de3782, type: 3}
 --- !u!1 &6502274121403170401
 GameObject:
   m_ObjectHideFlags: 0
