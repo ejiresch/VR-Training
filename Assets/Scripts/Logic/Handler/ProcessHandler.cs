@@ -12,7 +12,7 @@ public class ProcessHandler : MonoBehaviour
     [SerializeField] private GameObject patientSpawn;
     [SerializeField] private Material closePreviewMaterial, farPreviewMaterial;
     private static ProcessHandler _instance;
-    private string ppKey = "Process_Index";
+    public string ppKey = "Process_Index";
     // Singleton Instanz
     public static ProcessHandler Instance { get { return _instance; } }
     private void Awake()

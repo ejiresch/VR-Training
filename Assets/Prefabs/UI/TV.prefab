@@ -312,6 +312,7 @@ GameObject:
   - component: {fileID: 8604833639463585179}
   - component: {fileID: 8811027464289314582}
   - component: {fileID: 6949568501588013555}
+  - component: {fileID: 1578298268326414197}
   m_Layer: 5
   m_Name: Video_20_Meidzin_Schritt_2
   m_TagString: Untagged
@@ -441,6 +442,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1578298268326414197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30114083084440632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4e98231ef485c45905bfb1b7813a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: {fileID: 0}
+  process: {fileID: 11400000, guid: dc09295f0b127ac47a9b21ff96c7300c, type: 2}
 --- !u!1 &55427657472697776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1472,6 +1487,7 @@ GameObject:
   - component: {fileID: 5668648951836297926}
   - component: {fileID: 7621664345886205732}
   - component: {fileID: 6977657248931794774}
+  - component: {fileID: 6304129344829263415}
   m_Layer: 5
   m_Name: Video_1_heraus
   m_TagString: Untagged
@@ -1601,6 +1617,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6304129344829263415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276797396373693141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4e98231ef485c45905bfb1b7813a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: {fileID: 0}
+  process: {fileID: 11400000, guid: a9d5644452bd21c4fbcee99a187029f5, type: 2}
 --- !u!1 &1344279644316657312
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,6 +2250,7 @@ GameObject:
   - component: {fileID: 7105056861667019631}
   - component: {fileID: 1311241771387371918}
   - component: {fileID: 3298675008979062677}
+  - component: {fileID: 2008227336507361968}
   m_Layer: 5
   m_Name: Video_16_Essen_Schritt_2
   m_TagString: Untagged
@@ -2349,6 +2380,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2008227336507361968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2378401555792956923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4e98231ef485c45905bfb1b7813a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: {fileID: 0}
+  process: {fileID: 11400000, guid: dc09295f0b127ac47a9b21ff96c7300c, type: 2}
 --- !u!1 &2420282973596015988
 GameObject:
   m_ObjectHideFlags: 0
@@ -2361,6 +2406,7 @@ GameObject:
   - component: {fileID: 6342600005220360464}
   - component: {fileID: 2233932761671757985}
   - component: {fileID: 3815495499280531231}
+  - component: {fileID: 2716290125479765614}
   m_Layer: 5
   m_Name: Video_19_Medizin_Schritt_1
   m_TagString: Untagged
@@ -2490,6 +2536,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2716290125479765614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2420282973596015988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4e98231ef485c45905bfb1b7813a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: {fileID: 0}
+  process: {fileID: 11400000, guid: dc09295f0b127ac47a9b21ff96c7300c, type: 2}
 --- !u!1 &2574473737083707480
 GameObject:
   m_ObjectHideFlags: 0
@@ -4004,6 +4064,7 @@ GameObject:
   - component: {fileID: 2652388884055780849}
   - component: {fileID: 516721480226011861}
   - component: {fileID: 671308843623823976}
+  - component: {fileID: 6303306976889441381}
   m_Layer: 5
   m_Name: Video_22_Medizin_Schritt_4
   m_TagString: Untagged
@@ -4133,6 +4194,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6303306976889441381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4693952983755927978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4e98231ef485c45905bfb1b7813a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: {fileID: 0}
+  process: {fileID: 11400000, guid: dc09295f0b127ac47a9b21ff96c7300c, type: 2}
 --- !u!1 &5366230642290044558
 GameObject:
   m_ObjectHideFlags: 0
@@ -4901,6 +4976,7 @@ GameObject:
   - component: {fileID: 9010078935831248201}
   - component: {fileID: 2476464681772316306}
   - component: {fileID: 8874471903480956468}
+  - component: {fileID: 1541772399821590677}
   m_Layer: 5
   m_Name: Video_15_Essen_Schritt_1
   m_TagString: Untagged
@@ -5030,6 +5106,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1541772399821590677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6495335633130165675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4e98231ef485c45905bfb1b7813a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: {fileID: 0}
+  process: {fileID: 11400000, guid: dc09295f0b127ac47a9b21ff96c7300c, type: 2}
 --- !u!1 &6864350131013357815
 GameObject:
   m_ObjectHideFlags: 0
@@ -5042,6 +5132,7 @@ GameObject:
   - component: {fileID: 4929936213063005199}
   - component: {fileID: 8634117846200295945}
   - component: {fileID: 1363500996339395248}
+  - component: {fileID: 5886050753507049730}
   m_Layer: 5
   m_Name: Video_18_Essen_Schritt_4
   m_TagString: Untagged
@@ -5171,6 +5262,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5886050753507049730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6864350131013357815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4e98231ef485c45905bfb1b7813a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: {fileID: 0}
+  process: {fileID: 11400000, guid: dc09295f0b127ac47a9b21ff96c7300c, type: 2}
 --- !u!1 &7534737822324998071
 GameObject:
   m_ObjectHideFlags: 0
@@ -5324,6 +5429,7 @@ GameObject:
   - component: {fileID: 949285698655065760}
   - component: {fileID: 4034462512979917251}
   - component: {fileID: 6366783244979520157}
+  - component: {fileID: 7532376638391450725}
   m_Layer: 5
   m_Name: Video_17_Essen_Schritt_3
   m_TagString: Untagged
@@ -5453,6 +5559,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7532376638391450725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7885476883181188978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4e98231ef485c45905bfb1b7813a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: {fileID: 0}
+  process: {fileID: 11400000, guid: dc09295f0b127ac47a9b21ff96c7300c, type: 2}
 --- !u!1 &8042310856840079927
 GameObject:
   m_ObjectHideFlags: 0
@@ -5601,6 +5721,7 @@ GameObject:
   - component: {fileID: 2030913934035549868}
   - component: {fileID: 1794993192910883218}
   - component: {fileID: 1436739144507535215}
+  - component: {fileID: 8672158040099622501}
   m_Layer: 5
   m_Name: 'Video_21_Medizin_Schritt_3 '
   m_TagString: Untagged
@@ -5730,6 +5851,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8672158040099622501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8139599203999773875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4e98231ef485c45905bfb1b7813a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: {fileID: 0}
+  process: {fileID: 11400000, guid: dc09295f0b127ac47a9b21ff96c7300c, type: 2}
 --- !u!1 &8195300666353116722
 GameObject:
   m_ObjectHideFlags: 0
@@ -7134,6 +7269,7 @@ MonoBehaviour:
   splash: {fileID: 1099789415}
   selectedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
   highlightedColor: {r: 0.3, g: 1, b: 0.3, a: 1}
+  gone: {r: 0.2, g: 1, b: 0.1, a: 1}
 --- !u!1 &8656304803956472372
 GameObject:
   m_ObjectHideFlags: 0
