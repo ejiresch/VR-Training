@@ -22,12 +22,7 @@ public class TVHandler : MonoBehaviour
 
     public void StartVideo(int index)
     {
-        scene = GetComponent<SceneLoader>();
-        /*for(int i = 0; i<clips.Count; i++)
-        {
-            clips[i]
-        }*/
-        //print(GetComponent<SceneLoader>().selectedProcess.pName);
+        //scene = GetComponent<SceneLoader>();
 
         splash.SetActive(false);
         // start video with index
@@ -59,7 +54,7 @@ public class TVHandler : MonoBehaviour
         Debug.Log(button.transform.tag);
         //setActive(false) works here
         //button.SetActive(false); 
-        GameObject.FindGameObjectsWithTag("Video_8_hinein");
+        //GameObject.FindGameObjectsWithTag("Video_8_hinein");
 
 
 
