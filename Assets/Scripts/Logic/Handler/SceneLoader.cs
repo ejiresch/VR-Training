@@ -7,7 +7,7 @@ public class SceneLoader : MonoBehaviour
 {
     [SerializeField] private ProcessScriptableObject[] processes;
     public List<GameObject> toolList = new List<GameObject>();
-    private ProcessScriptableObject selectedProcess;
+    public ProcessScriptableObject selectedProcess;
     // Uses the pid to load a certain Process
     public void LoadProcess(int pid)
     {
@@ -59,5 +59,5 @@ public class SceneLoader : MonoBehaviour
     public List<GameObject> GetToolList()
     {
         return toolList;
-    }
+    } 
 }
