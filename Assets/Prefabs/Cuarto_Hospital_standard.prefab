@@ -281,6 +281,7 @@ GameObject:
   - component: {fileID: 2943172631895843838}
   - component: {fileID: 860424534079946136}
   - component: {fileID: 8086193069711797014}
+  - component: {fileID: 69461738422911472}
   m_Layer: 0
   m_Name: Colchon_2
   m_TagString: Untagged
@@ -295,13 +296,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493520550710380153}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.012629907, y: 0.42304337, z: -0.026}
-  m_LocalScale: {x: 1, y: 1, z: 1.0081767}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.012629907, y: -0.013, z: -0.026}
+  m_LocalScale: {x: 19.58451, y: 22.867079, z: 23.054056}
   m_Children: []
   m_Father: {fileID: 6604270072568598986}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &860424534079946136
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -309,7 +310,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493520550710380153}
-  m_Mesh: {fileID: -209014982897456484, guid: cafb7f958cee04ba5b995783a60e8c98, type: 3}
+  m_Mesh: {fileID: 4068373912626513877, guid: 674a7c9eed3ff004e9d1c1dd67d9d67f, type: 3}
 --- !u!23 &8086193069711797014
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -349,6 +350,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &69461738422911472
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493520550710380153}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4068373912626513877, guid: 674a7c9eed3ff004e9d1c1dd67d9d67f, type: 3}
 --- !u!1 &503926045637477141
 GameObject:
   m_ObjectHideFlags: 0
@@ -3896,7 +3911,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5650198695093724520}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0008665255, y: 0, z: 0}
+  m_LocalPosition: {x: -0.0008665255, y: 0.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2943172631895843838}
