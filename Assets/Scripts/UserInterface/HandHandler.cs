@@ -38,7 +38,7 @@ public class HandHandler : MonoBehaviour
 
     private void OnDestroy()
     {
-        toggleReferenceControl_right.action.started -= ShowControls;
+        toggleReferenceControl_right.action.started += ShowControls;        //change from toggleReferenceControl_right.action.started -= ShowControls;
     }
     public void ShowControls(InputAction.CallbackContext context) // Wird aufgerufen, wenn der Button für toggleReferenceControl_right gedrückt wird -> siehe Samples/Default Input Actions/XRI Default Input Actions
     {
