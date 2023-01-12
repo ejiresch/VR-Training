@@ -55,6 +55,14 @@ public class TaskManager : MonoBehaviour
     public void SetToolList(List<GameObject> toolList)
     {
         this.toolList = toolList;
+        Debug.Log("toolList");
+        print("try");
+        int i = toolList.Count;
+        print(i);
+        for(int i2 = 0; i2 < i; i2++)
+        {
+            print(toolList[i2]);
+        }
     }
     public void SetCompoundObject(GameObject compoundObject)
     {
