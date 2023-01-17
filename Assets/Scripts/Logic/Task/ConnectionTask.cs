@@ -18,7 +18,7 @@ public class ConnectionTask : Task
             
         }
     }
-
+    //Dazu, Simon
     public override List<GameObject> HighlightedObjects()
     {
         List<GameObject> result = new List<GameObject>();

@@ -13,4 +13,13 @@ public class ProximityActionTask : Task
         touchTarget = base.FindTool(touchTarget.name);
         touchObject.GetComponent<ProximityActionObject>().SetTarget(touchTarget);
     }
+
+    //Dazu, Simon
+    public override List<GameObject> HighlightedObjects()
+    {
+        List<GameObject> result = new List<GameObject>();
+        result.Add(touchTarget);
+        result.Add(touchObject);
+        return result;
+    }
 }
