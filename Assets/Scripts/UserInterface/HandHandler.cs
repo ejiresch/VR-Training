@@ -22,6 +22,8 @@ public class HandHandler : MonoBehaviour
 
     private void Awake()
     {
+        warning.SetActive(true);            //written,
+
         warning_texts[0] = warning.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
         warning_texts[1] = warning.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>();
         warning_sign = warning.transform.GetChild(2).gameObject.GetComponent<Image>();
@@ -34,11 +36,17 @@ public class HandHandler : MonoBehaviour
         warning_image.color = new Color(warning_image.color.r, warning_image.color.g, warning_image.color.b, 0);
 
         toggleReferenceControl_right.action.started += ShowControls;
+
+
+        //-----------------------------------------------------------------------------------------------------------------------
+
+        
+
     }
 
     private void OnDestroy()
     {
-        toggleReferenceControl_right.action.started -= ShowControls;
+        toggleReferenceControl_right.action.started -= ShowControls;        //change from toggleReferenceControl_right.action.started -= ShowControls;
     }
     public void ShowControls(InputAction.CallbackContext context) // Wird aufgerufen, wenn der Button für toggleReferenceControl_right gedrückt wird -> siehe Samples/Default Input Actions/XRI Default Input Actions
     {

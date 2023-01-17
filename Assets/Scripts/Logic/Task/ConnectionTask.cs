@@ -18,4 +18,12 @@ public class ConnectionTask : Task
             
         }
     }
+
+    public override List<GameObject> HighlightedObjects()
+    {
+        List<GameObject> result = new List<GameObject>();
+        result.Add(connectible);
+        result.Add(connector);
+        return result;
+    }
 }

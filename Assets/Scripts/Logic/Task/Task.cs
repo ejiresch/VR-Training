@@ -10,6 +10,7 @@ public abstract class Task : MonoBehaviour
     public bool warningMessage_BeideHaende = false;
     public bool warningMessage_KanueleFesthalten = false;
     public bool resetToolOnCompletion = false;
+
     // Gets called when Task is started
     public virtual void StartTask()
     {
@@ -38,6 +39,12 @@ public abstract class Task : MonoBehaviour
     public void ResetTool()
     {
 
+    }
+
+    //Created by Simon
+    public virtual List<GameObject> HighlightedObjects()
+    {
+        return null;
     }
 
 }
