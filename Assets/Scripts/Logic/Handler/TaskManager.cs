@@ -42,6 +42,13 @@ public class TaskManager : MonoBehaviour
             if(currentTask != null) currentTask.FinishTask();
             currentTask = t;
         }
+        List<GameObject> objects = t.HighlightedObjects();
+        for(int i = 0;i< objects.Count; i++)
+        {
+            Debug.Log(objects[i]);
+            //GameObject.FindGameObjectWithTag("Respawn").transform.position;
+            //GameObject.Find("Spot Light").transform.position;
+        }
         return t;
     }
 

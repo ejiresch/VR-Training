@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -8652356000690600733}
   - component: {fileID: 1462319625968229245}
   - component: {fileID: 9214515585080643536}
+  - component: {fileID: 7517450749379378725}
   m_Layer: 0
   m_Name: moerser
   m_TagString: Untagged
@@ -203,3 +204,15 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -4801167864256575531, guid: ab81d2e1473d35144aeb69f0faf1aeba, type: 3}
+--- !u!122 &7517450749379378725
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3945274505655888449}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4286611584
+  m_Size: 5
