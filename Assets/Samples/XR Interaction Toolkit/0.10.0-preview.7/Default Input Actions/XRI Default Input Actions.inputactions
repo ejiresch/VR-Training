@@ -671,6 +671,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "ClipPress",
+                    "type": "Button",
+                    "id": "e9262fe5-32ba-4a28-a477-19baaac14d0c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -803,6 +811,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "MakeAWish1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "121aa156-b014-4d97-a58a-b3c8989423c5",
+                    "path": "<XRController>{LeftHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ClipPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0547055c-b05e-491e-a801-e16fa78057a6",
+                    "path": "<XRController>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ClipPress",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

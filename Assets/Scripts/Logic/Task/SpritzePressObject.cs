@@ -9,7 +9,7 @@ using UnityEngine.InputSystem;
 public class SpritzePressObject : PressObject
 {
     public InputActionReference toggleReference = null;
-    public bool reingepumpt = false;
+    public bool reingepumpt = false; // spritze aufgezogen 
     public bool nurRauspumpen = false;
     public bool nurReinpumpen = false;
     public bool disconnectOnCompletion = false;
@@ -84,6 +84,6 @@ public class SpritzePressObject : PressObject
     }
     public void ResetTool()
     {
-        Debug.Log("RESET");
+        
     }
 }

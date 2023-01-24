@@ -9,7 +9,7 @@ public class ProximityActionObject : InteractableObject
     private GameObject touchTarget;
     private bool inRange = false;
     private Animator anim;
-
+    private bool activated = false;
     private void Start()
     {
         anim = this.GetComponent<Animator>();
@@ -25,8 +25,9 @@ public class ProximityActionObject : InteractableObject
     public void SetTouchTarget(GameObject touchTarger) => touchTarget = touchTarger;
     private void Toggle(InputAction.CallbackContext context)
     {
-        if (inRange)
+        if (inRange && !activated)
         {
+            activated = true;
             StartCoroutine(EventAnimation());
             ProcessHandler.Instance.NextTask();
         }
