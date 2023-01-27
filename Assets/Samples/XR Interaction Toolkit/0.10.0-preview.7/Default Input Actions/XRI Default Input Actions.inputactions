@@ -679,6 +679,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "ObjectGrabbed",
+                    "type": "Button",
+                    "id": "3071e953-1a67-4469-ac17-8f8828a0d420",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -833,6 +841,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "ClipPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8b6ff592-e795-4e49-8f67-bc7bf6acd7dd",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ObjectGrabbed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "149a7220-cd3c-486b-88f3-b76def6be4f6",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ObjectGrabbed",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

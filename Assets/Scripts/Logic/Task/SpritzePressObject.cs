@@ -1,11 +1,12 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 
 /* Ist für die Spritze Animation zuständig */
 [RequireComponent(typeof(ResetManager))]
+[RequireComponent(typeof(MaterialFetcher))]
 public class SpritzePressObject : PressObject
 {
     public InputActionReference toggleReference = null;
@@ -33,6 +34,8 @@ public class SpritzePressObject : PressObject
         }
         
     }
+
+
     private void Awake() => toggleReference.action.started += Toggle;
 
     private void OnDestroy() => toggleReference.action.started -= Toggle;

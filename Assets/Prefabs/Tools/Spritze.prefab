@@ -214,6 +214,7 @@ MonoBehaviour:
   preview: {fileID: 0}
   anchorPoints:
   - {fileID: 1535393618452758304}
+  resetOnTaskCompletion: 0
 --- !u!114 &3171862544218224998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,9 +228,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pressable: 0
-  toggleReference: {fileID: 8939289509126937741, guid: c348712bda248c246b8c49b3db54643f,
+  toggleReference: {fileID: -8676771288832313663, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
   reingepumpt: 0
+  nurRauspumpen: 0
+  nurReinpumpen: 0
+  disconnectOnCompletion: 0
   kolben: {fileID: 488833788344196725}
 --- !u!95 &7368715081314856139
 Animator:

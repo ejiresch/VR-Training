@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 286347593575785693}
-  - component: {fileID: 758854173970820926}
+  - component: {fileID: 5613453804739414899}
   m_Layer: 0
   m_Name: SpritzeVonSondeEntfernen
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &758854173970820926
+--- !u!114 &5613453804739414899
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,13 +40,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 9182968463707594753}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a840d0651ac490b4ea1f4cbc61e1c97e, type: 3}
+  m_Script: {fileID: 11500000, guid: f4e6a401d3d0ede4bb4652a832c8af48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tName: 'Spritze von Sonde trennen '
-  description: Trenne die Spritze von der Sonde
+  tName: SpritzeAbnehmen
+  description: Entfernen Sie die Spritze von der Sonde
   spawnedTools: []
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0
-  compoundObject: {fileID: 1628752821488307906, guid: d82683b4b9052bd408daffc9ea017df8,
+  resetToolOnCompletion: 0
+  toggleReference: {fileID: -6606467506871176741, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  connectorObject: {fileID: 1628752821488307906, guid: d82683b4b9052bd408daffc9ea017df8,
     type: 3}

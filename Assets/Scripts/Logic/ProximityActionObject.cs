@@ -29,6 +29,7 @@ public class ProximityActionObject : InteractableObject
         {
             activated = true;
             StartCoroutine(EventAnimation());
+            GetComponent<MaterialFetcher>().MaterialChange(gameObject,touchTarget,"liquid");
             ProcessHandler.Instance.NextTask();
         }
     }
@@ -41,4 +42,5 @@ public class ProximityActionObject : InteractableObject
     private void Awake() => toggleReference.action.started += Toggle;
 
     private void OnDestroy() => toggleReference.action.started -= Toggle;
+    
 }

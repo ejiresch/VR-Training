@@ -16,13 +16,16 @@ public class ConnectorObject : InteractableObject
     public GameObject[] anchorPoints;
     // Order of the AnchorPoints
     public Queue<GameObject> anchorQueue;
-    protected Transform previousParent;
+    public Queue<GameObject> connectedQueue;
+    [Tooltip("Setzt das Component nach der Reset-Methode zurück")]
     public bool resetOnTaskCompletion = false;
+    protected Transform previousParent;
     // Wird am Anfang ausgefuehrt
     public void Awake()
     {
         anchorQueue = new Queue<GameObject>();
         foreach (GameObject ap in anchorPoints) anchorQueue.Enqueue(ap);
+        connectedQueue = new Queue<GameObject>();
     }
     // Verbindet ein Connectible mit dem Objekt am definiertem Anchorpoint
     public virtual void Connect(GameObject connectible)
@@ -32,6 +35,7 @@ public class ConnectorObject : InteractableObject
         {
             previousParent = connectible.transform.parent;
             connectible.transform.parent = anchorQueue.Dequeue().transform;
+            connectedQueue.Enqueue(connectible);
             connectible.GetComponent<Rigidbody>().isKinematic = true;
             foreach (Collider collider in connectible.GetComponentsInChildren<Collider>()) collider.enabled = false;
             connectible.GetComponent<InteractableObject>().SetGrabbable(false);
@@ -47,6 +51,7 @@ public class ConnectorObject : InteractableObject
     public void ForceConnect(GameObject connectible)
     {
         connectible.transform.parent = anchorQueue.Dequeue().transform;
+        connectedQueue.Enqueue(connectible);
         connectible.GetComponent<Rigidbody>().isKinematic = true;
         foreach(Rigidbody child in connectible.GetComponentsInChildren<Rigidbody>()) child.isKinematic = true;
         connectible.transform.localPosition = new Vector3(0, 0, 0);
@@ -54,7 +59,9 @@ public class ConnectorObject : InteractableObject
     }
     // Kann implementiert werden um Objekte wieder zu entfernen
     public virtual void Disconnect() {
-        GameObject anchorPoint = anchorQueue.Peek();
+        Debug.Log(this);
+        GameObject anchorPoint = connectedQueue.Dequeue();
+        anchorQueue.Enqueue(anchorPoint);
         if (anchorPoint.transform.childCount > 0)
         {
             GameObject go = anchorPoint.transform.gameObject;
@@ -63,10 +70,10 @@ public class ConnectorObject : InteractableObject
                 try
                 {
                     ResetManager resetm;
-                    if (resetm = go.GetComponent<ResetManager>())
+                    /*if (resetm = go.GetComponent<ResetManager>())
                     {
                         resetm.ResetComp();
-                    }
+                    }*/
                     go.transform.parent = previousParent;
                     go.GetComponent<Rigidbody>().isKinematic = false;
                     go.GetComponentInChildren<BoxCollider>().enabled = true;
@@ -74,7 +81,7 @@ public class ConnectorObject : InteractableObject
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError("" + e.Source);
+                    Debug.LogError(e);
                 }
 
             }

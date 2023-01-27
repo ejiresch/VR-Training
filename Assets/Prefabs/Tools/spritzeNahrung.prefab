@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 8764983498919028598}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: liquid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -220,6 +220,8 @@ GameObject:
   - component: {fileID: 3811366977213384902}
   - component: {fileID: -2985972233971972348}
   - component: {fileID: -949077273807835395}
+  - component: {fileID: -173356458349465251}
+  - component: {fileID: 1493123807952908525}
   m_Layer: 0
   m_Name: spritzeNahrung
   m_TagString: Untagged
@@ -438,6 +440,32 @@ MonoBehaviour:
   isGrabbed: 0
   toggleReference: {fileID: 8939289509126937741, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
+--- !u!114 &-173356458349465251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808612825705206197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6bc8023a214abf45a696bc223578d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGrabbed: 0
+  taskFocus: 0
+--- !u!114 &1493123807952908525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808612825705206197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee422bd3ddb0ba41ada2d8b03f04393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2363475940048908635
 GameObject:
   m_ObjectHideFlags: 0
