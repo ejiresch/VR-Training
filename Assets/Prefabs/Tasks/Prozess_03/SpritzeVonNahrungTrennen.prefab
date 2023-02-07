@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 286347593575785693}
+  - component: {fileID: -3490080724524744257}
   m_Layer: 0
   m_Name: SpritzeVonNahrungTrennen
   m_TagString: Untagged
@@ -30,3 +31,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-3490080724524744257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9182968463707594753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e6a401d3d0ede4bb4652a832c8af48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tName: 'Spritze von Nahrung Trennen '
+  description: Trennen Sie die Spritze von der Nahrung
+  spawnedTools: []
+  warningMessage_BeideHaende: 0
+  warningMessage_KanueleFesthalten: 0
+  resetToolOnCompletion: 0
+  toggleReference: {fileID: -6606467506871176741, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  connectorObject: {fileID: 5511604176803794629, guid: 9428d8580708931438cd2d20e498008a,
+    type: 3}

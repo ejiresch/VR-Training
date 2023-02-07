@@ -43,8 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6476568b40475a4a84f4e08225cf24e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tName: 
-  description: 
+  tName: 'Spritze mit Sonde verbinden '
+  description: Verbinden Sie die Spritze mit der Sonde
   spawnedTools: []
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0

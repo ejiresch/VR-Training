@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -7,7 +10,7 @@ using UnityEngine.InputSystem;
 /* Ist für die Spritze Animation zuständig */
 [RequireComponent(typeof(ResetManager))]
 [RequireComponent(typeof(MaterialFetcher))]
-public class SpritzePressObject : PressObject
+public class SpritzePressObject : PressObject, ResetInterface
 {
     public InputActionReference toggleReference = null;
     public bool reingepumpt = false; // spritze aufgezogen 
@@ -15,6 +18,7 @@ public class SpritzePressObject : PressObject
     public bool nurReinpumpen = false;
     public bool disconnectOnCompletion = false;
     public GameObject kolben;
+    public GameObject ObjectToGetMaterial;
     private Animator anim;
 
     private void Start()
@@ -66,13 +70,26 @@ public class SpritzePressObject : PressObject
             temp.GetComponent<Rigidbody>().isKinematic = false;
         }
         base.Press();   //next task
+        ResetManager resetm;
+        if (resetm = GetComponent<ResetManager>())
+        {
+            resetm.ResetTool();
+        }
+        
     }
     IEnumerator Reinpumpen() // Start der "Reinpumpen" Animation
     {
+        try
+        {
+            GetComponent<MaterialFetcher>().MaterialChange(gameObject, GetComponent<Connectible>().GetConnector().gameObject, "liquid");
+        }
+        catch
+        {
+            
+        }
         anim.SetTrigger("reinpumpen");
         yield return new WaitForSeconds(1.1f);
         reingepumpt = true;
-
         if (nurReinpumpen)
         {
             Press();
@@ -83,10 +100,15 @@ public class SpritzePressObject : PressObject
        
         anim.SetTrigger("rauspumpen");
         yield return new WaitForSeconds(1.3f);
+        reingepumpt = false;
         Press();
     }
-    public void ResetTool()
+    public void ResetComp()
     {
         
+    }
+    public bool[] SetConfig(bool[] nurReinpumpen)
+    {
+        return nurReinpumpen;
     }
 }

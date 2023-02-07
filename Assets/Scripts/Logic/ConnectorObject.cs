@@ -61,7 +61,7 @@ public class ConnectorObject : InteractableObject
     public virtual void Disconnect() {
         Debug.Log(this);
         GameObject anchorPoint = connectedQueue.Dequeue();
-        anchorQueue.Enqueue(anchorPoint);
+        anchorQueue.Enqueue(anchorPoint.transform.parent.gameObject);
         if (anchorPoint.transform.childCount > 0)
         {
             GameObject go = anchorPoint.transform.gameObject;
@@ -69,7 +69,7 @@ public class ConnectorObject : InteractableObject
             {
                 try
                 {
-                    ResetManager resetm;
+                    /*ResetManager resetm;
                     /*if (resetm = go.GetComponent<ResetManager>())
                     {
                         resetm.ResetComp();

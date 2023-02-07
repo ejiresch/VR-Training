@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class MaterialFetcher : MonoBehaviour
 {
+    private Material materialToGet = null;
     private Material Fetch(GameObject target,string tag)
     {
-        Material materialToGet = null;
         foreach (Transform t in target.transform)
         {
             if (t.childCount > 0)
                 Fetch(t.gameObject,tag);
-            if (t.tag == tag)
+            if (t.tag == tag && materialToGet == null)
             {
+                Debug.Log(target + "sdyrfxgfchgvjbknlmölöknljbkhvgjchfxgdyfxgfchgvjhbgkjlnkmöl");
                 materialToGet = t.GetComponent<MeshRenderer>().material;
             }
         }
@@ -27,8 +28,10 @@ public class MaterialFetcher : MonoBehaviour
             if (t.tag == tag)
             {
                 Material otherMat = GetComponent<MaterialFetcher>().Fetch(target,tag);
+                Debug.Log(target +"sdyrfxgfchgvjbknlmölöknljbkhvgjchfxgdyfxgfchgvjhbgkjlnkmöl");
                 t.gameObject.GetComponent<MeshRenderer>().material = otherMat;
             }
         }
+        materialToGet=null;
     }
 }

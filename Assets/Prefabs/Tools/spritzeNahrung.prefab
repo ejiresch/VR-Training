@@ -406,11 +406,11 @@ MonoBehaviour:
   pressable: 0
   toggleReference: {fileID: 8939289509126937741, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  reingepumpt: 1
+  reingepumpt: 0
   nurRauspumpen: 0
   nurReinpumpen: 0
   disconnectOnCompletion: 0
-  kolben: {fileID: 2363475940048908635}
+  kolben: {fileID: 919132149155446097, guid: 64b5ce169ad89f341871120a87f000e6, type: 3}
 --- !u!114 &-2985972233971972348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,8 +423,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876195facae4e4746804b9dc183c37a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resetTargetList:
-  - {fileID: 0}
 --- !u!114 &-949077273807835395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,7 +436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrabbed: 0
-  toggleReference: {fileID: 8939289509126937741, guid: c348712bda248c246b8c49b3db54643f,
+  toggleReference: {fileID: -8676771288832313663, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
 --- !u!114 &-173356458349465251
 MonoBehaviour:

@@ -36,10 +36,6 @@ public abstract class Task : MonoBehaviour
     }
     // Wird am Ende der Task aufgerufen
     public virtual void FinishTask() => Destroy(this.gameObject);
-    public void ResetTool()
-    {
-
-    }
 
     //Created by Simon
     public virtual List<GameObject> HighlightedObjects()

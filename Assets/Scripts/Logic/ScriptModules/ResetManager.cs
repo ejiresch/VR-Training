@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ResetManager : MonoBehaviour
 {
-    public List<MonoBehaviour> resetTargetList;
+    public List<ResetInterface> resetTargetList = new List<ResetInterface>();
     // Start is called before the first frame update
     void Start()
     {
@@ -18,21 +18,21 @@ public class ResetManager : MonoBehaviour
         
     }
 
-    public void ResetComp()
+    public void ResetTool()
     {
         try
         {
-            foreach (Task task in resetTargetList)
+            foreach (ResetInterface task in resetTargetList)
             {
-                task.ResetTool();
+               task.ResetComp();
             }
         }
         catch(Exception e)
         {
-            Debug.LogError("Fehler in Reset Methode des Tasks: " +e.Source);
+            Debug.LogError("Fehler in Reset Methode des Tasks: " +e);
         }
     }
-    public void Register(MonoBehaviour toolToReset)
+    public void Register(ResetInterface toolToReset)
     {
         resetTargetList.Add(toolToReset);
     }
