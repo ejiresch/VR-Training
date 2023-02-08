@@ -13,7 +13,6 @@ public class MaterialFetcher : MonoBehaviour
                 Fetch(t.gameObject,tag);
             if (t.tag == tag && materialToGet == null)
             {
-                Debug.Log(target + "sdyrfxgfchgvjbknlmölöknljbkhvgjchfxgdyfxgfchgvjhbgkjlnkmöl");
                 materialToGet = t.GetComponent<MeshRenderer>().material;
             }
         }
@@ -28,7 +27,6 @@ public class MaterialFetcher : MonoBehaviour
             if (t.tag == tag)
             {
                 Material otherMat = GetComponent<MaterialFetcher>().Fetch(target,tag);
-                Debug.Log(target +"sdyrfxgfchgvjbknlmölöknljbkhvgjchfxgdyfxgfchgvjhbgkjlnkmöl");
                 t.gameObject.GetComponent<MeshRenderer>().material = otherMat;
             }
         }

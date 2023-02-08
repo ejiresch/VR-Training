@@ -847,10 +847,10 @@
                 {
                     "name": "",
                     "id": "8b6ff592-e795-4e49-8f67-bc7bf6acd7dd",
-                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "path": "<XRSimulatedController>{RightHand}/triggerButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Continuous Move",
                     "action": "ObjectGrabbed",
                     "isComposite": false,
                     "isPartOfComposite": false

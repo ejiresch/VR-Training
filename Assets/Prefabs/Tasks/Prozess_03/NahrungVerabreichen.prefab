@@ -43,8 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853f082dc4d2a924c8853a9bbd62dbf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tName: 
-  description: 
+  tName: 'Nahrung verabreichen '
+  description: 'Verabreichen Sie die Nahrung '
   spawnedTools: []
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0
