@@ -43,13 +43,27 @@ public class TaskManager : MonoBehaviour
             currentTask = t;
         }
         List<GameObject> objects = t.HighlightedObjects();
+        
+        /**GameObject one_exists = GameObject.Find("Cube");
+        if (one_exists != null)
+        {
+            Destroy(one_exists);
+        }*/
+
+
         if (objects != null)
         {
             for (int i = 0; i < objects.Count; i++)
             {
                 Debug.Log(objects[i]);
+                GameObject one = GameObject.Find("Cube");
+                one.transform.position = objects[i].transform.position;
+                //one.transform.position = new Vector3(objects[i].transform.position.x, 
+                //                                    objects[i].transform.position.y, 
+                //                                    objects[i].transform.position.z);
                 //GameObject.FindGameObjectWithTag("Respawn").transform.position;
                 //GameObject.Find("Spot Light").transform.position;
+                Debug.Log(one.transform.position);
             }
         }
         return t;
