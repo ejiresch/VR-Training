@@ -42,6 +42,7 @@ public class TaskManager : MonoBehaviour
             if(currentTask != null) currentTask.FinishTask();
             currentTask = t;
         }
+
         List<GameObject> objects = t.HighlightedObjects();
         
         /**GameObject one_exists = GameObject.Find("Cube");
@@ -49,7 +50,6 @@ public class TaskManager : MonoBehaviour
         {
             Destroy(one_exists);
         }*/
-
 
         if (objects != null)
         {
@@ -61,9 +61,15 @@ public class TaskManager : MonoBehaviour
                 //one.transform.position = new Vector3(objects[i].transform.position.x, 
                 //                                    objects[i].transform.position.y, 
                 //                                    objects[i].transform.position.z);
+
+                //one.transform.position = new Vector3(0, 0, 0);                                             
+
                 //GameObject.FindGameObjectWithTag("Respawn").transform.position;
                 //GameObject.Find("Spot Light").transform.position;
-                Debug.Log(one.transform.position);
+                //GameObject go = Instantiate(GameObject.Find("Cube"));
+                //go.transform.position = objects[i].transform.position;
+                //GameObject.Find("Cube").transform.position = objects[i].transform.position;
+                Debug.Log(objects[i].transform.position);
             }
         }
         return t;
