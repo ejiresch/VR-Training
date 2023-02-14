@@ -25,6 +25,7 @@ public class ProximityActionObject : InteractableObject
     public void SetTouchTarget(GameObject touchTarger) => touchTarget = touchTarger;
     private void Toggle(InputAction.CallbackContext context)
     {
+        
         if (inRange && !activated)
         {
             activated = true;
@@ -38,8 +39,15 @@ public class ProximityActionObject : InteractableObject
         anim.SetTrigger("reinpumpen");
         yield return new WaitForSeconds(1.3f);
     }
-    public void SetTarget(GameObject touchTarger) => touchTarget = touchTarger;
-    private void Awake() => toggleReference.action.started += Toggle;
+    public void SetTarget(GameObject touchTarger) 
+    { 
+        touchTarget = touchTarger;
+        inRange = false;
+        activated = false;
+    }
+    private void Awake() { 
+        toggleReference.action.started += Toggle;
+    }
 
     private void OnDestroy() => toggleReference.action.started -= Toggle;
     
