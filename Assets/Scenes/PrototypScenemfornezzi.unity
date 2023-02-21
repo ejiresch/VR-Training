@@ -2090,6 +2090,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 315381350670111777, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_text
+      value: Essen Schritt 3
+      objectReference: {fileID: 0}
     - target: {fileID: 650663831222299697, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_RootOrder
@@ -2196,6 +2201,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1071658308762392771, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_text
+      value: 'Essen Schritt 4
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 1363500996339395248, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -2301,6 +2313,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2716290125479765614, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: process
+      value: 
+      objectReference: {fileID: 11400000, guid: b851747833787ae40b689dc95d624fa0,
+        type: 2}
     - target: {fileID: 2981036514873372459, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_RootOrder
@@ -2571,6 +2589,20 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 4924589469728731841, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_text
+      value: 'Essen Schritt 5
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4997208351444717365, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_text
+      value: 'Essen Schritt 2
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 5148197214557367653, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -2730,6 +2762,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048281764895829454, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_text
+      value: Essen Schritt 6
       objectReference: {fileID: 0}
     - target: {fileID: 6352884635067224893, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -3274,7 +3311,7 @@ PrefabInstance:
     - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: clips.Array.size
-      value: 22
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -3364,31 +3401,31 @@ PrefabInstance:
         type: 3}
       propertyPath: clips.Array.data[14]
       value: 
-      objectReference: {fileID: 32900000, guid: 999fce4f272d9984fa9920eb48ee54a0,
+      objectReference: {fileID: 32900000, guid: 9448ba78f5d0c3f48b2a263c7f0245fb,
         type: 3}
     - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: clips.Array.data[15]
       value: 
-      objectReference: {fileID: 32900000, guid: e83cec813e67f0b4189f8040b3b7d374,
+      objectReference: {fileID: 32900000, guid: 61194015b8be34f468fb747b50abf18f,
         type: 3}
     - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: clips.Array.data[16]
       value: 
-      objectReference: {fileID: 32900000, guid: bfdc0757f833a3a4cb782b546dedfa05,
+      objectReference: {fileID: 32900000, guid: 67320f3c753b7ac46aa64419b4f670f2,
         type: 3}
     - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: clips.Array.data[17]
       value: 
-      objectReference: {fileID: 32900000, guid: ee0eab4bba684df4f9e373dc9bb74164,
+      objectReference: {fileID: 32900000, guid: 503ebd794f340e540b1c48d96a3293ae,
         type: 3}
     - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: clips.Array.data[18]
       value: 
-      objectReference: {fileID: 32900000, guid: 139129f0a791df5439b68ff0f403e1df,
+      objectReference: {fileID: 32900000, guid: f5f733f5e71b197419e485a835a27edd,
         type: 3}
     - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -3770,7 +3807,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624258205}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.076, y: -5.198, z: 4.776}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
