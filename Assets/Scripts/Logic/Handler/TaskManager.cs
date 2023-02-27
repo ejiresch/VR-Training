@@ -10,6 +10,7 @@ public class TaskManager : MonoBehaviour
     private GameObject compoundObject;
     private Task currentTask;
     private GameObject woman;
+    public GameObject indicator;
     /**
      * Returns the next Tasks and removes the Array index
     */
@@ -56,18 +57,23 @@ public class TaskManager : MonoBehaviour
             for (int i = 0; i < objects.Count; i++)
             {
                 Debug.Log(objects[i]);
-                GameObject one = GameObject.Find("Cube");
-                one.transform.position = objects[i].transform.position;
-                //one.transform.position = new Vector3(objects[i].transform.position.x, 
-                //                                    objects[i].transform.position.y, 
+                //GameObject one = GameObject.Find("Cube");
+                //one.transform.position = objects[i].transform.position;
+                //indicator.transform.position = new Vector3(objects[i].transform.position.x, 
+                //                                    objects[i].transform.position.y+0.1f, 
                 //                                    objects[i].transform.position.z);
 
                 //one.transform.position = new Vector3(0, 0, 0);                                             
 
                 //GameObject.FindGameObjectWithTag("Respawn").transform.position;
                 //GameObject.Find("Spot Light").transform.position;
-                //GameObject go = Instantiate(GameObject.Find("Cube"));
+                GameObject go = Instantiate(indicator);
                 //go.transform.position = objects[i].transform.position;
+
+                go.transform.position = new Vector3(objects[i].transform.position.x,
+                                                    objects[i].transform.position.y+0.5f, 
+                                                    objects[i].transform.position.z);
+
                 //GameObject.Find("Cube").transform.position = objects[i].transform.position;
                 Debug.Log(objects[i].transform.position);
             }
