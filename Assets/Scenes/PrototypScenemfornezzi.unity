@@ -2126,6 +2126,16 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 21
       objectReference: {fileID: 0}
+    - target: {fileID: 815365025024838329, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.525
+      objectReference: {fileID: 0}
+    - target: {fileID: 815365025024838329, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.027
+      objectReference: {fileID: 0}
     - target: {fileID: 947733990640752269, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_Colors.m_PressedColor.b
@@ -2236,17 +2246,22 @@ PrefabInstance:
     - target: {fileID: 1983590580178801772, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.51
+      value: 0.525
       objectReference: {fileID: 0}
     - target: {fileID: 1983590580178801772, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.49
+      value: 0.2874
       objectReference: {fileID: 0}
     - target: {fileID: 2079246796266059190, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_text
       value: "Training \nneu starten"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378401555792956923, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_Name
+      value: Video_16_Essen_Schritt_3
       objectReference: {fileID: 0}
     - target: {fileID: 2420282973596015988, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2338,6 +2353,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2981036514873372459, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.525
+      objectReference: {fileID: 0}
+    - target: {fileID: 2981036514873372459, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.102
       objectReference: {fileID: 0}
     - target: {fileID: 3242952232548459712, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2604,6 +2629,16 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 4797332276680077441, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.525
+      objectReference: {fileID: 0}
+    - target: {fileID: 4797332276680077441, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.157
+      objectReference: {fileID: 0}
     - target: {fileID: 4924589469728731841, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_text
@@ -2798,6 +2833,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ChangeButtonColor
       objectReference: {fileID: 0}
+    - target: {fileID: 6495335633130165675, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_Name
+      value: Video_15_Essen_Schritt_2
+      objectReference: {fileID: 0}
     - target: {fileID: 6739604024357749424, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -2852,6 +2892,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864350131013357815, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_Name
+      value: Video_18_Essen_Schritt_5
       objectReference: {fileID: 0}
     - target: {fileID: 6949568501588013555, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -3013,6 +3058,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7885476883181188978, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_Name
+      value: Video_17_Essen_Schritt_4
+      objectReference: {fileID: 0}
     - target: {fileID: 7925505143616107884, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_RootOrder
@@ -3022,6 +3072,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289270544525867235, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.525
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289270544525867235, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.231
       objectReference: {fileID: 0}
     - target: {fileID: 8385794492036290880, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
