@@ -2005,6 +2005,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 30114083084440632, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_Name
+      value: Video_20_Medizin_Schritt_2
+      objectReference: {fileID: 0}
     - target: {fileID: 74683679835923129, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_Colors.m_PressedColor.b
@@ -2099,6 +2104,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 650663831222299697, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.8538003
+      objectReference: {fileID: 0}
+    - target: {fileID: 650663831222299697, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.417
       objectReference: {fileID: 0}
     - target: {fileID: 671308843623823976, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2983,6 +2998,16 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 7080145046147009655, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.8538003
+      objectReference: {fileID: 0}
+    - target: {fileID: 7080145046147009655, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.288
+      objectReference: {fileID: 0}
     - target: {fileID: 7087034267691414045, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_Colors.m_PressedColor.b
@@ -3629,6 +3654,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979192248791109292, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.8538003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979192248791109292, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.157
       objectReference: {fileID: 0}
     - target: {fileID: 9195739566731304521, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
