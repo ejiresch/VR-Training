@@ -56,7 +56,6 @@ public class TaskManager : MonoBehaviour
         {
             for (int i = 0; i < objects.Count; i++)
             {
-                Debug.Log(objects[i]);
                 //GameObject one = GameObject.Find("Cube");
                 //one.transform.position = objects[i].transform.position;
                 //indicator.transform.position = new Vector3(objects[i].transform.position.x, 

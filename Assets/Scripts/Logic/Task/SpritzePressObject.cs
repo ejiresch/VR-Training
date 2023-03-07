@@ -79,14 +79,8 @@ public class SpritzePressObject : PressObject, ResetInterface
     }
     IEnumerator Reinpumpen() // Start der "Reinpumpen" Animation
     {
-        try
-        {
-            GetComponent<MaterialFetcher>().MaterialChange(gameObject, GetComponent<Connectible>().GetConnector().gameObject, "liquid");
-        }
-        catch
-        {
-            
-        }
+        Debug.Log("kompo "+ GetComponent<Connectible>().GetConnector());
+        GetComponent<MaterialFetcher>().MaterialChange(gameObject, GetComponent<Connectible>().GetConnector().gameObject, "liquid");
         anim.SetTrigger("reinpumpen");
         yield return new WaitForSeconds(1.1f);
         reingepumpt = true;
