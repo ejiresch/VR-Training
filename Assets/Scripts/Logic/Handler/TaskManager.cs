@@ -11,6 +11,7 @@ public class TaskManager : MonoBehaviour
     private Task currentTask;
     private GameObject woman;
     public GameObject indicator;
+    public bool showIndicator = false;
     /**
      * Returns the next Tasks and removes the Array index
     */
@@ -45,37 +46,39 @@ public class TaskManager : MonoBehaviour
         }
 
         List<GameObject> objects = t.HighlightedObjects();
-        
+
         /**GameObject one_exists = GameObject.Find("Cube");
         if (one_exists != null)
         {
             Destroy(one_exists);
         }*/
-
-        if (objects != null)
+        if (showIndicator == true)
         {
-            for (int i = 0; i < objects.Count; i++)
+            if (objects != null)
             {
-                Debug.Log(objects[i]);
-                //GameObject one = GameObject.Find("Cube");
-                //one.transform.position = objects[i].transform.position;
-                //indicator.transform.position = new Vector3(objects[i].transform.position.x, 
-                //                                    objects[i].transform.position.y+0.1f, 
-                //                                    objects[i].transform.position.z);
+                for (int i = 0; i < objects.Count; i++)
+                {
+                    Debug.Log(objects[i]);
+                    //GameObject one = GameObject.Find("Cube");
+                    //one.transform.position = objects[i].transform.position;
+                    //indicator.transform.position = new Vector3(objects[i].transform.position.x, 
+                    //                                    objects[i].transform.position.y+0.1f, 
+                    //                                    objects[i].transform.position.z);
 
-                //one.transform.position = new Vector3(0, 0, 0);                                             
+                    //one.transform.position = new Vector3(0, 0, 0);                                             
 
-                //GameObject.FindGameObjectWithTag("Respawn").transform.position;
-                //GameObject.Find("Spot Light").transform.position;
-                GameObject go = Instantiate(indicator);
-                //go.transform.position = objects[i].transform.position;
+                    //GameObject.FindGameObjectWithTag("Respawn").transform.position;
+                    //GameObject.Find("Spot Light").transform.position;
+                    GameObject go = Instantiate(indicator);
+                    //go.transform.position = objects[i].transform.position;
 
-                go.transform.position = new Vector3(objects[i].transform.position.x,
-                                                    objects[i].transform.position.y+0.5f, 
-                                                    objects[i].transform.position.z);
+                    go.transform.position = new Vector3(objects[i].transform.position.x,
+                                                        objects[i].transform.position.y + 0.5f,
+                                                        objects[i].transform.position.z);
 
-                //GameObject.Find("Cube").transform.position = objects[i].transform.position;
-                Debug.Log(objects[i].transform.position);
+                    //GameObject.Find("Cube").transform.position = objects[i].transform.position;
+                    Debug.Log(objects[i].transform.position);
+                }
             }
         }
         return t;
@@ -109,4 +112,16 @@ public class TaskManager : MonoBehaviour
         return this.compoundObject;
     }
     public GameObject GetWoman() => this.woman;
+
+    public void switchIndicator()
+    {
+        if (showIndicator == true)
+        {
+            showIndicator = false;
+        }
+        else if (showIndicator == false)
+        {
+            showIndicator = true;
+        }
+    }
 }
