@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 // Object that can be connected to a ConnectorObject
@@ -21,7 +22,9 @@ public class Connectible : InteractableObject
             {
                 connector.Connect(this.gameObject);
             }
+            
         }
+        ExecuteOnDropFunction();
     }
     // Wird ausgefuehrt wenn das Objekt gehoben oder 
     public override void SetIsGrabbed(bool isg)
@@ -50,7 +53,7 @@ public class Connectible : InteractableObject
     public void SetConnector(ConnectorObject connector)
     {
         this.connector = connector;
-        this.SetGrabbable(true);
+        if(connector != null) this.SetGrabbable(true);
         if (GetIsGrabbed() && connector != null)
         {
             connector.StartPreview(this.gameObject);
@@ -121,4 +124,6 @@ public class Connectible : InteractableObject
     {
         return connector;
     }
+
+    
 }

@@ -15,17 +15,14 @@ public class ConnectorObject : InteractableObject
     public GameObject preview = null;
     public GameObject[] anchorPoints;
     // Order of the AnchorPoints
-    public Queue<GameObject> anchorQueue;
-    public Queue<GameObject> connectedQueue;
     [Tooltip("Setzt das Component nach der Reset-Methode zurück")]
     public bool resetOnTaskCompletion = false;
     protected Transform previousParent;
+    protected AnchorStore aStore;
     // Wird am Anfang ausgefuehrt
     public void Awake()
     {
-        anchorQueue = new Queue<GameObject>();
-        foreach (GameObject ap in anchorPoints) anchorQueue.Enqueue(ap);
-        connectedQueue = new Queue<GameObject>();
+        aStore = new AnchorStore(anchorPoints);
     }
     // Verbindet ein Connectible mit dem Objekt am definiertem Anchorpoint
     public virtual void Connect(GameObject connectible)
@@ -33,9 +30,8 @@ public class ConnectorObject : InteractableObject
 
         if (!connectible.GetComponent<InteractableObject>().GetIsGrabbed() && connectorActive && this.GetIsGrabbed())
         {
-            previousParent = connectible.transform.parent;
-            connectible.transform.parent = anchorQueue.Dequeue().transform;
-            connectedQueue.Enqueue(connectible);
+            aStore.storeOb(connectible);
+            connectible.GetComponent<Connectible>().ResetOnDropFunc();
             connectible.GetComponent<Rigidbody>().isKinematic = true;
             foreach (Collider collider in connectible.GetComponentsInChildren<Collider>()) collider.enabled = false;
             connectible.GetComponent<InteractableObject>().SetGrabbable(false);
@@ -50,8 +46,7 @@ public class ConnectorObject : InteractableObject
     // Verbindet wiederum ein Connectible mit dem ConnectorObject, ohne auf Bedingungen zu achten
     public void ForceConnect(GameObject connectible)
     {
-        connectible.transform.parent = anchorQueue.Dequeue().transform;
-        connectedQueue.Enqueue(connectible);
+        aStore.storeOb(connectible);
         connectible.GetComponent<Rigidbody>().isKinematic = true;
         foreach(Rigidbody child in connectible.GetComponentsInChildren<Rigidbody>()) child.isKinematic = true;
         connectible.transform.localPosition = new Vector3(0, 0, 0);
@@ -59,9 +54,7 @@ public class ConnectorObject : InteractableObject
     }
     // Kann implementiert werden um Objekte wieder zu entfernen
     public virtual void Disconnect() {
-        Debug.Log(this);
-        GameObject anchorPoint = connectedQueue.Dequeue();
-        anchorQueue.Enqueue(anchorPoint.transform.parent.gameObject);
+        GameObject anchorPoint = aStore.getLatestConnectedObject();
         if (anchorPoint.transform.childCount > 0)
         {
             GameObject go = anchorPoint.transform.gameObject;
@@ -69,14 +62,11 @@ public class ConnectorObject : InteractableObject
             {
                 try
                 {
-                    /*ResetManager resetm;
-                    /*if (resetm = go.GetComponent<ResetManager>())
-                    {
-                        resetm.ResetComp();
-                    }*/
-                    go.transform.parent = previousParent;
+                    anchorPoint.GetComponent<Connectible>().SetOnDropFunc((x)=>{ return x.GetComponent<Rigidbody>().isKinematic = false; });
+                    anchorPoint.GetComponent<Connectible>().SetOnDropFunc((x)=>{ return x.transform.parent = ProcessHandler.Instance.transform; });
+                    go.transform.parent = aStore.getLatestConnectedParent();
                     go.GetComponent<Rigidbody>().isKinematic = false;
-                    go.GetComponentInChildren<BoxCollider>().enabled = true;
+                    foreach (Collider collider in go.GetComponentsInChildren<Collider>()) collider.enabled = true;
                     go.GetComponent<XRBaseInteractable>().interactionLayerMask = ~0;
                 }
                 catch (Exception e)
@@ -86,6 +76,7 @@ public class ConnectorObject : InteractableObject
 
             }
         }
+        aStore.removeObj();
     }
     // Startet den Preview (Rote Vorzeige)
     public virtual void StartPreview(GameObject prefab)
@@ -105,7 +96,7 @@ public class ConnectorObject : InteractableObject
             }
             foreach (Collider collider in preview.GetComponentsInChildren<Collider>()) Destroy(collider);
             PreviewFar();
-            preview.transform.parent = anchorQueue.Peek().transform;    
+            preview.transform.parent = aStore.nextFreeAnchor();    
             preview.transform.localPosition = new Vector3(0, 0, 0);
             preview.transform.localEulerAngles = new Vector3(0, 0, 0);
         }
@@ -140,7 +131,58 @@ public class ConnectorObject : InteractableObject
     // Holt sich den naechsten Anchorpoint
     public Vector3 GetAnchorPosition()
     {
-        if (anchorQueue.Count < 1) return new Vector3(0, 0, 0);
-        return anchorQueue.Peek().transform.position;
+        return aStore.nextFreeAnchorPosition();
+    }
+
+
+
+    protected class AnchorStore
+    {
+        private Transform[] parents;
+        private GameObject[] go;
+        private readonly Transform[] anchors;
+        private int index = 0;
+
+        public AnchorStore(GameObject[] anchorObjects)
+        {
+            anchors = new Transform[anchorObjects.Length];
+            parents = new Transform[anchorObjects.Length];
+            go = new GameObject[anchorObjects.Length];
+            
+            for (int i = 0; i < anchorObjects.Length; i++)
+            {
+                anchors[i] = anchorObjects[i].transform;
+            }
+        }
+        internal void storeOb(GameObject obj)
+        {
+            if (index < anchors.Length)
+            {
+                go[index] = obj;
+                parents[index] = obj.transform.parent;
+                obj.transform.parent = anchors[index];
+                index++;
+            }
+        }
+        public GameObject getLatestConnectedObject() => index>0 ? go[index - 1] : null;
+        public Transform getLatestConnectedParent() => index>0 ? parents[index - 1] : null;
+        public void removeObj()
+        {
+            if (index > 0)
+            {
+                go[index-1].transform.parent = parents[index-1].transform;
+                index--;
+            }
+        }
+        public Vector3 nextFreeAnchorPosition()
+        {
+            if (index == anchors.Length) return new Vector3(0, 0, 0);
+            return anchors[index].position;
+        }
+        public Transform nextFreeAnchor()
+        {
+            if (index == anchors.Length) return anchors[anchors.Length-1];
+            return anchors[index];
+        }
     }
 }

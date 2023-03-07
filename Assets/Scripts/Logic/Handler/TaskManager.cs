@@ -22,7 +22,7 @@ public class TaskManager : MonoBehaviour
             ProcessHandler.Instance.EndOfTasks();
             return null;
         }
-        
+
         // Sound abspielen, wenn Task abgeschlossen wurde
         gameObject.GetComponent<SoundManager>().ManageSound("taskdone", true, 0);
 
@@ -62,10 +62,10 @@ public class TaskManager : MonoBehaviour
                     //GameObject one = GameObject.Find("Cube");
                     //one.transform.position = objects[i].transform.position;
                     //indicator.transform.position = new Vector3(objects[i].transform.position.x, 
-                    //                                    objects[i].transform.position.y+0.1f, 
+                    //                                    objects[i].transform.position.y+0.1f,
                     //                                    objects[i].transform.position.z);
 
-                    //one.transform.position = new Vector3(0, 0, 0);                                             
+                    //one.transform.position = new Vector3(0, 0, 0);
 
                     //GameObject.FindGameObjectWithTag("Respawn").transform.position;
                     //GameObject.Find("Spot Light").transform.position;

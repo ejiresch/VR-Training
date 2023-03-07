@@ -51,5 +51,7 @@ MonoBehaviour:
   resetToolOnCompletion: 0
   toggleReference: {fileID: -6606467506871176741, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  connectorObject: {fileID: 5511604176803794629, guid: 9428d8580708931438cd2d20e498008a,
+  connectorObject: {fileID: 195317620184111067, guid: e288c24c531eaec47ac8a5436024fe71,
+    type: 3}
+  connectible: {fileID: 1808612825705206197, guid: b84a92fcc97d5584681cd98c55723cc0,
     type: 3}

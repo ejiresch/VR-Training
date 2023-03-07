@@ -14,9 +14,7 @@ public class CuffllineConnectionObject : ConnectorObject
     {
         if (!connectible.GetComponent<InteractableObject>().GetIsGrabbed() && connectorActive && this.GetIsGrabbed())
         {
-            previousParent = connectible.transform.parent;
-            Debug.Log(previousParent.name);
-            connectible.transform.parent = anchorQueue.Peek().transform;
+            aStore.storeOb(connectible);
             connectible.GetComponent<Rigidbody>().isKinematic = true;
             connectible.GetComponent<Collider>().enabled = false;
             connectible.GetComponent<InteractableObject>().SetGrabbable(false);
@@ -32,13 +30,13 @@ public class CuffllineConnectionObject : ConnectorObject
     public override void Disconnect()
     {
         //base.Disconnect();
-        GameObject anchorPoint = anchorQueue.Peek();
+        GameObject anchorPoint = aStore.getLatestConnectedObject();
         if (anchorPoint.transform.childCount > 0)
         {
             GameObject child = anchorPoint.transform.GetChild(0).gameObject;
             if (child)
             {
-                child.transform.parent = previousParent;
+                child.transform.parent = aStore.getLatestConnectedParent();
                 child.GetComponent<Rigidbody>().isKinematic = false;
             }
         }
@@ -61,7 +59,7 @@ public class CuffllineConnectionObject : ConnectorObject
             }
             foreach (Collider collider in preview.GetComponentsInChildren<Collider>()) Destroy(collider);
             PreviewFar();
-            preview.transform.parent = anchorQueue.Peek().transform;
+            preview.transform.parent = aStore.getLatestConnectedParent();
             preview.transform.localPosition = new Vector3(0, 0, 0);
             preview.transform.localEulerAngles = new Vector3(0, 0, 0);
         }

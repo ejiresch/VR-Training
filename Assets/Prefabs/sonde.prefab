@@ -241,7 +241,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 3895989045417072632}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -416,10 +417,10 @@ BoxCollider:
   m_GameObject: {fileID: 2680311864628644839}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.4057522, y: 0.15101112, z: 0.1391303}
-  m_Center: {x: 1.2001953, y: 0.25826663, z: 0.006138617}
+  m_Size: {x: 1.0200593, y: 0.15101112, z: 0.1391303}
+  m_Center: {x: -0.96245, y: 0.25826663, z: 0.006138617}
 --- !u!1 &3023204651141543857
 GameObject:
   m_ObjectHideFlags: 0

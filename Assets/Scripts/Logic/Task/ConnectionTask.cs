@@ -15,7 +15,6 @@ public class ConnectionTask : Task
         {
             connector.GetComponent<ConnectorObject>().connectorActive = true;
             connectible.GetComponent<Connectible>().SetConnector(connector.GetComponent<ConnectorObject>());
-            
         }
     }
     //Dazu, Simon
@@ -26,4 +25,6 @@ public class ConnectionTask : Task
         result.Add(connector);
         return result;
     }
+
+
 }

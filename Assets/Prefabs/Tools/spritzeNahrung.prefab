@@ -92,7 +92,7 @@ BoxCollider:
   m_GameObject: {fileID: 331035465110386292}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.068529084, y: 0.12370458, z: 0.052261937}
   m_Center: {x: 0.00028348155, y: -0.0000000018626451, z: 0}
@@ -273,7 +273,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 5222983012336592788}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -309,6 +310,17 @@ MonoBehaviour:
       - m_Target: {fileID: 8301435877491144619}
         m_MethodName: SetIsGrabbed
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8301435877491144619}
+        m_MethodName: OnDrop
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -411,6 +423,7 @@ MonoBehaviour:
   nurReinpumpen: 0
   disconnectOnCompletion: 0
   kolben: {fileID: 919132149155446097, guid: 64b5ce169ad89f341871120a87f000e6, type: 3}
+  ObjectToGetMaterial: {fileID: 0}
 --- !u!114 &-2985972233971972348
 MonoBehaviour:
   m_ObjectHideFlags: 0
