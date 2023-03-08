@@ -2234,6 +2234,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ChangeButtonColor
       objectReference: {fileID: 0}
+    - target: {fileID: 1813985244415519220, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_text
+      value: Medizin Schritt 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1983590580178801772, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2258,6 +2263,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Video_19_Essen_Schritt_6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2525007329817083352, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_text
+      value: Medizin Schritt 7
       objectReference: {fileID: 0}
     - target: {fileID: 2533057164040633212, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2349,6 +2359,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.102
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048302653684948013, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_text
+      value: Medizin Schritt 8
       objectReference: {fileID: 0}
     - target: {fileID: 3242952232548459712, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -3018,6 +3033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686493136206360074, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 7885476883181188978, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}

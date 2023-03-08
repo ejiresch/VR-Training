@@ -11,7 +11,7 @@ public class TaskManager : MonoBehaviour
     private Task currentTask;
     private GameObject woman;
     public GameObject indicator;
-    public bool showIndicator = false;
+    public bool showIndicator = true;
     /**
      * Returns the next Tasks and removes the Array index
     */
@@ -54,8 +54,8 @@ public class TaskManager : MonoBehaviour
         }*/
         if (showIndicator == true)
         {
-            if (objects != null)
-            {
+            //if (objects != null)
+            //{
                 for (int i = 0; i < objects.Count; i++)
                 {
                     Debug.Log(objects[i]);
@@ -79,7 +79,7 @@ public class TaskManager : MonoBehaviour
                     //GameObject.Find("Cube").transform.position = objects[i].transform.position;
                     Debug.Log(objects[i].transform.position);
                 }
-            }
+            //}
         }
         return t;
     }
@@ -113,15 +113,21 @@ public class TaskManager : MonoBehaviour
     }
     public GameObject GetWoman() => this.woman;
 
-    public void switchIndicator()
+    public void SwitchIndicator()
     {
-        if (showIndicator == true)
+        /**if (showIndicator == true)
         {
             showIndicator = false;
         }
         else if (showIndicator == false)
         {
             showIndicator = true;
+        }*/
+        showIndicator = !showIndicator;
+        Debug.Log("Indicator switched");
+        if (showIndicator == false)
+        {
+
         }
     }
 }
