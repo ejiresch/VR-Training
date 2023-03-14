@@ -11,6 +11,7 @@ public class TaskManager : MonoBehaviour
     private Task currentTask;
     private GameObject woman;
     public GameObject indicator;
+    public List<GameObject> indicatorsCurrent;      //Currently spawned Indicators
     public bool showIndicator = false;
     /**
      * Returns the next Tasks and removes the Array index
@@ -78,6 +79,7 @@ public class TaskManager : MonoBehaviour
 
                     //GameObject.Find("Cube").transform.position = objects[i].transform.position;
                     Debug.Log(objects[i].transform.position);
+                indicatorsCurrent.Add(go);
                 }
             //}
         }
@@ -127,7 +129,21 @@ public class TaskManager : MonoBehaviour
         Debug.Log("Indicator switched");
         if (showIndicator == false)
         {
+            GameObject o;
+            for(int i = 0; i < indicatorsCurrent.Count; i++) {
+                o = indicatorsCurrent[i];
+                o.SetActive(false);
+             }
+        }
 
+        if (showIndicator == true)
+        {
+            GameObject o;
+            for (int i = 0; i < indicatorsCurrent.Count; i++)
+            {
+                o = indicatorsCurrent[i];
+                o.SetActive(true);
+            }
         }
     }
 }
