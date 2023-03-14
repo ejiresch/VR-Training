@@ -11,7 +11,7 @@ public class TaskManager : MonoBehaviour
     private Task currentTask;
     private GameObject woman;
     public GameObject indicator;
-    public bool showIndicator = true;
+    public bool showIndicator = false;
     /**
      * Returns the next Tasks and removes the Array index
     */

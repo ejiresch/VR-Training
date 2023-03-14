@@ -20,7 +20,13 @@ public abstract class Task : MonoBehaviour
     }
     // Setzt die Liste an erzeugten Tools, welche gesucht werden kann
     public void SetSpawnTools(GameObject[] toolList) => spawnedTools = toolList;
+
     // Findet ein Tool in der Liste, anhand eines Namens 
+    /// <summary>
+    /// Sucht nach einem Tool in der Liste an spawnedTools
+    /// </summary>
+    /// <param name="prefabName"></param>
+    /// <returns></returns>
     public GameObject FindTool(string prefabName)
     {
         for (int i = 0; i < spawnedTools.Length; i++)
@@ -42,5 +48,21 @@ public abstract class Task : MonoBehaviour
     {
         return null;
     }
-
+    ///<summary>
+    ///  Sucht ein GameObject aus den spawnedTools anhand des Namens, wobei das GameObject auch ein child sein kann. 
+    /// </summary>
+    /// <param name="prefabName"> Name des zu suchenden <see cref="GameObject"/></paramref>
+    /// 
+    public GameObject FindToolAsChild(string prefabName, GameObject currentGameObject)
+    {
+        foreach(Transform child in currentGameObject.transform)
+        {   
+            if (currentGameObject.transform.childCount > 0)
+            {
+                FindToolAsChild(prefabName, child.gameObject);
+            }
+            if (currentGameObject.name == prefabName) return currentGameObject;
+        }
+        return currentGameObject;
+    }
 }

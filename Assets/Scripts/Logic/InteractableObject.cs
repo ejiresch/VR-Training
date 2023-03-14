@@ -34,7 +34,7 @@ public class InteractableObject : MonoBehaviour, OnDropFunctions
     }
     public void ResetOnDropFunc() => onDropFunctions = new List<Func<GameObject, bool>>();
 
-    public void ExecuteOnDropFunction()
+    public void ExecuteOnDropFunc()
     {
         foreach (Func<GameObject, bool> func in onDropFunctions)
         {
