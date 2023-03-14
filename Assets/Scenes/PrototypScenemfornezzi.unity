@@ -2444,6 +2444,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: b851747833787ae40b689dc95d624fa0,
         type: 2}
+    - target: {fileID: 2854783948154168210, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: process
+      value: 
+      objectReference: {fileID: 11400000, guid: b851747833787ae40b689dc95d624fa0,
+        type: 2}
     - target: {fileID: 2981036514873372459, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2727,6 +2733,11 @@ PrefabInstance:
       value: 'Essen Schritt 2
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030091681529683935, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.506
       objectReference: {fileID: 0}
     - target: {fileID: 5148197214557367653, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -3426,7 +3437,7 @@ PrefabInstance:
     - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: clips.Array.size
-      value: 27
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -3587,6 +3598,12 @@ PrefabInstance:
     - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: clips.Array.data[26]
+      value: 
+      objectReference: {fileID: 32900000, guid: d2767bde9a33b8d49a1e5439b4877b39,
+        type: 3}
+    - target: {fileID: 8656304803806084701, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: clips.Array.data[27]
       value: 
       objectReference: {fileID: 32900000, guid: d2767bde9a33b8d49a1e5439b4877b39,
         type: 3}
