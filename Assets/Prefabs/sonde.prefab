@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrabbed: 0
+  hasToBeGrabbed: 0
   connectorActive: 0
   preview: {fileID: 0}
   anchorPoints:

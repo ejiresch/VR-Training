@@ -11,6 +11,8 @@ public class TaskManager : MonoBehaviour
     private Task currentTask;
     private GameObject woman;
     public GameObject indicator;
+    public List<GameObject> indicatorsCurrent;      //Currently spawned Indicators
+    public bool showIndicator = false;
     /**
      * Returns the next Tasks and removes the Array index
     */
@@ -21,7 +23,7 @@ public class TaskManager : MonoBehaviour
             ProcessHandler.Instance.EndOfTasks();
             return null;
         }
-        
+
         // Sound abspielen, wenn Task abgeschlossen wurde
         gameObject.GetComponent<SoundManager>().ManageSound("taskdone", true, 0);
 
@@ -45,37 +47,41 @@ public class TaskManager : MonoBehaviour
         }
 
         List<GameObject> objects = t.HighlightedObjects();
-        
+
         /**GameObject one_exists = GameObject.Find("Cube");
         if (one_exists != null)
         {
             Destroy(one_exists);
         }*/
-
-        if (objects != null)
+        if (showIndicator == true)
         {
-            for (int i = 0; i < objects.Count; i++)
-            {
-                //GameObject one = GameObject.Find("Cube");
-                //one.transform.position = objects[i].transform.position;
-                //indicator.transform.position = new Vector3(objects[i].transform.position.x, 
-                //                                    objects[i].transform.position.y+0.1f, 
-                //                                    objects[i].transform.position.z);
+            //if (objects != null)
+            //{
+                for (int i = 0; i < objects.Count; i++)
+                {
+                    Debug.Log(objects[i]);
+                    //GameObject one = GameObject.Find("Cube");
+                    //one.transform.position = objects[i].transform.position;
+                    //indicator.transform.position = new Vector3(objects[i].transform.position.x, 
+                    //                                    objects[i].transform.position.y+0.1f,
+                    //                                    objects[i].transform.position.z);
 
-                //one.transform.position = new Vector3(0, 0, 0);                                             
+                    //one.transform.position = new Vector3(0, 0, 0);
 
-                //GameObject.FindGameObjectWithTag("Respawn").transform.position;
-                //GameObject.Find("Spot Light").transform.position;
-                GameObject go = Instantiate(indicator);
-                //go.transform.position = objects[i].transform.position;
+                    //GameObject.FindGameObjectWithTag("Respawn").transform.position;
+                    //GameObject.Find("Spot Light").transform.position;
+                    GameObject go = Instantiate(indicator);
+                    //go.transform.position = objects[i].transform.position;
 
-                go.transform.position = new Vector3(objects[i].transform.position.x,
-                                                    objects[i].transform.position.y+0.5f, 
-                                                    objects[i].transform.position.z);
+                    go.transform.position = new Vector3(objects[i].transform.position.x,
+                                                        objects[i].transform.position.y + 0.5f,
+                                                        objects[i].transform.position.z);
 
-                //GameObject.Find("Cube").transform.position = objects[i].transform.position;
-                Debug.Log(objects[i].transform.position);
-            }
+                    //GameObject.Find("Cube").transform.position = objects[i].transform.position;
+                    Debug.Log(objects[i].transform.position);
+                indicatorsCurrent.Add(go);
+                }
+            //}
         }
         return t;
     }
@@ -108,4 +114,36 @@ public class TaskManager : MonoBehaviour
         return this.compoundObject;
     }
     public GameObject GetWoman() => this.woman;
+
+    public void SwitchIndicator()
+    {
+        /**if (showIndicator == true)
+        {
+            showIndicator = false;
+        }
+        else if (showIndicator == false)
+        {
+            showIndicator = true;
+        }*/
+        showIndicator = !showIndicator;
+        Debug.Log("Indicator switched");
+        if (showIndicator == false)
+        {
+            GameObject o;
+            for(int i = 0; i < indicatorsCurrent.Count; i++) {
+                o = indicatorsCurrent[i];
+                o.SetActive(false);
+             }
+        }
+
+        if (showIndicator == true)
+        {
+            GameObject o;
+            for (int i = 0; i < indicatorsCurrent.Count; i++)
+            {
+                o = indicatorsCurrent[i];
+                o.SetActive(true);
+            }
+        }
+    }
 }

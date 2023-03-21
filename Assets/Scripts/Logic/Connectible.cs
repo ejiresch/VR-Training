@@ -24,7 +24,7 @@ public class Connectible : InteractableObject
             }
             
         }
-        ExecuteOnDropFunction();
+        ExecuteOnDropFunc();
     }
     // Wird ausgefuehrt wenn das Objekt gehoben oder 
     public override void SetIsGrabbed(bool isg)
@@ -54,7 +54,7 @@ public class Connectible : InteractableObject
     {
         this.connector = connector;
         if(connector != null) this.SetGrabbable(true);
-        if (GetIsGrabbed() && connector != null)
+        if ((GetIsGrabbed()) && connector != null)
         {
             connector.StartPreview(this.gameObject);
             StartCoroutine(CheckDistance());

@@ -11,6 +11,7 @@ using UnityEngine.XR.Interaction.Toolkit;
  */
 public class ConnectorObject : InteractableObject
 {
+    public bool hasToBeGrabbed = true;
     public bool connectorActive = false;
     public GameObject preview = null;
     public GameObject[] anchorPoints;
@@ -28,7 +29,7 @@ public class ConnectorObject : InteractableObject
     public virtual void Connect(GameObject connectible)
     {
 
-        if (!connectible.GetComponent<InteractableObject>().GetIsGrabbed() && connectorActive && this.GetIsGrabbed())
+        if (!connectible.GetComponent<InteractableObject>().GetIsGrabbed() && connectorActive && (this.GetIsGrabbed()||!hasToBeGrabbed))
         {
             aStore.storeOb(connectible);
             connectible.GetComponent<Connectible>().ResetOnDropFunc();

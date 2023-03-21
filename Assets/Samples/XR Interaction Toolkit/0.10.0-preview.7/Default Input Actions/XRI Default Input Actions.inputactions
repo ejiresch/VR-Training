@@ -726,7 +726,7 @@
                 {
                     "name": "",
                     "id": "1395fba0-9c12-457b-8a0e-387a06c1af96",
-                    "path": "<XRController>{LeftHand}/gripPressed",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -737,7 +737,7 @@
                 {
                     "name": "",
                     "id": "b8d9b13e-6bf1-4386-9f80-d166e983e20e",
-                    "path": "<XRController>{RightHand}/gripPressed",
+                    "path": "<XRController>{RightHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -748,7 +748,18 @@
                 {
                     "name": "",
                     "id": "a104101d-056d-4975-88f5-8a2d08c9f41b",
-                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "path": "<XRController>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "triggerPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5bb5389e-6809-4da9-9e41-541d8ed5c9a2",
+                    "path": "<XRController>{LeftHand}/gripPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -759,7 +770,7 @@
                 {
                     "name": "",
                     "id": "77d7183c-18a6-44cb-9236-5afebad6ab2d",
-                    "path": "<XRController>{LeftHand}/gripPressed",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -770,7 +781,7 @@
                 {
                     "name": "",
                     "id": "aa80b12a-ced8-4096-b235-8467bd435c45",
-                    "path": "<XRController>{RightHand}/gripPressed",
+                    "path": "<XRController>{RightHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -781,7 +792,7 @@
                 {
                     "name": "",
                     "id": "0581a2f2-780e-498f-8728-f6e166715502",
-                    "path": "<XRController>{LeftHand}/gripPressed",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -792,7 +803,7 @@
                 {
                     "name": "",
                     "id": "0eb768dd-51ed-4f00-968d-ed618b0609b4",
-                    "path": "<XRController>{RightHand}/gripPressed",
+                    "path": "<XRController>{RightHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -803,7 +814,7 @@
                 {
                     "name": "",
                     "id": "8758d977-9886-459e-a733-b407b8323748",
-                    "path": "<XRController>{LeftHand}/gripPressed",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -814,7 +825,7 @@
                 {
                     "name": "",
                     "id": "c89bfa7e-64ee-4268-a1fc-4677a5067992",
-                    "path": "<XRController>{RightHand}/gripPressed",
+                    "path": "<XRController>{RightHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -825,7 +836,7 @@
                 {
                     "name": "",
                     "id": "121aa156-b014-4d97-a58a-b3c8989423c5",
-                    "path": "<XRController>{LeftHand}/gripPressed",
+                    "path": "<XRController>{RightHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -836,7 +847,7 @@
                 {
                     "name": "",
                     "id": "0547055c-b05e-491e-a801-e16fa78057a6",
-                    "path": "<XRController>{RightHand}/gripPressed",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -847,7 +858,7 @@
                 {
                     "name": "",
                     "id": "8b6ff592-e795-4e49-8f67-bc7bf6acd7dd",
-                    "path": "<XRSimulatedController>{RightHand}/triggerButton",
+                    "path": "<XRController>{RightHand}/gripPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "Continuous Move",
@@ -858,10 +869,10 @@
                 {
                     "name": "",
                     "id": "149a7220-cd3c-486b-88f3-b76def6be4f6",
-                    "path": "<XRController>{LeftHand}/triggerPressed",
+                    "path": "<XRController>{LeftHand}/gripPressed",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Continuous Move",
                     "action": "ObjectGrabbed",
                     "isComposite": false,
                     "isPartOfComposite": false
