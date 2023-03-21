@@ -25,15 +25,15 @@ public class SceneLoader : MonoBehaviour
         GameObject[] tools = selectedProcess.toolList;
         Transform patientSpawn = ProcessHandler.Instance.GetPatientSpawn();
         GameObject com = selectedProcess.GetCompound();
-        GameObject woman = Instantiate(selectedProcess.GetWoman(),patientSpawn);
+        GameObject patientModel = Instantiate(selectedProcess.GetPatientModel(),patientSpawn);
         if (com != null)
         {
             GameObject inst = Instantiate(com);
-            woman.GetComponent<ConnectorObject>().ForceConnect(inst);
+            patientModel.GetComponent<ConnectorObject>().ForceConnect(inst);
             ProcessHandler.Instance.SetCompoundOb(inst);
             toolList.Add(inst);
         }
-        toolList.Add(woman);
+        toolList.Add(patientModel);
         
 
         Transform[] spawnPoints = ProcessHandler.Instance.GetSpawnPoints();
@@ -46,7 +46,7 @@ public class SceneLoader : MonoBehaviour
 
         foreach (GameObject p in tools)
         {
-            toolList.Add(Instantiate(p, spawnPoints[i].position , Quaternion.identity, this.gameObject.transform));
+            toolList.Add(Instantiate(p, spawnPoints[i].position , p.transform.localRotation, this.gameObject.transform));
             i++;
         }
     }

@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// Abstract class that Describes a Task
+
+/// <summary>
+/// Abstract class that Describes a Task
+/// </summary>
 public abstract class Task : MonoBehaviour
 {
     public string tName;
@@ -11,19 +14,23 @@ public abstract class Task : MonoBehaviour
     public bool warningMessage_KanueleFesthalten = false;
     public bool resetToolOnCompletion = false;
 
-    // Gets called when Task is started
+    /// <summary>
+    /// Gets called when Task is started
+    /// </summary>
     public virtual void StartTask()
     {
         if(warningMessage_BeideHaende) ProcessHandler.Instance.ShowWarning(0);
         if(warningMessage_KanueleFesthalten) ProcessHandler.Instance.ShowWarning(1);
         if (resetToolOnCompletion) PlayerPrefs.SetInt("resetCommand", resetToolOnCompletion ? 1:0) ;
     }
-    // Setzt die Liste an erzeugten Tools, welche gesucht werden kann
+    /// <summary>
+    /// Setzt die Liste an erzeugten Tools, welche gesucht werden kann
+    /// </summary>
+    /// <param name="toolList">Tool Liste</param>
     public void SetSpawnTools(GameObject[] toolList) => spawnedTools = toolList;
 
-    // Findet ein Tool in der Liste, anhand eines Namens 
     /// <summary>
-    /// Sucht nach einem Tool in der Liste an spawnedTools
+    /// Findet ein Tool in der Liste, anhand eines Namens
     /// </summary>
     /// <param name="prefabName"></param>
     /// <returns></returns>
@@ -52,7 +59,7 @@ public abstract class Task : MonoBehaviour
     ///  Sucht ein GameObject aus den spawnedTools anhand des Namens, wobei das GameObject auch ein child sein kann. 
     /// </summary>
     /// <param name="prefabName"> Name des zu suchenden <see cref="GameObject"/></paramref>
-    /// 
+    ///<returns></returns>
     public GameObject FindToolAsChild(string prefabName, GameObject currentGameObject)
     {
         foreach(Transform child in currentGameObject.transform)

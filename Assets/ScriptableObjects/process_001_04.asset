@@ -22,6 +22,7 @@ MonoBehaviour:
   - {fileID: 3133612690540729634, guid: b21095e3032aad24abb10d6a305fbaca, type: 3}
   compoundOb: {fileID: 1628752821488307906, guid: d82683b4b9052bd408daffc9ea017df8,
     type: 3}
-  woman: {fileID: 6117283350620791866, guid: 7e5492e767ac00a499e7ef8cad3514fa, type: 3}
+  patientModel: {fileID: 6117283350620791866, guid: 7e5492e767ac00a499e7ef8cad3514fa,
+    type: 3}
   taskList:
   - {fileID: 9182968463707594753, guid: 668cabc5006089d47bfda95d6d20e828, type: 3}
