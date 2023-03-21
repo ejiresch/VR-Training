@@ -10,7 +10,7 @@ public class ProcessScriptableObject : ScriptableObject
     public GameObject[] toolList;
     public GameObject compoundOb;
     [Tooltip("Patienten Modell welches für den Prozess verwendet werden soll.")]
-    public GameObject woman; 
+    public GameObject patientModel; 
     [SerializeField] private GameObject[] taskList;
 
     /**
@@ -34,10 +34,10 @@ public class ProcessScriptableObject : ScriptableObject
             return compoundOb;
         return null;
     }
-    public GameObject GetWoman()
+    public GameObject GetPatientModel()
     {
-        if(woman != null)
-            return woman;
+        if(patientModel != null)
+            return patientModel;
         return null;
     }
 }
