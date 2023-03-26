@@ -50,6 +50,10 @@ MonoBehaviour:
   taskManager: {fileID: 4529476429821932933}
   uiManager: {fileID: 1253349289}
   spawnPoints: {fileID: 0}
+  patientSpawn: {fileID: 0}
+  closePreviewMaterial: {fileID: 0}
+  farPreviewMaterial: {fileID: 0}
+  ppKey: Process_Index
 --- !u!114 &4529476429821932936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,6 +68,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   processes:
   - {fileID: 11400000, guid: dc09295f0b127ac47a9b21ff96c7300c, type: 2}
+  toolList: []
+  selectedProcess: {fileID: 0}
+  placeholderTool: {fileID: 2125370344606644910, guid: e0d8eedba3762b64382df4bc044cb438,
+    type: 3}
 --- !u!114 &4529476429821932933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,7 +84,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4f947e0924aa42f0a05851b28a482ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTask: {fileID: 0}
+  toolList: []
+  indicator: {fileID: 0}
+  indicatorsCurrent: []
+  showIndicator: 0
 --- !u!114 &1253349289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,4 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 110668fa1a1c84ddc9d0ed6780019c44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handler: {fileID: 0}
+  wbh: {fileID: 0}
+  hudh: {fileID: 0}
+  hh: {fileID: 0}
