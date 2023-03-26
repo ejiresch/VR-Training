@@ -54,14 +54,16 @@ public class SpritzePressObject : PressObject, ResetInterface
         if (!pressable) return;
         if (disconnectOnCompletion)
         {
-            try
+            ConnectorObject connObj;
+            if(connObj = GetComponent<ConnectorObject>())
             {
-                GetComponent<ConnectorObject>().Disconnect();   //disconnect object
+                connObj.Disconnect();  //disconnect object
             }
-            catch
+            else
             {
-                GetComponent<Connectible>().GetConnector().Disconnect(); //disconnect object
-            }   //disconnect object
+                GetComponent<Connectible>().GetConnector().Disconnect();  //disconnect object
+            }
+
         }
         if (!nurRauspumpen)
         {
