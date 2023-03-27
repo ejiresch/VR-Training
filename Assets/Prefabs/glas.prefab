@@ -129,7 +129,7 @@ BoxCollider:
   m_GameObject: {fileID: 5664044047155542320}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.04313518, y: 0.010098442, z: 0.043155115}
   m_Center: {x: 0.00000970314, y: 0.0075573996, z: 0.00000026077032}
@@ -266,7 +266,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 8102832496370632274}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1

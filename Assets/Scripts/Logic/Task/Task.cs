@@ -13,6 +13,7 @@ public abstract class Task : MonoBehaviour
     public bool warningMessage_BeideHaende = false;
     public bool warningMessage_KanueleFesthalten = false;
     public bool resetToolOnCompletion = false;
+    private GameObject rightObject = null;
 
     /// <summary>
     /// Gets called when Task is started
@@ -36,15 +37,24 @@ public abstract class Task : MonoBehaviour
     /// <returns></returns>
     public GameObject FindTool(string prefabName)
     {
+        
         for (int i = 0; i < spawnedTools.Length; i++)
         {
             if ((prefabName + "(Clone)") == spawnedTools[i].name) return spawnedTools[i];
+            
         }
         GameObject tco = ProcessHandler.Instance.GetCompoundObject();
+        GameObject foundTool = FindToolAsChild(prefabName, tco);
+        
+        if (foundTool != null)
+        {
+            return foundTool;
+        }
         foreach (Rigidbody child in tco.GetComponentsInChildren<Rigidbody>())
         {
             if (child.gameObject.name == prefabName) return child.gameObject;
         }
+        
         return null;
     }
     // Wird am Ende der Task aufgerufen
@@ -64,12 +74,16 @@ public abstract class Task : MonoBehaviour
     {
         foreach(Transform child in currentGameObject.transform)
         {   
+            if (currentGameObject.name == prefabName)
+            {
+                rightObject = currentGameObject;
+                return rightObject;
+            }
             if (currentGameObject.transform.childCount > 0)
             {
                 FindToolAsChild(prefabName, child.gameObject);
             }
-            if (currentGameObject.name == prefabName) return currentGameObject;
         }
-        return currentGameObject;
+        return rightObject;
     }
 }
