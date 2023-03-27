@@ -8,6 +8,8 @@ TagManager:
   - CompoundGrabbablePart
   - Hand
   - liquid
+  - touchMaterial
+  - touchHand
   layers:
   - Default
   - TransparentFX

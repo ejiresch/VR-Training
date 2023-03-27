@@ -700,6 +700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrabbed: 1
+  hasToBeGrabbed: 1
   connectorActive: 0
   preview: {fileID: 0}
   anchorPoints:
@@ -1043,7 +1044,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 03fa306be4bb4044d9f5773e99841403, type: 2}
+  - {fileID: 2100000, guid: 575564cd96417ab42ab167ef92d692b7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

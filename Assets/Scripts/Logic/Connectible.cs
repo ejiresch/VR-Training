@@ -24,7 +24,6 @@ public class Connectible : InteractableObject
             }
             
         }
-        ExecuteOnDropFunc();
     }
     // Wird ausgefuehrt wenn das Objekt gehoben oder 
     public override void SetIsGrabbed(bool isg)

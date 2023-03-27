@@ -8,6 +8,11 @@ public class TouchObject : InteractableObject
     private void OnCollisionExit(Collision collision) {
         if (collision.gameObject.Equals(touchTarget))
         {
+            MaterialFetcher matF = GetComponent<MaterialFetcher>();
+            if (matF != null)
+            {
+                matF.MaterialChange(this.gameObject, touchTarget, "touchMaterial"); 
+            }
             ProcessHandler.Instance.NextTask();
             touchTarget = null;
         }

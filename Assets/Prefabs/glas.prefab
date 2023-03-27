@@ -129,10 +129,10 @@ BoxCollider:
   m_GameObject: {fileID: 5664044047155542320}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.04313518, y: 0.07568024, z: 0.04315511}
-  m_Center: {x: 0.00000970345, y: 0.0403483, z: 0.00000026170164}
+  m_Size: {x: 0.04313518, y: 0.010098442, z: 0.043155115}
+  m_Center: {x: 0.00000970314, y: 0.0075573996, z: 0.00000026077032}
 --- !u!64 &637518376644928342
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -142,7 +142,7 @@ MeshCollider:
   m_GameObject: {fileID: 5664044047155542320}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30

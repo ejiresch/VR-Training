@@ -31,7 +31,7 @@ public class ConnectorObject : InteractableObject
 
         if (!connectible.GetComponent<InteractableObject>().GetIsGrabbed() && connectorActive && (this.GetIsGrabbed()||!hasToBeGrabbed))
         {
-            aStore.storeOb(connectible);
+            aStore.StoreObj(connectible);
             connectible.GetComponent<Connectible>().ResetOnDropFunc();
             connectible.GetComponent<Rigidbody>().isKinematic = true;
             foreach (Collider collider in connectible.GetComponentsInChildren<Collider>()) collider.enabled = false;
@@ -47,7 +47,7 @@ public class ConnectorObject : InteractableObject
     // Verbindet wiederum ein Connectible mit dem ConnectorObject, ohne auf Bedingungen zu achten
     public void ForceConnect(GameObject connectible)
     {
-        aStore.storeOb(connectible);
+        aStore.StoreObj(connectible);
         connectible.GetComponent<Rigidbody>().isKinematic = true;
         foreach(Rigidbody child in connectible.GetComponentsInChildren<Rigidbody>()) child.isKinematic = true;
         connectible.transform.localPosition = new Vector3(0, 0, 0);
@@ -55,7 +55,7 @@ public class ConnectorObject : InteractableObject
     }
     // Kann implementiert werden um Objekte wieder zu entfernen
     public virtual void Disconnect() {
-        GameObject anchorPoint = aStore.getLatestConnectedObject();
+        GameObject anchorPoint = aStore.GetLatestConnectedObject();
         if (anchorPoint.transform.childCount > 0)
         {
             GameObject go = anchorPoint.transform.gameObject;
@@ -63,9 +63,10 @@ public class ConnectorObject : InteractableObject
             {
                 try
                 {
-                    anchorPoint.GetComponent<Connectible>().SetOnDropFunc((x)=>{ return x.GetComponent<Rigidbody>().isKinematic = false; });
-                    anchorPoint.GetComponent<Connectible>().SetOnDropFunc((x)=>{ return x.transform.parent = ProcessHandler.Instance.transform; });
-                    go.transform.parent = aStore.getLatestConnectedParent();
+                    Connectible connectible = anchorPoint.GetComponent<Connectible>();
+                    connectible.SetOnDropFunc((x)=>{ return x.GetComponent<Rigidbody>().isKinematic = false; });
+                    connectible.GetComponent<Connectible>().SetOnDropFunc((x)=>{ return x.transform.parent = ProcessHandler.Instance.transform; });
+                    go.transform.parent = aStore.GetLatestConnectedParent();
                     go.GetComponent<Rigidbody>().isKinematic = false;
                     foreach (Collider collider in go.GetComponentsInChildren<Collider>()) collider.enabled = true;
                     go.GetComponent<XRBaseInteractable>().interactionLayerMask = ~0;
@@ -77,7 +78,7 @@ public class ConnectorObject : InteractableObject
 
             }
         }
-        aStore.removeObj();
+        aStore.RemoveObj();
     }
     // Startet den Preview (Rote Vorzeige)
     public virtual void StartPreview(GameObject prefab)
@@ -97,7 +98,7 @@ public class ConnectorObject : InteractableObject
             }
             foreach (Collider collider in preview.GetComponentsInChildren<Collider>()) Destroy(collider);
             PreviewFar();
-            preview.transform.parent = aStore.nextFreeAnchor();    
+            preview.transform.parent = aStore.NextFreeAnchor();    
             preview.transform.localPosition = new Vector3(0, 0, 0);
             preview.transform.localEulerAngles = new Vector3(0, 0, 0);
         }
@@ -132,11 +133,13 @@ public class ConnectorObject : InteractableObject
     // Holt sich den naechsten Anchorpoint
     public Vector3 GetAnchorPosition()
     {
-        return aStore.nextFreeAnchorPosition();
+        return aStore.NextFreeAnchorPosition();
     }
 
 
-
+    /// <summary>
+    /// Stellt Methoden zum Speichern von AnchorPoints und mit diesen verbundenen Objekten bereit
+    /// </summary>
     protected class AnchorStore
     {
         private Transform[] parents;
@@ -144,6 +147,10 @@ public class ConnectorObject : InteractableObject
         private readonly Transform[] anchors;
         private int index = 0;
 
+        /// <summary>
+        /// Erzeugt einen AnchorStore mit AnchorPoints die mit Objekten verbunden werden können 
+        /// </summary>
+        /// <param name="anchorObjects"> Die AnchorPoints die zum speichern eines Objektes verfügbar sein sollen</param>
         public AnchorStore(GameObject[] anchorObjects)
         {
             anchors = new Transform[anchorObjects.Length];
@@ -155,7 +162,7 @@ public class ConnectorObject : InteractableObject
                 anchors[i] = anchorObjects[i].transform;
             }
         }
-        internal void storeOb(GameObject obj)
+        internal void StoreObj(GameObject obj)
         {
             if (index < anchors.Length)
             {
@@ -165,9 +172,9 @@ public class ConnectorObject : InteractableObject
                 index++;
             }
         }
-        public GameObject getLatestConnectedObject() => index>0 ? go[index - 1] : null;
-        public Transform getLatestConnectedParent() => index>0 ? parents[index - 1] : null;
-        public void removeObj()
+        public GameObject GetLatestConnectedObject() => index>0 ? go[index - 1] : null;
+        public Transform GetLatestConnectedParent() => index>0 ? parents[index - 1] : null;
+        public void RemoveObj()
         {
             if (index > 0)
             {
@@ -175,12 +182,12 @@ public class ConnectorObject : InteractableObject
                 index--;
             }
         }
-        public Vector3 nextFreeAnchorPosition()
+        public Vector3 NextFreeAnchorPosition()
         {
             if (index == anchors.Length) return new Vector3(0, 0, 0);
             return anchors[index].position;
         }
-        public Transform nextFreeAnchor()
+        public Transform NextFreeAnchor()
         {
             if (index == anchors.Length) return anchors[anchors.Length-1];
             return anchors[index];

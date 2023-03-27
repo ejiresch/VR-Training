@@ -26,7 +26,6 @@ public class PressTask : Task
             if (prop.Name == "pressable") continue;
             if (prop.GetValue(pressObject.GetComponents(typeof(PressObject))[0]) is bool)
             {
-                
                 prop.SetValue(pressObject.GetComponents(typeof(PressObject))[0], values[i]);
                 i++;
             }

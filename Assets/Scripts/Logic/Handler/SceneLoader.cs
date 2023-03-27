@@ -8,6 +8,7 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] private ProcessScriptableObject[] processes;
     public List<GameObject> toolList = new List<GameObject>();
     public ProcessScriptableObject selectedProcess;
+    public GameObject placeholderTool;
     // Uses the pid to load a certain Process
     public void LoadProcess(int pid)
     {
@@ -46,6 +47,12 @@ public class SceneLoader : MonoBehaviour
 
         foreach (GameObject p in tools)
         {
+            if (p == null)
+            {
+                toolList.Add(Instantiate(placeholderTool, spawnPoints[i].position, Quaternion.identity, this.gameObject.transform));
+                i++;
+                continue;
+            }
             toolList.Add(Instantiate(p, spawnPoints[i].position , p.transform.localRotation, this.gameObject.transform));
             i++;
         }
