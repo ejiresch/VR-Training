@@ -6201,7 +6201,7 @@ PrefabInstance:
     - target: {fileID: 4529476429821932933, guid: 3aad0fe442fb5a3499590f29d410347f,
         type: 3}
       propertyPath: showIndicator
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4529476429821932933, guid: 3aad0fe442fb5a3499590f29d410347f,
         type: 3}
