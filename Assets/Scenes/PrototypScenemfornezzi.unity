@@ -918,7 +918,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189399198}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00003, y: -0.00002, z: 0.0011}
+  m_LocalPosition: {x: 0.00003, y: 9.561, z: 0.0011}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1982,6 +1982,12 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 1578257885}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &469568753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1962243757528287735, guid: aa3bc0ba5c589984b9de73b03b462955,
+    type: 3}
+  m_PrefabInstance: {fileID: 561959143}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &469685491 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1276797396373693141, guid: aa3bc0ba5c589984b9de73b03b462955,
@@ -2173,7 +2179,7 @@ PrefabInstance:
     - target: {fileID: 315381350670111777, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_text
-      value: Essen Schritt 3
+      value: Wasser verabreichen
       objectReference: {fileID: 0}
     - target: {fileID: 650663831222299697, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2289,9 +2295,7 @@ PrefabInstance:
     - target: {fileID: 1071658308762392771, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_text
-      value: 'Essen Schritt 4
-
-'
+      value: "Nahrung und Spritze anschlie\xDFen"
       objectReference: {fileID: 0}
     - target: {fileID: 1152504163216715422, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2321,7 +2325,7 @@ PrefabInstance:
     - target: {fileID: 1813985244415519220, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_text
-      value: Medizin Schritt 6
+      value: Medikament aufnehmen
       objectReference: {fileID: 0}
     - target: {fileID: 1983590580178801772, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2348,10 +2352,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Video_19_Essen_Schritt_6
       objectReference: {fileID: 0}
+    - target: {fileID: 2474378484344366187, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_text
+      value: Vorbereitung
+      objectReference: {fileID: 0}
     - target: {fileID: 2525007329817083352, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_text
-      value: Medizin Schritt 7
+      value: Medikament verabreichen
       objectReference: {fileID: 0}
     - target: {fileID: 2533057164040633212, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2453,7 +2462,7 @@ PrefabInstance:
     - target: {fileID: 3048302653684948013, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_text
-      value: Medizin Schritt 8
+      value: "Mit Wasser Nachsp\xFClen"
       objectReference: {fileID: 0}
     - target: {fileID: 3242952232548459712, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2535,6 +2544,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ChangeButtonColor
       objectReference: {fileID: 0}
+    - target: {fileID: 3353215874318246577, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 469568753}
     - target: {fileID: 3354865778773379288, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_RootOrder
@@ -2713,26 +2727,32 @@ PrefabInstance:
     - target: {fileID: 4924589469728731841, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_text
-      value: 'Essen Schritt 5
-
-'
+      value: Nahrung verabreichen
       objectReference: {fileID: 0}
     - target: {fileID: 4997208351444717365, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_text
-      value: 'Essen Schritt 2
-
-'
+      value: Wasser aufnehmen
       objectReference: {fileID: 0}
     - target: {fileID: 5030091681529683935, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.502
       objectReference: {fileID: 0}
+    - target: {fileID: 5123981441853445786, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_text
+      value: Vorbereitung
+      objectReference: {fileID: 0}
     - target: {fileID: 5148197214557367653, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ResetScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 5163954645679514100, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_text
+      value: Wasserspritze anstecken
       objectReference: {fileID: 0}
     - target: {fileID: 5388462133794410894, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -2892,7 +2912,7 @@ PrefabInstance:
     - target: {fileID: 6048281764895829454, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_text
-      value: Essen Schritt 6
+      value: "Mit Wasser Nachsp\xFClen"
       objectReference: {fileID: 0}
     - target: {fileID: 6366783244979520157, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -3128,6 +3148,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399424434547616118, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_text
+      value: "Mit Wasser Durchsp\xFClen"
       objectReference: {fileID: 0}
     - target: {fileID: 7686493136206360074, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -3676,6 +3701,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.157
+      objectReference: {fileID: 0}
+    - target: {fileID: 9057650302734888498, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_text
+      value: "Medikament aufl\xF6sen"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192639999646904474, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_text
+      value: Medikament verpulfern
       objectReference: {fileID: 0}
     - target: {fileID: 9195739566731304521, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -7200,7 +7235,7 @@ PrefabInstance:
     - target: {fileID: 3994895589118395350, guid: 49ef3bc8be2c19a41aabe3f4bcd1e112,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 12.7
       objectReference: {fileID: 0}
     - target: {fileID: 3994895589118395350, guid: 49ef3bc8be2c19a41aabe3f4bcd1e112,
         type: 3}
