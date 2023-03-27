@@ -1399,6 +1399,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2819325056564144657, guid: 8432a4407adb54806944bc9e714a497b,
         type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.158
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819325056564144657, guid: 8432a4407adb54806944bc9e714a497b,
+        type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.077
       objectReference: {fileID: 0}
@@ -2029,7 +2034,7 @@ PrefabInstance:
     - target: {fileID: 6393043742038220582, guid: 4d014390b4879124d8013f9ab0853974,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.037
+      value: -0.023
       objectReference: {fileID: 0}
     - target: {fileID: 6393043742038220582, guid: 4d014390b4879124d8013f9ab0853974,
         type: 3}
@@ -6211,6 +6216,12 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 4529476429821932936, guid: 3aad0fe442fb5a3499590f29d410347f,
         type: 3}
+      propertyPath: placeholderTool
+      value: 
+      objectReference: {fileID: 2125370344606644910, guid: 2817ddba258cf484faefeb490fbb03c9,
+        type: 3}
+    - target: {fileID: 4529476429821932936, guid: 3aad0fe442fb5a3499590f29d410347f,
+        type: 3}
       propertyPath: processes.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -6908,10 +6919,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1150428460927507191, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 178.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1757601701360467622, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
       propertyPath: m_text
       value: Indicator on/off
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919296407964971950, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_text
+      value: Tracheostoma einsetzen
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919296408374491061, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 178.5
       objectReference: {fileID: 0}
     - target: {fileID: 1919296408374491062, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
@@ -6993,6 +7019,11 @@ PrefabInstance:
       propertyPath: m_Spacing
       value: 0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 3308848926602673899, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 178.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3319591711218430115, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
       propertyPath: m_Colors.m_SelectedColor.b
@@ -7043,11 +7074,23 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3356641834453315335, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_text
+      value: Tracheostoma entfernen
+      objectReference: {fileID: 0}
     - target: {fileID: 3955653633778729388, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 465756303}
+    - target: {fileID: 3980392861493069873, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_text
+      value: 'PEG Sonde Medikament
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 4104654540460631271, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -7062,6 +7105,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SwitchIndicator
+      objectReference: {fileID: 0}
+    - target: {fileID: 5436536348361497619, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 178.5
       objectReference: {fileID: 0}
     - target: {fileID: 6624353078037812910, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
@@ -7083,6 +7131,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.602
       objectReference: {fileID: 0}
+    - target: {fileID: 6871150472795922130, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_text
+      value: PEG Sonde Nahrung
+      objectReference: {fileID: 0}
     - target: {fileID: 6910659227706002828, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
       propertyPath: hud
@@ -7092,6 +7145,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: IndicatorSwitch
+      objectReference: {fileID: 0}
+    - target: {fileID: 8466582355923254077, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8466582355923254077, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.118
+      objectReference: {fileID: 0}
+    - target: {fileID: 8466582355923254077, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2792798782048599816, guid: db14cc08211f6874496ffcb573e622ac, type: 3}
