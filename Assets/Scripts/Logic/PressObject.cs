@@ -15,7 +15,7 @@ public class PressObject : MonoBehaviour
         }
     }
     // Ob das Objekt drueckbar sein soll
-    public void SetPressable(bool pressable)
+    public virtual void SetPressable(bool pressable)
     {
         this.pressable = pressable;
     }
