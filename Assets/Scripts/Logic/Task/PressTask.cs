@@ -35,7 +35,7 @@ public class PressTask : Task
 
 }
 
-
+#if UNITY_STANDALONE_WIN
 [CustomEditor(typeof(PressTask))]
 public class CustomInspector : Editor
 {
@@ -63,3 +63,4 @@ public class CustomInspector : Editor
         }
     }
 }
+#endif
