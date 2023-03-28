@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dde782ad63195c468031cd616cfe950, type: 3}
   m_Name: process_001_02
   m_EditorClassIdentifier: 
-  pName: Trachestomaweschsel
+  pName: "TrachestomaweschselEinf\xFCgen"
   description: Tracheostoma
   toolList:
   - {fileID: 8512863445878634139, guid: 0b27ce49f4f1e504a9027fd5e12edd39, type: 3}

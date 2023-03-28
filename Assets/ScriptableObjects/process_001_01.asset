@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dde782ad63195c468031cd616cfe950, type: 3}
   m_Name: process_001_01
   m_EditorClassIdentifier: 
-  pName: Trachestomaweschsel
+  pName: TrachestomaweschselEntfernen
   description: Tracheostoma
   toolList:
   - {fileID: 6645954436737465285, guid: cc7554a1bbbb5a74f95193c95880e7ca, type: 3}

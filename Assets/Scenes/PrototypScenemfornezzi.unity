@@ -4361,7 +4361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: {fileID: 0}
-  process: {fileID: 11400000, guid: dc09295f0b127ac47a9b21ff96c7300c, type: 2}
+  process: {fileID: 11400000, guid: a1bc367d975b0894cb460080b234b14d, type: 2}
   highlightedColor: {r: 0.3, g: 1, b: 0.3, a: 1}
 --- !u!1 &943974165
 GameObject:
@@ -5843,7 +5843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: {fileID: 0}
-  process: {fileID: 11400000, guid: a1bc367d975b0894cb460080b234b14d, type: 2}
+  process: {fileID: 11400000, guid: dc09295f0b127ac47a9b21ff96c7300c, type: 2}
   highlightedColor: {r: 0.3, g: 1, b: 0.3, a: 1}
 --- !u!1 &1852632507
 GameObject:
@@ -6264,6 +6264,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1520135525941460286, guid: bf1ed372ab3f0e045a3a7b5929314ecf,
         type: 3}
+    - target: {fileID: 4529476429821932933, guid: 3aad0fe442fb5a3499590f29d410347f,
+        type: 3}
+      propertyPath: indicatorsCurrent.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4529476429821932936, guid: 3aad0fe442fb5a3499590f29d410347f,
         type: 3}
       propertyPath: placeholderTool
@@ -7077,7 +7082,7 @@ PrefabInstance:
     - target: {fileID: 3319591711218430115, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
       propertyPath: m_Colors.m_SelectedColor.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3319591711218430115, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
@@ -7087,7 +7092,7 @@ PrefabInstance:
     - target: {fileID: 3319591711218430115, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
       propertyPath: m_Colors.m_SelectedColor.r
-      value: 0.120005846
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3319591711218430115, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
