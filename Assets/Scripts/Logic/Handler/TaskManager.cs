@@ -55,8 +55,8 @@ public class TaskManager : MonoBehaviour
         }*/
         if (showIndicator == true)
         {
-            //if (objects != null)
-            //{
+            if (objects != null)
+            {
                 for (int i = 0; i < objects.Count; i++)
                 {
                     Debug.Log(objects[i]);
@@ -81,7 +81,7 @@ public class TaskManager : MonoBehaviour
                     Debug.Log(objects[i].transform.position);
                 indicatorsCurrent.Add(go);
                 }
-            //}
+            }
         }
         return t;
     }

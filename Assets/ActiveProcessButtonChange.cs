@@ -19,7 +19,10 @@ public class ActiveProcessButtonChange : MonoBehaviour
     void Update()
     {
         if (process.pName.Equals(scene.selectedProcess.pName))
-        { 
+        {
+            Debug.Log(process.pName);
+            Debug.Log(scene.selectedProcess.pName);
+
             var colors = gameObject.GetComponent<Button>().colors;
             colors.normalColor = highlightedColor;
             colors.pressedColor = highlightedColor;
