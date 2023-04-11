@@ -32,6 +32,10 @@ public class PressTask : Task
             
         }
     }
+    protected override void EndTask()
+    {
+        base.EndTask();
+    }
 
 }
 

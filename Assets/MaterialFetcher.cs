@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// 
+/// </summary>
+/// <remarks>Autor: Marvin Fornezzi</remarks>
 public class MaterialFetcher : MonoBehaviour
 {
     private Material materialToGet = null;

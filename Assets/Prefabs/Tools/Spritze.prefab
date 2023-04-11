@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 3171862544218224998}
   - component: {fileID: 7368715081314856139}
   - component: {fileID: -6318319679830797382}
+  - component: {fileID: -537533933784688901}
   m_Layer: 9
   m_Name: Spritze
   m_TagString: Untagged
@@ -211,11 +212,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrabbed: 0
+  hasToBeGrabbed: 1
   connectorActive: 0
   preview: {fileID: 0}
   anchorPoints:
   - {fileID: 1535393618452758304}
-  resetOnTaskCompletion: 0
 --- !u!114 &3171862544218224998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,6 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e72e57053b765e4ba6a809b0f73d79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGrabbed: 0
   pressable: 0
   toggleReference: {fileID: -8676771288832313663, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
@@ -236,7 +238,6 @@ MonoBehaviour:
   nurReinpumpen: 0
   disconnectOnCompletion: 0
   kolben: {fileID: 488833788344196725}
-  ObjectToGetMaterial: {fileID: 0}
 --- !u!95 &7368715081314856139
 Animator:
   serializedVersion: 3
@@ -266,6 +267,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 876195facae4e4746804b9dc183c37a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-537533933784688901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5119784095115724615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dbf2fe8be236a4e8304c9ff8429a02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2566622094869265065

@@ -13,7 +13,13 @@ public class ProximityActionTask : Task
         touchTarget = base.FindTool(touchTarget.name);
         touchObject.GetComponent<ProximityActionObject>().SetTarget(touchTarget);
     }
-
+    void FixedUpdate()
+    {
+        if (touchObject.GetComponent<ProximityActionObject>().GetTaskCompletion())
+        {
+            Destroy(this);
+        }
+    }
     //Dazu, Simon
     public override List<GameObject> HighlightedObjects()
     {
@@ -21,5 +27,10 @@ public class ProximityActionTask : Task
         result.Add(touchTarget);
         result.Add(touchObject);
         return result;
+    }
+    void OnDestroy()
+    {
+        touchObject.GetComponent<ProximityActionObject>().SetTaskFinished(false);
+        ProcessHandler.Instance.NextTask();
     }
 }

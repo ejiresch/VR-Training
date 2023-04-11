@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 public class ProximityActionObject : InteractableObject
 {
     public InputActionReference toggleReference = null;
+    public float distance = 0.1f;
+    public bool hasToBeUsed = true;
     private GameObject touchTarget;
     private bool inRange = false;
     private Animator anim;
@@ -19,7 +21,17 @@ public class ProximityActionObject : InteractableObject
     {
         if (touchTarget != null)
         {
-            inRange = Vector3.Distance(touchTarget.transform.position, this.transform.position) < 0.1f;
+            inRange = Vector3.Distance(touchTarget.transform.position, this.transform.position) < distance;
+        }
+        if (inRange)
+        {
+            if (!hasToBeUsed)
+            {
+                activated = true;
+                StartCoroutine(EventAnimation());
+                GetComponent<MaterialFetcher>().MaterialChange(gameObject, touchTarget, "liquid");
+                taskfinished = true;
+            }
         }
     }
     public void SetTouchTarget(GameObject touchTarger) => touchTarget = touchTarger;
@@ -31,12 +43,15 @@ public class ProximityActionObject : InteractableObject
             activated = true;
             StartCoroutine(EventAnimation());
             GetComponent<MaterialFetcher>().MaterialChange(gameObject,touchTarget,"liquid");
-            ProcessHandler.Instance.NextTask();
+            taskfinished = true;
         }
     }
     IEnumerator EventAnimation()
     {
-        anim.SetTrigger("reinpumpen");
+        if(anim != null)
+        {
+            anim.SetTrigger("reinpumpen");
+        }
         yield return new WaitForSeconds(1.3f);
     }
     public void SetTarget(GameObject touchTarger) 
@@ -45,10 +60,13 @@ public class ProximityActionObject : InteractableObject
         inRange = false;
         activated = false;
     }
+    public bool GetInRange()
+    {
+        return inRange;
+    }
     private void Awake() { 
         toggleReference.action.started += Toggle;
     }
 
     private void OnDestroy() => toggleReference.action.started -= Toggle;
-    
 }

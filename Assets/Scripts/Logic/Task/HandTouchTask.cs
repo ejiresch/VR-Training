@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class HandTouchTask : Task
 {
     public GameObject touchTarget;
@@ -10,6 +9,7 @@ public class HandTouchTask : Task
     public override void StartTask()
     {
         base.StartTask();
+        
         touchTarget = base.FindTool(touchTarget.name);
         active = true;
     }
@@ -19,6 +19,7 @@ public class HandTouchTask : Task
     {
         if (active)
         {
+
             GameObject[] touchObjects = GameObject.FindGameObjectsWithTag("touchHand");
             if (touchObjects != null && touchObjects.Length>1)
             {

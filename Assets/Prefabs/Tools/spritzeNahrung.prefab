@@ -220,8 +220,8 @@ GameObject:
   - component: {fileID: 3811366977213384902}
   - component: {fileID: -2985972233971972348}
   - component: {fileID: -949077273807835395}
-  - component: {fileID: -173356458349465251}
   - component: {fileID: 1493123807952908525}
+  - component: {fileID: -6927346285204240846}
   m_Layer: 0
   m_Name: spritzeNahrung
   m_TagString: Untagged
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_OnSelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8301435877491144619}
+      - m_Target: {fileID: -6927346285204240846}
         m_MethodName: SetIsGrabbed
         m_Mode: 6
         m_Arguments:
@@ -307,20 +307,9 @@ MonoBehaviour:
   m_OnSelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8301435877491144619}
+      - m_Target: {fileID: -6927346285204240846}
         m_MethodName: SetIsGrabbed
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8301435877491144619}
-        m_MethodName: OnDrop
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -415,6 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e72e57053b765e4ba6a809b0f73d79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGrabbed: 0
   pressable: 0
   toggleReference: {fileID: 8939289509126937741, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
@@ -423,7 +413,6 @@ MonoBehaviour:
   nurReinpumpen: 0
   disconnectOnCompletion: 0
   kolben: {fileID: 919132149155446097, guid: 64b5ce169ad89f341871120a87f000e6, type: 3}
-  ObjectToGetMaterial: {fileID: 0}
 --- !u!114 &-2985972233971972348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,20 +440,8 @@ MonoBehaviour:
   isGrabbed: 0
   toggleReference: {fileID: -8676771288832313663, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
---- !u!114 &-173356458349465251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1808612825705206197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6bc8023a214abf45a696bc223578d64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isGrabbed: 0
-  taskFocus: 0
+  distance: 0.1
+  hasToBeUsed: 1
 --- !u!114 &1493123807952908525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -475,6 +452,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cee422bd3ddb0ba41ada2d8b03f04393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6927346285204240846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808612825705206197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dbf2fe8be236a4e8304c9ff8429a02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2363475940048908635

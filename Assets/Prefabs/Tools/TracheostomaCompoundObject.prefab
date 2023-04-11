@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1520135525941460273}
   - component: {fileID: 8005832389038543038}
   - component: {fileID: 1205632461314612460}
+  - component: {fileID: -756577117230470718}
   m_Layer: 0
   m_Name: TracheostomaCompoundObject
   m_TagString: Untagged
@@ -50,6 +51,7 @@ MonoBehaviour:
   - {fileID: 5766007287988627784}
   - {fileID: 7655197041730458386}
   grabbablePart: {fileID: 5691635717697086461}
+  IsActive: 0
 --- !u!54 &1205632461314612460
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -66,6 +68,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-756577117230470718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520135525941460286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dbf2fe8be236a4e8304c9ff8429a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1755431885064191995
 GameObject:
   m_ObjectHideFlags: 0

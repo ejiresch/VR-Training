@@ -6,7 +6,11 @@ public class CompundPart : InteractableObject
 {
     [SerializeField] private bool taskFocus;
     // Start is called before the first frame update
-    void Awake() => taskFocus = false;
+    void Awake()
+    {
+        Debug.LogError(name);
+        taskFocus = false;
+    }
     // Wird aufgerufen wenn das Objekt losgelassen wird
     public override void OnDrop()
     {

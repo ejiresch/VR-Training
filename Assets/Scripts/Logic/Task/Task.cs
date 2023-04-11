@@ -86,4 +86,8 @@ public abstract class Task : MonoBehaviour
         }
         return rightObject;
     }
+    protected virtual void EndTask()
+    {
+        ProcessHandler.Instance.NextTask();
+    }
 }

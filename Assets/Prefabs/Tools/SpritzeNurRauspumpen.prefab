@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 4908335890613657840}
   - component: {fileID: 1034629455864690013}
   - component: {fileID: -5912057153961077301}
+  - component: {fileID: 8260491228727621026}
   m_Layer: 9
   m_Name: SpritzeNurRauspumpen
   m_TagString: Untagged
@@ -260,11 +261,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrabbed: 0
+  hasToBeGrabbed: 1
   connectorActive: 0
   preview: {fileID: 0}
   anchorPoints:
   - {fileID: 9031829471026128566}
-  resetOnTaskCompletion: 0
 --- !u!114 &4908335890613657840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e72e57053b765e4ba6a809b0f73d79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGrabbed: 0
   pressable: 0
   toggleReference: {fileID: 8939289509126937741, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
@@ -285,7 +287,6 @@ MonoBehaviour:
   nurReinpumpen: 0
   disconnectOnCompletion: 0
   kolben: {fileID: 7985443908070623203}
-  ObjectToGetMaterial: {fileID: 0}
 --- !u!95 &1034629455864690013
 Animator:
   serializedVersion: 3
@@ -315,6 +316,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 876195facae4e4746804b9dc183c37a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8260491228727621026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3392461571748585169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dbf2fe8be236a4e8304c9ff8429a02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5264929493354249503
