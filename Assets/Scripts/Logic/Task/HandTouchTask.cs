@@ -42,4 +42,8 @@ public class HandTouchTask : Task
         result.Add(touchTarget);
         return result;
     }
+    protected override void EndTask()
+    {
+        base.EndTask();
+    }
 }

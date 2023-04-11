@@ -8,7 +8,6 @@ public class CompundPart : InteractableObject
     // Start is called before the first frame update
     void Awake()
     {
-        Debug.LogError(name);
         taskFocus = false;
     }
     // Wird aufgerufen wenn das Objekt losgelassen wird
