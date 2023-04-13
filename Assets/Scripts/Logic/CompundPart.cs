@@ -16,7 +16,7 @@ public class CompundPart : InteractableObject
         base.OnDrop();
         if (taskFocus)
         {
-            ProcessHandler.Instance.NextTask();
+            taskfinished = true;
             taskFocus = false;
             GetComponent<Rigidbody>().isKinematic = false;
         }

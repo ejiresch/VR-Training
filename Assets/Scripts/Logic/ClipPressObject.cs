@@ -8,7 +8,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ClipPressObject : PressObject
 {
     public InputActionReference toggleReference = null;
-    private bool allDone = false;
     private Transform parent;
     private Func<GameObject, bool> ondrop;
     // Start is called before the first frame update

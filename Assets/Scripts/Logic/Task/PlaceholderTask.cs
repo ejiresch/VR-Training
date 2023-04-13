@@ -8,10 +8,26 @@ using UnityEngine.InputSystem;
 public class PlaceholderTask : Task
 {
     public InputActionReference toggleReferenceRight = null;
+    private bool taskOk = false;
     public override void StartTask()
     {
         base.StartTask();
     }
+
+    protected override void CompReset()
+    {
+        
+    }
+
+    protected override IEnumerator TaskRunActive()
+    {
+        while (!taskOk)
+        {
+            yield return new WaitForFixedUpdate();
+        }
+        EndTask();
+    }
+
     private void Awake()
     {
         toggleReferenceRight.action.started += Toggle;
@@ -23,7 +39,7 @@ public class PlaceholderTask : Task
     }
     private void Toggle(InputAction.CallbackContext context)
     {
-        ProcessHandler.Instance.NextTask();
+        taskOk = true;
     }
 
 }

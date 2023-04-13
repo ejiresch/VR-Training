@@ -37,8 +37,8 @@ public class ConnectorObject : InteractableObject
             connectible.transform.localPosition = new Vector3(0, 0, 0);
             connectible.transform.localEulerAngles = new Vector3(0, 0, 0);
             connectible.GetComponent<Connectible>().SetConnected(true);
+            taskfinished = true;
             this.connectorActive = false;
-            ProcessHandler.Instance.NextTask();
             DestroyPreview();
         }
     }
@@ -68,6 +68,7 @@ public class ConnectorObject : InteractableObject
                     go.GetComponent<Rigidbody>().isKinematic = false;
                     foreach (Collider collider in go.GetComponentsInChildren<Collider>()) collider.enabled = true;
                     go.GetComponent<XRBaseInteractable>().interactionLayerMask = ~0;
+                    taskfinished = true;
                 }
                 catch (Exception e)
                 {
@@ -175,12 +176,12 @@ public class ConnectorObject : InteractableObject
             }
         }
         /// <summary>
-        /// Gibt das letzte GameObject zurück, das im AnchorStore gespeichert wurde
+        /// Gibt das letzte GameObject zurück, das im AnchorStore gespeichert wurde.
         /// </summary>
         /// <returns>Das GameObject, das als letztes gespeichert wurde</returns>
         public GameObject GetLatestConnectedObject() => index>0 ? go[index - 1] : null;
         /// <summary>
-        /// Gibt das Parent Objekt des zuletzt gespeicherten GameObjects zurück
+        /// Gibt das Parent Objekt des zuletzt gespeicherten GameObjects zurück.
         /// </summary>
         /// <returns>Parent des zuletzt gespeicherten GameObject</returns>
         public Transform GetLatestConnectedParent() => index>0 ? parents[index - 1] : null;
@@ -199,7 +200,7 @@ public class ConnectorObject : InteractableObject
         /// <summary>
         /// Durchsucht den AnchorStore nach dem nächsten freien Anchor und gibt die Position zurück.
         /// </summary>
-        /// <returns>Position des nöchsten freien Anchor in Vector3</returns>
+        /// <returns>Position des nächsten freien Anchor in <b>Vector3</b></returns>
         public Vector3 NextFreeAnchorPosition()
         {
             if (index == anchors.Length) return new Vector3(0, 0, 0);
@@ -208,7 +209,7 @@ public class ConnectorObject : InteractableObject
         /// <summary>
         /// Gibt den nächsten freien Anchor zurück.
         /// </summary>
-        /// <returns>Das Transform des nächsten Anchors. Wenn es keinen freien gibt, wird der letzte in der liste zurückgegeben</returns>
+        /// <returns>Das Transform des nächsten Anchors. Wenn es keinen freien gibt, wird der letzte in der liste zurückgegeben.</returns>
         public Transform NextFreeAnchor()
         {
             if (index == anchors.Length) return anchors[anchors.Length-1];

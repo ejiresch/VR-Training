@@ -26,11 +26,24 @@ public class DetachObjectTask : Task
         if (connectible.GetComponent<Connectible>().GetIsGrabbed())
         {
             connectorOb.Disconnect();
-            ProcessHandler.Instance.NextTask();
             isActive = false;
         }
     }
     private void Awake() => toggleReference.action.started += Toggle;
 
     private void OnDestroy() => toggleReference.action.started -= Toggle;
+
+    protected override void CompReset()
+    {
+        connectorObject.GetComponent<ConnectorObject>().SetTaskFinished(false);
+    }
+
+    protected override IEnumerator TaskRunActive()
+    {
+        while (!connectorObject.GetComponent<ConnectorObject>().GetTaskCompletion())
+        {
+            yield return new WaitForFixedUpdate();
+        }
+        EndTask();
+    }
 }

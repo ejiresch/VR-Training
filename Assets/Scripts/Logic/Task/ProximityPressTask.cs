@@ -46,7 +46,6 @@ public class ProximityPressTask : PressTask
             pressObject.GetComponent<PressObject>().SetIsGrabbed(ProxObjects[0].GetComponent<ProximityActionObject>().GetInRange() || ProxObjects[1].GetComponent<ProximityActionObject>().GetInRange());
             if (pressObject.GetComponent<PressObject>().GetTaskCompletion())
             {
-                Debug.LogWarning("wesdrfghbjnk");
                 pressObject.GetComponent<PressObject>().SetTaskFinished(false);
                 pressObject.GetComponent<PressObject>().SetIsGrabbed(false);
                 EndTask();

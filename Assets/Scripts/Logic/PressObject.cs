@@ -10,7 +10,7 @@ public class PressObject : InteractableObject
     {
         if (pressable)
         {
-            ProcessHandler.Instance.NextTask();
+            taskfinished = true;  
             pressable = false;
         }
     }

@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-// Ein Objekt, welche bei der Beruehrung zweier Objekte die Task beendet
+/// <summary>
+/// Ein Objekt das an ein anderes angenähert wird und durch Verwendung des Objektes oder automatisch den Task erfüllen.  
+/// </summary>
 public class ProximityActionObject : InteractableObject
 {
     public InputActionReference toggleReference = null;
