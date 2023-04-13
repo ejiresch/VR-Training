@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Boo.Lang.Environments;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,9 +21,26 @@ public class ClipPressObject : PressObject
     private void OnDestroy() => toggleReference.action.started -= Toggle;
     private void Toggle(InputAction.CallbackContext context) // Wird aufgerufen, wenn der Button für toggleReference gedrückt wird -> siehe Samples/Default Input Actions/XRI Default Input Actions
     {
-        
+        Animator animator = GetComponent<Animator>();
+        bool close = animator.GetBool("KlippZu");
+
         if (GetIsGrabbed())
         {
+            if (GetComponent<Animator>())
+            {
+                if (close)
+                {
+                   animator.SetBool("KlippAuf", true);
+                   animator.SetBool("KlippZu", false);
+                }
+                else
+                {
+                   animator.SetBool("KlippAuf", false);
+                   animator.SetBool("KlippZu", true);
+                }
+                
+                    
+            }
             taskfinished = true;    
         }
             
