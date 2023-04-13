@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// Ein Objekt, welche bei der Beruehrung zweier Objekte die Task beendet
+/// <summary>
+/// Für Verwendung in einem Task, in dem ein Objekt mit einer oder beiden Händen berührt weren müssen. 
+/// </summary>
 [RequireComponent(typeof(MaterialFetcher))]
 public class TouchHand : InteractableObject
 {
@@ -21,11 +23,10 @@ public class TouchHand : InteractableObject
                 }
                 
             }
-            if (!hasfinished)
+            if (!taskfinished)
             {
-                ProcessHandler.Instance.NextTask();
-                hands[0].GetComponent<TouchHand>().hasfinished = true;
-                hands[1].GetComponent<TouchHand>().hasfinished = true;
+                hands[0].GetComponent<TouchHand>().taskfinished = true;
+                hands[1].GetComponent<TouchHand>().taskfinished = true;
             }
             touchTarget = null;
         }

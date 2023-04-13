@@ -46,6 +46,11 @@ MonoBehaviour:
   tName: KaffKontrollieren
   description: Cuff mit der Spritze kontrollieren
   spawnedTools: []
-  warningMessage: 0
+  warningMessage_BeideHaende: 0
+  warningMessage_KanueleFesthalten: 0
+  resetToolOnCompletion: 0
+  pressObject: {fileID: 5119784095115724615, guid: 2d38feab86c75744aaa6ef8c585d2e06,
+    type: 3}
+  values: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   connector: {fileID: 5119784095115724615, guid: 2d38feab86c75744aaa6ef8c585d2e06,
     type: 3}

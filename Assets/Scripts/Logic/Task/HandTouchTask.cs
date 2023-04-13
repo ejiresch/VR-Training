@@ -5,6 +5,7 @@ public class HandTouchTask : Task
 {
     public GameObject touchTarget;
     private bool active = false;
+    private GameObject[] touchObjects;
     // Wird bei Start der Task ausgefuehrt
     public override void StartTask()
     {
@@ -20,7 +21,7 @@ public class HandTouchTask : Task
         if (active)
         {
 
-            GameObject[] touchObjects = GameObject.FindGameObjectsWithTag("touchHand");
+            touchObjects = GameObject.FindGameObjectsWithTag("touchHand");
             if (touchObjects != null && touchObjects.Length>1)
             {
                 Debug.Log(touchObjects.Length);
@@ -42,8 +43,23 @@ public class HandTouchTask : Task
         result.Add(touchTarget);
         return result;
     }
-    protected override void EndTask()
+
+    protected override void CompReset()
     {
-        base.EndTask();
+        touchObjects[0].GetComponent<TouchHand>().SetTaskFinished(false);
+        touchObjects[1].GetComponent<TouchHand>().SetTaskFinished(false);
+    }
+
+    protected override IEnumerator TaskRunActive()
+    {
+        while (touchObjects == null)
+        {
+            yield return new WaitForFixedUpdate();
+        }
+        while (!touchObjects[0].GetComponent<TouchHand>().GetTaskCompletion())
+        {
+            yield return new WaitForFixedUpdate();
+        }
+        EndTask();
     }
 }

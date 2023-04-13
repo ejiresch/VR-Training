@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Abstract class that Describes a Task
+/// Abstract class that Describes a Class
+/// If a new task is implemented, this class has to be derived of.
+/// <remark><br><b>Some methodes have to be overridden</b></br></remark>
 /// </summary>
 public abstract class Task : MonoBehaviour
 {
     public string tName;
+    [Tooltip("Die Taskbeschreibung die am Whiteboard steht.")]
     public string description;
-    public GameObject[] spawnedTools;
+    [HideInInspector]public GameObject[] spawnedTools;
     public bool warningMessage_BeideHaende = false;
     public bool warningMessage_KanueleFesthalten = false;
     public bool resetToolOnCompletion = false;
+
     private GameObject rightObject = null;
 
     /// <summary>
@@ -23,9 +27,10 @@ public abstract class Task : MonoBehaviour
         if(warningMessage_BeideHaende) ProcessHandler.Instance.ShowWarning(0);
         if(warningMessage_KanueleFesthalten) ProcessHandler.Instance.ShowWarning(1);
         if (resetToolOnCompletion) PlayerPrefs.SetInt("resetCommand", resetToolOnCompletion ? 1:0) ;
+        StartCoroutine(TaskRunActive());
     }
     /// <summary>
-    /// Setzt die Liste an erzeugten Tools, welche gesucht werden kann
+    /// Setzt die Liste an erzeugten Tools, welche gesucht werden können
     /// </summary>
     /// <param name="toolList">Tool Liste</param>
     public void SetSpawnTools(GameObject[] toolList) => spawnedTools = toolList;
@@ -86,8 +91,30 @@ public abstract class Task : MonoBehaviour
         }
         return rightObject;
     }
+    /// <summary>
+    /// Beendet einen Task und startet einen neuen Task durch den ProcessHandler
+    /// <br><b>Autor: </b>Marvin Fornezzi</br>
+    /// </remark>
+    /// </summary>
     protected virtual void EndTask()
     {
+        CompReset();
         ProcessHandler.Instance.NextTask();
     }
+    /// <summary>
+    /// In ComReset soll der taskFinished Status der verwendeten Objekte zurückgesetzt werden
+    ///   
+    /// </summary>
+    /// <example>
+    /// Der Code könnte wie folgt aussehen. Das GameObject muss dabei von InteractableObject erben.
+    /// <code>
+    /// GameObject.SetTaskFinished(false);
+    /// </code>
+    /// </example>
+    protected abstract void CompReset();
+    /// <summary>
+    /// TaskRunAktive wird aufgerufen wenn ein Task gestartet wird. In dem code der Methde soll die Überprüfung statfinden, ob die Taskbedingungen erfüllt wurden.
+    /// </summary>
+    /// <returns></returns>
+    protected abstract IEnumerator TaskRunActive();
 }

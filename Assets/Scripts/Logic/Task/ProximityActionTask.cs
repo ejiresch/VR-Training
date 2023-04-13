@@ -1,7 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 // Task, welche bei Beruehrung zweier Objekte beendet wird
+/// <summary>
+/// Dieser Task überprüft, ob das übergebene TouchObject (in diesem Fall muss es ein ProximityActionObject sein) 
+/// Die festgelegte Bedingung erfüllt.<br> Wird die Bedingung erfüllt so wird der nächste Task durch die OnDestroy Methode eingeleitet.</br>
+/// </summary>
+/// <remarks><b>Autor:</b> Marvin Fornezzi </remarks>
 public class ProximityActionTask : Task
 {
     public GameObject touchObject, touchTarget;
@@ -15,10 +21,7 @@ public class ProximityActionTask : Task
     }
     void FixedUpdate()
     {
-        if (touchObject.GetComponent<ProximityActionObject>().GetTaskCompletion())
-        {
-            Destroy(this);
-        }
+        
     }
     //Dazu, Simon
     public override List<GameObject> HighlightedObjects()
@@ -28,9 +31,18 @@ public class ProximityActionTask : Task
         result.Add(touchObject);
         return result;
     }
-    void OnDestroy()
+
+    protected override void CompReset()
     {
         touchObject.GetComponent<ProximityActionObject>().SetTaskFinished(false);
-        ProcessHandler.Instance.NextTask();
+    }
+
+    protected override IEnumerator TaskRunActive()
+    {
+        while (!touchObject.GetComponent<ProximityActionObject>().GetTaskCompletion())
+        {
+            yield return new WaitForFixedUpdate();
+        }
+        EndTask();
     }
 }

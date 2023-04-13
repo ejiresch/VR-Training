@@ -6,9 +6,9 @@ using UnityEngine.InputSystem;
 /* Ist für die Manometer Animation zuständig */
 public class ManometerMovement : PressObject
 {
-    public GameObject nadel;
+    
     public InputActionReference toggleReference= null;
-
+    public GameObject nadel;
     private void Update()
     {
         if (nadel.transform.localRotation.eulerAngles.y > 32f)

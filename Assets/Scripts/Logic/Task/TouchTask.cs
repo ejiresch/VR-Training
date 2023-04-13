@@ -8,10 +8,10 @@ public class TouchTask : Task
     // Wird bei Start der Task ausgefuehrt
     public override void StartTask()
     {
-        base.StartTask();
         touchObject = base.FindTool(touchObject.name);
         touchTarget = base.FindTool(touchTarget.name);
         touchObject.GetComponent<TouchObject>().SetTouchTarget(touchTarget);
+        base.StartTask();
     }
     //Dazu, Simon
     public override List<GameObject> HighlightedObjects()
@@ -20,5 +20,19 @@ public class TouchTask : Task
         result.Add(touchObject);
         result.Add(touchTarget);
         return result;
+    }
+
+    protected override void CompReset()
+    {
+        touchObject.GetComponent<TouchObject>().SetTaskFinished(false);
+    }
+
+    protected override IEnumerator TaskRunActive()
+    {
+        while (!touchObject.GetComponent<TouchObject>().GetTaskCompletion())
+        {
+            yield return new WaitForFixedUpdate();
+        }
+        EndTask();
     }
 }

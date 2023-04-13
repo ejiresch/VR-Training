@@ -37,6 +37,7 @@ public class CuffllineConnectionObject : ConnectorObject
             if (child)
             {
                 child.transform.parent = aStore.GetLatestConnectedParent();
+                Debug.LogWarning(child.transform.parent);
                 child.GetComponent<Rigidbody>().isKinematic = false;
             }
         }

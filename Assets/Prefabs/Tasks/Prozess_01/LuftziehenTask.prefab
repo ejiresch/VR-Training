@@ -46,7 +46,11 @@ MonoBehaviour:
   tName: cuffline
   description: Verbinde die Cuffline mit der Spritze
   spawnedTools: []
-  warningMessage_0: 0
-  warningMessage_1: 0
+  warningMessage_BeideHaende: 0
+  warningMessage_KanueleFesthalten: 0
+  resetToolOnCompletion: 0
+  pressObject: {fileID: 3392461571748585169, guid: 681e19e80d10b454eac2703fdb3aa6d1,
+    type: 3}
+  values: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   connector: {fileID: 3392461571748585169, guid: 681e19e80d10b454eac2703fdb3aa6d1,
     type: 3}
