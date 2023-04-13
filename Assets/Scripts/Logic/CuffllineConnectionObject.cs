@@ -29,8 +29,8 @@ public class CuffllineConnectionObject : ConnectorObject
     // Entfernt angehaengte Objekte
     public override void Disconnect()
     {
-        //base.Disconnect();
-        GameObject anchorPoint = aStore.GetLatestConnectedObject();
+        base.Disconnect();
+        /*GameObject anchorPoint = aStore.GetLatestConnectedObject();
         if (anchorPoint.transform.childCount > 0)
         {
             GameObject child = anchorPoint.transform.GetChild(0).gameObject;
@@ -40,7 +40,7 @@ public class CuffllineConnectionObject : ConnectorObject
                 Debug.LogWarning(child.transform.parent);
                 child.GetComponent<Rigidbody>().isKinematic = false;
             }
-        }
+        }*/
     }
     // Startet den Preview (Rote Vorzeige)
     public override void StartPreview(GameObject prefab)

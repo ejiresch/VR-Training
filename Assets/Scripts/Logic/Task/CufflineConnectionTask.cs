@@ -26,6 +26,21 @@ public class CufflineConnectionTask : PressTask
     protected override void CompReset()
     {
         connector.GetComponent<PressObject>().SetTaskFinished(false);
+        connector.GetComponent<ConnectorObject>().SetTaskFinished(false);
+        try
+        {
+            GameObject temp = GameObject.FindGameObjectWithTag("CompoundGrabbablePart").transform.parent.parent.gameObject;
+            if (temp = null)
+            {
+                temp.GetComponent<InteractableObject>().SetGrabbable(true);
+                temp.GetComponent<Rigidbody>().isKinematic = false;
+            }
+        }
+        catch
+        {
+
+        }
+        
     }
 
     protected override IEnumerator TaskRunActive()
@@ -33,7 +48,6 @@ public class CufflineConnectionTask : PressTask
         
         while (!connector.GetComponent<PressObject>().GetTaskCompletion())
         {
-            Debug.LogWarning(connector.GetComponent<ConnectorObject>().GetTaskCompletion());
             yield return new WaitForFixedUpdate();
         }
         EndTask();
