@@ -11,6 +11,7 @@ public class ClipPressObject : PressObject
     public InputActionReference toggleReference = null;
     private Transform parent;
     private Func<GameObject, bool> ondrop;
+    private bool animationPlayed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,23 +23,21 @@ public class ClipPressObject : PressObject
     private void Toggle(InputAction.CallbackContext context) // Wird aufgerufen, wenn der Button für toggleReference gedrückt wird -> siehe Samples/Default Input Actions/XRI Default Input Actions
     {
         Animator animator = GetComponent<Animator>();
-        bool close = animator.GetBool("KlippZu");
+        bool close = animator.GetBool("KlippAufBool");
 
         if (GetIsGrabbed())
         {
-            if (GetComponent<Animator>())
+            if (GetComponent<Animator>() && !animationPlayed)
             {
                 if (close)
                 {
-                   animator.SetBool("KlippAuf", true);
-                   animator.SetBool("KlippZu", false);
+                   animator.SetBool("KlippAufBool", true);
                 }
                 else
                 {
                    animator.SetBool("KlippAuf", false);
-                   animator.SetBool("KlippZu", true);
                 }
-                
+                animationPlayed = true;
                     
             }
             taskfinished = true;    
@@ -53,5 +52,6 @@ public class ClipPressObject : PressObject
     public override void SetPressable(bool pressable)
     {
         base.SetPressable(pressable);
+        animationPlayed = false;
     }
 }
