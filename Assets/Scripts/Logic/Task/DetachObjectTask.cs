@@ -19,6 +19,8 @@ public class DetachObjectTask : Task
         connectible = base.FindTool(connectible.name);
         connectible.GetComponent<Connectible>().SetConnector(null); // Wichtig, da sonst ein Preview erzeugt wird
         connectible.GetComponent<Connectible>().SetGrabbable(true); // Muss Grabbable sein 
+        connectible.GetComponent<XRBaseInteractable>().interactionLayerMask = ~0;
+        foreach (Collider collider in connectible.GetComponentsInChildren<Collider>()) collider.enabled = true;
         isActive = true;
     }
     private void Toggle(InputAction.CallbackContext context)

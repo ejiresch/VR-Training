@@ -9,12 +9,13 @@ using UnityEngine;
 public class CufflineConnectionTask : PressTask
 {
     public GameObject connector;
+    private GameObject connectible;
     // Wird beim Start der Task ausgefuehrt
     public override void StartTask()
     {
         base.StartTask();
         connector = base.FindTool(connector.name);
-        GameObject connectible = GameObject.FindGameObjectWithTag("CompoundGrabbablePart");
+        connectible = GameObject.FindGameObjectWithTag("CompoundGrabbablePart");
         if (connector != null && connectible != null)
         {
             
