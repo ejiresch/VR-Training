@@ -703,6 +703,17 @@
                 },
                 {
                     "name": "",
+                    "id": "effb2eed-7aba-4830-9e2a-1b31235679a6",
+                    "path": "<XRController>{LeftHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlaceholderRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "bbd18882-76c3-48e8-9068-6c12728057ba",
                     "path": "<XRController>{RightHand}/secondaryButton",
                     "interactions": "",

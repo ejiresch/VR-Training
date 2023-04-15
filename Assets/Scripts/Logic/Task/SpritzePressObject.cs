@@ -31,9 +31,12 @@ public class SpritzePressObject : PressObject, ResetInterface
     private void OnDestroy() => toggleReference.action.started -= Toggle;
     private void Toggle(InputAction.CallbackContext context) // Wird aufgerufen, wenn der Button für toggleReference gedrückt wird -> siehe Samples/Default Input Actions/XRI Default Input Actions
     {
-        if (!pressable) return;
-        if (!reingepumpt) StartCoroutine(Reinpumpen());
-        else StartCoroutine(Rauspumpen());
+        if (GetIsGrabbed())
+        {
+            if (!pressable) return;
+            if (!reingepumpt) StartCoroutine(Reinpumpen());
+            else StartCoroutine(Rauspumpen());
+        }
     }
     public override void Press()
     {

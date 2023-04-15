@@ -60,7 +60,7 @@ public class CuffllineConnectionObject : ConnectorObject
             }
             foreach (Collider collider in preview.GetComponentsInChildren<Collider>()) Destroy(collider);
             PreviewFar();
-            preview.transform.parent = aStore.GetLatestConnectedParent();
+            preview.transform.parent = aStore.NextFreeAnchor();
             preview.transform.localPosition = new Vector3(0, 0, 0);
             preview.transform.localEulerAngles = new Vector3(0, 0, 0);
         }

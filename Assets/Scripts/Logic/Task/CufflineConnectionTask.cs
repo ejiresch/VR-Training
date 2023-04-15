@@ -20,6 +20,7 @@ public class CufflineConnectionTask : PressTask
             
             connector.GetComponent<ConnectorObject>().connectorActive = true;
             connectible.GetComponent<Connectible>().SetConnector(connector.GetComponent<ConnectorObject>());
+            connectible.GetComponent<InteractableObject>().SetGrabbable(true);
         }
     }
 
@@ -45,9 +46,10 @@ public class CufflineConnectionTask : PressTask
 
     protected override IEnumerator TaskRunActive()
     {
-        
+        connector.GetComponent<PressObject>().SetPressable(connector.GetComponent<ConnectorObject>().GetIsGrabbed());
         while (!connector.GetComponent<PressObject>().GetTaskCompletion())
         {
+            connector.GetComponent<PressObject>().SetPressable(connector.GetComponent<ConnectorObject>().GetIsGrabbed());
             yield return new WaitForFixedUpdate();
         }
         EndTask();

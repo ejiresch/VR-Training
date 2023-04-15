@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
-
+/// <summary>
+/// 
+/// </summary>
 public class DetachObjectTask : Task
 {
     public InputActionReference toggleReference = null;
@@ -15,8 +17,8 @@ public class DetachObjectTask : Task
         base.StartTask();
         connectorObject = base.FindTool(connectorObject.name);
         connectible = base.FindTool(connectible.name);
-        connectible.GetComponent<Connectible>().SetConnector(null);
-        connectible.GetComponent<Connectible>().SetGrabbable(true);
+        connectible.GetComponent<Connectible>().SetConnector(null); // Wichtig, da sonst ein Preview erzeugt wird
+        connectible.GetComponent<Connectible>().SetGrabbable(true); // Muss Grabbable sein 
         isActive = true;
     }
     private void Toggle(InputAction.CallbackContext context)

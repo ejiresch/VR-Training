@@ -132,7 +132,7 @@ MonoBehaviour:
   m_OnSelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7812281341478599138}
+      - m_Target: {fileID: -537533933784688901}
         m_MethodName: SetIsGrabbed
         m_Mode: 6
         m_Arguments:
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_OnSelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7812281341478599138}
+      - m_Target: {fileID: -537533933784688901}
         m_MethodName: SetIsGrabbed
         m_Mode: 6
         m_Arguments:
