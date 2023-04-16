@@ -29,18 +29,18 @@ public class ClipPressObject : PressObject
         {
             if (GetComponent<Animator>() && !animationPlayed)
             {
-                if (close)
+                if (!close)
                 {
                    animator.SetBool("KlippAufBool", true);
                 }
                 else
                 {
-                   animator.SetBool("KlippAuf", false);
+                   animator.SetBool("KlippAufBool", false);
                 }
                 animationPlayed = true;
                     
             }
-            taskfinished = true;    
+            taskfinished = true;
         }
             
     }
@@ -52,6 +52,11 @@ public class ClipPressObject : PressObject
     public override void SetPressable(bool pressable)
     {
         base.SetPressable(pressable);
+    }
+
+    public override void SetIsGrabbed(bool isg)
+    {
+        base.SetIsGrabbed(isg);
         animationPlayed = false;
     }
 }

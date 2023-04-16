@@ -32,7 +32,6 @@ public class ProximityPressTask : PressTask
             ProxObjects = touchObjects;
             if (touchObjects != null && touchObjects.Length > 1)
             {
-                Debug.Log(touchObjects.Length);
                 foreach (GameObject touchObject in touchObjects)
                 {
                     touchObject.GetComponent<ProximityActionObject>().SetTouchTarget(pressObject);
@@ -44,7 +43,6 @@ public class ProximityPressTask : PressTask
         }
         while (taskActive)
         {
-            Debug.LogError("wertzuiop");
             pressObject.GetComponent<InteractableHandler>().SetIsGrabbed(Vector3.Distance(pressObject.transform.position, this.transform.position) < distance);
             Debug.LogWarning(ProxObjects[0]+""+ ProxObjects[1]);
             pressObject.GetComponent<PressObject>().SetIsGrabbed(ProxObjects[0].GetComponent<ProximityActionObject>().GetInRange() || ProxObjects[1].GetComponent<ProximityActionObject>().GetInRange());

@@ -54,7 +54,6 @@ public class ConnectorObject : InteractableObject
     // Kann implementiert werden um Objekte wieder zu entfernen
     public virtual void Disconnect() {
         GameObject anchorPoint = aStore.GetLatestConnectedObject();
-        Debug.LogWarning(anchorPoint.transform);
         if (anchorPoint.transform.childCount > 0)
         {
             GameObject go = anchorPoint.transform.gameObject;
