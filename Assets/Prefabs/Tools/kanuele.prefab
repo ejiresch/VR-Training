@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 8682821958502708275}
   - component: {fileID: 7302028714749927121}
   - component: {fileID: 4130891288885884490}
+  - component: {fileID: 9120294862560510663}
   m_Layer: 0
   m_Name: kanuele
   m_TagString: Untagged
@@ -234,6 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrabbed: 0
+  hasToBeGrabbed: 1
   connectorActive: 0
   preview: {fileID: 0}
   anchorPoints:
@@ -241,6 +243,18 @@ MonoBehaviour:
   - {fileID: 5215236243642276427}
   - {fileID: 6887892252360516077}
   - {fileID: 7543571948096946583}
+--- !u!114 &9120294862560510663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6645954436737465285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dbf2fe8be236a4e8304c9ff8429a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6651693067213561483
 GameObject:
   m_ObjectHideFlags: 0

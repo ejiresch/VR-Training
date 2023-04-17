@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5239823840481723099}
   - component: {fileID: 5080200717378346753}
   - component: {fileID: 2532056419872849729}
+  - component: {fileID: 3100882361503605429}
   m_Layer: 0
   m_Name: NahrungspackungComp
   m_TagString: Untagged
@@ -104,7 +105,18 @@ MonoBehaviour:
   preview: {fileID: 0}
   anchorPoints:
   - {fileID: 6065725820666401395}
-  resetOnTaskCompletion: 0
+--- !u!114 &3100882361503605429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195317620184111067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dbf2fe8be236a4e8304c9ff8429a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &362229342338869165
 GameObject:
   m_ObjectHideFlags: 0

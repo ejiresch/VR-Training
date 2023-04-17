@@ -29,17 +29,18 @@ public class CuffllineConnectionObject : ConnectorObject
     // Entfernt angehaengte Objekte
     public override void Disconnect()
     {
-        //base.Disconnect();
-        GameObject anchorPoint = aStore.GetLatestConnectedObject();
+        base.Disconnect();
+        /*GameObject anchorPoint = aStore.GetLatestConnectedObject();
         if (anchorPoint.transform.childCount > 0)
         {
             GameObject child = anchorPoint.transform.GetChild(0).gameObject;
             if (child)
             {
                 child.transform.parent = aStore.GetLatestConnectedParent();
+                Debug.LogWarning(child.transform.parent);
                 child.GetComponent<Rigidbody>().isKinematic = false;
             }
-        }
+        }*/
     }
     // Startet den Preview (Rote Vorzeige)
     public override void StartPreview(GameObject prefab)
@@ -59,7 +60,7 @@ public class CuffllineConnectionObject : ConnectorObject
             }
             foreach (Collider collider in preview.GetComponentsInChildren<Collider>()) Destroy(collider);
             PreviewFar();
-            preview.transform.parent = aStore.GetLatestConnectedParent();
+            preview.transform.parent = aStore.NextFreeAnchor();
             preview.transform.localPosition = new Vector3(0, 0, 0);
             preview.transform.localEulerAngles = new Vector3(0, 0, 0);
         }

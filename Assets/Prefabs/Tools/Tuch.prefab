@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 5825139607255366051}
   - component: {fileID: 4448721849062678411}
   - component: {fileID: 7328790659048406002}
+  - component: {fileID: -6409964050357964665}
   m_Layer: 0
   m_Name: Tuch
   m_TagString: Untagged
@@ -265,3 +266,15 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
+--- !u!114 &-6409964050357964665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8991949586336640730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dbf2fe8be236a4e8304c9ff8429a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

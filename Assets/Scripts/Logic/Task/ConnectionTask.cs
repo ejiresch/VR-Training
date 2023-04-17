@@ -26,5 +26,17 @@ public class ConnectionTask : Task
         return result;
     }
 
+    protected override void CompReset()
+    {
+        connector.GetComponent<ConnectorObject>().SetTaskFinished(false);
+    }
 
+    protected override IEnumerator TaskRunActive()
+    {
+        while (!connector.GetComponent<ConnectorObject>().GetTaskCompletion())
+        {
+            yield return new WaitForFixedUpdate();
+        }
+        EndTask();
+    }
 }

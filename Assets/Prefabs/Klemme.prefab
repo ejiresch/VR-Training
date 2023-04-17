@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1068559873784994836}
   - component: {fileID: 4029063965205468966}
+  - component: {fileID: -6263897630576011549}
   m_Layer: 0
   m_Name: Klemme
   m_TagString: Untagged
@@ -51,7 +52,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e9a6723dd679f4a8dc3be608d5549a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGrabbed: 0
   pressable: 0
+--- !u!114 &-6263897630576011549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128060035567663543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dbf2fe8be236a4e8304c9ff8429a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2095605352894999842
 GameObject:
   m_ObjectHideFlags: 0

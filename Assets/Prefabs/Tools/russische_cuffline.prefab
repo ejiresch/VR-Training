@@ -288,7 +288,8 @@ GameObject:
   - component: {fileID: 6449500811354043858}
   - component: {fileID: 4113008612119495647}
   - component: {fileID: 6003247909132586369}
-  m_Layer: 0
+  - component: {fileID: 6515256408158764871}
+  m_Layer: 12
   m_Name: Ballon
   m_TagString: CompoundGrabbablePart
   m_Icon: {fileID: 0}
@@ -441,7 +442,7 @@ MonoBehaviour:
   m_OnSelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6003247909132586369}
+      - m_Target: {fileID: 6515256408158764871}
         m_MethodName: SetIsGrabbed
         m_Mode: 6
         m_Arguments:
@@ -455,7 +456,7 @@ MonoBehaviour:
   m_OnSelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6003247909132586369}
+      - m_Target: {fileID: 6515256408158764871}
         m_MethodName: SetIsGrabbed
         m_Mode: 6
         m_Arguments:
@@ -521,6 +522,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrabbed: 0
+--- !u!114 &6515256408158764871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555392401902913349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dbf2fe8be236a4e8304c9ff8429a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5299592522299463716
 GameObject:
   m_ObjectHideFlags: 0

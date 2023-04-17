@@ -16,8 +16,6 @@ public class ConnectorObject : InteractableObject
     public GameObject preview = null;
     public GameObject[] anchorPoints;
     // Order of the AnchorPoints
-    [Tooltip("Setzt das Component nach der Reset-Methode zurück")]
-    public bool resetOnTaskCompletion = false;
     protected Transform previousParent;
     protected AnchorStore aStore;
     // Wird am Anfang ausgefuehrt
@@ -34,13 +32,18 @@ public class ConnectorObject : InteractableObject
             aStore.StoreObj(connectible);
             connectible.GetComponent<Connectible>().ResetOnDropFunc();
             connectible.GetComponent<Rigidbody>().isKinematic = true;
-            foreach (Collider collider in connectible.GetComponentsInChildren<Collider>()) collider.enabled = false;
+            // Alle Collider werden deaktiviert abgesehen von Collidern die auf Objekten des Layers "NoColliderOff" sind. 
+            foreach (Collider collider in connectible.GetComponentsInChildren<Collider>())
+            {
+                if (collider.gameObject.layer == LayerMask.NameToLayer("NoColliderOff")) continue;
+                collider.enabled = false;
+            }
             connectible.GetComponent<InteractableObject>().SetGrabbable(false);
             connectible.transform.localPosition = new Vector3(0, 0, 0);
             connectible.transform.localEulerAngles = new Vector3(0, 0, 0);
             connectible.GetComponent<Connectible>().SetConnected(true);
+            taskfinished = true;
             this.connectorActive = false;
-            ProcessHandler.Instance.NextTask();
             DestroyPreview();
         }
     }
@@ -70,6 +73,7 @@ public class ConnectorObject : InteractableObject
                     go.GetComponent<Rigidbody>().isKinematic = false;
                     foreach (Collider collider in go.GetComponentsInChildren<Collider>()) collider.enabled = true;
                     go.GetComponent<XRBaseInteractable>().interactionLayerMask = ~0;
+                    taskfinished = true;
                 }
                 catch (Exception e)
                 {
@@ -162,6 +166,10 @@ public class ConnectorObject : InteractableObject
                 anchors[i] = anchorObjects[i].transform;
             }
         }
+        /// <summary>
+        /// Speichert ein Objekt im AnchorStore, dabei wird das Parent Object gespeichert und anschließend der nächste freie Anchor als neuer Parent gesetzt.
+        /// </summary>
+        /// <param name="obj">Das Objekt, das gespeichert werden soll.</param>
         internal void StoreObj(GameObject obj)
         {
             if (index < anchors.Length)
@@ -172,8 +180,20 @@ public class ConnectorObject : InteractableObject
                 index++;
             }
         }
+        /// <summary>
+        /// Gibt das letzte GameObject zurück, das im AnchorStore gespeichert wurde.
+        /// </summary>
+        /// <returns>Das GameObject, das als letztes gespeichert wurde</returns>
         public GameObject GetLatestConnectedObject() => index>0 ? go[index - 1] : null;
+        /// <summary>
+        /// Gibt das Parent Objekt des zuletzt gespeicherten GameObjects zurück.
+        /// </summary>
+        /// <returns>Parent des zuletzt gespeicherten GameObject</returns>
         public Transform GetLatestConnectedParent() => index>0 ? parents[index - 1] : null;
+        /// <summary>
+        /// Entfernt das zuletzt hinzugefügte GameObject aus dem AnchorStore.
+        /// Dabei wird das Parent Objekt auf das zuvor gespeicherte Parent Objekt gesetzt.
+        /// </summary>
         public void RemoveObj()
         {
             if (index > 0)
@@ -182,11 +202,19 @@ public class ConnectorObject : InteractableObject
                 index--;
             }
         }
+        /// <summary>
+        /// Durchsucht den AnchorStore nach dem nächsten freien Anchor und gibt die Position zurück.
+        /// </summary>
+        /// <returns>Position des nächsten freien Anchor in <b>Vector3</b></returns>
         public Vector3 NextFreeAnchorPosition()
         {
             if (index == anchors.Length) return new Vector3(0, 0, 0);
             return anchors[index].position;
         }
+        /// <summary>
+        /// Gibt den nächsten freien Anchor zurück.
+        /// </summary>
+        /// <returns>Das Transform des nächsten Anchors. Wenn es keinen freien gibt, wird der letzte in der liste zurückgegeben.</returns>
         public Transform NextFreeAnchor()
         {
             if (index == anchors.Length) return anchors[anchors.Length-1];

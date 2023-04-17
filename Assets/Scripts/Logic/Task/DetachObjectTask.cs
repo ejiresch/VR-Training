@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
-
+/// <summary>
+/// 
+/// </summary>
 public class DetachObjectTask : Task
 {
     public InputActionReference toggleReference = null;
@@ -15,8 +17,10 @@ public class DetachObjectTask : Task
         base.StartTask();
         connectorObject = base.FindTool(connectorObject.name);
         connectible = base.FindTool(connectible.name);
-        connectible.GetComponent<Connectible>().SetConnector(null);
-        connectible.GetComponent<Connectible>().SetGrabbable(true);
+        connectible.GetComponent<Connectible>().SetConnector(null); // Wichtig, da sonst ein Preview erzeugt wird
+        connectible.GetComponent<Connectible>().SetGrabbable(true); // Muss Grabbable sein 
+        connectible.GetComponent<XRBaseInteractable>().interactionLayerMask = ~0;
+        foreach (Collider collider in connectible.GetComponentsInChildren<Collider>()) collider.enabled = true;
         isActive = true;
     }
     private void Toggle(InputAction.CallbackContext context)
@@ -26,11 +30,24 @@ public class DetachObjectTask : Task
         if (connectible.GetComponent<Connectible>().GetIsGrabbed())
         {
             connectorOb.Disconnect();
-            ProcessHandler.Instance.NextTask();
             isActive = false;
         }
     }
     private void Awake() => toggleReference.action.started += Toggle;
 
     private void OnDestroy() => toggleReference.action.started -= Toggle;
+
+    protected override void CompReset()
+    {
+        connectorObject.GetComponent<ConnectorObject>().SetTaskFinished(false);
+    }
+
+    protected override IEnumerator TaskRunActive()
+    {
+        while (!connectorObject.GetComponent<ConnectorObject>().GetTaskCompletion())
+        {
+            yield return new WaitForFixedUpdate();
+        }
+        EndTask();
+    }
 }

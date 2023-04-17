@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8879699335341445277}
   - component: {fileID: 5788090927457762514}
   - component: {fileID: 2479288750193548432}
+  - component: {fileID: -5550706593777898014}
+  - component: {fileID: 3196445499727166589}
   m_Layer: 0
   m_Name: Left Hand
   m_TagString: touchHand
@@ -73,6 +75,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.071672976, y: 0.16738486, z: 0.20930105}
   m_Center: {x: -0.0182288, y: 0.020757318, z: -0.017793804}
+--- !u!114 &-5550706593777898014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320468556585710384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dbf2fe8be236a4e8304c9ff8429a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3196445499727166589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320468556585710384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa49e9d80289d84aaccbc9a0f19d18d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGrabbed: 0
+  toggleReference: {fileID: -8676771288832313663, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  distance: 0.1
+  hasToBeUsed: 0
 --- !u!1 &7100067695290414845
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,14 +129,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7100067695290414845}
-  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: -0.1}
+  m_LocalRotation: {x: -0.37226075, y: 0.5166355, z: 0.52801037, w: 0.5618851}
+  m_LocalPosition: {x: -0.0113, y: -0.0337, z: -0.1363}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 6998852687833963037}
   m_Father: {fileID: 6327526970831573494}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: -74.561005, y: 44.763, z: 51.629}
 --- !u!33 &3162042729123385910
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 // Definiert ein Objekt, welches gedrueckt werden muss
-public class PressObject : MonoBehaviour
+public class PressObject : InteractableObject
 {
     public bool pressable = false;
     // Soll von Unterklassen aufgerufen werden wenn die Task beendet werden soll
@@ -10,7 +10,7 @@ public class PressObject : MonoBehaviour
     {
         if (pressable)
         {
-            ProcessHandler.Instance.NextTask();
+            taskfinished = true;  
             pressable = false;
         }
     }

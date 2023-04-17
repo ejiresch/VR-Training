@@ -12,6 +12,7 @@ public class BandControlTask : Task
     private Animator[] animators;
     private Vector3 centerVector;
     private GameObject[] hands;
+    private bool taskOk = false;
 
     private void Awake() => toggleReference.action.started += CheckDistance;
 
@@ -46,8 +47,21 @@ public class BandControlTask : Task
                 bandRechts.transform.Rotate(new Vector3(130, 180, 0));
             }
             foreach (Animator anime in animators) anime.SetTrigger("biegen");
-            ProcessHandler.Instance.NextTask();
+            taskOk = true;
         }
     }
 
+    protected override void CompReset()
+    {
+        
+    }
+
+    protected override IEnumerator TaskRunActive()
+    {
+        while(!taskOk)
+        {
+            yield return new WaitForFixedUpdate();
+        }
+        EndTask();
+    }
 }

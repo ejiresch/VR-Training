@@ -8,35 +8,21 @@ using UnityEngine.InputSystem;
 
 
 /* Ist für die Spritze Animation zuständig */
-[RequireComponent(typeof(ResetManager))]
 [RequireComponent(typeof(MaterialFetcher))]
 public class SpritzePressObject : PressObject, ResetInterface
 {
     public InputActionReference toggleReference = null;
-    public bool reingepumpt = false; // spritze aufgezogen 
-    public bool nurRauspumpen = false;
-    public bool nurReinpumpen = false;
-    public bool disconnectOnCompletion = false;
+    [HideInInspector]public bool reingepumpt = false; // spritze aufgezogen 
+    [HideInInspector] public bool nurRauspumpen = false;
+    [HideInInspector] public bool nurReinpumpen = false;
+    [HideInInspector] public bool disconnectOnCompletion = false;
     public GameObject kolben;
-    public GameObject ObjectToGetMaterial;
     private Animator anim;
 
     private void Start()
     {
         anim = this.gameObject.GetComponent<Animator>();
-        if (nurRauspumpen) StartCoroutine(Reinpumpen());
-        if (PlayerPrefs.GetInt("resetCommand") == 1)
-        {
-            if (this.gameObject.GetComponent<ResetManager>())
-            {
-                this.gameObject.GetComponent<ResetManager>().Register(this);
-            }
-            else
-            {
-                Debug.LogError("Kein ReserManager am GameObject");
-            }
-        }
-        
+        if (nurRauspumpen) StartCoroutine(Reinpumpen());     
     }
 
 
@@ -45,9 +31,12 @@ public class SpritzePressObject : PressObject, ResetInterface
     private void OnDestroy() => toggleReference.action.started -= Toggle;
     private void Toggle(InputAction.CallbackContext context) // Wird aufgerufen, wenn der Button für toggleReference gedrückt wird -> siehe Samples/Default Input Actions/XRI Default Input Actions
     {
-        if (!pressable) return;
-        if (!reingepumpt) StartCoroutine(Reinpumpen());
-        else StartCoroutine(Rauspumpen());
+        if (GetIsGrabbed())
+        {
+            if (!pressable) return;
+            if (!reingepumpt) StartCoroutine(Reinpumpen());
+            else StartCoroutine(Rauspumpen());
+        }
     }
     public override void Press()
     {
@@ -72,11 +61,6 @@ public class SpritzePressObject : PressObject, ResetInterface
             temp.GetComponent<Rigidbody>().isKinematic = false;
         }
         base.Press();   //next task
-        ResetManager resetm;
-        if (resetm = GetComponent<ResetManager>())
-        {
-            resetm.ResetTool();
-        }
         
     }
     IEnumerator Reinpumpen() // Start der "Reinpumpen" Animation

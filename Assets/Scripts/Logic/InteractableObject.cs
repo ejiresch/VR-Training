@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 // Objects that have this script, send reports upon colliding with other interactibles
+[RequireComponent(typeof(InteractableHandler))]
 public class InteractableObject : MonoBehaviour, OnDropFunctions
 {
     [SerializeField] private bool isGrabbed = false;
     private LayerMask lmNotGrabbable = 0;
     private LayerMask lmGrabbable = ~0;
     private List<Func<GameObject, bool>> onDropFunctions = new List<Func<GameObject, bool>>();
+    protected bool taskfinished = false;
     public void SetGrabbable(bool grab)
     {
         XRGrabInteractable xrObject = gameObject.GetComponent<XRGrabInteractable>();
@@ -45,4 +47,9 @@ public class InteractableObject : MonoBehaviour, OnDropFunctions
         }
         onDropFunctions = new List<Func<GameObject, bool>>();
     }
+    public void SetTaskFinished(bool isF)
+    {
+        taskfinished = isF;
+    }
+    public bool GetTaskCompletion() => taskfinished;
 }

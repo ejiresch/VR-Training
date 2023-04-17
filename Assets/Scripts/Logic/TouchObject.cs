@@ -13,7 +13,7 @@ public class TouchObject : InteractableObject
             {
                 matF.MaterialChange(this.gameObject, touchTarget, "touchMaterial"); 
             }
-            ProcessHandler.Instance.NextTask();
+            taskfinished = true;
             touchTarget = null;
         }
     }

@@ -29,4 +29,22 @@ public class RemoveFromCompundObjectTask : Task
         result.Add(objectToRemove);
         return result;
     }
+
+    protected override void CompReset()
+    {
+        objectToRemove.GetComponent<CompundPart>().SetTaskFinished(false);
+    }
+
+    protected override IEnumerator TaskRunActive()
+    {
+        while (objectToRemove == null)
+        {
+            yield return new WaitForFixedUpdate();
+        }
+        while (!objectToRemove.GetComponent<CompundPart>().GetTaskCompletion())
+        {
+            yield return new WaitForFixedUpdate();
+        }
+        EndTask();
+    }
 }

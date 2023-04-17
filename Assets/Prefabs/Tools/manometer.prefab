@@ -207,6 +207,7 @@ GameObject:
   - component: {fileID: -4562019329338428734}
   - component: {fileID: 1346873332}
   - component: {fileID: 1971720246265520870}
+  - component: {fileID: 2697537267660738908}
   m_Layer: 0
   m_Name: manometer
   m_TagString: Untagged
@@ -358,6 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrabbed: 0
+  hasToBeGrabbed: 1
   connectorActive: 0
   preview: {fileID: 0}
   anchorPoints:
@@ -374,6 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f05948eb6ed98b94f8c4f9a28c185db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGrabbed: 0
   pressable: 0
   nadel: {fileID: 4722615117423879462}
   toggleReference: {fileID: -3624616657726735963, guid: c348712bda248c246b8c49b3db54643f,
@@ -392,6 +395,18 @@ CapsuleCollider:
   m_Height: 7.581928
   m_Direction: 2
   m_Center: {x: -0.115854666, y: 1.1726253, z: 0.094036385}
+--- !u!114 &2697537267660738908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4561207380521413469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dbf2fe8be236a4e8304c9ff8429a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4652459016098776535
 GameObject:
   m_ObjectHideFlags: 0

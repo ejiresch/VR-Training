@@ -15,7 +15,7 @@ public class PressTask : Task
     // Wird beim Start der Task aufgerufen
     public override void StartTask()
     {
-        base.StartTask();
+        
         pressObject = base.FindTool(pressObject.name);
         pressObject.GetComponent<PressObject>().SetPressable(true);
         Type myType = pressObject.GetComponents(typeof(PressObject))[0].GetType();
@@ -31,13 +31,33 @@ public class PressTask : Task
             }
             
         }
+        base.StartTask();
     }
 
+    protected override void CompReset()
+    {
+        pressObject.GetComponent<PressObject>().SetTaskFinished(false);
+    }
+
+    protected override IEnumerator TaskRunActive()
+    {
+        while (!pressObject.GetComponent<PressObject>().GetTaskCompletion())
+        {
+            yield return new WaitForFixedUpdate();
+        }
+        EndTask();
+    }
 }
 
+
+
+/// <summary>
+/// Klasse um die Einstellungsmöglichkeiten eines PressObjects je nach Task einzustellen. 
+/// <remark><br><b>Autor:</b> Marvin Fornezzi</br></remark>
+/// </summary>
 #if UNITY_STANDALONE_WIN
 [CustomEditor(typeof(PressTask))]
-public class CustomInspector : Editor
+public class CustomInspectorCuff : Editor
 {
     override public void OnInspectorGUI()
     {
@@ -45,6 +65,8 @@ public class CustomInspector : Editor
         var task = target as PressTask;
         Component[] comp = task.pressObject.GetComponents(typeof(PressObject));
         if (task.pressObject == null) return;
+        GUILayout.Space(20f);
+        GUILayout.Label("PressOject options");
         foreach (Component comp2 in comp)
         {
             Type myType = comp2.GetType();

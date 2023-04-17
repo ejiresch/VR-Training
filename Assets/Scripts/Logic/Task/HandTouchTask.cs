@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class HandTouchTask : Task
 {
     public GameObject touchTarget;
     private bool active = false;
+    private GameObject[] touchObjects;
     // Wird bei Start der Task ausgefuehrt
     public override void StartTask()
     {
         base.StartTask();
+        
         touchTarget = base.FindTool(touchTarget.name);
         active = true;
     }
@@ -19,7 +20,8 @@ public class HandTouchTask : Task
     {
         if (active)
         {
-            GameObject[] touchObjects = GameObject.FindGameObjectsWithTag("touchHand");
+
+            touchObjects = GameObject.FindGameObjectsWithTag("touchHand");
             if (touchObjects != null && touchObjects.Length>1)
             {
                 Debug.Log(touchObjects.Length);
@@ -40,5 +42,24 @@ public class HandTouchTask : Task
         //result.Add(touchObject);
         result.Add(touchTarget);
         return result;
+    }
+
+    protected override void CompReset()
+    {
+        touchObjects[0].GetComponent<TouchHand>().SetTaskFinished(false);
+        touchObjects[1].GetComponent<TouchHand>().SetTaskFinished(false);
+    }
+
+    protected override IEnumerator TaskRunActive()
+    {
+        while (touchObjects == null)
+        {
+            yield return new WaitForFixedUpdate();
+        }
+        while (!touchObjects[0].GetComponent<TouchHand>().GetTaskCompletion())
+        {
+            yield return new WaitForFixedUpdate();
+        }
+        EndTask();
     }
 }
