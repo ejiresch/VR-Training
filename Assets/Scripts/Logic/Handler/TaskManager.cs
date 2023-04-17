@@ -47,12 +47,6 @@ public class TaskManager : MonoBehaviour
         }
 
         List<GameObject> objects = t.HighlightedObjects();
-
-        /**GameObject one_exists = GameObject.Find("Cube");
-        if (one_exists != null)
-        {
-            Destroy(one_exists);
-        }*/
         if (showIndicator == true)
         {
             if (objects != null)
@@ -60,24 +54,10 @@ public class TaskManager : MonoBehaviour
                 for (int i = 0; i < objects.Count; i++)
                 {
                     Debug.Log(objects[i]);
-                    //GameObject one = GameObject.Find("Cube");
-                    //one.transform.position = objects[i].transform.position;
-                    //indicator.transform.position = new Vector3(objects[i].transform.position.x, 
-                    //                                    objects[i].transform.position.y+0.1f,
-                    //                                    objects[i].transform.position.z);
-
-                    //one.transform.position = new Vector3(0, 0, 0);
-
-                    //GameObject.FindGameObjectWithTag("Respawn").transform.position;
-                    //GameObject.Find("Spot Light").transform.position;
                     GameObject go = Instantiate(indicator);
-                    //go.transform.position = objects[i].transform.position;
-
                     go.transform.position = new Vector3(objects[i].transform.position.x,
                                                         objects[i].transform.position.y + 0.5f,
                                                         objects[i].transform.position.z);
-
-                    //GameObject.Find("Cube").transform.position = objects[i].transform.position;
                     Debug.Log(objects[i].transform.position);
                 indicatorsCurrent.Add(go);
                 }

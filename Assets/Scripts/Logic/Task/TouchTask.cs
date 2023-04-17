@@ -13,7 +13,6 @@ public class TouchTask : Task
         touchTarget = base.FindTool(touchTarget.name);
         touchObject.GetComponent<TouchObject>().SetTouchTarget(touchTarget);
     }
-    //Dazu, Simon
     public override List<GameObject> HighlightedObjects()
     {
         List<GameObject> result = new List<GameObject>();

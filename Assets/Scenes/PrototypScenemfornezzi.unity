@@ -2467,7 +2467,7 @@ PrefabInstance:
     - target: {fileID: 3048302653684948013, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_text
-      value: "Mit Wasser Nachsp\xFClen"
+      value: "Mit Wasser nachsp\xFClen"
       objectReference: {fileID: 0}
     - target: {fileID: 3242952232548459712, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -3172,7 +3172,7 @@ PrefabInstance:
     - target: {fileID: 7399424434547616118, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_text
-      value: "Mit Wasser Durchsp\xFClen"
+      value: "Mit Wasser durchsp\xFClen"
       objectReference: {fileID: 0}
     - target: {fileID: 7686493136206360074, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
