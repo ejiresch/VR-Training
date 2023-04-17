@@ -23,7 +23,7 @@ TagManager:
   - Interactable
   - UI_not_interactable
   - PostProcessingLayer
-  - 
+  - NoColliderOff
   - 
   - 
   - 
