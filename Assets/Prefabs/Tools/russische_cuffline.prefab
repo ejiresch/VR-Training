@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 4113008612119495647}
   - component: {fileID: 6003247909132586369}
   - component: {fileID: 6515256408158764871}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ballon
   m_TagString: CompoundGrabbablePart
   m_Icon: {fileID: 0}

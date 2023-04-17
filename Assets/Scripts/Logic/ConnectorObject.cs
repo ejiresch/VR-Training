@@ -32,7 +32,12 @@ public class ConnectorObject : InteractableObject
             aStore.StoreObj(connectible);
             connectible.GetComponent<Connectible>().ResetOnDropFunc();
             connectible.GetComponent<Rigidbody>().isKinematic = true;
-            foreach (Collider collider in connectible.GetComponentsInChildren<Collider>()) collider.enabled = false;
+            // Alle Collider werden deaktiviert abgesehen von Collidern die auf Objekten des Layers "NoColliderOff" sind. 
+            foreach (Collider collider in connectible.GetComponentsInChildren<Collider>())
+            {
+                if (collider.gameObject.layer == LayerMask.NameToLayer("NoColliderOff")) continue;
+                collider.enabled = false;
+            }
             connectible.GetComponent<InteractableObject>().SetGrabbable(false);
             connectible.transform.localPosition = new Vector3(0, 0, 0);
             connectible.transform.localEulerAngles = new Vector3(0, 0, 0);
