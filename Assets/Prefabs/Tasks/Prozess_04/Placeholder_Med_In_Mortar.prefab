@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7451276498472072938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3637728468549133581}
+  - component: {fileID: 8640089808762603191}
+  m_Layer: 0
+  m_Name: Placeholder_Med_In_Mortar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3637728468549133581
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7451276498472072938}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8640089808762603191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7451276498472072938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6476568b40475a4a84f4e08225cf24e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tName: "Medikament in den M\xF6rser geben"
+  description: "Gib das Medikament in den M\xF6rser"
+  spawnedTools: []
+  warningMessage_BeideHaende: 0
+  warningMessage_KanueleFesthalten: 0
+  resetToolOnCompletion: 0
+  connector: {fileID: 3945274505655888449, guid: 350189746fcf57646a19e51b7549d64d,
+    type: 3}
+  connectible: {fileID: 7377189898647564526, guid: 3d97f26469f393d469fe596a28d9a6e1,
+    type: 3}
