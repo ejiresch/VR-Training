@@ -49,11 +49,25 @@ public class SceneLoader : MonoBehaviour
         {
             if (p == null)
             {
+                
                 toolList.Add(Instantiate(placeholderTool, spawnPoints[i].position, Quaternion.identity, this.gameObject.transform));
                 i++;
                 continue;
             }
-            toolList.Add(Instantiate(p, spawnPoints[i].position , p.transform.localRotation, this.gameObject.transform));
+
+            /*
+             * für spawnBack
+             * übergibt gewählten SpawnPoint
+             */
+            GameObject currentTool = Instantiate(p, spawnPoints[i].position, p.transform.localRotation, this.gameObject.transform);
+
+            if (currentTool.GetComponent<spawnBack>() != null)
+            { 
+                currentTool.GetComponent<spawnBack>().spawnPoint = spawnPoints[i];
+            }
+            toolList.Add(currentTool);
+
+
             i++;
         }
     }

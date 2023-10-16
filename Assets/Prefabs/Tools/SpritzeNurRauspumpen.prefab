@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.43935782, w: 0.8983122}
   m_LocalPosition: {x: -0.013062, y: 5.9125776, z: 2.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4781443836841502629}
   m_RootOrder: 1
@@ -51,10 +52,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -79,6 +82,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &3392461571748585169
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,6 +100,8 @@ GameObject:
   - component: {fileID: 1034629455864690013}
   - component: {fileID: -5912057153961077301}
   - component: {fileID: 8260491228727621026}
+  - component: {fileID: 3352331167935283144}
+  - component: {fileID: -7969271969972384980}
   m_Layer: 9
   m_Name: SpritzeNurRauspumpen
   m_TagString: Untagged
@@ -113,6 +119,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4781443836841502629}
   - {fileID: 2145194362715937883}
@@ -166,7 +173,44 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_SelectMode: 0
+  m_CustomReticle: {fileID: 0}
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
   m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
     m_PersistentCalls:
       m_Calls: []
   m_OnHoverEntered:
@@ -175,13 +219,11 @@ MonoBehaviour:
   m_OnHoverExited:
     m_PersistentCalls:
       m_Calls: []
-  m_OnLastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
   m_OnSelectEntered:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8260491228727621026}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetIsGrabbed
         m_Mode: 6
         m_Arguments:
@@ -196,6 +238,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8260491228727621026}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetIsGrabbed
         m_Mode: 6
         m_Arguments:
@@ -215,10 +258,13 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_CustomReticle: {fileID: 0}
   m_AttachTransform: {fileID: 0}
   m_AttachEaseInTime: 0.15
   m_MovementType: 0
+  m_VelocityDamping: 1
+  m_VelocityScale: 1
+  m_AngularVelocityDamping: 1
+  m_AngularVelocityScale: 1
   m_TrackPosition: 1
   m_SmoothPosition: 0
   m_SmoothPositionAmount: 5
@@ -246,8 +292,9 @@ MonoBehaviour:
     m_RotationOrder: 4
   m_ThrowVelocityScale: 1.5
   m_ThrowAngularVelocityScale: 1
-  m_GravityOnDetach: 0
+  m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
+  m_AttachPointCompatibilityMode: 0
 --- !u!114 &320772812020375668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,7 +336,7 @@ MonoBehaviour:
   kolben: {fileID: 7985443908070623203}
 --- !u!95 &1034629455864690013
 Animator:
-  serializedVersion: 3
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -302,6 +349,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -330,6 +378,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85dbf2fe8be236a4e8304c9ff8429a02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3352331167935283144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3392461571748585169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee422bd3ddb0ba41ada2d8b03f04393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-7969271969972384980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3392461571748585169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc4ed88f9ffcd54eac9bcf65e41e1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5264929493354249503
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +428,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -3.49, z: -1.36}
   m_LocalScale: {x: 0.6496636, y: 0.6496636, z: 0.6496636}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3763168481487521144}
   - {fileID: 6603188061477069387}
@@ -390,6 +463,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -0.02, y: 9.21, z: 2.3136034}
   m_LocalScale: {x: 0.9477549, y: 0.9477549, z: 0.9477549}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4781443836841502629}
   m_RootOrder: 0
@@ -413,10 +487,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -441,6 +517,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &9031829471026128566
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,6 +544,7 @@ Transform:
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.22, y: -4.75, z: 0.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 292645257058014225}
   m_RootOrder: 1
