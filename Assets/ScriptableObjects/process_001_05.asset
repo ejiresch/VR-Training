@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dde782ad63195c468031cd616cfe950, type: 3}
+  m_Name: process_001_05
+  m_EditorClassIdentifier: 
+  pName: Tutorial
+  description: "kurzer Tutorial-Prozess um Benutzer einzuf\xFChren"
+  toolList:
+  - {fileID: 6645954436737465285, guid: cc7554a1bbbb5a74f95193c95880e7ca, type: 3}
+  - {fileID: 4561207380521413469, guid: 59aa1cef234e6a249811214b7bb69fd7, type: 3}
+  - {fileID: 7228085617110046450, guid: 602eee7b2c4c49342bac7147da2706fb, type: 3}
+  - {fileID: 3392461571748585169, guid: 681e19e80d10b454eac2703fdb3aa6d1, type: 3}
+  - {fileID: 8907562860919515554, guid: 768faeebbbfd19647b4f0a4beb9cab6a, type: 3}
+  - {fileID: 3133612690540729634, guid: b21095e3032aad24abb10d6a305fbaca, type: 3}
+  compoundOb: {fileID: 0}
+  patientModel: {fileID: 6117283350620791866, guid: be0707d502ba38845b74a9ed10d3cdb5,
+    type: 3}
+  taskList:
+  - {fileID: 9182968463707594753, guid: 39299019a436aa646896dbaf15d96096, type: 3}
