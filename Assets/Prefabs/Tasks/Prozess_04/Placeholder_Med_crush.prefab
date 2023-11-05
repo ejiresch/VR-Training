@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3637728468549133581}
-  - component: {fileID: 7516257651309392272}
+  - component: {fileID: -1550564495079244979}
   m_Layer: 0
   m_Name: Placeholder_Med_crush
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7516257651309392272
+--- !u!114 &-1550564495079244979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7451276498472072938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c96c630a8d5530468786e9c19e030b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9beff124e3f192849bb00e8267ad3e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tName: Medikament zermahlen
@@ -50,5 +50,7 @@ MonoBehaviour:
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0
   resetToolOnCompletion: 0
-  toggleReferenceRight: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f,
+  pressObject: {fileID: 7377189898647564526, guid: 3d97f26469f393d469fe596a28d9a6e1,
     type: 3}
+  values: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  distance: 1
