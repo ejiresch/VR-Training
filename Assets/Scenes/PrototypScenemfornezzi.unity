@@ -2511,6 +2511,11 @@ PrefabInstance:
       propertyPath: m_text
       value: Nahrung aufziehen
       objectReference: {fileID: 0}
+    - target: {fileID: 1079007532640099795, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1152504163216715422, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_AnchoredPosition.y

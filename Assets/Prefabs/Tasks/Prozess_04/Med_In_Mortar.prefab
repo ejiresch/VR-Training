@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3637728468549133581}
   - component: {fileID: 8640089808762603191}
   m_Layer: 0
-  m_Name: Placeholder_Med_In_Mortar
+  m_Name: Med_In_Mortar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
