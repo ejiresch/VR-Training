@@ -8,7 +8,6 @@ using UnityEngine.InputSystem;
 
 
 /* Ist für die Med Crush Animation zuständig */
-[RequireComponent(typeof(MaterialFetcher))]
 public class MedPressObject : PressObject, ResetInterface
 {
     public InputActionReference toggleReference = null;
