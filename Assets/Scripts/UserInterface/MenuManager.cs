@@ -10,7 +10,19 @@ public class MenuManager : MonoBehaviour
     public GameObject main_page;
 
     
-    public void StartSimulation() // Methode für Button "Start" 
+    public void StartPEGNahrung() 
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void StartTracheostomEntfernen()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void StartracheostomEinsetzen()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void StartPEGMedikament()
     {
         SceneManager.LoadScene(1);
     }
