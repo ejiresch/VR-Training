@@ -11,6 +11,12 @@ TagManager:
   - touchMaterial
   - touchHand
   - RespawnCollider
+  - PEGNahrung
+  - PEGsonde
+  - einsetzen
+  - entfernen
+  - Tutorial
+  - verlassen
   layers:
   - Default
   - TransparentFX
@@ -25,7 +31,7 @@ TagManager:
   - UI_not_interactable
   - PostProcessingLayer
   - NoColliderOff
-  - 
+  - ViewSelect
   - 
   - 
   - 
