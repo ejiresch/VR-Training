@@ -12,6 +12,7 @@ public class ButtonHover : MonoBehaviour
     public string lastHit;
     public Image[] images;
     private Animator anim = null;
+    public bool reset = false;
     //public WhiteboardHandler whiteboard;
 
     public void Start()
@@ -26,7 +27,7 @@ public class ButtonHover : MonoBehaviour
         var main = Camera.main.transform;
         bool success= Physics.Raycast(main.position, main.forward, out hit,layerMask);
         float indicatorTimer = 0;
-        bool reset = false;
+        
        
 
         if (success == true)
@@ -69,7 +70,7 @@ public class ButtonHover : MonoBehaviour
             switch (lastHit)
             {
                 case "PEGNahrung":
-                images[0].fillAmount += indicatorTimer / 5;
+                    images[0].fillAmount += indicatorTimer / 5;
                     break;
                 case "PEGsonde":
                     images[1].fillAmount += indicatorTimer / 5;
@@ -102,19 +103,19 @@ public class ButtonHover : MonoBehaviour
                 switch (lastHit){
                     case "PEGNahrung":
                         Debug.Log("PEGNahrung");
-                       // whiteboard.StartProcess("03");
+                        SceneManager.LoadScene(3);
                         break;
                     case "PEGsonde":
                         Debug.Log("PEGsonde");
-                      //  whiteboard.StartProcess("04");
+                        SceneManager.LoadScene(4);
                         break;
                     case "einsetzen":
                         Debug.Log("einsetzen");
-                       // whiteboard.StartProcess("02");
+                        SceneManager.LoadScene(2);
                         break;
                     case "entfernen":
                         Debug.Log("entfernen");
-                       // whiteboard.StartProcess("01");
+                        SceneManager.LoadScene(1);
                         break;
                     case "verlassen":
                         Debug.Log("verlassen");
@@ -122,6 +123,7 @@ public class ButtonHover : MonoBehaviour
                         break;
                     case "Tutorial":
                         Debug.Log("tutorial");
+                        SceneManager.LoadScene(5);
                         break;
                     
                 }
