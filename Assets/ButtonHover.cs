@@ -13,6 +13,8 @@ public class ButtonHover : MonoBehaviour
     public Image[] images;
     private Animator anim = null;
     public bool reset = false;
+    private int processGroup = 1;
+
     //public WhiteboardHandler whiteboard;
 
     public void Start()
@@ -27,8 +29,9 @@ public class ButtonHover : MonoBehaviour
         var main = Camera.main.transform;
         bool success= Physics.Raycast(main.position, main.forward, out hit,layerMask);
         float indicatorTimer = 0;
-        
-       
+
+        Scene s = SceneManager.GetSceneByName("PrototypScenemfornezzi");
+        String scene =s.buildIndex.ToString();
 
         if (success == true)
         {
@@ -103,19 +106,24 @@ public class ButtonHover : MonoBehaviour
                 switch (lastHit){
                     case "PEGNahrung":
                         Debug.Log("PEGNahrung");
-                        SceneManager.LoadScene(3);
+                        ProcessHandler.Instance.SetProcessIndex(103);
+                        SceneManager.LoadScene(scene);
+                        break;
                         break;
                     case "PEGsonde":
                         Debug.Log("PEGsonde");
-                        SceneManager.LoadScene(4);
+                        ProcessHandler.Instance.SetProcessIndex(104);
+                        SceneManager.LoadScene(scene);
                         break;
                     case "einsetzen":
                         Debug.Log("einsetzen");
-                        SceneManager.LoadScene(2);
+                        ProcessHandler.Instance.SetProcessIndex(102);
+                        SceneManager.LoadScene(scene);
                         break;
                     case "entfernen":
                         Debug.Log("entfernen");
-                        SceneManager.LoadScene(1);
+                        ProcessHandler.Instance.SetProcessIndex(101);
+                        SceneManager.LoadScene(scene);
                         break;
                     case "verlassen":
                         Debug.Log("verlassen");
@@ -123,7 +131,9 @@ public class ButtonHover : MonoBehaviour
                         break;
                     case "Tutorial":
                         Debug.Log("tutorial");
-                        SceneManager.LoadScene(5);
+                        ProcessHandler.Instance.SetProcessIndex(105);
+                        SceneManager.LoadScene(scene);
+                        
                         break;
                     
                 }
@@ -150,5 +160,7 @@ public class ButtonHover : MonoBehaviour
 
 
     }
+   
+
 }
     
