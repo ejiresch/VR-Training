@@ -26,7 +26,7 @@ public class ButtonHover : MonoBehaviour
         var main = Camera.main.transform;
         bool success= Physics.Raycast(main.position, main.forward, out hit,layerMask);
         float indicatorTimer = 0;
-        
+        bool reset = false;
        
 
         if (success == true)
@@ -37,6 +37,7 @@ public class ButtonHover : MonoBehaviour
             lastHit = hit.collider.gameObject.tag;
             timeViewed+=Time.deltaTime;
             anim = hit.collider.gameObject.GetComponent<Animator>();
+            reset = true;
 
             /*
             if (lastHit == "PEGNahrung")
@@ -132,8 +133,11 @@ public class ButtonHover : MonoBehaviour
         {
             timeViewed = 0;
             lastHit = null;
-            
-            anim.SetBool("Open", false);
+            if(reset == true)
+            {
+                anim.SetBool("Open", false); //löst NullReferenceException aus aber egal
+                reset = false;
+            }
             for (int i = 0; i<images.Length; i++)
             {
                 images[i].fillAmount = 0;

@@ -1414,7 +1414,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tracheostom einsetzen
+  m_text: 'Tracheostoma einsetzen
 
 '
   m_isRightToLeft: 0
@@ -3748,7 +3748,6 @@ MonoBehaviour:
   - {fileID: 1850095265}
   - {fileID: 160358606}
   - {fileID: 816256352}
-  whiteboard: {fileID: 241527065}
 --- !u!1 &1313890539
 GameObject:
   m_ObjectHideFlags: 0
@@ -3807,7 +3806,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tracheostom entfernen
+  m_text: Tracheostoma entfernen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cd7a66d950a0f1145943e7e12592d569, type: 2}
   m_sharedMaterial: {fileID: 5099360731432219088, guid: cd7a66d950a0f1145943e7e12592d569,
@@ -4295,7 +4294,6 @@ MonoBehaviour:
   - {fileID: 1850095265}
   - {fileID: 160358606}
   - {fileID: 816256352}
-  whiteboard: {fileID: 241527065}
 --- !u!1 &1554177596
 GameObject:
   m_ObjectHideFlags: 0
@@ -5136,7 +5134,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Spiel Verlassen
+  m_text: Training Verlassen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cd7a66d950a0f1145943e7e12592d569, type: 2}
   m_sharedMaterial: {fileID: 5099360731432219088, guid: cd7a66d950a0f1145943e7e12592d569,
@@ -5471,7 +5469,6 @@ GameObject:
   - component: {fileID: 1817197660}
   - component: {fileID: 1817197661}
   - component: {fileID: 1817197662}
-  - component: {fileID: 1817197663}
   m_Layer: 13
   m_Name: PEG Nahrung
   m_TagString: PEGNahrung
@@ -5644,21 +5641,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &1817197663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817197655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a821287013b780d45ac2d04c5467e4e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scene: {fileID: 0}
-  process: {fileID: 11400000, guid: b851747833787ae40b689dc95d624fa0, type: 2}
-  highlightedColor: {r: 0.3, g: 1, b: 0.3, a: 1}
 --- !u!1 &1850095263
 GameObject:
   m_ObjectHideFlags: 0
