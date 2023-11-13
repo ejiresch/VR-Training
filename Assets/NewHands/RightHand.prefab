@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 5939820536848822908}
   m_Layer: 0
   m_Name: hands:Lhand
-  m_TagString: Untagged
+  m_TagString: touchMaterial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -344,6 +344,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1223693115296425342}
   - component: {fileID: 2726699047869347144}
+  - component: {fileID: 4057570008657584144}
+  - component: {fileID: 5270869304731667425}
+  - component: {fileID: 8962715439733986226}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: touchHand
@@ -388,6 +391,44 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4057570008657584144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995304414849925060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee422bd3ddb0ba41ada2d8b03f04393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5270869304731667425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995304414849925060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dbf2fe8be236a4e8304c9ff8429a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8962715439733986226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995304414849925060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81b05a0c75a54754395c49f08bcb636c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGrabbed: 0
+  hasfinished: 0
 --- !u!1 &2372285673959933174
 GameObject:
   m_ObjectHideFlags: 0

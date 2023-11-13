@@ -21,7 +21,7 @@ public class HandTouchTask : Task
         if (active)
         {
 
-            touchObjects = GameObject.FindGameObjectsWithTag("touchHand");
+            touchObjects = GameObject.FindGameObjectsWithTag("Hand");
             if (touchObjects != null && touchObjects.Length>1)
             {
                 Debug.Log(touchObjects.Length);

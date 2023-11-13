@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 5939820536848822908}
   m_Layer: 0
   m_Name: hands:Lhand
-  m_TagString: Untagged
+  m_TagString: touchMaterial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -344,6 +344,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1223693115296425342}
   - component: {fileID: -6462063881977273834}
+  - component: {fileID: 8789291571398992962}
+  - component: {fileID: -4070657464470799569}
+  - component: {fileID: -2857499052909716023}
+  - component: {fileID: -7080562623326812373}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: touchHand
@@ -388,6 +392,61 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8789291571398992962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995304414849925060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee422bd3ddb0ba41ada2d8b03f04393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4070657464470799569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995304414849925060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dbf2fe8be236a4e8304c9ff8429a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2857499052909716023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995304414849925060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81b05a0c75a54754395c49f08bcb636c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGrabbed: 0
+  hasfinished: 0
+--- !u!114 &-7080562623326812373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995304414849925060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa49e9d80289d84aaccbc9a0f19d18d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGrabbed: 0
+  toggleReference: {fileID: -8676771288832313663, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  distance: 0.1
+  hasToBeUsed: 0
 --- !u!1 &2372285673959933174
 GameObject:
   m_ObjectHideFlags: 0
