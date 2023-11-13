@@ -14,6 +14,7 @@ public class ButtonHover : MonoBehaviour
     private Animator anim = null;
     public bool reset = false;
     private int processGroup = 1;
+    private PlayerPrefs playerPrefs;
 
     //public WhiteboardHandler whiteboard;
 
@@ -30,8 +31,8 @@ public class ButtonHover : MonoBehaviour
         bool success= Physics.Raycast(main.position, main.forward, out hit,layerMask);
         float indicatorTimer = 0;
 
-        Scene s = SceneManager.GetSceneByName("PrototypScenemfornezzi");
-        String scene =s.buildIndex.ToString();
+        //Scene s = SceneManager.GetSceneByName("PrototypScenemfornezzi");
+       // String scene =s.buildIndex.ToString();
 
         if (success == true)
         {
@@ -103,39 +104,42 @@ public class ButtonHover : MonoBehaviour
             }
             if (timeViewed > 5)
             {
+                string ppkey = "Process_Index";
                 switch (lastHit){
                     case "PEGNahrung":
                         Debug.Log("PEGNahrung");
-                        ProcessHandler.Instance.SetProcessIndex(103);
-                        SceneManager.LoadScene(scene);
+                        PlayerPrefs.SetInt(ppkey, 103);
+                        SceneManager.LoadScene(0);
                         break;
-                        break;
+
                     case "PEGsonde":
                         Debug.Log("PEGsonde");
-                        ProcessHandler.Instance.SetProcessIndex(104);
-                        SceneManager.LoadScene(scene);
+                        PlayerPrefs.SetInt(ppkey, 104);
+                        SceneManager.LoadScene(0);
                         break;
+
                     case "einsetzen":
                         Debug.Log("einsetzen");
-                        ProcessHandler.Instance.SetProcessIndex(102);
-                        SceneManager.LoadScene(scene);
+                        PlayerPrefs.SetInt(ppkey, 102);
+                        SceneManager.LoadScene(0);
                         break;
+
                     case "entfernen":
                         Debug.Log("entfernen");
-                        ProcessHandler.Instance.SetProcessIndex(101);
-                        SceneManager.LoadScene(scene);
+                        PlayerPrefs.SetInt(ppkey, 101);
+                        SceneManager.LoadScene(0);
                         break;
+
                     case "verlassen":
                         Debug.Log("verlassen");
                         Application.Quit();
                         break;
+
                     case "Tutorial":
                         Debug.Log("tutorial");
-                        ProcessHandler.Instance.SetProcessIndex(105);
-                        SceneManager.LoadScene(scene);
-                        
+                        PlayerPrefs.SetInt(ppkey, 105);
+                        SceneManager.LoadScene(0);
                         break;
-                    
                 }
 
             }
