@@ -347,6 +347,8 @@ GameObject:
   - component: {fileID: 4057570008657584144}
   - component: {fileID: 5270869304731667425}
   - component: {fileID: 8962715439733986226}
+  - component: {fileID: -7032086947614952890}
+  - component: {fileID: 525415528214077473}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: touchHand
@@ -429,6 +431,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrabbed: 0
   hasfinished: 0
+--- !u!65 &-7032086947614952890
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995304414849925060}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.071672976, y: 0.08888039, z: 0.17731395}
+  m_Center: {x: -0.0182288, y: -0.018494923, z: -0.001800254}
+--- !u!114 &525415528214077473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995304414849925060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa49e9d80289d84aaccbc9a0f19d18d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGrabbed: 0
+  toggleReference: {fileID: -8676771288832313663, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  distance: 0.1
+  hasToBeUsed: 0
 --- !u!1 &2372285673959933174
 GameObject:
   m_ObjectHideFlags: 0
