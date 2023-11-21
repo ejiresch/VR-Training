@@ -38,5 +38,9 @@ public class ConnectionTask : Task
             yield return new WaitForFixedUpdate();
         }
         EndTask();
+        if (Input.GetButtonDown("Jump"))
+        {
+            connector.GetComponent<ConnectorObject>().SetTaskFinished(true);
+        }
     }
 }

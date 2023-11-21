@@ -54,6 +54,7 @@ public class HandTouchTask : Task
     {
         while (touchObjects == null)
         {
+
             yield return new WaitForFixedUpdate();
         }
         while (!touchObjects[0].GetComponent<TouchHand>().GetTaskCompletion())

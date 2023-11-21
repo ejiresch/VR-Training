@@ -4,25 +4,31 @@ using UnityEngine.UI;
 using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
-
+/*
+ * Die Klasse schaut ob man im main menu über einen Knopf hovered,
+ * und lädt die passende Simulation, einzige Klasse die im main menu verwendet wird
+ */
 public class ButtonHover : MonoBehaviour
 {
 
     public float timeViewed;
     public string lastHit;
-    public Image[] images;
+    public Image[] images; //rote border um Knöpfe sind Bilder die sich auffüllen
     private Animator anim = null;
     public bool reset = false;
     private int processGroup = 1;
     private PlayerPrefs playerPrefs;
 
-    //public WhiteboardHandler whiteboard;
+    
 
     public void Start()
     {
         timeViewed = 0;
         lastHit = null;
     }
+   /*
+    * 
+    */
     public void Update()
     {
         int layerMask = LayerMask.GetMask("ViewSelect");
@@ -31,8 +37,7 @@ public class ButtonHover : MonoBehaviour
         bool success= Physics.Raycast(main.position, main.forward, out hit,layerMask);
         float indicatorTimer = 0;
 
-        //Scene s = SceneManager.GetSceneByName("PrototypScenemfornezzi");
-       // String scene =s.buildIndex.ToString();
+        
 
         if (success == true)
         {
@@ -71,7 +76,7 @@ public class ButtonHover : MonoBehaviour
             }
              */
 
-            switch (lastHit)
+            switch (lastHit) //Je nachdem welcher Knopf angeschaut wird füllt sich die rote umrandung auf
             {
                 case "PEGNahrung":
                     images[0].fillAmount += indicatorTimer / 5;
@@ -106,7 +111,7 @@ public class ButtonHover : MonoBehaviour
             {
                 string ppkey = "Process_Index";
                 switch (lastHit){
-                    case "PEGNahrung":
+                    case "PEGNahrung": // lädt die passende simulation
                         Debug.Log("PEGNahrung");
                         PlayerPrefs.SetInt(ppkey, 103);
                         SceneManager.LoadScene(0);
@@ -151,7 +156,7 @@ public class ButtonHover : MonoBehaviour
             lastHit = null;
             if(reset == true)
             {
-                anim.SetBool("Open", false); //löst NullReferenceException aus aber egal
+                anim.SetBool("Open", false); 
                 reset = false;
             }
             for (int i = 0; i<images.Length; i++)

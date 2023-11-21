@@ -11028,7 +11028,7 @@ MonoBehaviour:
   - {fileID: 989498781}
   - {fileID: 1642814450}
   - {fileID: 806269783}
-  whiteboard: {fileID: 4991433274349570000}
+  reset: 0
 --- !u!1001 &1578257885
 PrefabInstance:
   m_ObjectHideFlags: 0

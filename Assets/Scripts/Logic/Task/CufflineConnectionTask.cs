@@ -48,13 +48,20 @@ public class CufflineConnectionTask : PressTask
     protected override IEnumerator TaskRunActive()
     {
         connector.GetComponent<PressObject>().SetPressable(connector.GetComponent<ConnectorObject>().GetIsGrabbed());
+
         while (!connector.GetComponent<PressObject>().GetTaskCompletion())
         {
+            if (Input.GetButtonDown("U"))
+            {
+                connector.GetComponent<ConnectorObject>().SetTaskFinished(true);
+            }
             connector.GetComponent<PressObject>().SetPressable(connector.GetComponent<ConnectorObject>().GetIsGrabbed());
             yield return new WaitForFixedUpdate();
         }
         EndTask();
+        
     }
+
 }
 /// <summary>
 /// Klasse um die Einstellungsmöglichkeiten eines PressObjects je nach Task einzustellen. 
