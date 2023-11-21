@@ -12,6 +12,9 @@ public class DetachObjectTask : Task
     public GameObject connectorObject;
     public GameObject connectible;
     private bool isActive = false;
+    //für SPritze disconected nicht Bug
+    private bool tryDisconect = false;
+    public float tryDisconectTimer = 0.1f;
     public override void StartTask()
     {
         base.StartTask();
@@ -25,13 +28,20 @@ public class DetachObjectTask : Task
     }
     private void Toggle(InputAction.CallbackContext context)
     {
+
         if (!isActive) return;
-        ConnectorObject connectorOb = connectorObject.GetComponent<ConnectorObject>();
-        if (connectible.GetComponent<Connectible>().GetIsGrabbed())
+
+        //für SPritze disconected nicht Bug
+        tryDisconect = true;
+
+        /*
+        if (c.GetIsGrabbed())
         {
+            Debug.Log("3");
             connectorOb.Disconnect();
             isActive = false;
         }
+        */
     }
     private void Awake() => toggleReference.action.started += Toggle;
 
@@ -49,5 +59,26 @@ public class DetachObjectTask : Task
             yield return new WaitForFixedUpdate();
         }
         EndTask();
+    }
+
+    //für den Spritze disconected nicht Bug
+    public void Update()
+    {
+        if (tryDisconect)
+        {
+            ConnectorObject connectorOb = connectorObject.GetComponent<ConnectorObject>();
+            Connectible c = connectible.GetComponent<Connectible>();
+            if (c.GetIsGrabbed())
+            {
+                connectorOb.Disconnect();
+                isActive = false;
+                tryDisconect = false;
+            }
+            tryDisconectTimer -= Time.deltaTime;
+            if (tryDisconectTimer <= 0)
+            {
+                tryDisconect = false;
+            }
+        }
     }
 }
