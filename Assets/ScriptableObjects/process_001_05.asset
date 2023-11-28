@@ -26,3 +26,4 @@ MonoBehaviour:
     type: 3}
   taskList:
   - {fileID: 9182968463707594753, guid: 39299019a436aa646896dbaf15d96096, type: 3}
+  - {fileID: 9182968463707594753, guid: 78295b4637eb5934db1d374f896c43f7, type: 3}

@@ -12,9 +12,8 @@ public class DetachObjectTask : Task
     public GameObject connectorObject;
     public GameObject connectible;
     private bool isActive = false;
-    //für SPritze disconected nicht Bug
-    private bool tryDisconect = false;
-    public float tryDisconectTimer = 0.1f;
+    private bool tryDisconnect = false;
+    private float tryDisconnectTimer = 0.1f;
     public override void StartTask()
     {
         base.StartTask();
@@ -30,18 +29,12 @@ public class DetachObjectTask : Task
     {
 
         if (!isActive) return;
+        tryDisconnectTimer = 0.1f;
 
-        //für SPritze disconected nicht Bug
-        tryDisconect = true;
+        //Da es zu einem Bug kommen kann, wenn in der Toggle-Methode nur einmal überprüft wird ob das Connectible auf IsGrabbed true gesetzt ist, muss es über mehrere Frames abgefragt werden.
+        //Durch try Disconnect = true kann Code in der Update Methode ausgeführt werden
+        tryDisconnect = true;
 
-        /*
-        if (c.GetIsGrabbed())
-        {
-            Debug.Log("3");
-            connectorOb.Disconnect();
-            isActive = false;
-        }
-        */
     }
     private void Awake() => toggleReference.action.started += Toggle;
 
@@ -60,11 +53,11 @@ public class DetachObjectTask : Task
         }
         EndTask();
     }
-
-    //für den Spritze disconected nicht Bug
+    
     public void Update()
     {
-        if (tryDisconect)
+        //solange tryDisconnectTimer über 0 ist wird in jedem Frame überprüft ob das Connectible auf IsGrabbed true gesetzt ist, dann wird weiterer Code im Connector ausgeführt um den Task schließlich abzuschließen. Dies ist notwendig da SetIsGrabbed beim Connectible immer zu einer unterschiedlichen, zufälligen Zeit aufgerufen wird.
+        if (tryDisconnect)
         {
             ConnectorObject connectorOb = connectorObject.GetComponent<ConnectorObject>();
             Connectible c = connectible.GetComponent<Connectible>();
@@ -72,12 +65,12 @@ public class DetachObjectTask : Task
             {
                 connectorOb.Disconnect();
                 isActive = false;
-                tryDisconect = false;
+                tryDisconnect = false;
             }
-            tryDisconectTimer -= Time.deltaTime;
-            if (tryDisconectTimer <= 0)
+            tryDisconnectTimer -= Time.deltaTime;
+            if (tryDisconnectTimer <= 0)
             {
-                tryDisconect = false;
+                tryDisconnect = false;
             }
         }
     }

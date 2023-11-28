@@ -17,6 +17,8 @@ TagManager:
   - entfernen
   - Tutorial
   - verlassen
+  - Medikament
+  - stoessel
   layers:
   - Default
   - TransparentFX
