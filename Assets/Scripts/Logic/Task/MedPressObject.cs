@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class MedPressObject : PressObject, ResetInterface
 {
     public InputActionReference toggleReference = null;
-    public float maxDistance = 0.05f;
+    public float maxDistance = 0.05f;   // Maximal Distanz zwischen Stössel und Medikament
 
     [HideInInspector]public bool crushed = false; 
     private Animator anim;
@@ -16,7 +16,7 @@ public class MedPressObject : PressObject, ResetInterface
 
     private void Start()
     {
-        stoessel = GameObject.FindWithTag("stoessel");
+        stoessel = GameObject.FindWithTag("stoessel");  // Speichert den in der Szene vorhandenen Stössel als GO ab
         anim = this.gameObject.GetComponent<Animator>();  
     }
 
@@ -30,8 +30,7 @@ public class MedPressObject : PressObject, ResetInterface
         {
             if(stoessel != null)
             {
-                dist = Vector3.Distance(transform.position, stoessel.transform.position);
-                Debug.Log(dist);
+                dist = Vector3.Distance(transform.position, stoessel.transform.position);   //  Distanz zwischen Stössel und Medikament
                 if(dist <= maxDistance)
                 {
                     if (!pressable) return;
