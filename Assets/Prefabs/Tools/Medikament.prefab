@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: -4864233408700315043}
   m_Layer: 0
   m_Name: Medikament
-  m_TagString: Untagged
+  m_TagString: Medikament
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -387,4 +387,5 @@ MonoBehaviour:
   pressable: 0
   toggleReference: {fileID: 4247772908111231093, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
+  maxDistance: 0.05
   crushed: 0

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
+﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 
@@ -11,11 +7,16 @@ using UnityEngine.InputSystem;
 public class MedPressObject : PressObject, ResetInterface
 {
     public InputActionReference toggleReference = null;
+    public float maxDistance = 0.05f;
+
     [HideInInspector]public bool crushed = false; 
     private Animator anim;
+    private GameObject stoessel;
+    private float dist;
 
     private void Start()
     {
+        stoessel = GameObject.FindWithTag("stoessel");
         anim = this.gameObject.GetComponent<Animator>();  
     }
 
@@ -27,8 +28,16 @@ public class MedPressObject : PressObject, ResetInterface
     {
         if (GetIsGrabbed())
         {
-            if (!pressable) return;
-            if (!crushed) StartCoroutine(Crush());
+            if(stoessel != null)
+            {
+                dist = Vector3.Distance(transform.position, stoessel.transform.position);
+                Debug.Log(dist);
+                if(dist <= maxDistance)
+                {
+                    if (!pressable) return;
+                    if (!crushed) StartCoroutine(Crush());
+                }
+            }
         }
     }
     public override void Press()
@@ -39,12 +48,12 @@ public class MedPressObject : PressObject, ResetInterface
         
     }
     IEnumerator Crush() // Start der "Crush" Animation
-    {
-       
+    {   
+
         anim.SetTrigger("crushed");
         yield return new WaitForSeconds(1.3f);
         crushed = true;
-        Press();
+        Press();   
     }
     public void ResetComp()
     {
