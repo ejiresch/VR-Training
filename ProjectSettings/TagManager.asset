@@ -19,6 +19,7 @@ TagManager:
   - verlassen
   - Medikament
   - stoessel
+  - dontShowWhiteboard
   layers:
   - Default
   - TransparentFX
