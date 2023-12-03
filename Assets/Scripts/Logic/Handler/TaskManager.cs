@@ -13,6 +13,8 @@ public class TaskManager : MonoBehaviour
     public GameObject indicator;
     public List<GameObject> indicatorsCurrent;      //Currently spawned Indicators
     public bool showIndicator = false;
+    public Canvas tutorialCanvas;
+    public HUDHandler hudHandler;
     /**
      * Returns the next Tasks and removes the Array index
     */
@@ -29,13 +31,29 @@ public class TaskManager : MonoBehaviour
 
 
         Task task = StartNextTask();
-        ProcessHandler.Instance.UINextTask(task.description, isFirst);
+        if (task.gameObject.tag == "dontShowWhiteboard")
+        {
+            ProcessHandler.Instance.UINextTask(task.description, isFirst, false);
+        }
+        else
+        {
+            ProcessHandler.Instance.UINextTask(task.description, isFirst);
+        }
         return task;
     }
     // Startet die naechste Task
     public Task StartNextTask()
     {
         GameObject task = Instantiate(taskList[0], this.transform.position, Quaternion.identity, this.transform);
+
+        //für Press Button Task um ihn den Tutorial Canvas und dem HUDHandler mit dem tutorial Pfeil aus der Szene zu übergeben
+        if (task.GetComponent<PressButtonTask>() != null)
+        {
+            task.GetComponent<PressButtonTask>().tutorialCanvas = tutorialCanvas;
+            task.GetComponent<PressButtonTask>().hudHandler = hudHandler;
+
+        }
+
         Task t = task.GetComponent<Task>();
         taskList.RemoveAt(0);
         if (t != null)

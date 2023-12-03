@@ -13,10 +13,21 @@ public class UserInterfaceManager : MonoBehaviour
         if (isFirst) wbh.FirstTask(taskdescription);
         else
         {
-            StartCoroutine(wbh.TaskRotation(taskdescription));
+            StartCoroutine(wbh.TaskRotation(taskdescription, true));
             hudh.ShowText(); // Anzeige von "Aufgabe abgeschlossen"
         }
     }
+
+    public void NewTask(string taskdescription, bool isFirst, bool showWhiteboard) // Wird aufgerufen, wenn ein neuer Task gestartet wird der nicht am Whiteboard gezeigt werden soll
+    {
+        if (isFirst) wbh.FirstTask(taskdescription, showWhiteboard);
+        else
+        {
+            StartCoroutine(wbh.TaskRotation(taskdescription, showWhiteboard));
+            hudh.ShowText(); // Anzeige von "Aufgabe abgeschlossen"
+        }
+    }
+
     public void EndOfTasks()  // Wird aufgerufen, wenn alle Tasks beendet wurden
     {
         StartCoroutine(wbh.ShowEndMessage());

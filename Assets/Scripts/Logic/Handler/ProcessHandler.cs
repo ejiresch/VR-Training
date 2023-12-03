@@ -61,6 +61,13 @@ public class ProcessHandler : MonoBehaviour
     {
         uiManager.NewTask(desc, isFirst);
     }
+
+    // Calls the next tasks
+    public void UINextTask(string desc, bool isFirst,bool showWhiteboard)
+    {
+        uiManager.NewTask(desc, isFirst, showWhiteboard);
+    }
+
     // Shows a Warning, given by index
     public void ShowWarning(int warningIndex)
     {

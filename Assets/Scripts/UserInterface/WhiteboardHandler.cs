@@ -23,6 +23,21 @@ public class WhiteboardHandler : MonoBehaviour
         this.NewTask(task_number + ". " + taskdescription, true);
         task_current.SetActive(true);
     }
+
+    public void FirstTask(string taskdescription, bool showWhiteboard) // Ersten Task erstellen
+    {
+        if (showWhiteboard)
+        {
+            this.NewTask(task_number + ". " + taskdescription, true);
+        }
+        else
+        {
+            this.NewTask("", true);
+            task_number--;
+        }
+        task_current.SetActive(true);
+    }
+
     public void NewTask(string taskdescription, bool first) // Neuen Task erstellen
     {
         task_current = Instantiate(task_prefab, transform.GetChild(1));
@@ -51,12 +66,20 @@ public class WhiteboardHandler : MonoBehaviour
         }
         task_number++;
     }
-    public IEnumerator TaskRotation(string taskdescription) // Verschiebung der Tasks und das anzeigen des neuen Tasks
+    public IEnumerator TaskRotation(string taskdescription, bool showWhiteboard) // Verschiebung der Tasks und das anzeigen des neuen Tasks
     {
         this.FinishTask();
         yield return new WaitForSeconds(0.4f);
 
-        this.NewTask(task_number + ". " + taskdescription, false);
+        if (showWhiteboard)
+        {
+            this.NewTask(task_number + ". " + taskdescription, false);
+        }
+        else
+        {
+            this.NewTask("", false);
+            task_number--;
+        }
 
         yield return new WaitForSeconds(0.4f);
         task_current.SetActive(true);

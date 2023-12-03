@@ -25,5 +25,8 @@ MonoBehaviour:
   patientModel: {fileID: 6117283350620791866, guid: be0707d502ba38845b74a9ed10d3cdb5,
     type: 3}
   taskList:
-  - {fileID: 9182968463707594753, guid: 39299019a436aa646896dbaf15d96096, type: 3}
+  - {fileID: 9182968463707594753, guid: cfea2c6d1d8678f4a9d136950d0ecd6e, type: 3}
+  - {fileID: 9182968463707594753, guid: ffcda3a450dc29b4a9f44e8671ccd193, type: 3}
+  - {fileID: 9182968463707594753, guid: 44da5eeb73aac48409d0f7aee6d81602, type: 3}
+  - {fileID: 9182968463707594753, guid: f12e6d2c4b61fd74c9b585bd770631c6, type: 3}
   - {fileID: 9182968463707594753, guid: 78295b4637eb5934db1d374f896c43f7, type: 3}

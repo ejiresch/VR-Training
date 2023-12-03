@@ -8,14 +8,12 @@ using UnityEngine.UI;
 public class HUDHandler : MonoBehaviour
 {
     public TextMeshProUGUI hud_text;
-    //The image of the arrow
-    public RawImage tutorialArrow;
-    //das Transform des Pfeils um ihn zu drehen
-    public RectTransform tutorialArrowTransform;
-    //the trasnform of the camera to know in which direction it is looking
-    public Transform camera;
-    //Transform der Objekte auf die der Pfeil zeigen muss
-    public Transform lookDirection;
+    
+    //Atribute, die für den Tutorial-Prozess benötigt werden   
+    public RawImage tutorialArrow;  //The image of the arrow    
+    public Transform camera;        //the trasnform of the camera to know in which direction it is looking    
+    public Transform lookDirection; //Transform der Objekte auf die der Pfeil zeigen muss
+    private bool tutorialMode;
 
     public void ShowText() // Darstellung des grünen Textes "Aufgabe abgeschlossen"
     {
@@ -41,19 +39,40 @@ public class HUDHandler : MonoBehaviour
 
     public void Update()
     {
-        float cameraYRotation = camera.rotation.eulerAngles.y;
-        Debug.Log(cameraYRotation);
-        //if the camera is looking at the right spot, no arrow is visable
-        if(cameraYRotation < 300 && cameraYRotation > 260)
+        if (tutorialMode)
+        {
+            // Vektor zwischen Kamera und Zielobjekt
+            Vector3 toTarget = lookDirection.position - camera.position;
+
+            // Berechne die horizontale Rotation um die Y-Achse
+            float angleToTarget = Vector3.SignedAngle(camera.forward, toTarget, Vector3.up);
+
+
+            //if the camera is looking at the right spot, no arrow is visable
+            if (Mathf.Abs(angleToTarget)<30f)
+            {
+                tutorialArrow.enabled = false;
+            }
+            else
+            {
+                tutorialArrow.enabled = true;
+                tutorialArrow.transform.LookAt(lookDirection);
+                tutorialArrow.transform.Rotate(0, 270, 0);
+            }
+        }
+        else
         {
             tutorialArrow.enabled = false;
         }
-        else 
-        {
-            tutorialArrow.enabled = true;
-            //tutorialArrow_transform.rotation = Quaternion.Euler(0, 0, 180);
-            tutorialArrowTransform.LookAt(lookDirection);
-            tutorialArrowTransform.Rotate(0, 270, 0);
-        }
+    }
+
+    public void setTutorialMode(bool tutorialMode)
+    {
+        this.tutorialMode = tutorialMode;
+    }
+
+    public void setLookDirection(Transform lookDirection)
+    {
+        this.lookDirection = lookDirection; 
     }
 }

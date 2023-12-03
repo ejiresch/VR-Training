@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 286347593575785693}
-  - component: {fileID: 1367170973974955781}
+  - component: {fileID: -8027207162724237836}
   m_Layer: 0
-  m_Name: SpritzeNehmenTask
-  m_TagString: Untagged
+  m_Name: WhiteboardOkDrueckenTask
+  m_TagString: dontShowWhiteboard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1367170973974955781
+--- !u!114 &-8027207162724237836
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,15 +41,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 9182968463707594753}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d94180786755964baf6820c5dbb50f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 507183b408ec1934a9cc7f6180c1109c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tName: nimm die Spritze in die Hand
-  description: nimm die Spritze in die Hand
+  tName: "Dr\xFCcke auf Weiter beim Whiteboard"
+  description: "Dr\xFCcke auf Weiter beim Whiteboard"
   spawnedTools: []
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0
   resetToolOnCompletion: 0
-  grabObject: {fileID: 3392461571748585169, guid: 681e19e80d10b454eac2703fdb3aa6d1,
-    type: 3}
-  values: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  tutorialCanvas: {fileID: 0}
+  text: Das ist das Whiteboard. Hier wird wird dir angezeigt welche Aufgaben du erledigen
+    musst.
+  hudHandler: {fileID: 0}
+  transformChooser: 4
