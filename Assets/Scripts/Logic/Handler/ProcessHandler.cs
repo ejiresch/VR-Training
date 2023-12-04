@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 // Class responsible for loading Assets and assigning Tasks to the Task-Manager 
 // Also provides References to important GameObjects
 public class ProcessHandler : MonoBehaviour
@@ -13,6 +14,7 @@ public class ProcessHandler : MonoBehaviour
     [SerializeField] private Material closePreviewMaterial, farPreviewMaterial;
     private static ProcessHandler _instance;
     public string ppKey = "Process_Index";
+    private int pid1;
     // Singleton Instanz
     public static ProcessHandler Instance { get { return _instance; } }
     private void Awake()
@@ -40,6 +42,13 @@ public class ProcessHandler : MonoBehaviour
     // Called when all Tasks are over
     public void EndOfTasks()
     {
+        /*
+         * schauen was der jetzt aktive task ist -> neuen task starten
+         */
+        if(pid1 == 102)
+        {
+            sceneLoader.LoadProcess(101);
+        }
         uiManager.EndOfTasks();
     }    
     // Wird beim Anfang der naechsten Task aufgerufen
@@ -55,6 +64,7 @@ public class ProcessHandler : MonoBehaviour
         sceneLoader.LoadProcess(pid);
         taskManager.SetToolList(sceneLoader.GetToolList());
         taskManager.SetTaskList(sceneLoader.GetTaskList());
+        this.pid1 = pid;
     }
     // Calls the next tasks
     public void UINextTask(string desc, bool isFirst)
