@@ -51,10 +51,7 @@ public class CufflineConnectionTask : PressTask
 
         while (!connector.GetComponent<PressObject>().GetTaskCompletion())
         {
-            if (Input.GetButtonDown("U"))
-            {
-                connector.GetComponent<ConnectorObject>().SetTaskFinished(true);
-            }
+            connector.GetComponent<ConnectorObject>().SetTaskFinished(true);
             connector.GetComponent<PressObject>().SetPressable(connector.GetComponent<ConnectorObject>().GetIsGrabbed());
             yield return new WaitForFixedUpdate();
         }
