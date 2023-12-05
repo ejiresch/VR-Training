@@ -56,6 +56,7 @@ public class DetachObjectTask : Task
     
     public void Update()
     {
+        base.Update();
         //solange tryDisconnectTimer über 0 ist wird in jedem Frame überprüft ob das Connectible auf IsGrabbed true gesetzt ist, dann wird weiterer Code im Connector ausgeführt um den Task schließlich abzuschließen. Dies ist notwendig da SetIsGrabbed beim Connectible immer zu einer unterschiedlichen, zufälligen Zeit aufgerufen wird.
         if (tryDisconnect)
         {

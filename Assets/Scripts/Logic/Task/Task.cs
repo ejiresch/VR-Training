@@ -117,4 +117,11 @@ public abstract class Task : MonoBehaviour
     /// </summary>
     /// <returns></returns>
     protected abstract IEnumerator TaskRunActive();
+    protected void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            EndTask();
+        }
+    }
 }

@@ -14,7 +14,7 @@ public class ProcessHandler : MonoBehaviour
     [SerializeField] private Material closePreviewMaterial, farPreviewMaterial;
     private static ProcessHandler _instance;
     public string ppKey = "Process_Index";
-    private int pid1;
+    
     // Singleton Instanz
     public static ProcessHandler Instance { get { return _instance; } }
     private void Awake()
@@ -45,10 +45,13 @@ public class ProcessHandler : MonoBehaviour
         /*
          * schauen was der jetzt aktive task ist -> neuen task starten
          */
-        if(pid1 == 102)
+        if (sceneLoader.GetFollowupTask() !=0)
         {
-            sceneLoader.LoadProcess(101);
+            sceneLoader.LoadProcess(sceneLoader.GetFollowupTask());
         }
+        
+            
+        
         uiManager.EndOfTasks();
     }    
     // Wird beim Anfang der naechsten Task aufgerufen
@@ -64,7 +67,7 @@ public class ProcessHandler : MonoBehaviour
         sceneLoader.LoadProcess(pid);
         taskManager.SetToolList(sceneLoader.GetToolList());
         taskManager.SetTaskList(sceneLoader.GetTaskList());
-        this.pid1 = pid;
+        
     }
     // Calls the next tasks
     public void UINextTask(string desc, bool isFirst)

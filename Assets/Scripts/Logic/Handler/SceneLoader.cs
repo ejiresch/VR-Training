@@ -81,4 +81,9 @@ public class SceneLoader : MonoBehaviour
     {
         return toolList;
     } 
+    //
+    public int GetFollowupTask()
+    {
+        return selectedProcess.GetNextTask();
+    }
 }

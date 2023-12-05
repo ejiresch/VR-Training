@@ -18,6 +18,7 @@ public class HandTouchTask : Task
     // Update is called once per frame
     void Update()
     {
+        base.Update();
         if (active)
         {
 
