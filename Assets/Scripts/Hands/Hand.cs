@@ -14,6 +14,7 @@ public class Hand : MonoBehaviour
     //Stores the InputDevice that we're Targeting once we find it in InitializeHand()
     private InputDevice _targetDevice;
     private Animator _handAnimator;
+    private SkinnedMeshRenderer _mesh;
 
 
     private void Start()
@@ -36,6 +37,7 @@ public class Hand : MonoBehaviour
 
             GameObject spawnedHand = Instantiate(handPrefab, transform);
             _handAnimator = spawnedHand.GetComponent<Animator>();
+            _mesh = spawnedHand.GetComponentInChildren<SkinnedMeshRenderer>();
         }
     }
 
@@ -65,7 +67,7 @@ public class Hand : MonoBehaviour
         {
             _handAnimator.SetFloat("Trigger", 0);
         }
-        //This will get the value for our grip from the target device and output a flaot into gripValue
+        //This will get the value for our grip from the target device and output a flaot into gripValuel
         if (_targetDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue))
         {
             _handAnimator.SetFloat("Grip", gripValue);
@@ -76,5 +78,13 @@ public class Hand : MonoBehaviour
         }
     }
 
+    public void disableVisibility()
+    {
+        _mesh.enabled = false;
+    }
 
+    public void enableVisibility()
+    {
+        _mesh.enabled = true;
+    }
 }
