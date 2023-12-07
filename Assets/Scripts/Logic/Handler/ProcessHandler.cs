@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 // Class responsible for loading Assets and assigning Tasks to the Task-Manager 
 // Also provides References to important GameObjects
 public class ProcessHandler : MonoBehaviour
@@ -42,12 +44,15 @@ public class ProcessHandler : MonoBehaviour
     // Called when all Tasks are over
     public void EndOfTasks()
     {
+        string ppkey = "Process_Index";
         /*
          * schauen was der jetzt aktive task ist -> neuen task starten
          */
         if (sceneLoader.GetFollowupTask() !=0)
         {
-            sceneLoader.LoadProcess(sceneLoader.GetFollowupTask());
+            //sceneLoader.LoadProcess(sceneLoader.GetFollowupTask());
+            PlayerPrefs.SetInt(ppkey, sceneLoader.GetFollowupTask());
+            SceneManager.LoadScene(0);
         }
         
             
