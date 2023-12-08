@@ -50,7 +50,7 @@ MonoBehaviour:
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0
   resetToolOnCompletion: 0
-  connector: {fileID: 3945274505655888449, guid: 350189746fcf57646a19e51b7549d64d,
+  connector: {fileID: 127199775171483385, guid: 327ad3c5ba059ae46a7d0f4e2bb61907,
     type: 3}
   connectible: {fileID: 7377189898647564526, guid: 3d97f26469f393d469fe596a28d9a6e1,
     type: 3}

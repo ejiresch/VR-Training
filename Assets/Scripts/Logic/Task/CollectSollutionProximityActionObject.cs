@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
 using UnityEngine;
 using UnityEngine.InputSystem;
 /// <summary>
 /// Ein Objekt das an ein anderes angenähert wird und durch Verwendung des Objektes oder automatisch den Task erfüllen.  
 /// </summary>
-public class SolveProximityActionObject : InteractableObject
+public class CollectSollutionProximityActionObject : InteractableObject
 {
     public InputActionReference toggleReference = null;
     public float distance = 0.1f;
@@ -14,6 +13,7 @@ public class SolveProximityActionObject : InteractableObject
     private GameObject touchTarget;
     private bool inRange = false;
     private Animator anim;
+    private Animator animTarget;
     private bool activated = false;
     private void Start()
     {
@@ -30,34 +30,47 @@ public class SolveProximityActionObject : InteractableObject
         {
             if (!hasToBeUsed)
             {
-                activated = true;
-                StartCoroutine(Solve());
-                taskfinished = true;
+                if (animTarget.GetBool("solved"))
+                {
+                    activated = true;
+                    StartCoroutine(EventAnimation());
+                    GetComponent<MaterialFetcher>().MaterialChange(gameObject, touchTarget, "Blue");
+                    taskfinished = true;
+                }
             }
         }
     }
-    public void SetTouchTarget(GameObject touchTarger) => touchTarget = touchTarger;
+    public void SetTouchTarget(GameObject touchTarger)
+    {
+        touchTarget = touchTarger;
+        animTarget = touchTarget.GetComponent<Animator>();
+    }
     private void Toggle(InputAction.CallbackContext context)
     {
         
         if (inRange && !activated)
         {
-            activated = true;
-            StartCoroutine(Solve());
-            taskfinished = true;
+            if (animTarget != null && animTarget.GetBool("solved"))
+            {
+                activated = true;
+                StartCoroutine(EventAnimation());
+                GetComponent<MaterialFetcher>().MaterialChange(gameObject, touchTarget, "Blue");
+                taskfinished = true;
+            }
         }
     }
-
-    IEnumerator Solve() // Start der "Solve" Animation
+    IEnumerator EventAnimation()
     {
-
-        anim.SetTrigger("solved");
-        Destroy(touchTarget);
+        if (anim != null)
+        {
+            anim.SetTrigger("reinpumpen");
+        }
         yield return new WaitForSeconds(1.3f);
     }
     public void SetTarget(GameObject touchTarger) 
     { 
         touchTarget = touchTarger;
+        animTarget = touchTarget.GetComponent<Animator>();
         inRange = false;
         activated = false;
     }
