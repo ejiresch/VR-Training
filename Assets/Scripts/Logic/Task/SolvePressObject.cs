@@ -11,12 +11,18 @@ using UnityEngine.InputSystem;
 public class SolvePressObject : PressObject, ResetInterface
 {
     public InputActionReference toggleReference = null;
+    public float maxDistance = 0.05f;   // Maximal Distanz zwischen Glas und Medikament
+
     [HideInInspector]public bool crushed = false; 
     private Animator anim;
+    private GameObject med;
+    private float dist;
+
 
     private void Start()
     {
-        anim = this.gameObject.GetComponent<Animator>();  
+        anim = this.gameObject.GetComponent<Animator>();
+        med = GameObject.FindWithTag("Medikament");
     }
 
 
@@ -27,8 +33,12 @@ public class SolvePressObject : PressObject, ResetInterface
     {
         if (GetIsGrabbed())
         {
-            if (!pressable) return;
-            if (!crushed) StartCoroutine(Solve());
+            dist = Vector3.Distance(transform.position, med.transform.position);   //  Distanz zwischen Glas und Medikament
+            if (dist <= maxDistance)
+            {
+                if (!pressable) return;
+                if (!crushed) StartCoroutine(Solve());
+            }
         }
     }
     public override void Press()
@@ -40,7 +50,6 @@ public class SolvePressObject : PressObject, ResetInterface
     }
     IEnumerator Solve() // Start der "Solve" Animation
     {
-       
         anim.SetTrigger("solved");
         GameObject go = GameObject.Find("Medikament");
         if (go != null)

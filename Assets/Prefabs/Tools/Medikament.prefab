@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 6247238165562775878}
   - component: {fileID: -6493219018241484154}
   - component: {fileID: -4864233408700315043}
+  - component: {fileID: 6499271842051543673}
   m_Layer: 0
   m_Name: Medikament
   m_TagString: Medikament
@@ -389,3 +390,20 @@ MonoBehaviour:
     type: 3}
   maxDistance: 0.05
   crushed: 0
+--- !u!114 &6499271842051543673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7377189898647564526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24e748bd54f07564b8e0cacc6f84611b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGrabbed: 0
+  toggleReference: {fileID: 4247772908111231093, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  distance: 0.1
+  hasToBeUsed: 1
