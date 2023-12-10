@@ -29,13 +29,8 @@ public class WhiteboardHandler : MonoBehaviour
         if (showWhiteboard)
         {
             this.NewTask(task_number + ". " + taskdescription, true);
+            task_current.SetActive(true);
         }
-        else
-        {
-            this.NewTask("", true);
-            task_number--;
-        }
-        task_current.SetActive(true);
     }
 
     public void NewTask(string taskdescription, bool first) // Neuen Task erstellen
@@ -66,31 +61,29 @@ public class WhiteboardHandler : MonoBehaviour
         }
         task_number++;
     }
+
+    
+
     public IEnumerator TaskRotation(string taskdescription, bool showWhiteboard) // Verschiebung der Tasks und das anzeigen des neuen Tasks
     {
-        this.FinishTask();
-        yield return new WaitForSeconds(0.4f);
-
         if (showWhiteboard)
         {
+            this.FinishTask();
+            yield return new WaitForSeconds(0.4f);
             this.NewTask(task_number + ". " + taskdescription, false);
+            yield return new WaitForSeconds(0.4f);
+            task_current.SetActive(true);
         }
-        else
-        {
-            this.NewTask("", false);
-            task_number--;
-        }
-
-        yield return new WaitForSeconds(0.4f);
-        task_current.SetActive(true);
+        
     }
     public void FinishTask() // Stellt den derzeitigen Task als fertig dar
     {
-        task_text_current.color = new Color(0, 255, 0, 255); //Textfarbe auf grün
-
-        Color tmp = checkmark_current.GetComponent<SpriteRenderer>().color; // Änderung der opasity des checkmarks auf 1 -> 100%
-        tmp.a = 1f;
-        checkmark_current.GetComponent<SpriteRenderer>().color = tmp;
+        if (task_text_current != null) { 
+            task_text_current.color = new Color(0, 255, 0, 255); //Textfarbe auf grün
+            Color tmp = checkmark_current.GetComponent<SpriteRenderer>().color; // Änderung der opasity des checkmarks auf 1 -> 100%
+            tmp.a = 1f;
+            checkmark_current.GetComponent<SpriteRenderer>().color = tmp;
+        }
     }
     public IEnumerator ShowEndMessage() // Anzeige "Alles fertig,...". wenn alle Aufgaben abgeschlossen wurden
     {

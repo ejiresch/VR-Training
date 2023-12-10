@@ -8,11 +8,12 @@ using UnityEngine.UI;
 public class HUDHandler : MonoBehaviour
 {
     public TextMeshProUGUI hud_text;
-    
+
     //Atribute, die für den Tutorial-Prozess benötigt werden   
-    public RawImage tutorialArrow;  //The image of the arrow    
-    public Transform camera;        //the trasnform of the camera to know in which direction it is looking    
-    public Transform lookDirection; //Transform der Objekte auf die der Pfeil zeigen muss
+    public GameObject tutorialDirection;    //Das Parent Objekt des Pfeils (ist nur notwendig damit die Animation des Pfeils immer richtig funktioniert)
+    public RawImage tutorialArrow;          //The image of the arrow    
+    public Transform camera;                //the trasnform of the camera to know in which direction it is looking    
+    public Transform lookDirection;         //Transform der Objekte auf die der Pfeil zeigen muss
     private bool tutorialMode;
 
     public void ShowText() // Darstellung des grünen Textes "Aufgabe abgeschlossen"
@@ -56,8 +57,8 @@ public class HUDHandler : MonoBehaviour
             else
             {
                 tutorialArrow.enabled = true;
-                tutorialArrow.transform.LookAt(lookDirection);
-                tutorialArrow.transform.Rotate(0, 270, 0);
+                tutorialDirection.transform.LookAt(lookDirection);
+                tutorialDirection.transform.Rotate(0, 270, 0);
             }
         }
         else

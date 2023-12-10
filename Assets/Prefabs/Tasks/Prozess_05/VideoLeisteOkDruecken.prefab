@@ -55,3 +55,4 @@ MonoBehaviour:
     kannst du dir das dazugeh\xF6rige Video ansehen."
   hudHandler: {fileID: 0}
   transformChooser: 3
+  textposition: {x: 1.66, y: -5.118, z: 4.409}
