@@ -46,11 +46,22 @@ public class TaskManager : MonoBehaviour
     {
         GameObject task = Instantiate(taskList[0], this.transform.position, Quaternion.identity, this.transform);
 
-        //für Press Button Task um ihn den Tutorial Canvas und dem HUDHandler mit dem tutorial Pfeil aus der Szene zu übergeben
+        /*
+         * für Press Button Task um ihn den Tutorial Canvas und dem HUDHandler mit dem tutorial Pfeil aus der Szene zu übergeben
+         * 
+         * sollte man in Zukunft wohl ändern, das es im Task selbst mit FindObject oder so geschieht
+         * 
+         */
         if (task.GetComponent<PressButtonTask>() != null)
         {
             task.GetComponent<PressButtonTask>().tutorialCanvas = tutorialCanvas;
             task.GetComponent<PressButtonTask>().hudHandler = hudHandler;
+
+        }
+        if (task.GetComponent<GrabTaskWithCanvas>() != null)
+        {
+            task.GetComponent<GrabTaskWithCanvas>().tutorialCanvas = tutorialCanvas;
+            task.GetComponent<GrabTaskWithCanvas>().hudHandler = hudHandler;
 
         }
 
