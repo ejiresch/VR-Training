@@ -8,16 +8,19 @@ public class MedPressObject : PressObject, ResetInterface
 {
     public InputActionReference toggleReference = null;
     public float maxDistance = 0.05f;   // Maximal Distanz zwischen Stössel und Medikament
+    public Mesh crushedMesh;
 
     [HideInInspector]public bool crushed = false; 
     private Animator anim;
     private GameObject stoessel;
     private float dist;
+    private MeshFilter meshFilter;
 
     private void Start()
     {
         stoessel = GameObject.FindWithTag("stoessel");  // Speichert den in der Szene vorhandenen Stössel als GO ab
-        anim = this.gameObject.GetComponent<Animator>();  
+        anim = this.gameObject.GetComponent<Animator>();
+        meshFilter = GetComponent<MeshFilter>();
     }
 
 
@@ -47,10 +50,14 @@ public class MedPressObject : PressObject, ResetInterface
         
     }
     IEnumerator Crush() // Start der "Crush" Animation
-    {   
-
-        anim.SetTrigger("crushed");
-        yield return new WaitForSeconds(1.3f);
+    {
+        
+        yield return new WaitForSeconds(0.5f);
+        if (meshFilter != null && crushedMesh != null)
+        {
+            // Setze das Mesh auf das neue Mesh
+            meshFilter.mesh = crushedMesh;
+        }
         crushed = true;
         Press();   
     }

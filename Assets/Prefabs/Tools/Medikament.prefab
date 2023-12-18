@@ -370,4 +370,6 @@ MonoBehaviour:
   toggleReference: {fileID: 4247772908111231093, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
   maxDistance: 0.05
+  crushedMesh: {fileID: -8272065818239043596, guid: f9306d6dd2420224ba8bc7ea19e48fae,
+    type: 3}
   crushed: 0
