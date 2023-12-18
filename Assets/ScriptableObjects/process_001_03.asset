@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 195317620184111067, guid: e288c24c531eaec47ac8a5436024fe71, type: 3}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 5664044047155542320, guid: 8cdace87b38db8544b76b0f00c414df6, type: 3}
+  - {fileID: 5664044047155542320, guid: 472d1f77943cde24c943d20742d71744, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -50,3 +50,4 @@ MonoBehaviour:
   - {fileID: 9182968463707594753, guid: 432861628e1dc9948a566d90bb41b3ce, type: 3}
   - {fileID: 9182968463707594753, guid: 3d76dc735013b1745a5d76a86b75c43e, type: 3}
   - {fileID: 9182968463707594753, guid: 07ead31e0b531b142bd928767a542ed4, type: 3}
+  nextTask: 0

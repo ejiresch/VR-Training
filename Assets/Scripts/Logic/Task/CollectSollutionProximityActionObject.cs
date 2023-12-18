@@ -13,7 +13,6 @@ public class CollectSollutionProximityActionObject : InteractableObject
     private GameObject touchTarget;
     private bool inRange = false;
     private Animator anim;
-    private Animator animTarget;
     private bool activated = false;
     private void Start()
     {
@@ -30,33 +29,26 @@ public class CollectSollutionProximityActionObject : InteractableObject
         {
             if (!hasToBeUsed)
             {
-                if (animTarget.GetBool("solved"))
-                {
-                    activated = true;
-                    StartCoroutine(EventAnimation());
-                    GetComponent<MaterialFetcher>().MaterialChange(gameObject, touchTarget, "Blue");
-                    taskfinished = true;
-                }
+                activated = true;
+                StartCoroutine(EventAnimation());
+                GetComponent<MaterialFetcher>().MaterialChange(gameObject, touchTarget, "liquid");
+                taskfinished = true;
             }
         }
     }
     public void SetTouchTarget(GameObject touchTarger)
     {
         touchTarget = touchTarger;
-        animTarget = touchTarget.GetComponent<Animator>();
     }
     private void Toggle(InputAction.CallbackContext context)
     {
         
         if (inRange && !activated)
         {
-            if (animTarget != null && animTarget.GetBool("solved"))
-            {
-                activated = true;
-                StartCoroutine(EventAnimation());
-                GetComponent<MaterialFetcher>().MaterialChange(gameObject, touchTarget, "Blue");
-                taskfinished = true;
-            }
+            activated = true;
+            StartCoroutine(EventAnimation());
+            GetComponent<MaterialFetcher>().MaterialChange(gameObject, touchTarget, "liquid");
+            taskfinished = true;
         }
     }
     IEnumerator EventAnimation()
@@ -70,7 +62,6 @@ public class CollectSollutionProximityActionObject : InteractableObject
     public void SetTarget(GameObject touchTarger) 
     { 
         touchTarget = touchTarger;
-        animTarget = touchTarget.GetComponent<Animator>();
         inRange = false;
         activated = false;
     }

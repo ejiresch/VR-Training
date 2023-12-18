@@ -14,11 +14,8 @@ GameObject:
   - component: {fileID: -8414280114625071811}
   - component: {fileID: 2356478411391737305}
   - component: {fileID: 637518376644928342}
-  - component: {fileID: -8871580119292805869}
-  - component: {fileID: 7278635759199958863}
-  - component: {fileID: -1924880823591508051}
   m_Layer: 9
-  m_Name: glas
+  m_Name: glasWasser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,55 +131,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8188846882738213437, guid: 921707eeeaead3e4589ad14dd9de3782, type: 3}
---- !u!95 &-8871580119292805869
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5664044047155542320}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5a2a2294cc4b4284b8c5ae01ddf43078, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7278635759199958863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5664044047155542320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85dbf2fe8be236a4e8304c9ff8429a02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-1924880823591508051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5664044047155542320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24e748bd54f07564b8e0cacc6f84611b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isGrabbed: 0
-  toggleReference: {fileID: 4247772908111231093, guid: c348712bda248c246b8c49b3db54643f,
-    type: 3}
-  distance: 0.1
-  hasToBeUsed: 1
 --- !u!1 &6502274121403170401
 GameObject:
   m_ObjectHideFlags: 0

@@ -52,7 +52,7 @@ public class SolveProximityActionObject : InteractableObject
     {
 
         anim.SetTrigger("solved");
-        Destroy(touchTarget);
+        touchTarget.SetActive(false);
         yield return new WaitForSeconds(1.3f);
     }
     public void SetTarget(GameObject touchTarger) 

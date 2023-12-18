@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.9299141, y: -5.2893806, z: 0.43158942}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -51,5 +52,5 @@ MonoBehaviour:
   resetToolOnCompletion: 0
   touchObject: {fileID: 1808612825705206197, guid: b84a92fcc97d5584681cd98c55723cc0,
     type: 3}
-  touchTarget: {fileID: 5664044047155542320, guid: 8cdace87b38db8544b76b0f00c414df6,
+  touchTarget: {fileID: 5664044047155542320, guid: 472d1f77943cde24c943d20742d71744,
     type: 3}
