@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3637728468549133581}
   - component: {fileID: -1550564495079244979}
   m_Layer: 0
-  m_Name: Med_crush
+  m_Name: MedCrush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tName: Medikament zermahlen
-  description: "Zermahle das Medikament im M\xF6rser"
+  description: "Zermahle Sie das Medikament im M\xF6rser"
   spawnedTools: []
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0

@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tName: 'Wasser aufsauegen '
-  description: Ziehe mit der Spritze Wasser auf
+  description: Ziehem Sie mit der Spritze Wasser auf
   spawnedTools: []
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7451276498472072938
+--- !u!1 &9182968463707594753
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3637728468549133581}
-  - component: {fileID: 8640089808762603191}
+  - component: {fileID: 286347593575785693}
+  - component: {fileID: -1045900475293040484}
   m_Layer: 0
-  m_Name: Med_In_Mortar
+  m_Name: MedInSondeSpritzen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3637728468549133581
+--- !u!4 &286347593575785693
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7451276498472072938}
+  m_GameObject: {fileID: 9182968463707594753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.9299141, y: -5.2893806, z: 0.43158942}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8640089808762603191
+--- !u!114 &-1045900475293040484
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7451276498472072938}
+  m_GameObject: {fileID: 9182968463707594753}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6476568b40475a4a84f4e08225cf24e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9beff124e3f192849bb00e8267ad3e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tName: "Medikament in den M\xF6rser geben"
-  description: "Gib das Medikament in den M\xF6rser"
+  tName: "Sonde sp\xFClen "
+  description: Verabreichen Sie nun das Medikament mit der Sonde
   spawnedTools: []
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0
   resetToolOnCompletion: 0
-  connector: {fileID: 127199775171483385, guid: 327ad3c5ba059ae46a7d0f4e2bb61907,
+  pressObject: {fileID: 1808612825705206197, guid: b84a92fcc97d5584681cd98c55723cc0,
     type: 3}
-  connectible: {fileID: 7377189898647564526, guid: 3d97f26469f393d469fe596a28d9a6e1,
-    type: 3}
+  values: 01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  distance: 1
