@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: -6927346285204240846}
   - component: {fileID: 8014995192970052967}
   - component: {fileID: -542617516432615706}
+  - component: {fileID: 7958074721005044526}
   m_Layer: 0
   m_Name: spritzeNahrung
   m_TagString: Untagged
@@ -584,6 +585,33 @@ MonoBehaviour:
     type: 3}
   distance: 0.1
   hasToBeUsed: 1
+--- !u!114 &7958074721005044526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808612825705206197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2101d370ea47344b603258f00dc21e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hapticOnActivated:
+    intensity: 1
+    duration: 0.3
+  hapticHoverEntered:
+    intensity: 0
+    duration: 0
+  hapticHoverExited:
+    intensity: 0
+    duration: 0
+  hapticSelectEntered:
+    intensity: 0
+    duration: 0
+  hapticSelectExited:
+    intensity: 0
+    duration: 0
 --- !u!1 &2363475940048908635
 GameObject:
   m_ObjectHideFlags: 0
