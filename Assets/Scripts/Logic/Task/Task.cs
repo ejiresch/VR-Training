@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Abstract class that Describes a Class
@@ -18,6 +21,10 @@ public abstract class Task : MonoBehaviour
     public bool resetToolOnCompletion = false;
 
     private GameObject rightObject = null;
+
+    private Canvas canvas;
+    private Boolean active = false;
+    private MeshRenderer image;
 
     /// <summary>
     /// Gets called when Task is started
@@ -122,6 +129,30 @@ public abstract class Task : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             EndTask();
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            if(active == false)
+            {
+                active = true;
+                canvas = GameObject.Find("ButtonsOption").GetComponent<Canvas>();
+                canvas.enabled = true;
+
+                image = GameObject.Find("HelpPictureOptions").GetComponent<MeshRenderer>();
+                image.enabled = false;
+            }
+            else
+            {
+                active = false;
+                canvas = GameObject.Find("ButtonsOption").GetComponent<Canvas>();
+                canvas.enabled = false;
+
+                image = GameObject.Find("HelpPictureOptions").GetComponent<MeshRenderer>();
+                image.enabled = true;
+                
+            }
+          
         }
     }
 }

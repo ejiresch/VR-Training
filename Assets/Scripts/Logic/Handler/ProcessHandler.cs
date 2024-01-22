@@ -106,5 +106,4 @@ public class ProcessHandler : MonoBehaviour
     {
         taskManager.SetCompoundObject(compoundObject);
     }
-    
 }
