@@ -51,7 +51,7 @@ public class TVHandler : MonoBehaviour
         colors.selectedColor = gone;
         colors.highlightedColor = highlightedColor;
         button.gameObject.GetComponent<Button>().colors = colors;
-        Debug.Log(button.transform.tag);
+        //Debug.Log(button.transform.tag);
         //setActive(false) works here
         //button.SetActive(false); 
         //GameObject.FindGameObjectsWithTag("Video_8_hinein");

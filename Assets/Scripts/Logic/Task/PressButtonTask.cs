@@ -6,9 +6,8 @@ using TMPro;
 
 public class PressButtonTask : Task
 {
-    public Canvas tutorialCanvas;
     public string text;
-    public HUDHandler hudHandler;
+
 
     private bool buttonClicked = false;
 
@@ -17,7 +16,7 @@ public class PressButtonTask : Task
 
     public override void StartTask()
     {
-
+        base.canvasSetup();
         tutorialCanvas.GetComponent<RectTransform>().position = textposition;
         tutorialCanvas.GetComponent<RectTransform>().rotation = Quaternion.Euler(0,rotation,0);
         
@@ -40,7 +39,7 @@ public class PressButtonTask : Task
             button.onClick.AddListener(OnClick);
         }
 
-        base.StartTask();
+        base.StartTask(false);
     }
 
     void OnClick()
@@ -50,12 +49,14 @@ public class PressButtonTask : Task
     }
 
 
+    /*
     protected override void EndTask()
     {
         hudHandler.setTutorialMode(false);
         tutorialCanvas.enabled = false;
         base.EndTask();
     }
+    */
 
     protected override void CompReset()
     {

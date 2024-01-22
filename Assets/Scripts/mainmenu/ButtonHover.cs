@@ -112,36 +112,36 @@ public class ButtonHover : MonoBehaviour
                 string ppkey = "Process_Index";
                 switch (lastHit){
                     case "PEGNahrung": // lädt die passende simulation
-                        Debug.Log("PEGNahrung");
+                        //Debug.Log("PEGNahrung");
                         PlayerPrefs.SetInt(ppkey, 103);
                         SceneManager.LoadScene(0);
                         break;
 
                     case "PEGsonde":
-                        Debug.Log("PEGsonde");
+                        //Debug.Log("PEGsonde");
                         PlayerPrefs.SetInt(ppkey, 104);
                         SceneManager.LoadScene(0);
                         break;
 
                     case "einsetzen":
-                        Debug.Log("einsetzen");
+                        //Debug.Log("einsetzen");
                         PlayerPrefs.SetInt(ppkey, 102);
                         SceneManager.LoadScene(0);
                         break;
 
                     case "entfernen":
-                        Debug.Log("entfernen");
+                        //Debug.Log("entfernen");
                         PlayerPrefs.SetInt(ppkey, 101);
                         SceneManager.LoadScene(0);
                         break;
 
                     case "verlassen":
-                        Debug.Log("verlassen");
+                        //Debug.Log("verlassen");
                         Application.Quit();
                         break;
 
                     case "Tutorial":
-                        Debug.Log("tutorial");
+                        //Debug.Log("tutorial");
                         PlayerPrefs.SetInt(ppkey, 105);
                         SceneManager.LoadScene(0);
                         break;

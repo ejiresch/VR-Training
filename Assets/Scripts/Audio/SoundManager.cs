@@ -67,7 +67,7 @@ namespace development_a {
                 if (!play) s.source.Stop();
             }
 
-            Debug.Log("SOUND");
+            //Debug.Log("SOUND");
         }
     }
 }

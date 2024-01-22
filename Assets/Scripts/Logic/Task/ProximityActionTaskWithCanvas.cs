@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class GrabTaskWithCanvas : GrabTask
+public class ProximityActionTaskWithCanvas : ProximityActionTask
 {
-
     public string text;
 
 
@@ -14,13 +13,14 @@ public class GrabTaskWithCanvas : GrabTask
 
     public override void StartTask()
     {
+        Debug.Log("Task started (ProximityAction Task)");
         base.StartTask();
         cam = FindObjectOfType<Camera>().gameObject;
 
-        tutorialCanvas.GetComponent<RectTransform>().position = grabObject.transform.position + Vector3.up*0.2f;
+        tutorialCanvas.GetComponent<RectTransform>().position = touchTarget.transform.position + Vector3.up * 0.2f;
         tutorialCanvas.GetComponent<RectTransform>().LookAt(cam.transform);
 
-        Vector3 drehung = new Vector3(0, 180 +tutorialCanvas.GetComponent<RectTransform>().rotation.eulerAngles.y, tutorialCanvas.GetComponent<RectTransform>().rotation.eulerAngles.z);
+        Vector3 drehung = new Vector3(0, 180 + tutorialCanvas.GetComponent<RectTransform>().rotation.eulerAngles.y, tutorialCanvas.GetComponent<RectTransform>().rotation.eulerAngles.z);
 
         tutorialCanvas.GetComponent<RectTransform>().rotation = Quaternion.Euler(drehung);
 
@@ -37,6 +37,7 @@ public class GrabTaskWithCanvas : GrabTask
         // Finde den Button im Canvas
         Button button = tutorialCanvas.GetComponentInChildren<Button>();
 
+
         if (button != null)
         {
             button.enabled = false;
@@ -44,15 +45,16 @@ public class GrabTaskWithCanvas : GrabTask
             button.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
         }
 
-        
+
     }
 
+    
     /*
-    protected override void EndTask()
+      protected override void EndTask()
     {
         hudHandler.setTutorialMode(false);
         tutorialCanvas.enabled = false;
-        base.EndTask();
+        
         Button button = tutorialCanvas.GetComponentInChildren<Button>();
 
         if (button != null)
@@ -61,7 +63,7 @@ public class GrabTaskWithCanvas : GrabTask
             button.GetComponent<Image>().enabled = true;
             button.GetComponentInChildren<TextMeshProUGUI>().enabled = true;
         }
-        Debug.Log("Task ended (Grab Task)");
+        base.EndTask();
 
     }
     */

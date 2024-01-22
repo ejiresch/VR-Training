@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 286347593575785693}
-  - component: {fileID: 1982239221481180744}
+  - component: {fileID: -5723521565140359265}
   m_Layer: 0
-  m_Name: SpritzeNehmenMitCanvas
+  m_Name: "WasserAuff\xFCllenMitCanvas"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1982239221481180744
+--- !u!114 &-5723521565140359265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,17 +41,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 9182968463707594753}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f20b60693c42e974e95c3f2dddb6b8bb, type: 3}
+  m_Script: {fileID: 11500000, guid: d9a5e7c71ea4012499375e781f8efde1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tName: nimm die Spritze in die Hand
-  description: nimm die Spritze in die Hand
+  tName: "Wasser auff\xFCllen (mit Canvas)"
+  description: Ziehe mit der Spritze Wasser auf
   spawnedTools: []
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0
   resetToolOnCompletion: 0
-  grabObject: {fileID: 1808612825705206197, guid: b84a92fcc97d5584681cd98c55723cc0,
+  touchObject: {fileID: 1808612825705206197, guid: b84a92fcc97d5584681cd98c55723cc0,
     type: 3}
-  values: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  text: nimm die Spritze mit der "Greifen-Taste"
+  touchTarget: {fileID: 5664044047155542320, guid: 8cdace87b38db8544b76b0f00c414df6,
+    type: 3}
+  text: "Halte die Spritze ins Wasserglas und dr\xFCcke die \"Interagieren Taste\""
   cam: {fileID: 0}

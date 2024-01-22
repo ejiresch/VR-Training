@@ -25,7 +25,7 @@ public class HandTouchTask : Task
             touchObjects = GameObject.FindGameObjectsWithTag("Hand");
             if (touchObjects != null && touchObjects.Length>1)
             {
-                Debug.Log(touchObjects.Length);
+                //Debug.Log(touchObjects.Length);
                 foreach (GameObject touchObject in touchObjects)
                 {
                     touchObject.GetComponent<TouchHand>().SetTouchTarget(touchTarget);

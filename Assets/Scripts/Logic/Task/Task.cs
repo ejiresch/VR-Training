@@ -15,12 +15,15 @@ public abstract class Task : MonoBehaviour
     public string tName;
     [Tooltip("Die Taskbeschreibung die am Whiteboard steht.")]
     public string description;
-    [HideInInspector]public GameObject[] spawnedTools;
+    [HideInInspector] public GameObject[] spawnedTools;
     public bool warningMessage_BeideHaende = false;
     public bool warningMessage_KanueleFesthalten = false;
     public bool resetToolOnCompletion = false;
 
     private GameObject rightObject = null;
+
+    protected Canvas tutorialCanvas;
+    protected HUDHandler hudHandler;
 
     private Canvas canvas;
     private Boolean active = false;
@@ -31,11 +34,26 @@ public abstract class Task : MonoBehaviour
     /// </summary>
     public virtual void StartTask()
     {
-        if(warningMessage_BeideHaende) ProcessHandler.Instance.ShowWarning(0);
-        if(warningMessage_KanueleFesthalten) ProcessHandler.Instance.ShowWarning(1);
-        if (resetToolOnCompletion) PlayerPrefs.SetInt("resetCommand", resetToolOnCompletion ? 1:0) ;
+        canvasSetup();
+        clearCanvas();
+        if (warningMessage_BeideHaende) ProcessHandler.Instance.ShowWarning(0);
+        if (warningMessage_KanueleFesthalten) ProcessHandler.Instance.ShowWarning(1);
+        if (resetToolOnCompletion) PlayerPrefs.SetInt("resetCommand", resetToolOnCompletion ? 1 : 0);
         StartCoroutine(TaskRunActive());
     }
+
+    public virtual void StartTask(bool canvasClear)
+    {
+        canvasSetup();
+        if (canvasClear)
+            clearCanvas();
+
+        if (warningMessage_BeideHaende) ProcessHandler.Instance.ShowWarning(0);
+        if (warningMessage_KanueleFesthalten) ProcessHandler.Instance.ShowWarning(1);
+        if (resetToolOnCompletion) PlayerPrefs.SetInt("resetCommand", resetToolOnCompletion ? 1 : 0);
+        StartCoroutine(TaskRunActive());
+    }
+
     /// <summary>
     /// Setzt die Liste an erzeugten Tools, welche gesucht werden können
     /// </summary>
@@ -49,15 +67,15 @@ public abstract class Task : MonoBehaviour
     /// <returns></returns>
     public GameObject FindTool(string prefabName)
     {
-        
+
         for (int i = 0; i < spawnedTools.Length; i++)
         {
             if ((prefabName + "(Clone)") == spawnedTools[i].name) return spawnedTools[i];
-            
+
         }
         GameObject tco = ProcessHandler.Instance.GetCompoundObject();
         GameObject foundTool = FindToolAsChild(prefabName, tco);
-        
+
         if (foundTool != null)
         {
             return foundTool;
@@ -66,7 +84,7 @@ public abstract class Task : MonoBehaviour
         {
             if (child.gameObject.name == prefabName) return child.gameObject;
         }
-        
+
         return null;
     }
     // Wird am Ende der Task aufgerufen
@@ -84,8 +102,8 @@ public abstract class Task : MonoBehaviour
     ///<returns></returns>
     public GameObject FindToolAsChild(string prefabName, GameObject currentGameObject)
     {
-        foreach(Transform child in currentGameObject.transform)
-        {   
+        foreach (Transform child in currentGameObject.transform)
+        {
             if (currentGameObject.name == prefabName)
             {
                 rightObject = currentGameObject;
@@ -133,7 +151,7 @@ public abstract class Task : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.L))
         {
-            if(active == false)
+            if (active == false)
             {
                 active = true;
                 canvas = GameObject.Find("ButtonsOption").GetComponent<Canvas>();
@@ -150,9 +168,36 @@ public abstract class Task : MonoBehaviour
 
                 image = GameObject.Find("HelpPictureOptions").GetComponent<MeshRenderer>();
                 image.enabled = true;
-                
+
             }
-          
+
+        }
+    }
+
+    /// <summary>
+    /// findet den Tutorial Canvas und den HUD Handler
+    /// </summary>
+    protected void canvasSetup()
+    {
+        tutorialCanvas = GameObject.Find("TutorialCanvas").GetComponent<Canvas>();
+        hudHandler = GameObject.Find("HUDHandler").GetComponent<HUDHandler>();
+    }
+
+    /// <summary>
+    /// setzt den Tutorial Canvas und HUD Handler auf Anfang züruck
+    /// </summary>
+    protected void clearCanvas()
+    {
+        hudHandler.setTutorialMode(false);
+        tutorialCanvas.enabled = false;
+        Button button = tutorialCanvas.GetComponentInChildren<Button>();
+
+        if (button != null)
+        {
+            button.enabled = true;
+            button.GetComponent<Image>().enabled = true;
+            button.GetComponentInChildren<TextMeshProUGUI>().enabled = true;
         }
     }
 }
+

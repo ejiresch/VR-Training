@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using development_a;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 // Class responsible for managing all Tasks
 public class TaskManager : MonoBehaviour
 {
@@ -15,6 +17,7 @@ public class TaskManager : MonoBehaviour
     public bool showIndicator = false;
     public Canvas tutorialCanvas;
     public HUDHandler hudHandler;
+
     /**
      * Returns the next Tasks and removes the Array index
     */
@@ -22,6 +25,21 @@ public class TaskManager : MonoBehaviour
     {
         if (taskList.Count <= 0)
         {
+            //tutorial Canvas + HUDHandler zurücksetzten, da es sonnst nach dem letzten Task nicht passiert
+            hudHandler.setTutorialMode(false);
+            tutorialCanvas.enabled = false;
+            Button button = tutorialCanvas.GetComponentInChildren<Button>();
+
+            if (button != null)
+            {
+                button.enabled = true;
+                button.GetComponent<Image>().enabled = true;
+                button.GetComponentInChildren<TextMeshProUGUI>().enabled = true;
+            }
+
+
+
+
             ProcessHandler.Instance.EndOfTasks();
             return null;
         }
@@ -46,24 +64,6 @@ public class TaskManager : MonoBehaviour
     {
         GameObject task = Instantiate(taskList[0], this.transform.position, Quaternion.identity, this.transform);
 
-        /*
-         * für Press Button Task um ihn den Tutorial Canvas und dem HUDHandler mit dem tutorial Pfeil aus der Szene zu übergeben
-         * 
-         * sollte man in Zukunft wohl ändern, das es im Task selbst mit FindObject oder so geschieht
-         * 
-         */
-        if (task.GetComponent<PressButtonTask>() != null)
-        {
-            task.GetComponent<PressButtonTask>().tutorialCanvas = tutorialCanvas;
-            task.GetComponent<PressButtonTask>().hudHandler = hudHandler;
-
-        }
-        if (task.GetComponent<GrabTaskWithCanvas>() != null)
-        {
-            task.GetComponent<GrabTaskWithCanvas>().tutorialCanvas = tutorialCanvas;
-            task.GetComponent<GrabTaskWithCanvas>().hudHandler = hudHandler;
-
-        }
 
         Task t = task.GetComponent<Task>();
         taskList.RemoveAt(0);
@@ -82,12 +82,12 @@ public class TaskManager : MonoBehaviour
             {
                 for (int i = 0; i < objects.Count; i++)
                 {
-                    Debug.Log(objects[i]);
+                    //Debug.Log(objects[i]);
                     GameObject go = Instantiate(indicator);
                     go.transform.position = new Vector3(objects[i].transform.position.x,
                                                         objects[i].transform.position.y + 0.5f,
                                                         objects[i].transform.position.z);
-                    Debug.Log(objects[i].transform.position);
+                    //Debug.Log(objects[i].transform.position);
                 indicatorsCurrent.Add(go);
                 }
             }
@@ -105,7 +105,7 @@ public class TaskManager : MonoBehaviour
     public void SetToolList(List<GameObject> toolList)
     {
         this.toolList = toolList;
-        Debug.Log("toolList");
+        //Debug.Log("toolList");
         print("try");
         int i = toolList.Count;
         print(i);
@@ -135,7 +135,7 @@ public class TaskManager : MonoBehaviour
             showIndicator = true;
         }*/
         showIndicator = !showIndicator;
-        Debug.Log("Indicator switched");
+        //Debug.Log("Indicator switched");
         if (showIndicator == false)
         {
             GameObject o;
