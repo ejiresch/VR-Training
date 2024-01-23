@@ -3088,7 +3088,7 @@ GameObject:
   - component: {fileID: 1155359404}
   - component: {fileID: 1155359405}
   m_Layer: 13
-  m_Name: Tracheostom einsetzen
+  m_Name: Tracheostom einsetzen und  entfernen
   m_TagString: einsetzen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4624,7 +4624,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 0.6, y: -24}
+=======
+  m_AnchoredPosition: {x: 1.3, y: -24}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1766331349
