@@ -12,7 +12,7 @@ public class ProcessScriptableObject : ScriptableObject
     [Tooltip("Patienten Modell welches für den Prozess verwendet werden soll.")]
     public GameObject patientModel; 
     [SerializeField] private GameObject[] taskList;
-    public int nextProcess = 0;
+    public int nextProcess;
 
     /**
      * Returns the remaining Task amount
