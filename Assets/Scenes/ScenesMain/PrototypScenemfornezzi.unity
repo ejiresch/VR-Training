@@ -11639,6 +11639,11 @@ PrefabInstance:
       propertyPath: m_text
       value: Tracheostoma entfernen
       objectReference: {fileID: 0}
+    - target: {fileID: 1919296408374491060, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1919296408374491061, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -11724,6 +11729,16 @@ PrefabInstance:
       propertyPath: m_Spacing
       value: 0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 2766923753236450731, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2810675019431909585, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3308848926602673899, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -11801,6 +11816,11 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 4090730807880326335, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4104654540460631271, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -11846,6 +11866,11 @@ PrefabInstance:
       propertyPath: m_text
       value: PEG Sonde Nahrung
       objectReference: {fileID: 0}
+    - target: {fileID: 6880384402975382816, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6910659227706002828, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
       propertyPath: hud
@@ -11855,6 +11880,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: IndicatorSwitch
+      objectReference: {fileID: 0}
+    - target: {fileID: 6924547581354007013, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8466582355923254077, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
