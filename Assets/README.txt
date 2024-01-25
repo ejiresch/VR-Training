@@ -1,8 +1,8 @@
 Buttonclicks: 
-P...Finish Tasks immediatly
+P...Finish Tasks immediately
 L...Enable Developer Mode
 
-Wenn man den Device Sim mode verwenden will muss man um ihen ein/auszuschalten weleils XR Origin (XR Rig) 
+Wenn man den Device Simulator verwenden will, muss man um ihn ein/auszuschalten jeweils XR Origin (XR Rig) 
 und XR Device Simulator aktivieren/deaktivieren.
 
 Wenn man einen Autostart von einem neuen Prozess in einem ProcessScriptableObject setzen will,
