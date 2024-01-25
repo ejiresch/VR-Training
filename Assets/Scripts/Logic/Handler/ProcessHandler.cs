@@ -14,6 +14,7 @@ public class ProcessHandler : MonoBehaviour
     [SerializeField] private GameObject spawnPoints;
     [SerializeField] private GameObject patientSpawn;
     [SerializeField] private Material closePreviewMaterial, farPreviewMaterial;
+    [SerializeField] private DeveloperMenu menu;
     private static ProcessHandler _instance;
     public string ppKey = "Process_Index";
     
