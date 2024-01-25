@@ -1,14 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DeveloperMenu : MonoBehaviour
 {
     // Start is called before the first frame update
-    public string pid = "0";
+    public int button;
     private HandAnimation handAnimation;
     public Color highlightedColor = new Color(0.3f, 1, 0.3f);
+
+    public Boolean isButtonPressed = false;
+
+    public Boolean isHandanimationSelected, isHighlightingSelected, isVibrationSelected;
+
+    public Button[] optionButtons;
     void Start()
     {
         
@@ -17,40 +25,108 @@ public class DeveloperMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
-    public void optionSelected(string pid)
+    public void optionSelected(int pid)
     {
-        this.pid = pid;
-        if(this.pid == "1") {
-            handAnimation.staticHands();
-            var colors = GameObject.Find("Handanimation").GetComponent<Button>().colors;
-            colors.normalColor = highlightedColor;
-            colors.pressedColor = highlightedColor;
-            colors.selectedColor = highlightedColor;
-            colors.highlightedColor = highlightedColor;
-            GameObject.Find("Handanimation").GetComponent<Button>().colors = colors;
-
-        }
-        else if(this.pid == "2")
+        this.button = pid;
+        if (this.button == 1)
         {
-
             
-        }
-        else if(this.pid== "3")
-        {
+            if (isHandanimationSelected == false)
+            {
+                isHandanimationSelected = true;
+                var colors = optionButtons[0].colors;
+                colors.normalColor = highlightedColor;
+                colors.pressedColor = highlightedColor;
+                colors.selectedColor = highlightedColor;
+                colors.highlightedColor = highlightedColor;
+                this.optionButtons[0].colors = colors;
 
-        
+                UnityEngine.Debug.Log("handbutton an");
+               
+            }
+            else
+            {
+
+                isHandanimationSelected = false;
+
+                var colors = optionButtons[0].colors;
+                colors.normalColor = Color.white; ;
+                colors.pressedColor = Color.white; ;
+                colors.selectedColor = Color.white; ;
+                colors.highlightedColor = Color.white; ;
+                this.optionButtons[0].colors = colors;
+
+                UnityEngine.Debug.Log("Handbutton aus");
+            }
+           
+
         }
+        else if (this.button == 2)
+        {
+            
+            if (isVibrationSelected == false)
+            {
+                isVibrationSelected = true;
+                var colors = optionButtons[1].colors;
+                colors.normalColor = highlightedColor;
+                colors.pressedColor = highlightedColor;
+                colors.selectedColor = highlightedColor;
+                colors.highlightedColor = highlightedColor;
+                this.optionButtons[1].colors = colors;
+
+                UnityEngine.Debug.Log("Vibration an");
+                
+            }
+            else
+            {
+                isVibrationSelected = false;
+                var colors = optionButtons[1].colors;
+                colors.normalColor = Color.white;
+                colors.pressedColor = Color.white;
+                colors.selectedColor = Color.white;
+                colors.highlightedColor = Color.white;
+                this.optionButtons[1].colors = colors;
+
+                UnityEngine.Debug.Log("Vibration aus");
+            }
+
+        }
+        else if (this.button == 3)
+        {
+            
+            if (isHighlightingSelected == false)
+            {
+                isHighlightingSelected = true;
+                var colors = optionButtons[2].colors;
+                colors.normalColor = highlightedColor;
+                colors.pressedColor = highlightedColor;
+                colors.selectedColor = highlightedColor;
+                colors.highlightedColor = highlightedColor;
+                this.optionButtons[2].colors = colors;
+
+                UnityEngine.Debug.Log("Highlighting an");
+                
+            }
+            else
+            {
+
+                isHighlightingSelected = false;
+                var colors = optionButtons[2].colors;
+                colors.normalColor = Color.white;
+                colors.pressedColor = Color.white;
+                colors.selectedColor = Color.white;
+                colors.highlightedColor = Color.white;
+                this.optionButtons[2].colors = colors;
+
+                UnityEngine.Debug.Log("Highlighting aus");
+            }
+
+        }
+
+
     }
 }
 
-/**
- * var colors = GameObject.Find("Handanimation").GetComponent<Button>().colors;
-            colors.normalColor = highlightedColor;
-            colors.pressedColor = highlightedColor;
-            colors.selectedColor = highlightedColor;
-            colors.highlightedColor = highlightedColor;
-            GameObject.Find("Handanimation").GetComponent<Button>().colors = colors;
- */
