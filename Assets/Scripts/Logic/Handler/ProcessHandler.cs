@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -107,4 +108,7 @@ public class ProcessHandler : MonoBehaviour
     {
         taskManager.SetCompoundObject(compoundObject);
     }
+    public Boolean GetHandActive() => this.menu.isHandanimationSelected;
+    public Boolean GetHighlightingActive() => this.menu.isHighlightingSelected;
+    public Boolean GetVibrationActive() => this.menu.isVibrationSelected;
 }

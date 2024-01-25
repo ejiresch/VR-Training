@@ -5,18 +5,19 @@ using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
 
+/**
+ * Diese Klasse verwaltet welche Buttons im Developer Mode active sind 
+ * und wechselt passend die Farbe
+ */
 public class DeveloperMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
     public int button;
     private HandAnimation handAnimation;
     public Color highlightedColor = new Color(0.3f, 1, 0.3f);
-
-    public Boolean isButtonPressed = false;
-
     public Boolean isHandanimationSelected, isHighlightingSelected, isVibrationSelected;
-
     public Button[] optionButtons;
+
+    // Start is called before the first frame update
     void Start()
     {
         
@@ -27,42 +28,26 @@ public class DeveloperMenu : MonoBehaviour
     {
        
     }
-
+    /*
+     * Je nachdem welche Button angeklickt wurde wird die Farbe geändert und gespeichert ob er gerade active ist
+     */
     public void optionSelected(int pid)
     {
         this.button = pid;
         if (this.button == 1)
         {
-            
             if (isHandanimationSelected == false)
             {
                 isHandanimationSelected = true;
-                var colors = optionButtons[0].colors;
-                colors.normalColor = highlightedColor;
-                colors.pressedColor = highlightedColor;
-                colors.selectedColor = highlightedColor;
-                colors.highlightedColor = highlightedColor;
-                this.optionButtons[0].colors = colors;
-
+                ButtonActive(0);
                 UnityEngine.Debug.Log("handbutton an");
-               
             }
             else
             {
-
                 isHandanimationSelected = false;
-
-                var colors = optionButtons[0].colors;
-                colors.normalColor = Color.white; ;
-                colors.pressedColor = Color.white; ;
-                colors.selectedColor = Color.white; ;
-                colors.highlightedColor = Color.white; ;
-                this.optionButtons[0].colors = colors;
-
+                ButtonInactive(0);
                 UnityEngine.Debug.Log("Handbutton aus");
             }
-           
-
         }
         else if (this.button == 2)
         {
@@ -70,63 +55,52 @@ public class DeveloperMenu : MonoBehaviour
             if (isVibrationSelected == false)
             {
                 isVibrationSelected = true;
-                var colors = optionButtons[1].colors;
-                colors.normalColor = highlightedColor;
-                colors.pressedColor = highlightedColor;
-                colors.selectedColor = highlightedColor;
-                colors.highlightedColor = highlightedColor;
-                this.optionButtons[1].colors = colors;
-
+                ButtonActive(1);
                 UnityEngine.Debug.Log("Vibration an");
-                
             }
             else
             {
                 isVibrationSelected = false;
-                var colors = optionButtons[1].colors;
-                colors.normalColor = Color.white;
-                colors.pressedColor = Color.white;
-                colors.selectedColor = Color.white;
-                colors.highlightedColor = Color.white;
-                this.optionButtons[1].colors = colors;
-
+                ButtonInactive(1);
                 UnityEngine.Debug.Log("Vibration aus");
             }
-
         }
         else if (this.button == 3)
         {
-            
             if (isHighlightingSelected == false)
             {
                 isHighlightingSelected = true;
-                var colors = optionButtons[2].colors;
-                colors.normalColor = highlightedColor;
-                colors.pressedColor = highlightedColor;
-                colors.selectedColor = highlightedColor;
-                colors.highlightedColor = highlightedColor;
-                this.optionButtons[2].colors = colors;
-
+                ButtonActive(2);
                 UnityEngine.Debug.Log("Highlighting an");
                 
             }
             else
             {
-
                 isHighlightingSelected = false;
-                var colors = optionButtons[2].colors;
-                colors.normalColor = Color.white;
-                colors.pressedColor = Color.white;
-                colors.selectedColor = Color.white;
-                colors.highlightedColor = Color.white;
-                this.optionButtons[2].colors = colors;
-
+                ButtonInactive(2);
                 UnityEngine.Debug.Log("Highlighting aus");
             }
-
         }
-
-
+    }
+    //Setzt die Farbe der Buttons auf Highlighted
+    public void ButtonActive(int button)
+    {
+        var colors = optionButtons[button].colors;
+        colors.normalColor = highlightedColor;
+        colors.pressedColor = highlightedColor;
+        colors.selectedColor = highlightedColor;
+        colors.highlightedColor = highlightedColor;
+        this.optionButtons[button].colors = colors;
+    }
+    //Setzt die Farbe der Buttons auf normal
+    public void ButtonInactive(int button)
+    {
+        var colors = optionButtons[button].colors;
+        colors.normalColor = Color.white;
+        colors.pressedColor = Color.white;
+        colors.selectedColor = Color.white;
+        colors.highlightedColor = Color.white;
+        this.optionButtons[button].colors = colors;
     }
 }
 

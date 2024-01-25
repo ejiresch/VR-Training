@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class Hand : MonoBehaviour
 {
     //Stores handPrefab to be Instantiated
     public GameObject handPrefab;
+    public GameObject spawnedHand;
 
     //Stores what kind of characteristics we're looking for with our Input Device when we search for it later
     public InputDeviceCharacteristics inputDeviceCharacteristics;
@@ -35,9 +37,9 @@ public class Hand : MonoBehaviour
 
             _targetDevice = devices[0];
 
-            GameObject spawnedHand = Instantiate(handPrefab, transform);
-            _handAnimator = spawnedHand.GetComponent<Animator>();
-            _mesh = spawnedHand.GetComponentInChildren<SkinnedMeshRenderer>();
+           this.spawnedHand = Instantiate(handPrefab, transform);
+            _handAnimator = this.spawnedHand.GetComponent<Animator>();
+            _mesh = this.spawnedHand.GetComponentInChildren<SkinnedMeshRenderer>();
         }
     }
 
@@ -45,15 +47,30 @@ public class Hand : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        //Since our target device might not register at the start of the scene, we continously check until one is found.
-        if (!_targetDevice.isValid)
+        
+        if (ProcessHandler.Instance.GetHandActive()==true)
         {
-            InitializeHand();
+            Destroy(this.spawnedHand);
+            GameObject left = GameObject.Find("Left Hand");
+            Destroy(left);
+            GameObject right = GameObject.Find("Right Hand");
+            Destroy(right);
+            Debug.Log("HAHAHHAHAHAhAHHAHAHHAAHHAHAAHA");
         }
         else
         {
-            UpdateHand();
+            
+            //Since our target device might not register at the start of the scene, we continously check until one is found.
+            if (!_targetDevice.isValid)
+            {
+                InitializeHand();
+            }
+            else
+            {
+                UpdateHand();
+            }
         }
+        
     }
 
     private void UpdateHand()
