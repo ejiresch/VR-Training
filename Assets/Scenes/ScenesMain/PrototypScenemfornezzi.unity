@@ -2975,7 +2975,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
@@ -10010,6 +10010,7 @@ GameObject:
   - component: {fileID: 1853513199}
   - component: {fileID: 1853513198}
   - component: {fileID: 1853513202}
+  - component: {fileID: 1853513203}
   m_Layer: 5
   m_Name: ButtonsOption
   m_TagString: Untagged
@@ -10113,6 +10114,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pid: 0
   highlightedColor: {r: 0.3, g: 1, b: 0.3, a: 1}
+--- !u!114 &1853513203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853513197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!1 &1861666437 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4090730807880326335, guid: db14cc08211f6874496ffcb573e622ac,

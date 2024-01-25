@@ -87,15 +87,13 @@ public class ButtonHover : MonoBehaviour
                 case "einsetzen":
                     images[2].fillAmount += indicatorTimer / 5;
                     break;
-                case "entfernen":
+                case "verlassen":
                     images[3].fillAmount += indicatorTimer / 5;
                     break;
-                case "verlassen":
+                case "Tutorial":
                     images[4].fillAmount += indicatorTimer / 5;
                     break;
-                case "Tutorial":
-                    images[5].fillAmount += indicatorTimer / 5;
-                    break;
+               
 
             }
 
