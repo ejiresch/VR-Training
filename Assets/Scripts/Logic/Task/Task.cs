@@ -23,6 +23,7 @@ public abstract class Task : MonoBehaviour
     private GameObject rightObject = null;
 
     protected Canvas tutorialCanvas;
+    protected Canvas tutorialBackgroundCanvas;
     protected HUDHandler hudHandler;
 
     private Canvas canvas;
@@ -180,6 +181,7 @@ public abstract class Task : MonoBehaviour
     protected void canvasSetup()
     {
         tutorialCanvas = GameObject.Find("TutorialCanvas").GetComponent<Canvas>();
+        tutorialBackgroundCanvas = GameObject.Find("TutorialBackgroundCanvas").GetComponent<Canvas>();
         hudHandler = GameObject.Find("HUDHandler").GetComponent<HUDHandler>();
     }
 
@@ -190,6 +192,7 @@ public abstract class Task : MonoBehaviour
     {
         hudHandler.setTutorialMode(false);
         tutorialCanvas.enabled = false;
+        tutorialBackgroundCanvas.enabled = false;
         Button button = tutorialCanvas.GetComponentInChildren<Button>();
 
         if (button != null)

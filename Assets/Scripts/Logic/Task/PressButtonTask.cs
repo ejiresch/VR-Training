@@ -22,6 +22,7 @@ public class PressButtonTask : Task
         
 
         tutorialCanvas.enabled = true;
+        tutorialBackgroundCanvas.enabled = true;
         hudHandler.setTutorialMode(true);
         hudHandler.setLookDirection(tutorialCanvas.transform);
 
