@@ -50,9 +50,8 @@ MonoBehaviour:
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0
   resetToolOnCompletion: 0
-  tutorialCanvas: {fileID: 0}
+  showControllerBelegung: 3
   text: "Das ist der Video Bereich. Solltest du w\xE4hrend einer Aufgabe nicht weiterkommen,
     kannst du dir das dazugeh\xF6rige Video ansehen."
-  hudHandler: {fileID: 0}
-  transformChooser: 3
   textposition: {x: 1.66, y: -5.118, z: 4.409}
+  rotation: 0

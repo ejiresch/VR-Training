@@ -50,9 +50,8 @@ MonoBehaviour:
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0
   resetToolOnCompletion: 0
-  tutorialCanvas: {fileID: 0}
+  showControllerBelegung: 3
   text: Wilkommen im Tutorial! Klicke mit der "A" Taste des Controller auf weiter
     um zu starten.
-  hudHandler: {fileID: 0}
-  transformChooser: 1
   textposition: {x: 2.923, y: -5.133, z: 2.965}
+  rotation: 0

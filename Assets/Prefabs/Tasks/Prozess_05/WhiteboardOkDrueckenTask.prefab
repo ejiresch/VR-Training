@@ -50,6 +50,7 @@ MonoBehaviour:
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0
   resetToolOnCompletion: 0
+  showControllerBelegung: 3
   text: Das ist das Whiteboard. Hier wird dir angezeigt welche Aufgaben du erledigen
     musst.
   textposition: {x: 0, y: -4.505, z: 0.964}

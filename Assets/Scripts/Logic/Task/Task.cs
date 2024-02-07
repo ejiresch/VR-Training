@@ -19,6 +19,8 @@ public abstract class Task : MonoBehaviour
     public bool warningMessage_BeideHaende = false;
     public bool warningMessage_KanueleFesthalten = false;
     public bool resetToolOnCompletion = false;
+    [Tooltip("Blendet Einen Controller ein auf dem ein Button blinkt: 1: UseButton, 2: HoldButton, 3: A-Button 0: kein Controller wird angezeigt")]
+    public int showControllerBelegung = 0;
 
     private GameObject rightObject = null;
 
@@ -37,6 +39,7 @@ public abstract class Task : MonoBehaviour
     {
         canvasSetup();
         clearCanvas();
+        controllerBelegungSetup();
         if (warningMessage_BeideHaende) ProcessHandler.Instance.ShowWarning(0);
         if (warningMessage_KanueleFesthalten) ProcessHandler.Instance.ShowWarning(1);
         if (resetToolOnCompletion) PlayerPrefs.SetInt("resetCommand", resetToolOnCompletion ? 1 : 0);
@@ -48,6 +51,7 @@ public abstract class Task : MonoBehaviour
         canvasSetup();
         if (canvasClear)
             clearCanvas();
+        controllerBelegungSetup();
 
         if (warningMessage_BeideHaende) ProcessHandler.Instance.ShowWarning(0);
         if (warningMessage_KanueleFesthalten) ProcessHandler.Instance.ShowWarning(1);
@@ -201,6 +205,36 @@ public abstract class Task : MonoBehaviour
             button.GetComponent<Image>().enabled = true;
             button.GetComponentInChildren<TextMeshProUGUI>().enabled = true;
         }
+    }
+
+    protected void controllerBelegungSetup()
+    {        
+        RawImage cB_full = GameObject.Find("ControllerBelegungFull").GetComponent<RawImage>();
+        RawImage cB_UseButton = GameObject.Find("ControllerBelegung_UseButton").GetComponent<RawImage>();
+        RawImage cB_HoldButton = GameObject.Find("ControllerBelegung_HoldButton").GetComponent<RawImage>();
+        RawImage cB_AButton = GameObject.Find("ControllerBelegung_AButton").GetComponent<RawImage>();
+
+        cB_full.enabled = false;
+        cB_UseButton.enabled = false;
+        cB_HoldButton.enabled = false;
+        cB_AButton.enabled = false;
+        
+        switch (showControllerBelegung)
+        {
+            case 1:
+                cB_full.enabled = true;
+                cB_UseButton.enabled = true;
+                break;
+            case 2:
+                cB_full.enabled = true;
+                cB_HoldButton.enabled = true;
+                break;
+            case 3:
+                cB_full.enabled = true;
+                cB_AButton.enabled = true;
+                break;
+        }
+        
     }
 }
 

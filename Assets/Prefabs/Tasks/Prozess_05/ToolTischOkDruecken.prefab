@@ -50,9 +50,8 @@ MonoBehaviour:
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0
   resetToolOnCompletion: 0
-  tutorialCanvas: {fileID: 0}
+  showControllerBelegung: 3
   text: "Das ist der Tool Tisch. Hier liegen alle Ger\xE4te welche du w\xE4hrend
     der Aufgaben ben\xF6tigst."
-  hudHandler: {fileID: 0}
   textposition: {x: 2.993, y: -5.056, z: -0.137}
   rotation: 180
