@@ -1,0 +1,199 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: WhiteboardDescriptions_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 2376c0e470de1584a9e2543373e4b2b5, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1570493300736
+    m_Localized: Coge la jeringuilla con la mano
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2065140154368
+    m_Localized: Aspirar agua con la jeringa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2285362085888
+    m_Localized: Abrir el clip de la sonda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2549028618240
+    m_Localized: Cierre el clip de la sonda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2713722159104
+    m_Localized: Ponte guantes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5248864354304
+    m_Localized: Ahora aspira el medicamento disuelto con la jeringa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5606642679808
+    m_Localized: Moler la medicina en un mortero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6024156282880
+    m_Localized: Poner la medicina en el mortero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6311633879040
+    m_Localized: "Ahora administre la medicaci\xF3n con el tubo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6601892298752
+    m_Localized: Disolver el medicamento en agua
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7005455646720
+    m_Localized: Enjuague la sonda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7597238386688
+    m_Localized: Conectar la jeringa a la sonda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7810514550784
+    m_Localized: Conectar la jeringa a la sonda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8064865533952
+    m_Localized: Retire la jeringa de la sonda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382034608128
+    m_Localized: Aspirar agua con la jeringa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40835633774592
+    m_Localized: Abrir el clip de la sonda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41017872089088
+    m_Localized: Cierre el clip de la sonda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41403500593152
+    m_Localized: Ponte guantes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41670325436416
+    m_Localized: Aspirar el alimento con la jeringuilla.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42251605639168
+    m_Localized: Administrar los alimentos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42514856935424
+    m_Localized: Enjuague la sonda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42970198966272
+    m_Localized: Introducir la jeringa en el agua del vaso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43214689140736
+    m_Localized: Conectar la jeringa al envase de alimentos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43444293730304
+    m_Localized: Conectar la jeringa a la sonda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43782899892224
+    m_Localized: Conectar la jeringa a la sonda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44987663384576
+    m_Localized: Separar la jeringa del alimento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45238533095424
+    m_Localized: Retire la jeringa de la sonda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45412747706368
+    m_Localized: Aspirar agua con la jeringa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51633840062464
+    m_Localized: Sujeta la correa con ambas manos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51922374623232
+    m_Localized: "Interact\xFAa con ambas correas para fijarlas en su sitio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52313015320576
+    m_Localized: "Fije la correa izquierda a la c\xE1nula"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52601436635136
+    m_Localized: "Fije la correa derecha a la c\xE1nula"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52867275816960
+    m_Localized: Compruebe el manguito con la jeringa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53124000776192
+    m_Localized: Abrir la cinta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53424115810304
+    m_Localized: "Coloque la c\xE1nula en el cuello del paciente"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54505902309376
+    m_Localized: "Conecta el manguito al man\xF3metro y bombea hacia arriba."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54674207145984
+    m_Localized: "Acople la nariz h\xFAmeda a la c\xE1nula"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60504813993984
+    m_Localized: "Aplicar la compresa traqueal a la c\xE1nula"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60772985208832
+    m_Localized: "Lubrique la c\xE1nula con el pa\xF1o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61045090680832
+    m_Localized: Abra la correa con ambas manos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61293615775744
+    m_Localized: Deshacerse de la basura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61603998466048
+    m_Localized: "Retire la c\xE1nula del cuello de la persona"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61861776195584
+    m_Localized: Conectar el manguito a la jeringa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 62086284705792
+    m_Localized: Retire la nariz mojada de la persona
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

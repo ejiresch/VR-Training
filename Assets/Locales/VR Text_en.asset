@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: VR Text_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: e8c34a9771ffdd947922cbc11556854f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 216953651200
+    m_Localized: standard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2495148589056
+    m_Localized: Welcome to the tutorial! Click on continue with the "A" button on
+      the controller to start.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2516392738816
+    m_Localized: This is the tool table. This is where you will find all the equipment
+      you need during the tasks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 525311476367360
+    m_Localized: This is the video section. If you get stuck during a task, you can
+      watch the corresponding video.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 525768697446400
+    m_Localized: This is the whiteboard. It shows you which tasks you need to complete.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 526620183101440
+    m_Localized: take the syringe with the "grab button"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 526795098161152
+    m_Localized: Hold the syringe in the glass of water and press the "Interact button"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

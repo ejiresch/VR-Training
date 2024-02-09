@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: VR Text Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: VR Text
+  m_TableCollectionNameGuidString: e8c34a9771ffdd947922cbc11556854f
+  m_Entries:
+  - m_Id: 216953651200
+    m_Key: standard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 526795098161152
+    m_Key: "Tutorial SpritzeAuff\xFCllen Text"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 526620183101440
+    m_Key: Tutorial SpritzeNehmen Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2495148589056
+    m_Key: Tutorial Start Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2516392738816
+    m_Key: Tutorial Tooltisch Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 525311476367360
+    m_Key: Tutorial Video Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 525768697446400
+    m_Key: Tutorial Whiteboard Text
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7916344260476534808
+  references:
+    version: 2
+    RefIds:
+    - rid: 7916344260476534808
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1707341795077

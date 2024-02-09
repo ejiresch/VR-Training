@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 286347593575785693}
   - component: {fileID: -938301614241708091}
+  - component: {fileID: 1015616636863848993}
   m_Layer: 0
   m_Name: HandschuhTaslk
   m_TagString: Untagged
@@ -27,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.9299141, y: -5.2893806, z: 0.43158942}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -49,5 +51,46 @@ MonoBehaviour:
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0
   resetToolOnCompletion: 0
+  showControllerBelegung: 0
   touchTarget: {fileID: 3133612690540729634, guid: b21095e3032aad24abb10d6a305fbaca,
     type: 3}
+--- !u!114 &1015616636863848993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9182968463707594753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:2376c0e470de1584a9e2543373e4b2b5
+    m_TableEntryReference:
+      m_KeyId: 2713722159104
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -938301614241708091}
+        m_TargetAssemblyTypeName: Task, Assembly-CSharp
+        m_MethodName: setDescription
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []

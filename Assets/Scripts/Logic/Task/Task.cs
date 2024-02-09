@@ -236,5 +236,10 @@ public abstract class Task : MonoBehaviour
         }
         
     }
+
+    public void setDescription(String description)
+    {
+        this.description = description;
+    }
 }
 

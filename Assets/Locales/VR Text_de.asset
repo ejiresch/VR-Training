@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: VR Text_de
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de
+  m_SharedData: {fileID: 11400000, guid: e8c34a9771ffdd947922cbc11556854f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 216953651200
+    m_Localized: standard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2516392738816
+    m_Localized: "Das ist der Tool Tisch. Hier liegen alle Ger\xE4te welche du w\xE4hrend
+      der Aufgaben ben\xF6tigst."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2495148589056
+    m_Localized: Willkommen im Tutorial! Klicke mit der "A" Taste des Controller
+      auf weiter um zu starten.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 525311476367360
+    m_Localized: "Das ist der Video Bereich. Solltest du w\xE4hrend einer Aufgabe
+      nicht weiterkommen, kannst du dir das dazugeh\xF6rige Video ansehen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 525768697446400
+    m_Localized: Das ist das Whiteboard. Hier wird dir angezeigt welche Aufgaben
+      du erledigen musst.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 526620183101440
+    m_Localized: nimm die Spritze mit der "Greifen-Taste"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 526795098161152
+    m_Localized: "Halte die Spritze ins Wasserglas und dr\xFCcke die \"Interagieren
+      Taste\""
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

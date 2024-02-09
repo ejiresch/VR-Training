@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6213938921634095060}
   - component: {fileID: -275923926801227529}
+  - component: {fileID: 860692812520595552}
   m_Layer: 0
   m_Name: Nase_ConnectionTask
   m_TagString: Untagged
@@ -27,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -48,7 +50,49 @@ MonoBehaviour:
   spawnedTools: []
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 1
+  resetToolOnCompletion: 0
+  showControllerBelegung: 0
   connector: {fileID: 6645954436737465285, guid: cc7554a1bbbb5a74f95193c95880e7ca,
     type: 3}
   connectible: {fileID: 8907562860919515554, guid: 768faeebbbfd19647b4f0a4beb9cab6a,
     type: 3}
+--- !u!114 &860692812520595552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6213938921634095066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:2376c0e470de1584a9e2543373e4b2b5
+    m_TableEntryReference:
+      m_KeyId: 54674207145984
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -275923926801227529}
+        m_TargetAssemblyTypeName: Task, Assembly-CSharp
+        m_MethodName: setDescription
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []

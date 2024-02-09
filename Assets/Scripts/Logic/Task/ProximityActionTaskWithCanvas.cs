@@ -48,7 +48,12 @@ public class ProximityActionTaskWithCanvas : ProximityActionTask
 
     }
 
-    
+
+    public void setText(string text)
+    {
+        this.text = text;
+    }
+
     /*
       protected override void EndTask()
     {

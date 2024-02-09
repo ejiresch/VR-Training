@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1325155203522021071}
   - component: {fileID: 4067882422550854124}
+  - component: {fileID: -2945776887528146072}
   m_Layer: 0
   m_Name: BandRechtsConnectionTask
   m_TagString: Untagged
@@ -27,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -46,8 +48,51 @@ MonoBehaviour:
   tName: RechtesBandConnection
   description: "Bringe das rechte Band auf die Kan\xFCle an"
   spawnedTools: []
-  warningMessage: 0
+  warningMessage_BeideHaende: 0
+  warningMessage_KanueleFesthalten: 0
+  resetToolOnCompletion: 0
+  showControllerBelegung: 0
   connector: {fileID: 6645954436737465285, guid: cc7554a1bbbb5a74f95193c95880e7ca,
     type: 3}
   connectible: {fileID: 8740253547829732437, guid: 2f9b8cbb2e8c1a74cb22b79e057b381a,
     type: 3}
+--- !u!114 &-2945776887528146072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325155203522021057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:2376c0e470de1584a9e2543373e4b2b5
+    m_TableEntryReference:
+      m_KeyId: 52601436635136
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4067882422550854124}
+        m_TargetAssemblyTypeName: Task, Assembly-CSharp
+        m_MethodName: setDescription
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: VR Text_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: e8c34a9771ffdd947922cbc11556854f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 216953651200
+    m_Localized: standard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 526795098161152
+    m_Localized: "Mant\xE9n la jeringuilla en el vaso de agua y pulsa el \"bot\xF3n
+      Interact\"."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 526620183101440
+    m_Localized: "coger la jeringuilla con el \"bot\xF3n de agarre\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2495148589056
+    m_Localized: "\xA1Bienvenido al tutorial! Haz clic en continuar con el bot\xF3n
+      \"A\" del mando para empezar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2516392738816
+    m_Localized: "Esta es la mesa de herramientas. Aqu\xED es donde encontrar\xE1
+      todo el equipo que necesita durante las tareas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 525311476367360
+    m_Localized: "Esta es la secci\xF3n de v\xEDdeos. Si te quedas atascado durante
+      una tarea, puedes ver el v\xEDdeo correspondiente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 525768697446400
+    m_Localized: Esta es la pizarra. Te muestra las tareas que tienes que completar.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

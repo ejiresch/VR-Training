@@ -1,0 +1,199 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: WhiteboardDescriptions_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 2376c0e470de1584a9e2543373e4b2b5, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1570493300736
+    m_Localized: Take the syringe in your hand
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2065140154368
+    m_Localized: Draw up water with the syringe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2285362085888
+    m_Localized: Open the clip of the probe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2549028618240
+    m_Localized: Close the probe clip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2713722159104
+    m_Localized: Put on gloves.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5248864354304
+    m_Localized: Now draw up the dissolved medication with the syringe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5606642679808
+    m_Localized: Grind the medicine in a mortar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6024156282880
+    m_Localized: Put the medicine in the mortar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6311633879040
+    m_Localized: Now administer the medication with the tube
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6601892298752
+    m_Localized: Dissolve the medicine in water
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7005455646720
+    m_Localized: Rinse the probe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7597238386688
+    m_Localized: Connect the syringe to the probe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7810514550784
+    m_Localized: Connect the syringe to the probe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8064865533952
+    m_Localized: Remove the syringe from the probe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382034608128
+    m_Localized: Draw up water with the syringe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40835633774592
+    m_Localized: Open the clip of the probe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41017872089088
+    m_Localized: Close the probe clip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41403500593152
+    m_Localized: Put on gloves.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41670325436416
+    m_Localized: Draw up food with the syringe.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42251605639168
+    m_Localized: Administer the food
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42514856935424
+    m_Localized: Rinse the probe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42970198966272
+    m_Localized: Insert the syringe into the water in the glass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43214689140736
+    m_Localized: Connect the syringe to the food pack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43444293730304
+    m_Localized: Connect the syringe to the probe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43782899892224
+    m_Localized: Connect the syringe to the probe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44987663384576
+    m_Localized: Separate the syringe from the food
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45238533095424
+    m_Localized: Remove the syringe from the probe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45412747706368
+    m_Localized: Draw up water with the syringe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51633840062464
+    m_Localized: Attach the strap with both hands
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51922374623232
+    m_Localized: Interact with both straps to fix them in place
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52313015320576
+    m_Localized: Attach the left strap to the cannula
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52601436635136
+    m_Localized: Attach the right strap to the cannula
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52867275816960
+    m_Localized: Check the cuff with the syringe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53124000776192
+    m_Localized: Open the tape
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53424115810304
+    m_Localized: Attach the cannula to the patient's neck
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54505902309376
+    m_Localized: Connect the cuffline to the pressure gauge and pump it up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54674207145984
+    m_Localized: Attach the wet nose to the cannula
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60504813993984
+    m_Localized: Apply the tracheal compress to the cannula
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60772985208832
+    m_Localized: Lubricate the cannula with the cloth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61045090680832
+    m_Localized: Open the strap with both hands
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61293615775744
+    m_Localized: Dispose of the waste
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61603998466048
+    m_Localized: Remove the cannula from the person's neck
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61861776195584
+    m_Localized: Connect the cuffline to the syringe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 62086284705792
+    m_Localized: Remove the wet nose from the person
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

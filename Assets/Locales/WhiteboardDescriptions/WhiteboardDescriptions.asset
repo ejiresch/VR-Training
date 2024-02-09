@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: WhiteboardDescriptions
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 2376c0e470de1584a9e2543373e4b2b5, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 7d6dd77fd513b5341910e824040b6d8b, type: 2}
+  - {fileID: 11400000, guid: ad58361a119f7e7448aa093576ba6794, type: 2}
+  - {fileID: 11400000, guid: 89d049681980bfe498d3b967f0ef6be1, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 630474244228897184}
   - component: {fileID: 630474244228897185}
+  - component: {fileID: 8006228581269976586}
   m_Layer: 0
   m_Name: BandAnKanueleTask
   m_TagString: Untagged
@@ -27,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -46,6 +48,49 @@ MonoBehaviour:
   tName: PlaceHodl
   description: "Bringen Sie das Band mit beiden H\xE4nden an"
   spawnedTools: []
-  warningMessage: 0
+  warningMessage_BeideHaende: 0
+  warningMessage_KanueleFesthalten: 0
+  resetToolOnCompletion: 0
+  showControllerBelegung: 0
   toggleReferenceRight: {fileID: -6606467506871176741, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
+--- !u!114 &8006228581269976586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630474244228897186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:2376c0e470de1584a9e2543373e4b2b5
+    m_TableEntryReference:
+      m_KeyId: 51633840062464
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 630474244228897185}
+        m_TargetAssemblyTypeName: Task, Assembly-CSharp
+        m_MethodName: setDescription
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []

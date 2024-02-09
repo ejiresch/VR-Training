@@ -1,0 +1,205 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: WhiteboardDescriptions Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: WhiteboardDescriptions
+  m_TableCollectionNameGuidString: 2376c0e470de1584a9e2543373e4b2b5
+  m_Entries:
+  - m_Id: 1570493300736
+    m_Key: 05 nimm die Spritze in die Hand
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2065140154368
+    m_Key: 05 Ziehe mit der Spritze Wasser auf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2285362085888
+    m_Key: "04 \xD6ffnen Sie den Clip der Sonde"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2549028618240
+    m_Key: "04 Schlie\xDFen Sie den Clip der Sonde"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2713722159104
+    m_Key: 04 Ziehe Handschuhe an.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5248864354304
+    m_Key: "04 Spritze mit Medikament bef\xFCllen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5606642679808
+    m_Key: 04 Medikament zermahlen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6024156282880
+    m_Key: "04 Medikament in den M\xF6rser geben"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6311633879040
+    m_Key: "04 Sonde sp\xFClen "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6601892298752
+    m_Key: "04 Medikament aufl\xF6sen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7005455646720
+    m_Key: "04 Sonde sp\xFClen 2"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7597238386688
+    m_Key: '04 Spritze mit Sonde verbinden '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7810514550784
+    m_Key: 04 Spritze mit Sonde verbinden 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8064865533952
+    m_Key: 04 SpritzeAbnehmen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382034608128
+    m_Key: '04 Wasser aufsauegen '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40835633774592
+    m_Key: "03 \xD6ffnen Sie den Clip der Sonde"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41017872089088
+    m_Key: "03 Schlie\xDFen Sie den Clip der Sonde"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41403500593152
+    m_Key: 03 Ziehe Handschuhe an.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41670325436416
+    m_Key: '03 Nahrung Aufsaugen '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42251605639168
+    m_Key: '03 Nahrung verabreichen '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42514856935424
+    m_Key: "03 Sonde sp\xFClen "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42970198966272
+    m_Key: 03 Spritze in Wasser
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43214689140736
+    m_Key: 03 Spritze auf Nahrung drehen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43444293730304
+    m_Key: '03 Spritze mit Sonde verbinden '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43782899892224
+    m_Key: 03 Spritze mit Sonde verbinden 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44987663384576
+    m_Key: '03 Spritze von Nahrung Trennen '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45238533095424
+    m_Key: 03 SpritzeAbnehmen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45412747706368
+    m_Key: 03 Wasser aufsaugen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51633840062464
+    m_Key: "02 Bringen Sie das Band mit beiden H\xE4nden an"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51922374623232
+    m_Key: 02 Band_Fixieren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52313015320576
+    m_Key: 02 LinkesBandConnection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52601436635136
+    m_Key: 02 RechtesBandConnection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52867275816960
+    m_Key: 02 KaffKontrollieren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53124000776192
+    m_Key: "02 \xD6ffnen Sie das Band"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53424115810304
+    m_Key: 02 Kanuele Task
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54505902309376
+    m_Key: 02 cuffline
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54674207145984
+    m_Key: 02 Kanuele Task 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60504813993984
+    m_Key: 02 TrachealKompresseConnection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60772985208832
+    m_Key: 02 Touchy Boi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61045090680832
+    m_Key: 01 Open_Mid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61293615775744
+    m_Key: 01 Entsorgen Sie den Muell
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61603998466048
+    m_Key: 01 Entfernen Sie die Kanuele von dem Hals der Person
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61861776195584
+    m_Key: 01 Verbinde die Cuffline mit der Spritze
+    m_Metadata:
+      m_Items: []
+  - m_Id: 62086284705792
+    m_Key: 01 Nehmen Sie die feuchte Nase von der Person ab
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7916344293428297744
+  references:
+    version: 2
+    RefIds:
+    - rid: 7916344293428297744
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1707500799199

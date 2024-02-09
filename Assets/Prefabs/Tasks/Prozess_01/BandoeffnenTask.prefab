@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8754685957678997294}
   - component: {fileID: 2236122687761801263}
+  - component: {fileID: 3867908456657582125}
   m_Layer: 0
   m_Name: BandoeffnenTask
   m_TagString: Untagged
@@ -27,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -46,7 +48,10 @@ MonoBehaviour:
   tName: Open_Mid
   description: "\xD6ffnen Sie das Band mit beiden H\xE4nden"
   spawnedTools: []
-  warningMessage: 0
+  warningMessage_BeideHaende: 0
+  warningMessage_KanueleFesthalten: 0
+  resetToolOnCompletion: 0
+  showControllerBelegung: 0
   bandLinks: {fileID: 8740253547829732437, guid: 06e1a4916e0f21c48b6f7daea1c79dc5,
     type: 3}
   bandRechts: {fileID: 8740253547829732437, guid: 2f9b8cbb2e8c1a74cb22b79e057b381a,
@@ -55,3 +60,43 @@ MonoBehaviour:
     type: 3}
   range: 0.1
   inReverse: 1
+--- !u!114 &3867908456657582125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8754685957678997292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:2376c0e470de1584a9e2543373e4b2b5
+    m_TableEntryReference:
+      m_KeyId: 61045090680832
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2236122687761801263}
+        m_TargetAssemblyTypeName: Task, Assembly-CSharp
+        m_MethodName: setDescription
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []

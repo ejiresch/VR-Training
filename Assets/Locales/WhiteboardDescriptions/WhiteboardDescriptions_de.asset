@@ -1,0 +1,199 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: WhiteboardDescriptions_de
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de
+  m_SharedData: {fileID: 11400000, guid: 2376c0e470de1584a9e2543373e4b2b5, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1570493300736
+    m_Localized: nimm die Spritze in die Hand
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2065140154368
+    m_Localized: Ziehe mit der Spritze Wasser auf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2285362085888
+    m_Localized: "\xD6ffnen Sie den Clip der Sonde"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2549028618240
+    m_Localized: "Schlie\xDFen Sie den Clip der Sonde"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2713722159104
+    m_Localized: Ziehe Handschuhe an.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5248864354304
+    m_Localized: "Ziehen Sie nun das aufgel\xF6ste Medikament mit der Spritze auf"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5606642679808
+    m_Localized: "Zermahle Sie das Medikament im M\xF6rser"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6024156282880
+    m_Localized: "Geben Sie das Medikament in den M\xF6rser"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6311633879040
+    m_Localized: Verabreichen Sie nun das Medikament mit der Sonde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6601892298752
+    m_Localized: "L\xF6sen Sie das Medikament in Wasser auf"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7005455646720
+    m_Localized: "Sp\xFClen Sie die Sonde"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7597238386688
+    m_Localized: Verbinden Sie die Spritze mit der Sonde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7810514550784
+    m_Localized: Verbinden Sie die Spritze mit der Sonde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8064865533952
+    m_Localized: Entfernen Sie die Spritze von der Sonde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8382034608128
+    m_Localized: Ziehen Sie mit der Spritze Wasser auf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40835633774592
+    m_Localized: "\xD6ffnen Sie den Clip der Sonde"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41017872089088
+    m_Localized: "Schlie\xDFen Sie den Clip der Sonde"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41403500593152
+    m_Localized: Ziehe Handschuhe an.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41670325436416
+    m_Localized: Ziehen Sie mit der Spritze Nahrung auf.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42251605639168
+    m_Localized: Verabreichen Sie die Nahrung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42514856935424
+    m_Localized: "Sp\xFClen sie die Sonde"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42970198966272
+    m_Localized: Stecke die Spritze in das Wasser im Glas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43214689140736
+    m_Localized: Verbinden Sie die Spritze mit der Nahrungspackung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43444293730304
+    m_Localized: Verbinden Sie die Spritze mit der Sonde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43782899892224
+    m_Localized: Verbinden Sie die Spritze mit der Sonde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44987663384576
+    m_Localized: Trennen Sie die Spritze von der Nahrung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45238533095424
+    m_Localized: Entfernen Sie die Spritze von der Sonde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45412747706368
+    m_Localized: Ziehe mit der Spritze Wasser auf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51633840062464
+    m_Localized: "Bringen Sie das Band mit beiden H\xE4nden an"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51922374623232
+    m_Localized: "Interagieren Sie mit beiden B\xE4ndern um Sie zu fixieren"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52313015320576
+    m_Localized: "Bringe das linke Band auf die Kan\xFCle an"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52601436635136
+    m_Localized: "Bringe das rechte Band auf die Kan\xFCle an"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52867275816960
+    m_Localized: Cuff mit der Spritze kontrollieren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53124000776192
+    m_Localized: "\xD6ffnen Sie das Band"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53424115810304
+    m_Localized: Bringe die Kanuele an den Hals des Patienten an
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54505902309376
+    m_Localized: Verbinde die Cuffline mit dem Manometer und pumpe sie auf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54674207145984
+    m_Localized: Bringe die feuchte Nase an die Kanuele an
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60504813993984
+    m_Localized: "Bringe die Trachealkompresse auf die Kan\xFCle auf"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60772985208832
+    m_Localized: "Lubriziere die Kan\xFCle mit dem Tuch"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61045090680832
+    m_Localized: "\xD6ffnen Sie das Band mit beiden H\xE4nden"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61293615775744
+    m_Localized: Entsorgen Sie den Muell
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61603998466048
+    m_Localized: Entfernen Sie die Kanuele von dem Hals der Person
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61861776195584
+    m_Localized: Verbinde die Cuffline mit der Spritze
+    m_Metadata:
+      m_Items: []
+  - m_Id: 62086284705792
+    m_Localized: Nehmen Sie die feuchte Nase von der Person ab
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
