@@ -10,6 +10,9 @@ public class Hand : MonoBehaviour
     public GameObject handPrefab;
     public GameObject spawnedHand;
 
+    public Renderer left, right;
+    public Renderer left2, right2;
+
     //Stores what kind of characteristics we're looking for with our Input Device when we search for it later
     public InputDeviceCharacteristics inputDeviceCharacteristics;
 
@@ -45,32 +48,47 @@ public class Hand : MonoBehaviour
 
 
     // Update is called once per frame
-    private void Update()
+    public void Update()
     {
-        
+        this.left = GameObject.Find("Left Hand").GetComponent<Renderer>();
+        this.right = GameObject.Find("Right Hand").GetComponent<Renderer>();
+
+
         if (ProcessHandler.Instance.GetHandActive()==true)
         {
-            Destroy(this.spawnedHand);
-            GameObject left = GameObject.Find("Left Hand");
-            Destroy(left);
-            GameObject right = GameObject.Find("Right Hand");
-            Destroy(right);
-            Debug.Log("HAHAHHAHAHAhAHHAHAHHAAHHAHAAHA");
+            //Für vr left und right hand zusammenschreiben also nur leertste weg glaube ich
+            //die spawnedhand auf  setactive(false) setzten; enabled bei GO?
+
+            
+           // GameObject.Destroy(left);
+           //GameObject.Destroy(right);
+
+            this.left.enabled = false;
+            this.right.enabled = false;
+
+
+           
         }
         else
         {
-            
-            //Since our target device might not register at the start of the scene, we continously check until one is found.
-            if (!_targetDevice.isValid)
-            {
-                InitializeHand();
-            }
-            else
-            {
-                UpdateHand();
-            }
-        }
+
+            this.left.enabled = true;
+            this.right.enabled = true;
+
         
+
+
+        }
+        //Since our target device might not register at the start of the scene, we continously check until one is found.
+        if (!_targetDevice.isValid)
+        {
+            InitializeHand();
+        }
+        else
+        {
+            UpdateHand();
+        }
+
     }
 
     private void UpdateHand()

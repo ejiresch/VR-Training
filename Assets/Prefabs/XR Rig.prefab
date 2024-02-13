@@ -83,6 +83,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handPrefab: {fileID: 1995304414849925060, guid: 7587be242254e7445817b79d592a5fa5,
     type: 3}
+  spawnedHand: {fileID: 0}
+  left: {fileID: 0}
+  right: {fileID: 0}
   inputDeviceCharacteristics: 576
 --- !u!120 &4722560672575975929
 LineRenderer:
@@ -1642,6 +1645,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handPrefab: {fileID: 1995304414849925060, guid: 74ae781cefaa2254a977b319fbf2bae9,
     type: 3}
+  spawnedHand: {fileID: 0}
+  left: {fileID: 0}
+  right: {fileID: 0}
   inputDeviceCharacteristics: 320
 --- !u!120 &4722560673929078458
 LineRenderer:
