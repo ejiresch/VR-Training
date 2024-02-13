@@ -53,8 +53,6 @@ public class Hand : MonoBehaviour
         this.left = GameObject.Find("Left Hand").GetComponent<Renderer>();
         this.right = GameObject.Find("Right Hand").GetComponent<Renderer>();
 
-        this.left2 = GameObject.Find("LeftHand").GetComponent<Renderer>();
-        this.right2 = GameObject.Find("RightHand").GetComponent<Renderer>();
 
         if (ProcessHandler.Instance.GetHandActive()==true)
         {
@@ -69,8 +67,7 @@ public class Hand : MonoBehaviour
             this.right.enabled = false;
 
 
-            this.left2.enabled = false;
-            this.right2.enabled = false;
+           
         }
         else
         {
@@ -78,9 +75,7 @@ public class Hand : MonoBehaviour
             this.left.enabled = true;
             this.right.enabled = true;
 
-            this.left2.enabled = true;
-            this.right2.enabled = true;
-
+        
 
 
         }
