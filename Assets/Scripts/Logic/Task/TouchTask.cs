@@ -13,13 +13,6 @@ public class TouchTask : Task
         touchObject.GetComponent<TouchObject>().SetTouchTarget(touchTarget);
         base.StartTask();
     }
-    public override List<GameObject> HighlightedObjects()
-    {
-        List<GameObject> result = new List<GameObject>();
-        result.Add(touchObject);
-        result.Add(touchTarget);
-        return result;
-    }
 
     protected override void CompReset()
     {

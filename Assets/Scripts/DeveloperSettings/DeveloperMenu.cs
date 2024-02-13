@@ -14,7 +14,7 @@ public class DeveloperMenu : MonoBehaviour
     public int button;
     private HandAnimation handAnimation;
     public Color highlightedColor = new Color(0.3f, 1, 0.3f);
-    public Boolean isHandanimationSelected, isHighlightingSelected, isVibrationSelected;
+    public Boolean isHandanimationSelected=false, isHighlightingSelected = false, isVibrationSelected = false;
     public Button[] optionButtons;
 
     // Start is called before the first frame update

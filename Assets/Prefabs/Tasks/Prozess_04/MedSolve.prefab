@@ -51,6 +51,7 @@ MonoBehaviour:
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0
   resetToolOnCompletion: 0
+  objectHighlight: {fileID: 2100000, guid: 7757758ff76c78242966eadf4bffa21c, type: 2}
   showControllerBelegung: 0
   touchObject: {fileID: 5664044047155542320, guid: 8cdace87b38db8544b76b0f00c414df6,
     type: 3}

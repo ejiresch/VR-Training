@@ -35,16 +35,6 @@ public class HandTouchTask : Task
             }
         }
     }
-
-    //Dazu, Simon
-    public override List<GameObject> HighlightedObjects()
-    {
-        List<GameObject> result = new List<GameObject>();
-        //result.Add(touchObject);
-        result.Add(touchTarget);
-        return result;
-    }
-
     protected override void CompReset()
     {
         touchObjects[0].GetComponent<TouchHand>().SetTaskFinished(false);

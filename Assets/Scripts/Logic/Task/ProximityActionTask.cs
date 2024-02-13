@@ -23,14 +23,6 @@ public class ProximityActionTask : Task
     {
         
     }
-    //Dazu, Simon
-    public override List<GameObject> HighlightedObjects()
-    {
-        List<GameObject> result = new List<GameObject>();
-        result.Add(touchTarget);
-        result.Add(touchObject);
-        return result;
-    }
 
     protected override void CompReset()
     {

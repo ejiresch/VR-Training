@@ -51,6 +51,7 @@ MonoBehaviour:
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0
   resetToolOnCompletion: 0
+  objectHighlight: {fileID: 2100000, guid: 7757758ff76c78242966eadf4bffa21c, type: 2}
   showControllerBelegung: 0
   connector: {fileID: 127199775171483385, guid: 327ad3c5ba059ae46a7d0f4e2bb61907,
     type: 3}

@@ -17,14 +17,6 @@ public class ConnectionTask : Task
             connectible.GetComponent<Connectible>().SetConnector(connector.GetComponent<ConnectorObject>());
         }
     }
-    //Dazu, Simon
-    public override List<GameObject> HighlightedObjects()
-    {
-        List<GameObject> result = new List<GameObject>();
-        result.Add(connectible);
-        result.Add(connector);
-        return result;
-    }
 
     protected override void CompReset()
     {
