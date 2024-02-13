@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +20,7 @@ public abstract class Task : MonoBehaviour
     public bool warningMessage_BeideHaende = false;
     public bool warningMessage_KanueleFesthalten = false;
     public bool resetToolOnCompletion = false;
+    public Material objectHighlight;
     [Tooltip("Blendet Einen Controller ein auf dem ein Button blinkt: 1: UseButton, 2: HoldButton, 3: A-Button 0: kein Controller wird angezeigt")]
     public int showControllerBelegung = 0;
 
@@ -31,6 +33,7 @@ public abstract class Task : MonoBehaviour
     private Canvas canvas;
     private Boolean active = false;
     private MeshRenderer image;
+    private List<GameObject> HighlightedObjects = new List<GameObject>();
 
     /// <summary>
     /// Gets called when Task is started
@@ -75,7 +78,11 @@ public abstract class Task : MonoBehaviour
 
         for (int i = 0; i < spawnedTools.Length; i++)
         {
-            if ((prefabName + "(Clone)") == spawnedTools[i].name) return spawnedTools[i];
+            if ((prefabName + "(Clone)") == spawnedTools[i].name)
+            {
+                highlightObject(spawnedTools[i]);
+                return spawnedTools[i];
+            }
 
         }
         GameObject tco = ProcessHandler.Instance.GetCompoundObject();
@@ -83,11 +90,16 @@ public abstract class Task : MonoBehaviour
 
         if (foundTool != null)
         {
+            highlightObject(foundTool);
             return foundTool;
         }
         foreach (Rigidbody child in tco.GetComponentsInChildren<Rigidbody>())
         {
-            if (child.gameObject.name == prefabName) return child.gameObject;
+            if (child.gameObject.name == prefabName)
+            {
+                highlightObject(child.gameObject);
+                return child.gameObject;
+            }
         }
 
         return null;
@@ -96,9 +108,27 @@ public abstract class Task : MonoBehaviour
     public virtual void FinishTask() => Destroy(this.gameObject);
 
     //Created by Simon
-    public virtual List<GameObject> HighlightedObjects()
+    public virtual void highlightObject(GameObject highobj)
     {
-        return null;
+        MeshRenderer mesh = highobj.GetComponentInChildren<MeshRenderer>();
+        Material[] matArray = mesh.materials;
+        Material[] newMatArray = new Material[2];
+        newMatArray[0] = matArray[0];
+        newMatArray[1] = objectHighlight;
+        mesh.materials = newMatArray;
+        HighlightedObjects.Add(highobj);
+    }
+
+    public virtual void removeHighlightfromObjects()
+    {
+        foreach (GameObject go in HighlightedObjects)
+        {
+            MeshRenderer mesh = go.GetComponentInChildren<MeshRenderer>();
+            Material[] matArray = mesh.materials;
+            Material[] newMatArray = new Material[1];
+            newMatArray[0] = matArray[0];
+            mesh.materials = newMatArray;
+        }
     }
     ///<summary>
     ///  Sucht ein GameObject aus den spawnedTools anhand des Namens, wobei das GameObject auch ein child sein kann. 
@@ -129,6 +159,7 @@ public abstract class Task : MonoBehaviour
     protected virtual void EndTask()
     {
         CompReset();
+        removeHighlightfromObjects();
         ProcessHandler.Instance.NextTask();
     }
     /// <summary>

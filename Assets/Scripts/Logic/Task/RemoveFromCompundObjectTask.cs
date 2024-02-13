@@ -22,13 +22,6 @@ public class RemoveFromCompundObjectTask : Task
             compP.SetTaskFocus(true);
         }
     }
-    public override List<GameObject> HighlightedObjects()
-    {
-        List<GameObject> result = new List<GameObject>();
-        result.Add(compoundObject);
-        result.Add(objectToRemove);
-        return result;
-    }
 
     protected override void CompReset()
     {
