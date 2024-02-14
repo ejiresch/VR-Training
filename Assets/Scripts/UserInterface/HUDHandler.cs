@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class HUDHandler : MonoBehaviour
 {
     public TextMeshProUGUI hud_text;
+    public RawImage hud_text_image;
 
     //Atribute, die für den Tutorial-Prozess benötigt werden   
     public GameObject tutorialDirection;    //Das Parent Objekt des Pfeils (ist nur notwendig damit die Animation des Pfeils immer richtig funktioniert)
@@ -21,22 +22,26 @@ public class HUDHandler : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(Fade_text(0.05f, 0.12f));
     }
+
+
     IEnumerator Fade_text(float wait, float value) // Fade Darstellung des Textes
-    {   
-        while (hud_text.color.a < 1.0f) // Fade in
+    {
+        while (hud_text_image.color.a < 1.0f) // Fade in
         {
-            hud_text.color = new Color(hud_text.color.r, hud_text.color.g, hud_text.color.b, hud_text.color.a + value);
+            hud_text_image.color = new Color(hud_text_image.color.r, hud_text_image.color.g, hud_text_image.color.b, hud_text_image.color.a + value);
             yield return new WaitForSeconds(wait);
         }
 
         yield return new WaitForSeconds(1.3f);
 
-        while (hud_text.color.a > 0.0f) // Fade out
+        while (hud_text_image.color.a > 0.0f) // Fade out
         {
-            hud_text.color = new Color(hud_text.color.r, hud_text.color.g, hud_text.color.b, hud_text.color.a - value);
+            hud_text_image.color = new Color(hud_text_image.color.r, hud_text_image.color.g, hud_text_image.color.b, hud_text_image.color.a - value);
             yield return new WaitForSeconds(wait);
         }
     }
+
+
 
     public void Update()
     {

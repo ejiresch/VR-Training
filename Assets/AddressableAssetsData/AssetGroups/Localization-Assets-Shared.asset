@@ -33,6 +33,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 32e1e548a2bac5a488843738243281a6
+    m_Address: "Assets/Locales/HUDTranslation/HUD \xDCbersetzung Shared Data.asset"
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: fbba51c1e5281e4429771cf2a9e9cc24, type: 2}
   m_SchemaSet:

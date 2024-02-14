@@ -18,6 +18,8 @@ public class WhiteboardHandler : MonoBehaviour
     private int task_number = 1;
     private int processGroup = 1;
 
+    private string abschlussText;
+
     public void FirstTask(string taskdescription) // Ersten Task erstellen
     {
         this.NewTask(task_number + ". " + taskdescription, true);
@@ -90,7 +92,7 @@ public class WhiteboardHandler : MonoBehaviour
         this.FinishTask();
         yield return new WaitForSeconds(0.4f);
 
-        this.NewTask("Alles fertig, Herzlichen Glückwunsch!", false);
+        this.NewTask(abschlussText, false);
 
         yield return new WaitForSeconds(0.4f);
         task_current.SetActive(true);
@@ -100,5 +102,11 @@ public class WhiteboardHandler : MonoBehaviour
     {
         ProcessHandler.Instance.SetProcessIndex(int.Parse(processGroup.ToString() + pid));
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+
+    public void setAbschlussText(string abschlussText)
+    {
+        this.abschlussText = abschlussText;
     }
 }
