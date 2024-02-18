@@ -35,6 +35,8 @@ public abstract class Task : MonoBehaviour
     private MeshRenderer image;
     private List<GameObject> HighlightedObjects = new List<GameObject>();
 
+    private Boolean hilightingButton = false;
+
     /// <summary>
     /// Gets called when Task is started
     /// </summary>
@@ -80,8 +82,8 @@ public abstract class Task : MonoBehaviour
         {
             if ((prefabName + "(Clone)") == spawnedTools[i].name)
             {
-                highlightObject(spawnedTools[i]);
-                return spawnedTools[i];
+                    highlightObject(spawnedTools[i]);
+                    return spawnedTools[i];
             }
 
         }
@@ -90,15 +92,15 @@ public abstract class Task : MonoBehaviour
 
         if (foundTool != null)
         {
-            highlightObject(foundTool);
-            return foundTool;
+                highlightObject(foundTool);
+                return foundTool;
         }
         foreach (Rigidbody child in tco.GetComponentsInChildren<Rigidbody>())
         {
             if (child.gameObject.name == prefabName)
             {
-                highlightObject(child.gameObject);
-                return child.gameObject;
+                    highlightObject(child.gameObject);
+                    return child.gameObject;
             }
         }
 
@@ -110,25 +112,32 @@ public abstract class Task : MonoBehaviour
     //Created by Simon
     public virtual void highlightObject(GameObject highobj)
     {
-        MeshRenderer mesh = highobj.GetComponentInChildren<MeshRenderer>();
-        Material[] matArray = mesh.materials;
-        Material[] newMatArray = new Material[2];
-        newMatArray[0] = matArray[0];
-        newMatArray[1] = objectHighlight;
-        mesh.materials = newMatArray;
-        HighlightedObjects.Add(highobj);
+        if(this.hilightingButton == false)
+        {
+            MeshRenderer mesh = highobj.GetComponentInChildren<MeshRenderer>();
+            Material[] matArray = mesh.materials;
+            Material[] newMatArray = new Material[2];
+            newMatArray[0] = matArray[0];
+            newMatArray[1] = objectHighlight;
+            mesh.materials = newMatArray;
+            HighlightedObjects.Add(highobj);
+        }
     }
 
     public virtual void removeHighlightfromObjects()
     {
-        foreach (GameObject go in HighlightedObjects)
+
+        if (this.hilightingButton == false)
         {
-            MeshRenderer mesh = go.GetComponentInChildren<MeshRenderer>();
-            Material[] matArray = mesh.materials;
-            Material[] newMatArray = new Material[1];
-            newMatArray[0] = matArray[0];
-            mesh.materials = newMatArray;
-        }
+            foreach (GameObject go in HighlightedObjects)
+            {
+                MeshRenderer mesh = go.GetComponentInChildren<MeshRenderer>();
+                Material[] matArray = mesh.materials;
+                Material[] newMatArray = new Material[1];
+                newMatArray[0] = matArray[0];
+                mesh.materials = newMatArray;
+            }
+       }
     }
     ///<summary>
     ///  Sucht ein GameObject aus den spawnedTools anhand des Namens, wobei das GameObject auch ein child sein kann. 
@@ -207,6 +216,22 @@ public abstract class Task : MonoBehaviour
 
             }
 
+        }
+        if (ProcessHandler.Instance.GetHighlightingActive() == true)
+        {
+            hilightingButton = true;
+            foreach (GameObject go in HighlightedObjects)
+            {
+                MeshRenderer mesh = go.GetComponentInChildren<MeshRenderer>();
+                Material[] matArray = mesh.materials;
+                Material[] newMatArray = new Material[1];
+                newMatArray[0] = matArray[0];
+                mesh.materials = newMatArray;
+            }
+        }
+        else
+        {
+            hilightingButton = false;
         }
     }
 

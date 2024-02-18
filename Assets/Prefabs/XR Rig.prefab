@@ -86,6 +86,8 @@ MonoBehaviour:
   spawnedHand: {fileID: 0}
   left: {fileID: 0}
   right: {fileID: 0}
+  left2: {fileID: 0}
+  right2: {fileID: 0}
   inputDeviceCharacteristics: 576
 --- !u!120 &4722560672575975929
 LineRenderer:
@@ -1648,6 +1650,8 @@ MonoBehaviour:
   spawnedHand: {fileID: 0}
   left: {fileID: 0}
   right: {fileID: 0}
+  left2: {fileID: 0}
+  right2: {fileID: 0}
   inputDeviceCharacteristics: 320
 --- !u!120 &4722560673929078458
 LineRenderer:

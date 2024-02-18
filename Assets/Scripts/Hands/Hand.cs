@@ -50,33 +50,41 @@ public class Hand : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        this.left = GameObject.Find("Left Hand").GetComponent<Renderer>();
-        this.right = GameObject.Find("Right Hand").GetComponent<Renderer>();
+        if (this.left == null || this.right == null)
+        {
+            this.left = GameObject.Find("Left Hand").GetComponent<Renderer>();
+            this.right = GameObject.Find("Right Hand").GetComponent<Renderer>();
+        }
+        
 
 
         if (ProcessHandler.Instance.GetHandActive()==true)
         {
-            //Für vr left und right hand zusammenschreiben also nur leertste weg glaube ich
-            //die spawnedhand auf  setactive(false) setzten; enabled bei GO?
-
             
-           // GameObject.Destroy(left);
-           //GameObject.Destroy(right);
-
-            this.left.enabled = false;
-            this.right.enabled = false;
-
-
-           
+           if(this.left.enabled == true && this.right.enabled == true)
+            {
+                this.left.enabled = false;
+                this.right.enabled = false;
+                if(spawnedHand != null)
+                {
+                    disableVisibility();
+                }
+                
+            }
         }
         else
         {
 
-            this.left.enabled = true;
-            this.right.enabled = true;
-
-        
-
+            if (this.left.enabled == false && this.right.enabled == false)
+            {
+                this.left.enabled = true;
+                this.right.enabled = true;
+                if(spawnedHand != null)
+                {
+                    enableVisibility();
+                }
+                
+            }
 
         }
         //Since our target device might not register at the start of the scene, we continously check until one is found.
