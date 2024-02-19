@@ -6,70 +6,56 @@ Shader "Custom/AlwaysOnTop"
     }
     SubShader {
         Pass {
-            Blend SrcAlpha OneMinusSrcAlpha  // Standard alpha blending
+            Blend SrcAlpha OneMinusSrcAlpha
             ZWrite On
-            ZTest Always  // Always render regardless of depth buffer content
+            ZTest Always
             ColorMask RGB
+            
             CGPROGRAM
-            #pragma vertex vertexShader
-            #pragma fragment pixelShader
+            #pragma vertex vert
+            #pragma fragment frag
             #pragma target 3.0
             #include "UnityCG.cginc"
             
-            // a texture we can set from Unity
-            uniform sampler2D _MainTex;
-            uniform sampler2D _RoughnessTex;
-
-            // this data is the input for the vertex shader
-            // (TRANSFORM)
-            struct vertInput {
+            struct appdata_t {
                 float4 vertex : POSITION;
                 float4 texcoord0 : TEXCOORD0;
                 float3 normal : NORMAL;
-            };
 
-            // this data is returned by the vertex shader
-            // as input for the pixel Shader
-            // (LIGHTING)
-            struct pixelInput {
+                UNITY_VERTEX_INPUT_INSTANCE_ID //Insert
+            };
+            
+            struct v2f {
                 float4 pos : SV_POSITION;
                 float4 texcoord0 : TEXCOORD0;
-                float3 normal : NORMAL;
-                float3 viewDir : TEXCOORD1;
+                float3 normal : TEXCOORD1;
+                float3 viewDir : TEXCOORD2;
+
+                UNITY_VERTEX_OUTPUT_STEREO //Insert
             };
+            
+            sampler2D _MainTex;
+            sampler2D _RoughnessTex;
+            
+            v2f vert(appdata_t v) {
+                v2f o;
 
-            // vertex shader
-            // TRANSFORM
-            pixelInput vertexShader(vertInput vi) {
-                pixelInput result;
-                // transform the vertex, including perspective
-                result.pos = UnityObjectToClipPos (vi.vertex);      
-                // texture coordinate is not transformed
-                result.texcoord0 = vi.texcoord0;   
-                // transform normal, without perspective
-                result.normal = UnityObjectToWorldNormal(vi.normal);
-                // calculate view direction, useful for special stuff
-                result.viewDir = normalize(WorldSpaceViewDir(vi.vertex)); 
+                UNITY_SETUP_INSTANCE_ID(v); //Insert
+                UNITY_INITIALIZE_OUTPUT(v2f, o); //Insert
+                UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o); //Insert
 
-                return result;
+                o.pos = UnityObjectToClipPos(v.vertex);
+                o.texcoord0 = v.texcoord0;
+                o.normal = UnityObjectToWorldNormal(v.normal);
+                o.viewDir = ObjSpaceViewDir(v.vertex);
+                return o;
             }
-
-            // pixel shader
-            // LIGHTING
-            float4 pixelShader(pixelInput pi) : SV_Target {
-                //float4 color =  float4(0,1,0,1); // RGBA
-                //float4 color =  float4(pi.texcoord0.x, pi.texcoord0.y, 0, 1); // show texture coords
-                float4 color = tex2D(_MainTex, pi.texcoord0.xy); // get the color from a texture
-
-                // TODO diffuse (Lambert) lighting
-                // dot product between normal and light direction
-                // use _WorldSpaceLightPos0.xyz and the dot() method
-                float d = dot(_WorldSpaceLightPos0.xyz, pi.normal);
-                
-
+            
+            fixed4 frag(v2f i) : SV_Target {
+                fixed4 color = tex2D(_MainTex, i.texcoord0.xy);
+                float d = dot(_WorldSpaceLightPos0.xyz, i.normal);
                 return color;
             }
-
             ENDCG
         }
     }

@@ -12,7 +12,8 @@ public class HUDHandler : MonoBehaviour
 
     //Atribute, die für den Tutorial-Prozess benötigt werden   
     public GameObject tutorialDirection;    //Das Parent Objekt des Pfeils (ist nur notwendig damit die Animation des Pfeils immer richtig funktioniert)
-    public RawImage tutorialArrow;          //The image of the arrow    
+    public RawImage tutorialArrow;          //The image of the arrow
+    public RawImage tutorialArrow_otherSide;
     public Transform camera;                //the trasnform of the camera to know in which direction it is looking    
     public Transform lookDirection;         //Transform der Objekte auf die der Pfeil zeigen muss
     private bool tutorialMode;
@@ -58,10 +59,12 @@ public class HUDHandler : MonoBehaviour
             if (Mathf.Abs(angleToTarget)<30f)
             {
                 tutorialArrow.enabled = false;
+                tutorialArrow_otherSide.enabled = false;
             }
             else
             {
                 tutorialArrow.enabled = true;
+                tutorialArrow_otherSide.enabled = true;
                 tutorialDirection.transform.LookAt(lookDirection);
                 tutorialDirection.transform.Rotate(0, 270, 0);
             }
@@ -69,6 +72,7 @@ public class HUDHandler : MonoBehaviour
         else
         {
             tutorialArrow.enabled = false;
+            tutorialArrow_otherSide.enabled = false;
         }
     }
 

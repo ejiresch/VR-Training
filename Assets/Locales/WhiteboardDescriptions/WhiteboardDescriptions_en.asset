@@ -194,6 +194,10 @@ MonoBehaviour:
     m_Localized: Remove the wet nose from the person
     m_Metadata:
       m_Items: []
+  - m_Id: 1777104567009280
+    m_Localized: All done, congratulations!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

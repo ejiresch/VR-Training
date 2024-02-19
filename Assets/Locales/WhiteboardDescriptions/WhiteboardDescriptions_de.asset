@@ -194,6 +194,10 @@ MonoBehaviour:
     m_Localized: Nehmen Sie die feuchte Nase von der Person ab
     m_Metadata:
       m_Items: []
+  - m_Id: 1777104567009280
+    m_Localized: "Alles fertig, Herzlichen Gl\xFCckwunsch!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
