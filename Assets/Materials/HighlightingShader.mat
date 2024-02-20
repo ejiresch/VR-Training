@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader_Test
+  m_Name: HighlightingShader
   m_Shader: {fileID: -6465566751694194690, guid: 9d24929885302134e94d4c556486ad74,
     type: 3}
   m_ValidKeywords: []

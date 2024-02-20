@@ -51,6 +51,7 @@ MonoBehaviour:
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0
   resetToolOnCompletion: 0
+  objectHighlight: {fileID: 2100000, guid: 7757758ff76c78242966eadf4bffa21c, type: 2}
   showControllerBelegung: 3
   text: "Das ist der Video Bereich. Solltest du w\xE4hrend einer Aufgabe nicht weiterkommen,
     kannst du dir das dazugeh\xF6rige Video ansehen."
