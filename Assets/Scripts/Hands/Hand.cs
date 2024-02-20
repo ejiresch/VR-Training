@@ -60,16 +60,15 @@ public class Hand : MonoBehaviour
 
         if (ProcessHandler.Instance.GetHandActive()==true)
         {
-            
            if(this.left.enabled == true && this.right.enabled == true)
             {
+
                 this.left.enabled = false;
                 this.right.enabled = false;
-                if(spawnedHand != null)
-                {
-                    disableVisibility();
-                }
-                
+            }
+            if (spawnedHand != null)
+            {
+                disableVisibility();
             }
         }
         else
@@ -79,11 +78,10 @@ public class Hand : MonoBehaviour
             {
                 this.left.enabled = true;
                 this.right.enabled = true;
-                if(spawnedHand != null)
-                {
-                    enableVisibility();
-                }
-                
+            }
+            if (spawnedHand != null)
+            {
+                enableVisibility();
             }
 
         }
