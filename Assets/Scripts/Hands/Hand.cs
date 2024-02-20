@@ -52,36 +52,45 @@ public class Hand : MonoBehaviour
     {
         if (this.left == null || this.right == null)
         {
-            this.left = GameObject.Find("Left Hand").GetComponent<Renderer>();
-            this.right = GameObject.Find("Right Hand").GetComponent<Renderer>();
+            GameObject g = GameObject.Find("Left Hand");
+            this.left = g?.GetComponent<Renderer>();
+            
+            GameObject g2 = GameObject.Find("Right Hand");
+            this.right = g?.GetComponent<Renderer>();
         }
         
 
 
         if (ProcessHandler.Instance.GetHandActive()==true)
         {
-           if(this.left.enabled == true && this.right.enabled == true)
+           if(left != null && right != null)
             {
+                if (this.left.enabled == true && this.right.enabled == true)
+                {
 
-                this.left.enabled = false;
-                this.right.enabled = false;
-            }
-            if (spawnedHand != null)
-            {
-                disableVisibility();
+                    this.left.enabled = false;
+                    this.right.enabled = false;
+                }
+                if (spawnedHand != null)
+                {
+                    disableVisibility();
+                }
             }
         }
         else
         {
 
-            if (this.left.enabled == false && this.right.enabled == false)
+           if(left != null && right != null)
             {
-                this.left.enabled = true;
-                this.right.enabled = true;
-            }
-            if (spawnedHand != null)
-            {
-                enableVisibility();
+                if (this.left.enabled == false && this.right.enabled == false)
+                {
+                    this.left.enabled = true;
+                    this.right.enabled = true;
+                }
+                if (spawnedHand != null)
+                {
+                    enableVisibility();
+                }
             }
 
         }
