@@ -11636,6 +11636,11 @@ MonoBehaviour:
     volume: 1
     loop: 0
     source: {fileID: 0}
+  - name: Latex Glove
+    clip: {fileID: 8300000, guid: 86d95712691a0094097519dfa59f30c6, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
   - name: click
     clip: {fileID: 8300000, guid: f97f328e9062a814b93a5acdc3df43f5, type: 3}
     volume: 1
