@@ -52,6 +52,7 @@ public class HandTouchTask : Task
         {
             yield return new WaitForFixedUpdate();
         }
+        FindObjectOfType<SoundManager>().ManageSound("Latex Glove", true, 1f);
         EndTask();
     }
 }
