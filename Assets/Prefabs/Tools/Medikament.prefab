@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 3690362659887997558}
   - component: {fileID: 8942627964769137050}
   - component: {fileID: -6493219018241484154}
-  - component: {fileID: -4864233408700315043}
+  - component: {fileID: 2760528894660227703}
   m_Layer: 0
   m_Name: Medikament
   m_TagString: Medikament
@@ -118,8 +118,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.032416336, y: 0.009975472, z: 0.031694785}
-  m_Center: {x: 0.0000000037252903, y: 0, z: -0.00036078412}
+  m_Size: {x: 0.032416336, y: 0.044049814, z: 0.031694785}
+  m_Center: {x: 0.0000000037252903, y: 0.000074736774, z: -0.0003607832}
 --- !u!95 &6247238165562775878
 Animator:
   serializedVersion: 4
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee422bd3ddb0ba41ada2d8b03f04393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-4864233408700315043
+--- !u!114 &2760528894660227703
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -362,14 +362,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7377189898647564526}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9700d10a78a66f49ab7cba896156131, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d5a3b0c40d41254ebf4d1bab5582c12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isGrabbed: 0
-  pressable: 0
   toggleReference: {fileID: 4247772908111231093, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  maxDistance: 0.05
+  distance: 0.1
+  hasToBeUsed: 0
   crushedMesh: {fileID: -8272065818239043596, guid: f9306d6dd2420224ba8bc7ea19e48fae,
     type: 3}
   crushed: 0

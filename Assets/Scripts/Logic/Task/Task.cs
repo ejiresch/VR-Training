@@ -109,7 +109,6 @@ public abstract class Task : MonoBehaviour
     // Wird am Ende der Task aufgerufen
     public virtual void FinishTask() => Destroy(this.gameObject);
 
-    //Created by Simon
     public virtual void highlightObject(GameObject highobj)
     {
         if(this.hilightingButton == false)

@@ -44,7 +44,6 @@ public class ProximityPressTask : PressTask
         while (taskActive)
         {
             pressObject.GetComponent<InteractableHandler>().SetIsGrabbed(Vector3.Distance(pressObject.transform.position, this.transform.position) < distance);
-            Debug.LogWarning(ProxObjects[0]+""+ ProxObjects[1]);
             pressObject.GetComponent<PressObject>().SetIsGrabbed(ProxObjects[0].GetComponent<ProximityActionObject>().GetInRange() || ProxObjects[1].GetComponent<ProximityActionObject>().GetInRange());
             if (pressObject.GetComponent<PressObject>().GetTaskCompletion())
             {
