@@ -36,6 +36,7 @@ public abstract class Task : MonoBehaviour
     private List<GameObject> HighlightedObjects = new List<GameObject>();
 
     private Boolean hilightingButton = false;
+    
 
     /// <summary>
     /// Gets called when Task is started
@@ -77,7 +78,7 @@ public abstract class Task : MonoBehaviour
     /// <returns></returns>
     public GameObject FindTool(string prefabName)
     {
-
+        
         for (int i = 0; i < spawnedTools.Length; i++)
         {
             if ((prefabName + "(Clone)") == spawnedTools[i].name)
@@ -231,6 +232,12 @@ public abstract class Task : MonoBehaviour
         else
         {
             hilightingButton = false;
+            /*
+            *   foreach (GameObject go in HighlightedObjects)
+            *{
+            *    highlightObject(go);
+            *}
+            */
         }
     }
 
