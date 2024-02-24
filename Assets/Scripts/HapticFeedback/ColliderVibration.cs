@@ -19,8 +19,7 @@ public class ColliderVibration : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (ProcessHandler.Instance.GetVibrationActive() != true) //schaut halt ob die funktion aktiviert oder deaktiviert ist kommentier halt aus und sag mir falls das was kaputt macht
-        {
+       
 
 
             float distanceRight = Vector3.Distance(other.transform.position, rechterController.transform.position);
@@ -33,7 +32,7 @@ public class ColliderVibration : MonoBehaviour
             {
                 links.SendHapticImpulse(0.4f, 0.1f);
             }
-        }
+        
        
     }
 }

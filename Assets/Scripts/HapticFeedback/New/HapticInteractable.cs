@@ -16,16 +16,20 @@ public class Haptic
         if (eventArgs.interactorObject is XRBaseControllerInteractor controllerInteractor)
         {
             TriggerHaptic(controllerInteractor.xrController);
-            Debug.Log("Haptik");
+            //Debug.Log("Haptik");
         }
     }
 
     public void TriggerHaptic(XRBaseController controller)
     {
-        if (intensity > 0)
+        if (ProcessHandler.Instance.GetVibrationActive() != true)
         {
-            controller.SendHapticImpulse(intensity, duration);
-            Debug.Log("Haptik");
+            if (intensity > 0)
+            {
+                controller.SendHapticImpulse(intensity, duration);
+                Debug.Log("Haptik");
+                
+            }
         }
     }
 }
