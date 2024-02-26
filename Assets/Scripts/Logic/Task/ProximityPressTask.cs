@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using development_a;
 using UnityEditor;
 using UnityEngine;
 
@@ -57,6 +58,7 @@ public class ProximityPressTask : PressTask
     }
     protected override void EndTask()
     {
+        FindObjectOfType<SoundManager>().ManageSound("Blop", true, 1f);
         base.EndTask();
     }
 }

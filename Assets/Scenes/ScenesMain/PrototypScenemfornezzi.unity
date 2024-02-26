@@ -11646,6 +11646,21 @@ MonoBehaviour:
     volume: 1
     loop: 0
     source: {fileID: 0}
+  - name: Plop
+    clip: {fileID: 8300000, guid: beb211afae230eb47afcae6c1d264179, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Blop
+    clip: {fileID: 8300000, guid: 2e292cf6d0c420e4181646a95422d9d7, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Swoosh
+    clip: {fileID: 8300000, guid: 4aa38d405bc45b349bf52824d0a9a517, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!114 &1927553958 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4529476429821932933, guid: 3aad0fe442fb5a3499590f29d410347f,

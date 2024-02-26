@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using development_a;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -51,6 +52,7 @@ public class DetachObjectTask : Task
         {
             yield return new WaitForFixedUpdate();
         }
+        FindObjectOfType<SoundManager>().ManageSound("Swoosh", true, 1f);
         EndTask();
     }
     

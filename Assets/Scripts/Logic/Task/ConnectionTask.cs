@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using development_a;
 using UnityEngine;
 // Eine Task welche fuer das Verbinden von einem ConnectorObject und Connectible zustaendig ist
 public class ConnectionTask : Task
@@ -29,6 +30,7 @@ public class ConnectionTask : Task
         {
             yield return new WaitForFixedUpdate();
         }
+        FindObjectOfType<SoundManager>().ManageSound("Plop", true, 1f);
         EndTask();
         if (Input.GetButtonDown("Jump"))
         {
