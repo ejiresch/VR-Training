@@ -53,8 +53,8 @@ MonoBehaviour:
   resetToolOnCompletion: 0
   objectHighlight: {fileID: 2100000, guid: 7757758ff76c78242966eadf4bffa21c, type: 2}
   showControllerBelegung: 3
-  text: "Das ist der Tool Tisch. Hier liegen alle Ger\xE4te welche du w\xE4hrend
-    der Aufgaben ben\xF6tigst."
+  text: "Das ist der Tool Tisch. Hier liegen alle Ger\xE4te die du w\xE4hrend der
+    Aufgaben ben\xF6tigst."
   textposition: {x: 2.993, y: -5.056, z: -0.137}
   rotation: 180
 --- !u!114 &4044826065118249579
