@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
 
 /// <summary>
 /// Abstract class that Describes a Class
@@ -36,7 +38,9 @@ public abstract class Task : MonoBehaviour
     private List<GameObject> HighlightedObjects = new List<GameObject>();
 
     private Boolean hilightingButton = false;
+    private int wasOff = 0;
     
+
 
     /// <summary>
     /// Gets called when Task is started
@@ -121,6 +125,7 @@ public abstract class Task : MonoBehaviour
             newMatArray[1] = objectHighlight;
             mesh.materials = newMatArray;
             HighlightedObjects.Add(highobj);
+            
         }
     }
 
@@ -169,6 +174,7 @@ public abstract class Task : MonoBehaviour
     {
         CompReset();
         removeHighlightfromObjects();
+        wasOff = 0;
         ProcessHandler.Instance.NextTask();
     }
     /// <summary>
@@ -227,17 +233,24 @@ public abstract class Task : MonoBehaviour
                 Material[] newMatArray = new Material[1];
                 newMatArray[0] = matArray[0];
                 mesh.materials = newMatArray;
+                wasOff = 1;
             }
         }
         else
         {
             hilightingButton = false;
-            /*
-            *   foreach (GameObject go in HighlightedObjects)
-            *{
-            *    highlightObject(go);
-            *}
-            */
+            
+            if(wasOff == 1)
+            {
+                
+                //foreach(GameObject go in HighlightedObjects)
+                //{
+                //    highlightObject(go);
+                //}
+           }
+            
+             
+           
         }
     }
 

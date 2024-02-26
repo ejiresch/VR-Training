@@ -53,7 +53,7 @@ MonoBehaviour:
   resetToolOnCompletion: 0
   objectHighlight: {fileID: 2100000, guid: 7757758ff76c78242966eadf4bffa21c, type: 2}
   showControllerBelegung: 3
-  text: Das ist das Whiteboard. Hier wird dir angezeigt welche Aufgaben du erledigen
+  text: Das ist das Whiteboard. Hier werden dir alle Aufgaben angezeigt, die du erledigen
     musst.
   textposition: {x: 0, y: -4.505, z: 0.964}
   rotation: -90
