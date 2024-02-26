@@ -45,7 +45,7 @@ public class TaskManager : MonoBehaviour
         }
 
         // Sound abspielen, wenn Task abgeschlossen wurde
-        gameObject.GetComponent<SoundManager>().ManageSound("taskdone", true, 0);
+        gameObject.GetComponent<SoundManager>().ManageSound("Complete", true, 3);
 
 
         Task task = StartNextTask();

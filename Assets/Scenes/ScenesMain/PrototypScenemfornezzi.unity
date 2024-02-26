@@ -11661,6 +11661,11 @@ MonoBehaviour:
     volume: 1
     loop: 0
     source: {fileID: 0}
+  - name: Complete
+    clip: {fileID: 8300000, guid: 5be2d8cf41a3b884c941b245779a7480, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
 --- !u!114 &1927553958 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4529476429821932933, guid: 3aad0fe442fb5a3499590f29d410347f,
