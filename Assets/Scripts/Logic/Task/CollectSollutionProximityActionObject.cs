@@ -14,6 +14,7 @@ public class CollectSollutionProximityActionObject : InteractableObject
     private bool inRange = false;
     private Animator anim;
     private bool activated = false;
+    private bool animplayed = false;
     private void Start()
     {
         anim = this.GetComponent<Animator>();
@@ -55,7 +56,11 @@ public class CollectSollutionProximityActionObject : InteractableObject
     {
         if (anim != null)
         {
-            anim.SetTrigger("reinpumpen");
+            if(!animplayed)
+            {
+                animplayed = true;
+                anim.SetTrigger("reinpumpen");
+            }
         }
         yield return new WaitForSeconds(1.3f);
     }

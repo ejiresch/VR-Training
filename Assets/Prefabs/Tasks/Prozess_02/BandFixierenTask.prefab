@@ -52,6 +52,7 @@ MonoBehaviour:
   warningMessage_KanueleFesthalten: 0
   resetToolOnCompletion: 0
   objectHighlight: {fileID: 2100000, guid: 7757758ff76c78242966eadf4bffa21c, type: 2}
+  stencilMask: {fileID: 2100000, guid: db5414ddc52fec24f85290609b9db803, type: 2}
   showControllerBelegung: 0
   bandLinks: {fileID: 8740253547829732437, guid: 06e1a4916e0f21c48b6f7daea1c79dc5,
     type: 3}

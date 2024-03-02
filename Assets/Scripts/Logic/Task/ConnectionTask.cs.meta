@@ -4,7 +4,8 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - objectHighlight: {fileID: 2100000, guid: 7757758ff76c78242966eadf4bffa21c, type: 2}
+  - objectHighlight: {instanceID: 0}
+  - stencilMask: {instanceID: 0}
   - connector: {instanceID: 0}
   - connectible: {instanceID: 0}
   executionOrder: 0

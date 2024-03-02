@@ -53,6 +53,7 @@ MonoBehaviour:
   warningMessage_KanueleFesthalten: 0
   resetToolOnCompletion: 0
   objectHighlight: {fileID: 2100000, guid: 7757758ff76c78242966eadf4bffa21c, type: 2}
+  stencilMask: {fileID: 2100000, guid: db5414ddc52fec24f85290609b9db803, type: 2}
   showControllerBelegung: 1
   touchObject: {fileID: 1808612825705206197, guid: b84a92fcc97d5584681cd98c55723cc0,
     type: 3}
