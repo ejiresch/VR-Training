@@ -75,23 +75,6 @@ public class TaskManager : MonoBehaviour
             currentTask = t;
         }
 
-        //List<GameObject> objects = t.HighlightedObjects();
-        //if (showIndicator == true)
-        //{
-        //if (objects != null)
-        //{
-        //for (int i = 0; i < objects.Count; i++)
-        //{
-        //Debug.Log(objects[i]);
-        //GameObject go = Instantiate(indicator);
-        //go.transform.position = new Vector3(objects[i].transform.position.x,
-        //objects[i].transform.position.y + 0.5f,
-        //objects[i].transform.position.z);
-        //Debug.Log(objects[i].transform.position);
-        //indicatorsCurrent.Add(go);
-        //}
-        //}
-        //}
         return t;
     }
 
@@ -123,36 +106,4 @@ public class TaskManager : MonoBehaviour
         return this.compoundObject;
     }
     public GameObject GetWoman() => this.woman;
-
-    public void SwitchIndicator()
-    {
-        /**if (showIndicator == true)
-        {
-            showIndicator = false;
-        }
-        else if (showIndicator == false)
-        {
-            showIndicator = true;
-        }*/
-        showIndicator = !showIndicator;
-        //Debug.Log("Indicator switched");
-        if (showIndicator == false)
-        {
-            GameObject o;
-            for(int i = 0; i < indicatorsCurrent.Count; i++) {
-                o = indicatorsCurrent[i];
-                o.SetActive(false);
-             }
-        }
-
-        if (showIndicator == true)
-        {
-            GameObject o;
-            for (int i = 0; i < indicatorsCurrent.Count; i++)
-            {
-                o = indicatorsCurrent[i];
-                o.SetActive(true);
-            }
-        }
-    }
 }
