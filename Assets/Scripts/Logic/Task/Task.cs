@@ -22,7 +22,8 @@ public abstract class Task : MonoBehaviour
     public bool warningMessage_BeideHaende = false;
     public bool warningMessage_KanueleFesthalten = false;
     public bool resetToolOnCompletion = false;
-    public Material objectHighlight;
+    public Material objectHighlight = null;
+    public Material stencilMask = null;
     [Tooltip("Blendet Einen Controller ein auf dem ein Button blinkt: 1: UseButton, 2: HoldButton, 3: A-Button 0: kein Controller wird angezeigt")]
     public int showControllerBelegung = 0;
 
@@ -118,14 +119,17 @@ public abstract class Task : MonoBehaviour
     {
         if(this.hilightingButton == false)
         {
-            MeshRenderer mesh = highobj.GetComponentInChildren<MeshRenderer>();
-            Material[] matArray = mesh.materials;
-            Material[] newMatArray = new Material[2];
-            newMatArray[0] = matArray[0];
-            newMatArray[1] = objectHighlight;
-            mesh.materials = newMatArray;
-            HighlightedObjects.Add(highobj);
-            
+            if(objectHighlight != null && stencilMask != null)
+            {
+                MeshRenderer mesh = highobj.GetComponentInChildren<MeshRenderer>();
+                Material[] matArray = mesh.materials;
+                Material[] newMatArray = new Material[3];
+                newMatArray[0] = matArray[0];
+                newMatArray[1] = stencilMask;
+                newMatArray[2] = objectHighlight;
+                mesh.materials = newMatArray;
+                HighlightedObjects.Add(highobj);
+            }
         }
     }
 
@@ -142,7 +146,8 @@ public abstract class Task : MonoBehaviour
                 newMatArray[0] = matArray[0];
                 mesh.materials = newMatArray;
             }
-       }
+            HighlightedObjects = new List<GameObject>();
+        }
     }
     ///<summary>
     ///  Sucht ein GameObject aus den spawnedTools anhand des Namens, wobei das GameObject auch ein child sein kann. 
