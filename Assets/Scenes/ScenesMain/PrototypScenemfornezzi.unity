@@ -6700,6 +6700,18 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
+--- !u!114 &1163431426 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4080953623411956184, guid: aa3bc0ba5c589984b9de73b03b462955,
+    type: 3}
+  m_PrefabInstance: {fileID: 561959143}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 380709ef4e706294081d1dc7d0a9f244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1181141406 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5291463307307851842, guid: 8432a4407adb54806944bc9e714a497b,
@@ -12723,6 +12735,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241191065744579285, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1163431426}
+    - target: {fileID: 8241191065744579285, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241191065744579285, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TVHandler, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8466582355923254077, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
