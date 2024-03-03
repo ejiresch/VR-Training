@@ -1450,64 +1450,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &199156356 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4080953621915427542, guid: aa3bc0ba5c589984b9de73b03b462955,
-    type: 3}
-  m_PrefabInstance: {fileID: 561959143}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &199156358 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4080953621915427540, guid: aa3bc0ba5c589984b9de73b03b462955,
-    type: 3}
-  m_PrefabInstance: {fileID: 561959143}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 199156356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &199156360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 199156356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_StringReference:
-    m_TableReference:
-      m_TableCollectionName: GUID:73b965613cb926d4097ee08af818a677
-    m_TableEntryReference:
-      m_KeyId: 408331354112
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  m_FormatArguments: []
-  m_UpdateString:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 199156358}
-        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
-        m_MethodName: set_text
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-  references:
-    version: 2
-    RefIds: []
 --- !u!1001 &256522389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3884,6 +3826,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ChangeButtonColor
       objectReference: {fileID: 0}
+    - target: {fileID: 4080953621915427542, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4080953622019585024, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_RootOrder
@@ -3912,12 +3859,17 @@ PrefabInstance:
     - target: {fileID: 4080953622656338496, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.201
+      value: -0.0825
       objectReference: {fileID: 0}
     - target: {fileID: 4080953622656338496, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.341
+      value: -0.2468
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080953622656338499, guid: aa3bc0ba5c589984b9de73b03b462955,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4080953622960155062, guid: aa3bc0ba5c589984b9de73b03b462955,
         type: 3}
@@ -12505,6 +12457,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 24510415363603249, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 24510415363603249, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.124
+      objectReference: {fileID: 0}
+    - target: {fileID: 24510415363603249, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.49
+      objectReference: {fileID: 0}
     - target: {fileID: 1150428460927507191, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -12669,6 +12636,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: Tracheostoma einsetzen
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955653633627260353, guid: db14cc08211f6874496ffcb573e622ac,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3955653633778729387, guid: db14cc08211f6874496ffcb573e622ac,
         type: 3}
