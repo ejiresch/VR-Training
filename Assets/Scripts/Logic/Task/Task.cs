@@ -122,13 +122,16 @@ public abstract class Task : MonoBehaviour
             if(objectHighlight != null && stencilMask != null)
             {
                 MeshRenderer mesh = highobj.GetComponentInChildren<MeshRenderer>();
-                Material[] matArray = mesh.materials;
-                Material[] newMatArray = new Material[3];
-                newMatArray[0] = matArray[0];
-                newMatArray[1] = stencilMask;
-                newMatArray[2] = objectHighlight;
-                mesh.materials = newMatArray;
-                HighlightedObjects.Add(highobj);
+                if(mesh != null)
+                {
+                    Material[] matArray = mesh.materials;
+                    Material[] newMatArray = new Material[3];
+                    newMatArray[0] = matArray[0];
+                    newMatArray[1] = stencilMask;
+                    newMatArray[2] = objectHighlight;
+                    mesh.materials = newMatArray;
+                    HighlightedObjects.Add(highobj);
+                }
             }
         }
     }
