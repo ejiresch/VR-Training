@@ -7,7 +7,8 @@ using TMPro;
 public class ProximityActionTaskWithCanvas : ProximityActionTask
 {
     public string text;
-
+    public int fontSize = 36;
+    public float controllerBelegungSize = 1.2f;
 
     public GameObject cam;
 
@@ -33,6 +34,9 @@ public class ProximityActionTaskWithCanvas : ProximityActionTask
         TextMeshProUGUI[] text = tutorialCanvas.GetComponentsInChildren<TextMeshProUGUI>();
         // [1] da sonnst nur der TextMeshPro des Buttons gefunden wird
         text[1].text = this.text;
+        text[1].fontSize = this.fontSize;
+
+        base.controllerBelegungSetup(controllerBelegungSize,Task.CONTROLLER_BELEGUNG_POSITION_TEMPLATE_2);
 
         // Finde den Button im Canvas
         Button button = tutorialCanvas.GetComponentInChildren<Button>();

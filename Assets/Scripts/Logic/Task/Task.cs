@@ -40,7 +40,10 @@ public abstract class Task : MonoBehaviour
 
     private Boolean hilightingButton = false;
     private int wasOff = 0;
-    
+
+
+    public static readonly Vector3 CONTROLLER_BELEGUNG_POSITION_TEMPLATE_1 = new Vector3(0.629f, -0.049f,0);
+    public static readonly Vector3 CONTROLLER_BELEGUNG_POSITION_TEMPLATE_2 = new Vector3(0, 0.2f, 0);
 
 
     /// <summary>
@@ -317,10 +320,22 @@ public abstract class Task : MonoBehaviour
                 cB_AButton.enabled = true;
                 break;
         }
-        
+
+        RectTransform cb = GameObject.Find("ControllerBelegung").GetComponent<RectTransform>();
+        cb.localScale = new Vector3(1.2f,1.2f,1.2f);
+        cb.localPosition = CONTROLLER_BELEGUNG_POSITION_TEMPLATE_1;
+
     }
 
-    public void setDescription(String description)
+    protected void controllerBelegungSetup(float size, Vector3 controllerBelegungPosition_Template) 
+    {
+        controllerBelegungSetup();
+        RectTransform cb = GameObject.Find("ControllerBelegung").GetComponent<RectTransform>();
+        cb.localScale = new Vector3(size, size, size);
+        cb.localPosition = controllerBelegungPosition_Template;
+    }
+
+        public void setDescription(String description)
     {
         this.description = description;
     }

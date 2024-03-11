@@ -8,6 +8,8 @@ public class GrabTaskWithCanvas : GrabTask
 {
 
     public string text;
+    public int fontSize = 36;
+    public float controllerBelegungSize = 1.2f;
 
 
     public GameObject cam;
@@ -23,11 +25,9 @@ public class GrabTaskWithCanvas : GrabTask
         cam = FindObjectOfType<Camera>().gameObject;
 
         tutorialCanvas.GetComponent<RectTransform>().position = grabObject.transform.position + Vector3.up * 0.2f;
-        tutorialCanvas.GetComponent<RectTransform>().LookAt(cam.transform);
+        
 
-        Vector3 drehung = new Vector3(0, 180 + tutorialCanvas.GetComponent<RectTransform>().rotation.eulerAngles.y, tutorialCanvas.GetComponent<RectTransform>().rotation.eulerAngles.z);
-
-        tutorialCanvas.GetComponent<RectTransform>().rotation = Quaternion.Euler(drehung);
+        
 
         //Wartezeit ist anders als bei anderen Tutorial Tasks da es mit dem Timing so besser passt. Sollte man probably nicht hardcoden da es nur für einen spezifischen Fall ist, aber ich glaube das ist eine Aufgabe für die Kollegen im nächsten Jahr
         yield return new WaitForSeconds(1.5f);
@@ -39,6 +39,11 @@ public class GrabTaskWithCanvas : GrabTask
         TextMeshProUGUI[] text = tutorialCanvas.GetComponentsInChildren<TextMeshProUGUI>();
         // [1] da sonnst nur der TextMeshPro des Buttons gefunden wird
         text[1].text = this.text;
+        text[1].fontSize = this.fontSize;
+
+        base.controllerBelegungSetup(controllerBelegungSize, Task.CONTROLLER_BELEGUNG_POSITION_TEMPLATE_2);
+
+        
 
         // Finde den Button im Canvas
         Button button = tutorialCanvas.GetComponentInChildren<Button>();
@@ -75,4 +80,13 @@ public class GrabTaskWithCanvas : GrabTask
 
     }
     */
+
+    public void Update()
+    {
+        base.Update();
+        tutorialCanvas.GetComponent<RectTransform>().LookAt(cam.transform);
+        Vector3 drehung = new Vector3(0, 180 + tutorialCanvas.GetComponent<RectTransform>().rotation.eulerAngles.y, tutorialCanvas.GetComponent<RectTransform>().rotation.eulerAngles.z);
+
+        tutorialCanvas.GetComponent<RectTransform>().rotation = Quaternion.Euler(drehung);
+    }
 }

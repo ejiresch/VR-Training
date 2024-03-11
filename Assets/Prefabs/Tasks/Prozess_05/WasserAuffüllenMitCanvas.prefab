@@ -60,6 +60,8 @@ MonoBehaviour:
   touchTarget: {fileID: 5664044047155542320, guid: 472d1f77943cde24c943d20742d71744,
     type: 3}
   text: "Halte die Spritze ins Wasserglas und dr\xFCcke die \"Interagieren Taste\""
+  fontSize: 24
+  controllerBelegungSize: 0.5
   cam: {fileID: 0}
 --- !u!114 &-8455704766604270845
 MonoBehaviour:
