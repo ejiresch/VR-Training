@@ -22,9 +22,11 @@ public class Hand : MonoBehaviour
     private SkinnedMeshRenderer _mesh;
 
 
+    private bool shouldShow = false;
     private void Start()
     {
         InitializeHand();
+        
     }
 
     private void InitializeHand()
@@ -48,53 +50,30 @@ public class Hand : MonoBehaviour
 
 
     // Update is called once per frame
+    // Update is called once per frame
     public void Update()
     {
-        if (this.left == null || this.right == null)
+
+        if (ProcessHandler.Instance.GetHandActive() == true)
         {
-            GameObject g = GameObject.Find("Left Hand");
-            this.left = g?.GetComponent<Renderer>();
-            
-            GameObject g2 = GameObject.Find("Right Hand");
-            this.right = g2?.GetComponent<Renderer>();
+            shouldShow = true;
         }
-        
-
-
-        if (ProcessHandler.Instance.GetHandActive()==true)
-        {
-           if(left != null && right != null)
-            {
-                if (this.left.enabled == true && this.right.enabled == true)
-                {
-
-                    this.left.enabled = false;
-                    this.right.enabled = false;
-                }
-            }
-            if (spawnedHand != null)
-            {
-                disableVisibility();
-            }
-        }   
         else
         {
-
-           if(left != null && right != null)
-            {
-                if (this.left.enabled == false && this.right.enabled == false)
-                {
-                    this.left.enabled = true;
-                    this.right.enabled = true;
-                }
-                
-            }
-            if (spawnedHand != null)
-            {
-                enableVisibility();
-            }
-
+            shouldShow= false;
         }
+
+       
+
+        if (shouldShow==false) {
+                 enableVisibility();
+                }
+      
+
+
+        
+
+            
         //Since our target device might not register at the start of the scene, we continously check until one is found.
         if (!_targetDevice.isValid)
         {
@@ -107,26 +86,36 @@ public class Hand : MonoBehaviour
 
     }
 
+
     private void UpdateHand()
     {
-        //This will get the value for our trigger from the target device and output a flaot into triggerValue
-        if (_targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
-        {
-            _handAnimator.SetFloat("Trigger", triggerValue);
-        }
-        else
-        {
-            _handAnimator.SetFloat("Trigger", 0);
-        }
-        //This will get the value for our grip from the target device and output a flaot into gripValuel
-        if (_targetDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue))
-        {
-            _handAnimator.SetFloat("Grip", gripValue);
-        }
-        else
-        {
-            _handAnimator.SetFloat("Grip", 0);
-        }
+            //This will get the value for our trigger from the target device and output a flaot into triggerValue
+            if (_targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
+            {
+                _handAnimator.SetFloat("Trigger", triggerValue);
+               
+            }
+            else
+            {
+                _handAnimator.SetFloat("Trigger", 0);
+                
+
+            }
+       
+            //This will get the value for our grip from the target device and output a flaot into gripValuel
+            if (_targetDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue))
+            {
+                _handAnimator.SetFloat("Grip", gripValue);
+                
+
+            }
+            else
+            {
+                _handAnimator.SetFloat("Grip", 0);
+               
+
+            }
+        
     }
 
     public void disableVisibility()

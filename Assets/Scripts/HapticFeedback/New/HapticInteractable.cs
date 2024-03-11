@@ -11,6 +11,9 @@ public class Haptic
     public float intensity;
     public float duration;
 
+    public float intensityOff = 0.0f;
+    public float durationOff = 0.0f;
+
     public void TriggerHaptic(BaseInteractionEventArgs eventArgs)
     {
         if (eventArgs.interactorObject is XRBaseControllerInteractor controllerInteractor)
@@ -30,6 +33,10 @@ public class Haptic
                 Debug.Log("Haptik");
                 
             }
+        }
+        else
+        {
+            controller.SendHapticImpulse(intensityOff, durationOff);
         }
     }
 }

@@ -26,11 +26,11 @@ public class ColliderVibration : MonoBehaviour
             float disanceLeft = Vector3.Distance(other.transform.position, linkerController.transform.position);
             if (distanceRight < disanceLeft)
             {
-                rechts.SendHapticImpulse(0.4f, 0.1f);
+                //rechts.SendHapticImpulse(0.4f, 0.1f);
             }
             else
             {
-                links.SendHapticImpulse(0.4f, 0.1f);
+                //links.SendHapticImpulse(0.4f, 0.1f);
             }
         
        
