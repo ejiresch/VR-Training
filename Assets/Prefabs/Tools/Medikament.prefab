@@ -16,9 +16,10 @@ GameObject:
   - component: {fileID: 6247238165562775878}
   - component: {fileID: -3397281951121404259}
   - component: {fileID: 3690362659887997558}
-  - component: {fileID: 8942627964769137050}
   - component: {fileID: -6493219018241484154}
   - component: {fileID: 2760528894660227703}
+  - component: {fileID: 8942627964769137050}
+  - component: {fileID: -4038572660448155152}
   m_Layer: 0
   m_Name: Medikament
   m_TagString: Medikament
@@ -329,18 +330,6 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &8942627964769137050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7377189898647564526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85dbf2fe8be236a4e8304c9ff8429a02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-6493219018241484154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,3 +362,28 @@ MonoBehaviour:
   crushedMesh: {fileID: -8272065818239043596, guid: f9306d6dd2420224ba8bc7ea19e48fae,
     type: 3}
   crushed: 0
+--- !u!114 &8942627964769137050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7377189898647564526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dbf2fe8be236a4e8304c9ff8429a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4038572660448155152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7377189898647564526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc4ed88f9ffcd54eac9bcf65e41e1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 0}

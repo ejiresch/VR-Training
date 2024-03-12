@@ -12,13 +12,13 @@ Shader "Unlit/Outline"
     {
         // properties that can be set in the Outline Shader
         _Color("Outline color", Color) = (.25, .5, .5, 1)
-        _Scale ("Outline Scale", Range(1.0, 2.0)) = 1.5
-        [IntRange] _StencilID ("StencilID", Range(0,255)) = 0
+        _Scale("Outline Scale", Range(1.0, 2.0)) = 1.5
+        [IntRange] _StencilID("StencilID", Range(0,255)) = 0
     }
-    SubShader
+        SubShader
     {
-        Tags { 
-            "RenderType"="Opaque"
+        Tags {
+            "RenderType" = "Opaque"
             "RenderPipeline" = "UniversalPipeline"
             "Queue" = "Geometry"}
 
@@ -27,11 +27,11 @@ Shader "Unlit/Outline"
             // check for stencil here
             Stencil
             {
-                Ref [_StencilID] // reference value = write this stencil value
+                Ref[_StencilID] // reference value = write this stencil value
                 Comp NotEqual // if the stencil value is equal, then fail, i.e., do not render
                 // never change the stencil value
-                Pass Keep 
-                Fail Keep 
+                Pass Keep
+                Fail Keep
             }
 
             CGPROGRAM
@@ -44,6 +44,8 @@ Shader "Unlit/Outline"
             {
                 float4 vertex : POSITION;
                 float2 uv : TEXCOORD0;
+
+                UNITY_VERTEX_INPUT_INSTANCE_ID
             };
 
             struct v2f
@@ -51,6 +53,8 @@ Shader "Unlit/Outline"
                 float2 uv : TEXCOORD0;
                 UNITY_FOG_COORDS(1)
                 float4 vertex : SV_POSITION;
+
+                UNITY_VERTEX_OUTPUT_STEREO
             };
 
             // declare the properties here again so they work in the shader
@@ -60,6 +64,11 @@ Shader "Unlit/Outline"
             v2f vert (appdata v)
             {
                 v2f o;
+
+                UNITY_SETUP_INSTANCE_ID(v); //Insert
+                UNITY_INITIALIZE_OUTPUT(v2f, o); //Insert
+                UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o); //Insert
+
                 float4 scaledVert = v.vertex;
                 scaledVert.xyz *= _Scale; // make the object bigger, so the outline is visible
                 o.vertex = UnityObjectToClipPos(scaledVert);
