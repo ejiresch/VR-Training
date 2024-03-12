@@ -12,7 +12,7 @@ Shader "Unlit/Outline"
     {
         // properties that can be set in the Outline Shader
         _Color("Outline color", Color) = (.25, .5, .5, 1)
-        _Scale("Outline Scale", Range(1.0, 2.0)) = 1.5
+        _Scale("Outline Scale", Range(0.001, 0.1)) = 0.01
         [IntRange] _StencilID("StencilID", Range(0,255)) = 0
     }
         SubShader
@@ -44,6 +44,7 @@ Shader "Unlit/Outline"
             {
                 float4 vertex : POSITION;
                 float2 uv : TEXCOORD0;
+                float3 normal : NORMAL;
 
                 UNITY_VERTEX_INPUT_INSTANCE_ID
             };
@@ -69,8 +70,16 @@ Shader "Unlit/Outline"
                 UNITY_INITIALIZE_OUTPUT(v2f, o); //Insert
                 UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o); //Insert
 
+                //https://forum.unity.com/threads/can-i-get-the-scale-in-the-transform-of-the-object-i-attach-a-shader-to-if-so-how.418345/
+                float3 worldScale = float3(
+                length(float3(unity_ObjectToWorld[0].x, unity_ObjectToWorld[1].x, unity_ObjectToWorld[2].x)), // scale x axis
+                length(float3(unity_ObjectToWorld[0].y, unity_ObjectToWorld[1].y, unity_ObjectToWorld[2].y)), // scale y axis
+                length(float3(unity_ObjectToWorld[0].z, unity_ObjectToWorld[1].z, unity_ObjectToWorld[2].z))  // scale z axis
+                );
+
                 float4 scaledVert = v.vertex;
-                scaledVert.xyz *= _Scale; // make the object bigger, so the outline is visible
+                //scaledVert.xyz *= _Scale; // make the object bigger, so the outline is visible
+                scaledVert.xyz += v.normal * _Scale / worldScale;
                 o.vertex = UnityObjectToClipPos(scaledVert);
                 o.uv = v.uv;
                 return o;
