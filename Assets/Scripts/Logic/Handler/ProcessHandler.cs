@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
+using UnityEngine.Localization.Settings;
 // Class responsible for loading Assets and assigning Tasks to the Task-Manager 
 // Also provides References to important GameObjects
 public class ProcessHandler : MonoBehaviour
@@ -40,6 +41,8 @@ public class ProcessHandler : MonoBehaviour
         int pi = 101;
         if (PlayerPrefs.HasKey(ppKey)) pi = PlayerPrefs.GetInt(ppKey);
         else PlayerPrefs.SetInt(ppKey, 0);
+        //setzt die Sprache auf Deutsch
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[0];
         LoadScene(pi);
     }
 
