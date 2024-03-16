@@ -22,7 +22,7 @@ public class Hand : MonoBehaviour
     private SkinnedMeshRenderer _mesh;
 
 
-    private bool shouldShow = false;
+    private bool shouldShow = true;
     private void Start()
     {
         InitializeHand();
@@ -56,11 +56,11 @@ public class Hand : MonoBehaviour
 
         if (ProcessHandler.Instance.GetHandActive() == true)
         {
-            shouldShow = true;
-        }
+            shouldShow = false;
+        }   
         else
         {
-            shouldShow= false;
+            shouldShow= true;
         }
 
        
@@ -120,11 +120,18 @@ public class Hand : MonoBehaviour
 
     public void disableVisibility()
     {
-        _mesh.enabled = false;
+        if (spawnedHand != null)
+        {
+            _mesh.enabled = false;
+           }
     }
 
     public void enableVisibility()
     {
-        _mesh.enabled = true;
+        if(spawnedHand!= null)
+        {
+            _mesh.enabled = true;
+
+        }
     }
 }
