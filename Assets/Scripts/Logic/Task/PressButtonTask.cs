@@ -7,6 +7,8 @@ using TMPro;
 public class PressButtonTask : Task
 {
     public string text;
+    public int fontSize = 36;
+    public float controllerBelegungSize = 1.2f;
 
 
     private bool buttonClicked = false;
@@ -42,7 +44,10 @@ public class PressButtonTask : Task
         // [1] da sonnst nur der TextMeshPro des Buttons gefunden wird
         text[1].text = this.text;
 
+        text[1].fontSize = this.fontSize;
 
+
+        
 
         // Finde den Button im Canvas
         Button button = tutorialCanvas.GetComponentInChildren<Button>();
@@ -54,6 +59,7 @@ public class PressButtonTask : Task
         }
 
         base.StartTask(false);
+        base.controllerBelegungSetup(controllerBelegungSize, Task.CONTROLLER_BELEGUNG_POSITION_TEMPLATE_1);
     }
 
 
