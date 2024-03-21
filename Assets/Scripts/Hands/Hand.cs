@@ -118,6 +118,9 @@ public class Hand : MonoBehaviour
         
     }
 
+    /**
+     * Deaktiviert das Hand Mesh
+     */
     public void disableVisibility()
     {
         if (spawnedHand != null)
@@ -126,6 +129,9 @@ public class Hand : MonoBehaviour
            }
     }
 
+    /**
+     * Aktiviert das Hand Mesh
+     */
     public void enableVisibility()
     {
         if(spawnedHand!= null)
