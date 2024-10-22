@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ScenesMain/Lisjak_Mainmenu2.unity
     guid: 4f6867562c712e04c9454e6a752b560b
+  - enabled: 0
+    path: Assets/Scenes/ScenesTest/PerformanceTestEmpty.unity
+    guid: 593cf3bb80eea7b4b92e38d29e6e66f8
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 29ae344b1e6a7944185c407743d2c475,
       type: 2}
