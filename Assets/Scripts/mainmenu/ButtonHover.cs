@@ -141,7 +141,7 @@ public class ButtonHover : MonoBehaviour
                     case "Tutorial":
                         //Debug.Log("tutorial");
                         PlayerPrefs.SetInt(ppkey, 105);
-                        SceneManager.LoadScene(0);
+                        SceneManager.LoadScene("PrototypSceneKaraca");
                         break;
                 }
 
