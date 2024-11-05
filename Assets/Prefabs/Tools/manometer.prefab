@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4293335148579379986}
   - component: {fileID: 5273363562814447825}
   - component: {fileID: 791881840987354389}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: druckteil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 283949569124468445}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Manometer_Modell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 7583660443623591769}
   - component: {fileID: 1607560302764742994}
   - component: {fileID: 2349374459167253072}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "gro\xDFesteil"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 1971720246265520870}
   - component: {fileID: 2697537267660738908}
   - component: {fileID: -1439241353344908039}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: manometer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ Transform:
   m_GameObject: {fileID: 4561207380521413469}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 283949569124468445}
@@ -277,8 +277,17 @@ MonoBehaviour:
     m_Bits: 55
   m_InteractionLayers:
     m_Bits: 1
+  m_DistanceCalculationMode: 1
   m_SelectMode: 0
+  m_FocusMode: 1
   m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -303,12 +312,27 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -361,6 +385,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
+  m_SecondaryAttachTransform: {fileID: 0}
+  m_UseDynamicAttach: 0
+  m_MatchAttachPosition: 1
+  m_MatchAttachRotation: 1
+  m_SnapToColliderVolume: 1
+  m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
   m_MovementType: 0
   m_VelocityDamping: 1
@@ -375,6 +405,10 @@ MonoBehaviour:
   m_SmoothRotation: 0
   m_SmoothRotationAmount: 5
   m_TightenRotation: 0.5
+  m_TrackScale: 1
+  m_SmoothScale: 0
+  m_SmoothScaleAmount: 8
+  m_TightenScale: 0.1
   m_ThrowOnDetach: 1
   m_ThrowSmoothingDuration: 0.25
   m_ThrowSmoothingCurve:
@@ -397,6 +431,9 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+  m_StartingSingleGrabTransformers: []
+  m_StartingMultipleGrabTransformers: []
+  m_AddDefaultGrabTransformers: 1
 --- !u!114 &-4562019329338428734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,7 +517,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8868913807803597162}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Anchorpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +550,7 @@ GameObject:
   - component: {fileID: 2895512910512493590}
   - component: {fileID: 8691956090304658036}
   - component: {fileID: 8162735046694788639}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Nadel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -595,7 +632,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6423416541458864664}
   - component: {fileID: 8067692433783465215}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rotated_box_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2479288750193548432}
   - component: {fileID: -5550706593777898014}
   - component: {fileID: 3196445499727166589}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left Hand
   m_TagString: touchHand
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 7621024466691337287}
   - component: {fileID: 3162042729123385910}
   - component: {fileID: 524932615891518027}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left Hand
   m_TagString: touchMaterial
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6998852687833963037}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

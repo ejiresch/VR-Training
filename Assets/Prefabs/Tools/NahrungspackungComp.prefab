@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5080200717378346753}
   - component: {fileID: 2532056419872849729}
   - component: {fileID: 3100882361503605429}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NahrungspackungComp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,8 @@ Transform:
   m_GameObject: {fileID: 195317620184111067}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3019929414635034124}
   - {fileID: 3029251411511618237}
@@ -126,7 +127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2117889219479681276}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: curve10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,6 +144,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.053371213, y: -0.123927325, z: -0.0310548}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7911055368430445824}
   m_RootOrder: 9
@@ -158,7 +160,7 @@ GameObject:
   - component: {fileID: 7911055368430445824}
   - component: {fileID: 4230805683701311085}
   - component: {fileID: 3675121819772715915}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pCube9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,6 +177,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.053371213, y: 0.123927325, z: 0.0310548}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4827960126593573530}
   - {fileID: 6337263076223892934}
@@ -209,10 +212,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -237,6 +242,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1315605033903225865
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,7 +252,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6044899746060720569}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: transform2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,6 +269,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8355480035174376849}
   m_RootOrder: 0
@@ -276,7 +283,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8355480035174376849}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pCube5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,6 +300,7 @@ Transform:
   m_LocalRotation: {x: 6.123234e-17, y: 1, z: -6.123234e-17, w: -6.123234e-17}
   m_LocalPosition: {x: 0.050950654, y: 0.117764115, z: 0.031054797}
   m_LocalScale: {x: 0.38105154, y: 2.527386, z: 2.527386}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6044899746060720569}
   m_Father: {fileID: 720075643861241185}
@@ -307,7 +315,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7525144176298974368}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: curve5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,6 +332,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.053371213, y: -0.123927325, z: -0.0310548}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7911055368430445824}
   m_RootOrder: 4
@@ -337,7 +346,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6337263076223892934}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: curve2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,6 +363,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.053371213, y: -0.123927325, z: -0.0310548}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7911055368430445824}
   m_RootOrder: 1
@@ -367,7 +377,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4754692627634465404}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: curve7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,6 +394,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.053371213, y: -0.123927325, z: -0.0310548}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7911055368430445824}
   m_RootOrder: 6
@@ -397,7 +408,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3306453022290747115}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: curve8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,6 +425,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.053371213, y: -0.123927325, z: -0.0310548}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7911055368430445824}
   m_RootOrder: 7
@@ -427,7 +439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3354805123639202635}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: transform3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,6 +456,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 427228967132356695}
   m_RootOrder: 0
@@ -457,7 +470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1476332273221052411}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: transform1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -474,6 +487,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4483763631456407678}
   m_RootOrder: 0
@@ -489,7 +503,7 @@ GameObject:
   - component: {fileID: 6704556881437091662}
   - component: {fileID: 3359007408447343203}
   - component: {fileID: 7613514461066759875}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pCube7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,6 +520,7 @@ Transform:
   m_LocalRotation: {x: -0.34989437, y: 0, z: -0, w: 0.93678916}
   m_LocalPosition: {x: 0.05277913, y: 0.18962891, z: -0.03879472}
   m_LocalScale: {x: 1, y: 1, z: 1.7575338}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 720075643861241185}
   m_RootOrder: 6
@@ -529,10 +544,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -557,6 +574,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &6182025420476090552
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,7 +587,7 @@ GameObject:
   - component: {fileID: 7233191723159690736}
   - component: {fileID: 9021396986455112223}
   - component: {fileID: 7840031288506427295}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Nahrung
   m_TagString: liquid
   m_Icon: {fileID: 0}
@@ -586,6 +604,7 @@ Transform:
   m_LocalRotation: {x: 0.4009563, y: -0, z: -0, w: 0.9160972}
   m_LocalPosition: {x: 0.053, y: 0.125, z: 0.033000007}
   m_LocalScale: {x: 0.005, y: 0.152, z: 0.15}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 720075643861241185}
   m_RootOrder: 0
@@ -609,10 +628,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -637,6 +658,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &7840031288506427295
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -659,7 +681,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7646414296192181982}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: curve11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -676,6 +698,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.053371213, y: -0.123927325, z: -0.0310548}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7911055368430445824}
   m_RootOrder: 10
@@ -689,7 +712,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 427228967132356695}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pCube8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -706,6 +729,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.054004747, y: 0.009714004, z: 0.030806195}
   m_LocalScale: {x: 1.0417947, y: 1, z: 1.5550325}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3354805123639202635}
   m_Father: {fileID: 720075643861241185}
@@ -720,7 +744,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3907568732908588480}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: curve4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -737,6 +761,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.053371213, y: -0.123927325, z: -0.0310548}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7911055368430445824}
   m_RootOrder: 3
@@ -750,7 +775,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7948021494804283508}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: transform4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -767,6 +792,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.053371213, y: -0.117764086, z: -0.031054797}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 195877862290148591}
   m_RootOrder: 0
@@ -782,7 +808,7 @@ GameObject:
   - component: {fileID: 6988390503790274833}
   - component: {fileID: 7044801079838886647}
   - component: {fileID: 4903180378575949072}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -799,6 +825,7 @@ Transform:
   m_LocalRotation: {x: -0.37159675, y: -0.00071523926, z: -0.00031090618, w: 0.9283939}
   m_LocalPosition: {x: 0.052400947, y: 0.1874706, z: -0.044560805}
   m_LocalScale: {x: 0.5976461, y: 0.5976461, z: 0.5976461}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 720075643861241185}
   m_RootOrder: 2
@@ -822,10 +849,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -850,6 +879,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &7857631956203565081
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,7 +889,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4827960126593573530}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: curve1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -876,6 +906,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.053371213, y: -0.123927325, z: -0.0310548}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7911055368430445824}
   m_RootOrder: 0
@@ -889,7 +920,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 195877862290148591}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pCube6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -906,6 +937,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.053371213, y: 0.13251922, z: 0.031054797}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7948021494804283508}
   m_Father: {fileID: 720075643861241185}
@@ -920,7 +952,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4483763631456407678}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pCube4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -937,6 +969,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.05579177, y: 0.117764115, z: 0.031054797}
   m_LocalScale: {x: 0.38105154, y: 2.527386, z: 2.527386}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1476332273221052411}
   m_Father: {fileID: 720075643861241185}
@@ -951,7 +984,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9181396932868234421}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: curve3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -968,6 +1001,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.053371213, y: -0.123927325, z: -0.0310548}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7911055368430445824}
   m_RootOrder: 2
@@ -981,7 +1015,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 465500242317726648}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: curve6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -998,6 +1032,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.053371213, y: -0.123927325, z: -0.0310548}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7911055368430445824}
   m_RootOrder: 5
@@ -1011,7 +1046,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2439748848603265134}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: curve9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1028,6 +1063,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.053371213, y: -0.123927325, z: -0.0310548}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7911055368430445824}
   m_RootOrder: 8
@@ -1151,15 +1187,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 935076fcc34d90442b668eb8a72691eb, type: 3}
---- !u!1 &6065725820666401395 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 634931743882419426, guid: 935076fcc34d90442b668eb8a72691eb,
-    type: 3}
-  m_PrefabInstance: {fileID: 6693037828416687761}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3029251411511618237 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8568206500517340204, guid: 935076fcc34d90442b668eb8a72691eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 6693037828416687761}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6065725820666401395 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 634931743882419426, guid: 935076fcc34d90442b668eb8a72691eb,
     type: 3}
   m_PrefabInstance: {fileID: 6693037828416687761}
   m_PrefabAsset: {fileID: 0}
