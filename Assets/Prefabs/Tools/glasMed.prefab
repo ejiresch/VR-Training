@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2897137391822569009}
   - component: {fileID: 8869963466571536198}
   - component: {fileID: 1626242845833368533}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MedLiquid
   m_TagString: liquid
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ Transform:
   m_GameObject: {fileID: 5664044047155542320}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.519, y: -6.4026, z: 2.0006}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 7.5, y: 7.5, z: 7.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 655473395271572212}
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 3253132620556188225}
   - component: {fileID: 3175432882165556095}
   - component: {fileID: 5991600972093355969}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

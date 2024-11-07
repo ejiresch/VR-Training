@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4397088972951379757}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BandLinksAnchorpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 4130891288885884490}
   - component: {fileID: 9120294862560510663}
   - component: {fileID: -2624878528418204925}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: kanuele
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ Transform:
   m_GameObject: {fileID: 6645954436737465285}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4225154029821941760}
@@ -110,8 +110,17 @@ MonoBehaviour:
     m_Bits: 0
   m_InteractionLayers:
     m_Bits: 1
+  m_DistanceCalculationMode: 1
   m_SelectMode: 0
+  m_FocusMode: 1
   m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -136,12 +145,27 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -218,6 +242,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
+  m_SecondaryAttachTransform: {fileID: 0}
+  m_UseDynamicAttach: 0
+  m_MatchAttachPosition: 1
+  m_MatchAttachRotation: 1
+  m_SnapToColliderVolume: 1
+  m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
   m_MovementType: 0
   m_VelocityDamping: 1
@@ -232,6 +262,10 @@ MonoBehaviour:
   m_SmoothRotation: 0
   m_SmoothRotationAmount: 5
   m_TightenRotation: 0.5
+  m_TrackScale: 1
+  m_SmoothScale: 0
+  m_SmoothScaleAmount: 8
+  m_TightenScale: 0.1
   m_ThrowOnDetach: 1
   m_ThrowSmoothingDuration: 0.25
   m_ThrowSmoothingCurve:
@@ -254,6 +288,9 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+  m_StartingSingleGrabTransformers: []
+  m_StartingMultipleGrabTransformers: []
+  m_AddDefaultGrabTransformers: 1
 --- !u!114 &7302028714749927121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,7 +360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5847883647542590164}
   - component: {fileID: 5376500441495087093}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rotated_capsule_collider_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -368,7 +405,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5696059313150791599}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BandRechtsAnchorpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,7 +437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5125504616682015562}
   - component: {fileID: 1430708603134079502}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rotated_capsule_collider_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,7 +482,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2418901996986498073}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TKAnchorpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -474,10 +511,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6645954436737465284}
     m_Modifications:
+    - target: {fileID: 758869379737505596, guid: 675ffab1244991a4da9fe7d2eed5244f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1769262579808509783, guid: 675ffab1244991a4da9fe7d2eed5244f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2443098367152688957, guid: 675ffab1244991a4da9fe7d2eed5244f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 2744864372075727987, guid: 675ffab1244991a4da9fe7d2eed5244f,
         type: 3}
       propertyPath: m_Name
       value: NaseAnchorpoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744864372075727987, guid: 675ffab1244991a4da9fe7d2eed5244f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898586350933842991, guid: 675ffab1244991a4da9fe7d2eed5244f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5061404247115801524, guid: 675ffab1244991a4da9fe7d2eed5244f,
         type: 3}
@@ -538,6 +600,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: kanuele_modell
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581764186415692046, guid: 675ffab1244991a4da9fe7d2eed5244f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 675ffab1244991a4da9fe7d2eed5244f, type: 3}

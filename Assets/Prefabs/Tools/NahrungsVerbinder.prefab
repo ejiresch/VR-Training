@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5962344888198147595}
   - component: {fileID: 1236118486576045890}
   - component: {fileID: 1339971489076740284}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: extrudedSurface1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8568206500517340204}
   m_RootOrder: 0
@@ -51,10 +52,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -79,6 +82,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &634931743882419426
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9050465187934772324}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AnchorPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,6 +109,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8568206500517340204}
   m_RootOrder: 10
@@ -120,7 +125,7 @@ GameObject:
   - component: {fileID: 6451893920137154538}
   - component: {fileID: 7934512893039392208}
   - component: {fileID: 6558434691521134040}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fffff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,6 +142,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.0022448597, y: -0.071169175, z: -0.007903528}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8568206500517340204}
   m_RootOrder: 1
@@ -160,10 +166,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -188,6 +196,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &3059855524760524061
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,7 +208,7 @@ GameObject:
   - component: {fileID: 4495831098760038103}
   - component: {fileID: 8930825807992647934}
   - component: {fileID: 4661322172468590663}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: polySurface7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,6 +225,7 @@ Transform:
   m_LocalRotation: {x: 6.0530364e-17, y: 0.9885359, z: -0.15098609, w: -9.2452314e-18}
   m_LocalPosition: {x: 0.000619305, y: 0.30666277, z: -0.0892961}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8568206500517340204}
   m_RootOrder: 6
@@ -239,10 +249,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -267,6 +279,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &3408484090729258074
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +291,7 @@ GameObject:
   - component: {fileID: 1179331360661399540}
   - component: {fileID: 5203135294777650721}
   - component: {fileID: 6429855615952314308}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pTorus4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,6 +308,7 @@ Transform:
   m_LocalRotation: {x: -0.13606675, y: -0.01347578, z: -0.0134757515, w: 0.99051636}
   m_LocalPosition: {x: 0.0012593191, y: 0.4288208, z: -0.015325969}
   m_LocalScale: {x: 1.169852, y: 1.169852, z: 1.169852}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8568206500517340204}
   m_RootOrder: 9
@@ -318,10 +332,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -346,6 +362,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &4017584080824979957
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,7 +374,7 @@ GameObject:
   - component: {fileID: 6459802993259985134}
   - component: {fileID: 2403551904084787034}
   - component: {fileID: 6297169178734798462}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pCylinder9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,6 +391,7 @@ Transform:
   m_LocalRotation: {x: 0.60418713, y: -0.019057613, z: 0.000000020384494, w: 0.7966146}
   m_LocalPosition: {x: 0.0012593191, y: 0.4288208, z: -0.015325969}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8568206500517340204}
   m_RootOrder: 2
@@ -397,10 +415,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -425,6 +445,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &4659178262967147122
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +457,7 @@ GameObject:
   - component: {fileID: 976396233773797292}
   - component: {fileID: 9210186534176185424}
   - component: {fileID: 3461923040227547767}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: polySurface4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -453,6 +474,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 6.123234e-17}
   m_LocalPosition: {x: -0.00010028392, y: -0.017243963, z: -0.044167846}
   m_LocalScale: {x: 1.0427966, y: 1.0427966, z: 1.0427966}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8568206500517340204}
   m_RootOrder: 4
@@ -476,10 +498,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -504,6 +528,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &4944628919886350245
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,7 +540,7 @@ GameObject:
   - component: {fileID: 1489167849606716222}
   - component: {fileID: 6108354518298950406}
   - component: {fileID: 8391878359363687415}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pTorus2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,6 +557,7 @@ Transform:
   m_LocalRotation: {x: -0.8056291, y: -0.0019241946, z: 0.0027027077, w: 0.592411}
   m_LocalPosition: {x: 0.0003748031, y: 0.29538584, z: -0.084951386}
   m_LocalScale: {x: 1.169852, y: 1.169852, z: 1.169852}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8568206500517340204}
   m_RootOrder: 8
@@ -555,10 +581,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -583,6 +611,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5607096514778144348
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,7 +623,7 @@ GameObject:
   - component: {fileID: 1860989143967251179}
   - component: {fileID: 8285616513382716992}
   - component: {fileID: 6998865356003872689}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: polySurface8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -611,6 +640,7 @@ Transform:
   m_LocalRotation: {x: -0.15649194, y: 0, z: -0, w: 0.98767924}
   m_LocalPosition: {x: 0.00008645803, y: 0.32585838, z: -0.0948972}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8568206500517340204}
   m_RootOrder: 7
@@ -634,10 +664,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -663,6 +695,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5657557214625236846
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,7 +707,7 @@ GameObject:
   - component: {fileID: 5500677179855064606}
   - component: {fileID: 2137240745861328722}
   - component: {fileID: 6339521081551030379}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: polySurface5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -691,6 +724,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.0007499238, y: -0.039198194, z: -0.044848137}
   m_LocalScale: {x: 1.0427966, y: 1.0427966, z: 1.0427966}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8568206500517340204}
   m_RootOrder: 5
@@ -714,10 +748,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -742,6 +778,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &6867806196065218767
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,7 +790,7 @@ GameObject:
   - component: {fileID: 5699409644491149281}
   - component: {fileID: 214039176388111839}
   - component: {fileID: 5325501484943846004}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pHelix3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -770,6 +807,7 @@ Transform:
   m_LocalRotation: {x: 0.60418713, y: -0.019057613, z: 0.000000020384494, w: 0.7966146}
   m_LocalPosition: {x: 0.0012593191, y: 0.4288208, z: -0.01532597}
   m_LocalScale: {x: 1, y: 1.0634348, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8568206500517340204}
   m_RootOrder: 3
@@ -793,10 +831,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -821,6 +861,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &9053276243230146198
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,7 +871,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8568206500517340204}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NahrungsVerbinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -846,7 +887,8 @@ Transform:
   m_GameObject: {fileID: 9053276243230146198}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.407, y: -5.439, z: 0.0011}
-  m_LocalScale: {x: 0.55864, y: 0.55864, z: 0.55864}
+  m_LocalScale: {x: 2.7932, y: 2.7932, z: 2.7932}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5962344888198147595}
   - {fileID: 6451893920137154538}

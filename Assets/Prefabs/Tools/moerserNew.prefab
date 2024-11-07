@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -7523668911552334850}
   - component: {fileID: 7205487081884956896}
   - component: {fileID: -8593656773430686331}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: moerserNew
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 127199775171483385}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0.12, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 465456967826874215}
@@ -324,7 +324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 465456967826874215}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AnchorPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

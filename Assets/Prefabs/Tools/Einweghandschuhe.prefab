@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8067539617474181091}
   - component: {fileID: 4703413364913658848}
   - component: {fileID: 6656716887700090018}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Einweghandschuhe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3133612690540729634}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8441457524990025438}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 8441457524990025438}
   - component: {fileID: 1564050050374034120}
   - component: {fileID: 896422047849390354}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pCube1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 8409726949559730010}
   - component: {fileID: 8663805378565609296}
   - component: {fileID: 1879259806178623214}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: polySurface2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 2405135917842442619}
   - component: {fileID: 6634002502409585274}
   - component: {fileID: 322111251807829119}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: touchMaterial
   m_Icon: {fileID: 0}
