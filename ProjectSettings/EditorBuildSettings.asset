@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ScenesOld/MainMenu.unity
     guid: 0b4cf161c7b72324fa3e092d7618a671
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ScenesMain/Prototype-MainmenuSceneKaraca.unity
     guid: 4f6867562c712e04c9454e6a752b560b
   - enabled: 1
