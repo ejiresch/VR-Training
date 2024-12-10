@@ -14,15 +14,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ScenesOld/MainMenu.unity
     guid: 0b4cf161c7b72324fa3e092d7618a671
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MenuScene.unity
     guid: 4f6867562c712e04c9454e6a752b560b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ScenesMain/PrototypSceneKaraca.unity
     guid: 6b30b2fb9dea6004cb6cc198badfdbe5
   - enabled: 0
     path: Assets/Scenes/ScenesTest/PerformanceTestEmpty.unity
     guid: 593cf3bb80eea7b4b92e38d29e6e66f8
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 9559ed948bcfa8b4b8069c99be5b9d09
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 29ae344b1e6a7944185c407743d2c475,
       type: 2}

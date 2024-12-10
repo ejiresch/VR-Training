@@ -112,25 +112,25 @@ public class ButtonHover : MonoBehaviour
                     case "PEGNahrung": // lädt die passende simulation
                         //Debug.Log("PEGNahrung");
                         PlayerPrefs.SetInt(ppkey, 103);
-                        SceneManager.LoadScene(0);
+                        SceneManager.LoadScene("MainScene");
                         break;
 
                     case "PEGsonde":
                         //Debug.Log("PEGsonde");
                         PlayerPrefs.SetInt(ppkey, 104);
-                        SceneManager.LoadScene(0);
+                        SceneManager.LoadScene("MainScene");
                         break;
 
                     case "einsetzen":
                         //Debug.Log("einsetzen");
                         PlayerPrefs.SetInt(ppkey, 102);
-                        SceneManager.LoadScene(0);
+                        SceneManager.LoadScene("MainScene");
                         break;
 
                     case "entfernen":
                         //Debug.Log("entfernen");
                         PlayerPrefs.SetInt(ppkey, 101);
-                        SceneManager.LoadScene(0);
+                        SceneManager.LoadScene("MainScene");
                         break;
 
                     case "verlassen":
@@ -141,7 +141,7 @@ public class ButtonHover : MonoBehaviour
                     case "Tutorial":
                         //Debug.Log("tutorial");
                         PlayerPrefs.SetInt(ppkey, 105);
-                        SceneManager.LoadScene("PrototypSceneKaraca");
+                        SceneManager.LoadScene("MainScene");
                         break;
                 }
 
