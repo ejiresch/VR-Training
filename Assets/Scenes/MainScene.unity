@@ -2560,7 +2560,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
@@ -9023,7 +9023,7 @@ PrefabInstance:
     - target: {fileID: 4722560672731034189, guid: 294cfcc6c57b99146b51002e0f44bb92,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4722560672731034191, guid: 294cfcc6c57b99146b51002e0f44bb92,
         type: 3}
@@ -9406,7 +9406,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
+  m_Size: {x: 0.09279519, y: 0.08681431, z: 0.1612505}
   m_Center: {x: -0.007667657, y: 0.01911388, z: 0.014139716}
 --- !u!114 &1578257903 stripped
 MonoBehaviour:
@@ -9431,7 +9431,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
+  m_Size: {x: 0.07167298, y: 0.1022954, z: 0.1875763}
   m_Center: {x: -0.0182288, y: 0.039003205, z: 0.009155452}
 --- !u!1 &1579730245 stripped
 GameObject:
@@ -11285,7 +11285,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1961499296
 MonoBehaviour:
   m_ObjectHideFlags: 0
