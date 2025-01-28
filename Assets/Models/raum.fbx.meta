@@ -3,7 +3,32 @@ guid: ae72314dc9540644795ffaadf6dbd2a8
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass.002
+    second: {fileID: 2100000, guid: 7ee4dedb2f26c7b4b9bdd69622d745fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal.001
+    second: {fileID: 2100000, guid: a9f73ef27c9ce984b8ede8145e350272, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Profile.002
+    second: {fileID: 2100000, guid: a8768d9445b5ab941ae3dfb5d68c826c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rubber.002
+    second: {fileID: 2100000, guid: 7036ff964ec6fc244bc9c11156b7d559, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White_Plastk.002
+    second: {fileID: 2100000, guid: 83ea37b94343f3649a71dfbec2d0dc01, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
