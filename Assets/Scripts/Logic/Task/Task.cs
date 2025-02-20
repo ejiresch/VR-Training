@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using Unity.Mathematics;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -129,7 +130,11 @@ public abstract class Task : MonoBehaviour
                 {
                     foreach (Highlight highlight in highlights)
                     {
-                        MeshRenderer mesh = highlight.gameObject.GetComponent<MeshRenderer>();
+                        Renderer mesh = highlight.gameObject.GetComponent<MeshRenderer>();
+                        if(mesh == null)
+                        {
+                            mesh = highlight.gameObject.GetComponent<SkinnedMeshRenderer>();
+                        }
                         Material[] matArray = mesh.materials;
                         Material[] newMatArray = new Material[3];
                         newMatArray[0] = matArray[0];
@@ -150,9 +155,14 @@ public abstract class Task : MonoBehaviour
         {
             foreach (GameObject go in HighlightedObjects)
             {
-                MeshRenderer[] meshes = go.GetComponentsInChildren<MeshRenderer>();
-                foreach (MeshRenderer mesh in meshes)
+                Highlight[] highlights = go.GetComponentsInChildren<Highlight>();
+                foreach (Highlight h in highlights)
                 {
+                    Renderer mesh = h.GetComponent<MeshRenderer>();
+                    if (mesh == null)
+                    {
+                        mesh = h.GetComponent<SkinnedMeshRenderer>();
+                    }
                     Material[] matArray = mesh.materials;
                     Material[] newMatArray = new Material[1];
                     newMatArray[0] = matArray[0];
