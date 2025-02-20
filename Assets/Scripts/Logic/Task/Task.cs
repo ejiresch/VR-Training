@@ -124,15 +124,19 @@ public abstract class Task : MonoBehaviour
         {
             if(objectHighlight != null && stencilMask != null)
             {
-                MeshRenderer mesh = highobj.GetComponentInChildren<MeshRenderer>();
-                if(mesh != null)
+                Highlight[] highlights = highobj.GetComponentsInChildren<Highlight>();
+                if(highlights != null)
                 {
-                    Material[] matArray = mesh.materials;
-                    Material[] newMatArray = new Material[3];
-                    newMatArray[0] = matArray[0];
-                    newMatArray[1] = stencilMask;
-                    newMatArray[2] = objectHighlight;
-                    mesh.materials = newMatArray;
+                    foreach (Highlight highlight in highlights)
+                    {
+                        MeshRenderer mesh = highlight.gameObject.GetComponent<MeshRenderer>();
+                        Material[] matArray = mesh.materials;
+                        Material[] newMatArray = new Material[3];
+                        newMatArray[0] = matArray[0];
+                        newMatArray[1] = stencilMask;
+                        newMatArray[2] = objectHighlight;
+                        mesh.materials = newMatArray;
+                    }
                     HighlightedObjects.Add(highobj);
                 }
             }
@@ -146,11 +150,14 @@ public abstract class Task : MonoBehaviour
         {
             foreach (GameObject go in HighlightedObjects)
             {
-                MeshRenderer mesh = go.GetComponentInChildren<MeshRenderer>();
-                Material[] matArray = mesh.materials;
-                Material[] newMatArray = new Material[1];
-                newMatArray[0] = matArray[0];
-                mesh.materials = newMatArray;
+                MeshRenderer[] meshes = go.GetComponentsInChildren<MeshRenderer>();
+                foreach (MeshRenderer mesh in meshes)
+                {
+                    Material[] matArray = mesh.materials;
+                    Material[] newMatArray = new Material[1];
+                    newMatArray[0] = matArray[0];
+                    mesh.materials = newMatArray;
+                }
             }
             HighlightedObjects = new List<GameObject>();
         }

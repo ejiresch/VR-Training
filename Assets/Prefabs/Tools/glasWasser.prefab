@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -8414280114625071811}
   - component: {fileID: 2356478411391737305}
   - component: {fileID: 637518376644928342}
+  - component: {fileID: 3442823353237760205}
   m_Layer: 9
   m_Name: glasWasser
   m_TagString: Untagged
@@ -131,6 +132,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8188846882738213437, guid: 921707eeeaead3e4589ad14dd9de3782, type: 3}
+--- !u!114 &3442823353237760205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5664044047155542320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d45cc1f1b1812674e9ceaebbf6cc5ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6502274121403170401
 GameObject:
   m_ObjectHideFlags: 0

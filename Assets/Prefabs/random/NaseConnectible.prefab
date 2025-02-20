@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 404310880547111916}
   - component: {fileID: 6742579278440603950}
   - component: {fileID: 8209964478746683754}
+  - component: {fileID: 7209614292978260233}
   m_Layer: 0
   m_Name: gelbes_ding2
   m_TagString: Untagged
@@ -83,6 +84,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7209614292978260233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3487692443565156313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d45cc1f1b1812674e9ceaebbf6cc5ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4246053604828938421
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +107,7 @@ GameObject:
   - component: {fileID: 1129899494337889513}
   - component: {fileID: 5891594359798383144}
   - component: {fileID: 2680812423183050557}
+  - component: {fileID: 4029034455845121743}
   m_Layer: 0
   m_Name: Kappe
   m_TagString: Untagged
@@ -166,6 +180,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4029034455845121743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4246053604828938421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d45cc1f1b1812674e9ceaebbf6cc5ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7568908171968262963
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +238,7 @@ GameObject:
   - component: {fileID: 5298276925137901085}
   - component: {fileID: 48460666678800558}
   - component: {fileID: 5296483508113722001}
+  - component: {fileID: 2682113148769212774}
   m_Layer: 0
   m_Name: gelbes_Ding1
   m_TagString: Untagged
@@ -284,6 +311,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2682113148769212774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8494693479170095930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d45cc1f1b1812674e9ceaebbf6cc5ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8536263223034256957
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,6 +334,7 @@ GameObject:
   - component: {fileID: 5882719659337366774}
   - component: {fileID: 8577478337326349228}
   - component: {fileID: 1534149716109256401}
+  - component: {fileID: 6394434495356365694}
   m_Layer: 0
   m_Name: Teil
   m_TagString: Untagged
@@ -367,6 +407,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6394434495356365694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8536263223034256957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d45cc1f1b1812674e9ceaebbf6cc5ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8907562860919515554
 GameObject:
   m_ObjectHideFlags: 0

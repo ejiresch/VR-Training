@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4293335148579379986}
   - component: {fileID: 5273363562814447825}
   - component: {fileID: 791881840987354389}
+  - component: {fileID: 8977539230013351942}
   m_Layer: 9
   m_Name: druckteil
   m_TagString: Untagged
@@ -83,6 +84,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8977539230013351942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801564264229204111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d45cc1f1b1812674e9ceaebbf6cc5ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2413190561413407067
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,6 +143,7 @@ GameObject:
   - component: {fileID: 7583660443623591769}
   - component: {fileID: 1607560302764742994}
   - component: {fileID: 2349374459167253072}
+  - component: {fileID: 4590798689192141084}
   m_Layer: 9
   m_Name: "gro\xDFesteil"
   m_TagString: Untagged
@@ -202,6 +216,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4590798689192141084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4407735315478771018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d45cc1f1b1812674e9ceaebbf6cc5ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4561207380521413469
 GameObject:
   m_ObjectHideFlags: 0

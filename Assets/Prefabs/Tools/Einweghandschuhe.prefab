@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 8409726949559730010}
   - component: {fileID: 8663805378565609296}
   - component: {fileID: 1879259806178623214}
+  - component: {fileID: 2456638399590262753}
   m_Layer: 9
   m_Name: polySurface2
   m_TagString: Untagged
@@ -245,6 +246,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2456638399590262753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4318049867195248911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d45cc1f1b1812674e9ceaebbf6cc5ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7136222420212719101
 GameObject:
   m_ObjectHideFlags: 0
