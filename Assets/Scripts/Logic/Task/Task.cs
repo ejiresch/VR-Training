@@ -35,11 +35,11 @@ public abstract class Task : MonoBehaviour
     protected HUDHandler hudHandler;
 
     private Canvas canvas;
-    private Boolean active = false;
+    private bool active = false;
     private MeshRenderer image;
     private List<GameObject> HighlightedObjects = new List<GameObject>();
 
-    private Boolean hilightingButton = false;
+    private bool hilightingButton = false;
     private int wasOff = 0;
 
 

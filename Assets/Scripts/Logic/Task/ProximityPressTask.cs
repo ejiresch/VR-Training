@@ -9,25 +9,25 @@ using UnityEngine;
 public class ProximityPressTask : PressTask
 {
     public float distance = 1.0f;
-    private bool active = false;
+    private bool isactive = false;
     GameObject[] ProxObjects = new GameObject[2];
     private bool taskActive;
     // Start is called before the first frame update
     void Start()
     {   
-        active = true;
+        isactive = true;
     }
     public override void StartTask()
     {
         base.StartTask();
         taskActive = true;
-        active = true;
+        isactive = true;
         
     }
     protected override IEnumerator TaskRunActive()
     {
-        active = true;
-        while (active)
+        isactive = true;
+        while (isactive)
         {
             GameObject[] touchObjects = GameObject.FindGameObjectsWithTag("touchHand");
             ProxObjects = touchObjects;
@@ -37,7 +37,7 @@ public class ProximityPressTask : PressTask
                 {
                     touchObject.GetComponent<ProximityActionObject>().SetTouchTarget(pressObject);
                 }
-                active = false;
+                isactive = false;
                 taskActive = true;
             }
             yield return new WaitForFixedUpdate();

@@ -5,7 +5,7 @@ using UnityEngine;
 public class HandTouchTask : Task
 {
     public GameObject touchTarget;
-    private bool active = false;
+    private bool isactive = false;
     private GameObject[] touchObjects;
     // Wird bei Start der Task ausgefuehrt
     public override void StartTask()
@@ -13,14 +13,14 @@ public class HandTouchTask : Task
         base.StartTask();
         
         touchTarget = base.FindTool(touchTarget.name);
-        active = true;
+        isactive = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         base.Update();
-        if (active)
+        if (isactive)
         {
 
             touchObjects = GameObject.FindGameObjectsWithTag("Hand");
@@ -31,7 +31,7 @@ public class HandTouchTask : Task
                     touchObject.GetComponent<TouchHand>().SetTouchTarget(touchTarget);
                     touchObject.GetComponent<TouchHand>().SetHands(new List<GameObject>() { touchObjects[0], touchObjects[1] });
                 }
-                active = false;
+                isactive = false;
             }
         }
     }
