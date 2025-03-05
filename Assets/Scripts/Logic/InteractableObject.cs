@@ -15,7 +15,7 @@ public class InteractableObject : MonoBehaviour, OnDropFunctions
     public void SetGrabbable(bool grab)
     {
         XRGrabInteractable xrObject = gameObject.GetComponent<XRGrabInteractable>();
-        xrObject.interactionLayers = grab ? lmGrabbable : lmNotGrabbable;
+        xrObject.interactionLayers = grab ? lmGrabbable.value : lmNotGrabbable.value;
     }
     public virtual void OnDrop()
     {
