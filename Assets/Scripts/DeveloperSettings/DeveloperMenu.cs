@@ -14,19 +14,23 @@ public class DeveloperMenu : MonoBehaviour
     public int button;
     private HandAnimation handAnimation;
     public Color highlightedColor = new Color(0.3f, 1, 0.3f);
-    public Boolean isHandanimationSelected=false, isHighlightingSelected = false, isVibrationSelected = false;
+    public Boolean isHandanimationSelected=false, isHighlightingSelected = false, isVibrationSelected = false, isFPSCounterSelected = false;
+    private GameObject fpsCounter;
     public Button[] optionButtons;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        fpsCounter = FindObjectOfType<FPSCounter>().gameObject;
+        fpsCounter.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        //if (Input.GetKeyDown(KeyCode.E)){
+        //    fpsCounter.SetActive(!fpsCounter.active);
+        //}
     }
     /*
      * Je nachdem welche Button angeklickt wurde wird die Farbe geändert und gespeichert ob er gerade active ist
@@ -79,6 +83,21 @@ public class DeveloperMenu : MonoBehaviour
                 isHighlightingSelected = false;
                 ButtonInactive(2);
                 UnityEngine.Debug.Log("Highlighting aus");
+            }
+        } else if(this.button == 4)
+        {
+            if(isFPSCounterSelected == false)
+            {
+                isFPSCounterSelected = true;
+                ButtonActive(3);
+                fpsCounter.SetActive(true);
+                UnityEngine.Debug.Log("FPS-Counter an");
+            } else
+            {
+                isFPSCounterSelected = false;
+                ButtonInactive(3);
+                fpsCounter.SetActive(false);
+                UnityEngine.Debug.Log("FPS-Counter aus");
             }
         }
     }
