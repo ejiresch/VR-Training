@@ -780,7 +780,7 @@ PrefabInstance:
         type: 3}
       propertyPath: camera
       value: 
-      objectReference: {fileID: 782637346}
+      objectReference: {fileID: 995543150}
     - target: {fileID: 5737938676628440082, guid: 569976cd1a3dc6548a7010b458b24445,
         type: 3}
       propertyPath: controls
@@ -941,7 +941,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 465756303}
+      objectReference: {fileID: 995543153}
     - target: {fileID: 5737938676628440084, guid: 569976cd1a3dc6548a7010b458b24445,
         type: 3}
       propertyPath: m_SortingOrder
@@ -6329,12 +6329,6 @@ MonoBehaviour:
   m_MoveObjectOut: 15
   m_DirectionalAnchorRotation: 1
   m_PoseProvider: {fileID: 0}
---- !u!4 &782637346 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4722560673157216111, guid: 294cfcc6c57b99146b51002e0f44bb92,
-    type: 3}
-  m_PrefabInstance: {fileID: 1578257885}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &829506289
 PrefabInstance:
   m_ObjectHideFlags: 0
