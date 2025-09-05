@@ -17,12 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 1e6689f8891c5da448c9c6d43e6b7036
   m_SerializeEntries:
-  - m_GUID: f1249c165703dee46af36ab7de5ca653
-    m_Address: VR Text_de
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-de
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9b749bf9f7f1b084f9928054aed3cb8a
     m_Address: Buttons_de
     m_ReadOnly: 1
@@ -31,6 +25,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ad58361a119f7e7448aa093576ba6794
     m_Address: WhiteboardDescriptions_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1249c165703dee46af36ab7de5ca653
+    m_Address: VR Text_de
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de

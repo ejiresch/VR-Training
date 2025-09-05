@@ -17,16 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 20335b9c3ee937641b0e664175d4b4e0
   m_SerializeEntries:
-  - m_GUID: e8c34a9771ffdd947922cbc11556854f
-    m_Address: Assets/Locales/VR Text Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 73b965613cb926d4097ee08af818a677
-    m_Address: Assets/Locales/Buttons/Buttons Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2376c0e470de1584a9e2543373e4b2b5
     m_Address: Assets/Locales/WhiteboardDescriptions/WhiteboardDescriptions Shared
       Data.asset
@@ -35,6 +25,16 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 32e1e548a2bac5a488843738243281a6
     m_Address: "Assets/Locales/HUDTranslation/HUD \xDCbersetzung Shared Data.asset"
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 73b965613cb926d4097ee08af818a677
+    m_Address: Assets/Locales/Buttons/Buttons Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e8c34a9771ffdd947922cbc11556854f
+    m_Address: Assets/Locales/VR Text Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

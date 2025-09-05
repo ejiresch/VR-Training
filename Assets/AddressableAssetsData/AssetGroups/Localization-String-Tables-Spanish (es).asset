@@ -17,8 +17,8 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: f3558e90df214c04baf4d34ddef46437
   m_SerializeEntries:
-  - m_GUID: e439324bcc9949543897f9b138988a9d
-    m_Address: VR Text_es
+  - m_GUID: 89d049681980bfe498d3b967f0ef6be1
+    m_Address: WhiteboardDescriptions_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
@@ -29,8 +29,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 89d049681980bfe498d3b967f0ef6be1
-    m_Address: WhiteboardDescriptions_es
+  - m_GUID: e439324bcc9949543897f9b138988a9d
+    m_Address: VR Text_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
