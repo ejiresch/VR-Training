@@ -71,3 +71,10 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 /.vsconfig
 .DS_Store
+/.vscode
+/aaa_BurstDebugInformation_DoNotShip
+/.idea
+/build_BurstDebugInformation_DoNotShip
+/training_BurstDebugInformation_DoNotShip
+/ujzg_BurstDebugInformation_DoNotShip
+/VR-Training_BurstDebugInformation_DoNotShip
