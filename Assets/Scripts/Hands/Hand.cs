@@ -10,8 +10,7 @@ public class Hand : MonoBehaviour
     public GameObject handPrefab;
     public GameObject spawnedHand;
 
-    public Renderer left, right;
-    public Renderer left2, right2;
+    public Renderer left, right, left2, right2; 
 
     //Stores what kind of characteristics we're looking for with our Input Device when we search for it later
     public InputDeviceCharacteristics inputDeviceCharacteristics;
@@ -20,7 +19,6 @@ public class Hand : MonoBehaviour
     private InputDevice _targetDevice;
     private Animator _handAnimator;
     private SkinnedMeshRenderer _mesh;
-
 
     private bool shouldShow = true;
     private void Start()
@@ -48,7 +46,6 @@ public class Hand : MonoBehaviour
         }
     }
 
-
     // Update is called once per frame
     // Update is called once per frame
     public void Update()
@@ -56,24 +53,13 @@ public class Hand : MonoBehaviour
 
         if (ProcessHandler.Instance.GetHandActive() == true)
         {
-            shouldShow = false;
+            enableVisibility();
         }   
         else
         {
             shouldShow= true;
         }
-
-       
-
-        if (shouldShow==false) {
-                 enableVisibility();
-                }
       
-
-
-        
-
-            
         //Since our target device might not register at the start of the scene, we continously check until one is found.
         if (!_targetDevice.isValid)
         {
@@ -85,7 +71,6 @@ public class Hand : MonoBehaviour
         }
 
     }
-
 
     private void UpdateHand()
     {
@@ -137,7 +122,6 @@ public class Hand : MonoBehaviour
         if(spawnedHand!= null)
         {
             _mesh.enabled = true;
-
         }
     }
 }

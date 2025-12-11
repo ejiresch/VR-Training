@@ -31,7 +31,6 @@ namespace development_a {
                 return;
             }
 
-            //DontDestroyOnLoad(gameObject);
 
             foreach (Sound sound in sounds) {
                 sound.source = gameObject.AddComponent<AudioSource>();
@@ -43,7 +42,7 @@ namespace development_a {
         }
 
         void Start() {
-            // ManageSound("taskdone", true, 0);
+            
         }
 
         /**

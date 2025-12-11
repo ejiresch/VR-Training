@@ -35,7 +35,7 @@ public class InputReader : MonoBehaviour
     void Update()
     {
         //We should have a total of 3 Input Devices. If it's less, then we try to initialize them again.
-        if (inputDevices.Count < 2)
+        if (inputDevices.Count < 2) // how 3, 2 controllers, 1 goggle?
         {
             InitializeInputReader();
         }

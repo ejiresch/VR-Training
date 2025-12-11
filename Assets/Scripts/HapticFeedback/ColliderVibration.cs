@@ -19,20 +19,7 @@ public class ColliderVibration : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-       
-
-
             float distanceRight = Vector3.Distance(other.transform.position, rechterController.transform.position);
             float disanceLeft = Vector3.Distance(other.transform.position, linkerController.transform.position);
-            if (distanceRight < disanceLeft)
-            {
-                //rechts.SendHapticImpulse(0.4f, 0.1f);
-            }
-            else
-            {
-                //links.SendHapticImpulse(0.4f, 0.1f);
-            }
-        
-       
     }
 }

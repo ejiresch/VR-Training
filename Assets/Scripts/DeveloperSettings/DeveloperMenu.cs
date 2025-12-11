@@ -111,6 +111,7 @@ public class DeveloperMenu : MonoBehaviour
         colors.highlightedColor = highlightedColor;
         this.optionButtons[button].colors = colors;
     }
+
     //Setzt die Farbe der Buttons auf normal
     public void ButtonInactive(int button)
     {
@@ -121,7 +122,4 @@ public class DeveloperMenu : MonoBehaviour
         colors.highlightedColor = Color.white;
         this.optionButtons[button].colors = colors;
     }
-
- 
 }
-
