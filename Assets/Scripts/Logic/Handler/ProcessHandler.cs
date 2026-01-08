@@ -16,7 +16,7 @@ public class ProcessHandler : MonoBehaviour
     private static ProcessHandler _instance;
     public string ppKey = "Process_Index";
     
-    // Singleton Instanz
+    // Simpleton Instanz(Tobias)
     public static ProcessHandler Instance { get { return _instance; } }
     private void Awake()
     {

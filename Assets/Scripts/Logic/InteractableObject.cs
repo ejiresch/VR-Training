@@ -12,9 +12,13 @@ public class InteractableObject : MonoBehaviour, OnDropFunctions
     private LayerMask lmGrabbable = ~0;
     private List<Func<GameObject, bool>> onDropFunctions = new List<Func<GameObject, bool>>();
     protected bool taskfinished = false;
+    private XRGrabInteractable xrObject;
     public void SetGrabbable(bool grab)
     {
-        XRGrabInteractable xrObject = gameObject.GetComponent<XRGrabInteractable>();
+        if (xrObject == null)
+        {
+            xrObject = gameObject.GetComponent<XRGrabInteractable>();
+        }
         xrObject.interactionLayers = grab ? lmGrabbable.value : lmNotGrabbable.value;
     }
     public virtual void OnDrop()
