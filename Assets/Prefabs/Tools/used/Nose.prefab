@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -3826492812473188402}
   - component: {fileID: -915356991379350187}
   m_Layer: 9
-  m_Name: Nase
+  m_Name: Nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

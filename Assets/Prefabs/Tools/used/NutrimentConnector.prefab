@@ -872,7 +872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8568206500517340204}
   m_Layer: 9
-  m_Name: NahrungsVerbinder
+  m_Name: NutrimentConnector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

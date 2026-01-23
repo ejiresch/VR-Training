@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: -6927346285204240846}
   - component: {fileID: 7958074721005044526}
   m_Layer: 9
-  m_Name: spritzeNahrung
+  m_Name: Syringe_Nutriments
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

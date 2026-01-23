@@ -110,7 +110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5023819906841411602}
   - component: {fileID: 1532636999540155614}
-  - component: {fileID: 2018289620743754533}
+  - component: {fileID: 6200030388963473118}
   m_Layer: 9
   m_Name: band
   m_TagString: Untagged
@@ -186,7 +186,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.089144826, y: -46.26176, z: 0}
     m_Extent: {x: 0.5891448, y: 46.76176, z: 0.5}
   m_DirtyAABB: 0
---- !u!114 &2018289620743754533
+--- !u!114 &6200030388963473118
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -209,11 +209,11 @@ GameObject:
   - component: {fileID: 8740253547829732459}
   - component: {fileID: 8740253547829732458}
   - component: {fileID: 8740253547829732456}
-  - component: {fileID: -8818808235535917072}
-  - component: {fileID: 7312899770045639971}
-  - component: {fileID: 3277658701573103295}
+  - component: {fileID: -9103323263955215916}
+  - component: {fileID: 8288393845249718776}
+  - component: {fileID: -1117176714211293327}
   m_Layer: 9
-  m_Name: BandRechts
+  m_Name: BandLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrabbed: 0
---- !u!114 &-8818808235535917072
+--- !u!114 &-9103323263955215916
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -440,7 +440,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &7312899770045639971
+--- !u!114 &8288393845249718776
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -452,7 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85dbf2fe8be236a4e8304c9ff8429a02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3277658701573103295
+--- !u!114 &-1117176714211293327
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

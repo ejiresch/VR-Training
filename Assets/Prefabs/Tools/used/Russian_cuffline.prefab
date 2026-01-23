@@ -730,7 +730,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5581736208263592738}
   m_Layer: 9
-  m_Name: russische_cuffline
+  m_Name: Russian_cuffline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: -724368395166129109}
   - component: {fileID: 3641554233742697005}
   m_Layer: 9
-  m_Name: TrachealKompresse_
+  m_Name: Tracheal_compress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

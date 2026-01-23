@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 9120294862560510663}
   - component: {fileID: -2624878528418204925}
   m_Layer: 9
-  m_Name: kanuele
+  m_Name: cannula
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

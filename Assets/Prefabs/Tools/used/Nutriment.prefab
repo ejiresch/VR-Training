@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2532056419872849729}
   - component: {fileID: 3100882361503605429}
   m_Layer: 9
-  m_Name: NahrungspackungComp
+  m_Name: Nutriment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
