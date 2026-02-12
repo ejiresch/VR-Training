@@ -52,6 +52,18 @@ public class SpritzePressObject : PressObject, ResetInterface
     {
         if (!pressable) return;
 
+        ConnectorObject conn = GetComponent<ConnectorObject>();
+        if (conn != null && !conn.HasConnection())
+            return;
+
+        Connectible c0 = GetComponent<Connectible>();
+        if (c0 != null)
+        {
+            ConnectorObject connector0 = c0.GetConnector();
+            if (connector0 != null && !connector0.HasConnection())
+                return;
+        }
+
         if (disconnectOnCompletion)
         {
             // MINI-FIX: Disconnect nur wenn Referenzen existieren
