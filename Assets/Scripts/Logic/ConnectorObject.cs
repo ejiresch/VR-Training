@@ -174,6 +174,11 @@ public class ConnectorObject : InteractableObject
         return aStore.NextFreeAnchorPosition();
     }
 
+    public bool HasConnection()
+    {
+        return aStore != null && aStore.GetLatestConnectedObject() != null;
+    }
+
     /// <summary>
     /// Stellt Methoden zum Speichern von AnchorPoints und mit diesen verbundenen Objekten bereit
     /// </summary>
