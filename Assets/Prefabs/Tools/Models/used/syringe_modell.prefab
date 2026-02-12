@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 710497494997353626}
   m_Layer: 0
-  m_Name: Spritze
+  m_Name: syringe_modell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
