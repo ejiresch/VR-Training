@@ -1,13 +1,13 @@
 using UnityEngine;
 using UnityEditor;
 using System.IO;
-
 /*
- * In this class the idea is to spawn a zoo full of all existing gameobjects
- * Changes:
- *  - Integrated component cleaner
- *  - Safer instantiation
- *  - Cleaner hierarchy
+ *In this class the idea is to spawn a zoo full of all existing gameobjects
+ *To do:
+ *  Correct spawn pacing 
+ *  Correct null Pointer exceptions
+ *  Disable player game object logic
+ *  add correct flooring
  */
 
 public class spawnprefabs : MonoBehaviour
@@ -23,8 +23,10 @@ public class spawnprefabs : MonoBehaviour
     [MenuItem("Tools/Build Zoo Scene")]
     public static void BuildZoo()
     {
+        // Ordner mit Prefabs (anpassen falls nötig)
         string prefabFolder = "Assets";
 
+        // Alle Prefabs im Ordner finden
         string[] guids = AssetDatabase.FindAssets("t:Prefab", new[] { prefabFolder });
 
         if (guids.Length == 0)
@@ -33,7 +35,7 @@ public class spawnprefabs : MonoBehaviour
             return;
         }
 
-        // Falls schon ein Zoo existiert → löschen
+        // Bestehenden Zoo löschen
         GameObject existingZoo = GameObject.Find("Zoo");
         if (existingZoo != null)
         {
@@ -61,11 +63,13 @@ public class spawnprefabs : MonoBehaviour
             if (prefab == null)
                 continue;
 
+            // Position im Grid berechnen
             int row = i / itemsPerRow;
             int col = i % itemsPerRow;
 
             Vector3 position = new Vector3(col * spacing, 0, row * spacing);
 
+            // Prefab instanziieren
             GameObject instance = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
 
             if (instance == null)
@@ -82,7 +86,7 @@ public class spawnprefabs : MonoBehaviour
         Debug.Log("Zoo created with " + guids.Length + " prefabs.");
     }
 
-    // Neue Funktion: deaktiviert alles außer MeshRenderer + MeshFilter
+    // Neue Funktion: Komponenten bereinigen + Rigidbody auf kinematic
     static void CleanComponents(GameObject root)
     {
         if (root == null)
@@ -95,7 +99,7 @@ public class spawnprefabs : MonoBehaviour
             if (comp == null)
                 continue;
 
-            // Nie anfassen
+            // Transform nie anfassen
             if (comp is Transform)
                 continue;
 
@@ -107,9 +111,16 @@ public class spawnprefabs : MonoBehaviour
             if (comp is MeshFilter)
                 continue;
 
-            // Deaktivierbare Komponenten
-            Behaviour behaviour = comp as Behaviour;
-            if (behaviour != null)
+            // Rigidbody auf kinematic setzen
+            if (comp is Rigidbody rb)
+            {
+                rb.isKinematic = true;
+                rb.useGravity = false;
+                continue;
+            }
+
+            // Alle anderen Behaviour-Komponenten deaktivieren
+            if (comp is Behaviour behaviour)
             {
                 behaviour.enabled = false;
             }

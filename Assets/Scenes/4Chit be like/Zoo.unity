@@ -3742,12 +3742,12 @@ PrefabInstance:
     - target: {fileID: 5849765079216124530, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.00509172
+      value: 0.0025496047
       objectReference: {fileID: 0}
     - target: {fileID: 5849765079216124530, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00819414
+      value: 0.026506482
       objectReference: {fileID: 0}
     - target: {fileID: 5849765079317170013, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
@@ -6968,7 +6968,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 62049cb28f49b0f4ab1d30be32de6c86, type: 2}
+  - {fileID: 2100000, guid: 5fa88bf0026c84c5d8868b11ca2fbf8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7008,7 +7008,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -467.06, y: 1305.5625, z: -1030.5}
-  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_LocalScale: {x: 383.2277, y: 154.10475, z: 350.2493}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
