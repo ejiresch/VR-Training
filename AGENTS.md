@@ -2,7 +2,7 @@
 - Project name: VR-Training
 - Unity version: Unity 2022.3.45f1
 - Active game object:
-  - Name: spritzeNahrung
+  - Name: XR Origin
   - Tag: Untagged
-  - Layer: Interactable
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
