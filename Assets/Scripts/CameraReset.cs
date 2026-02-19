@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
+/**
+ * Resets Camera Postion with the press of the menu Button (left controller, the button withe the 3 stripes)
+ * 
+ * @author Tobias Salomon
+ * @version 19-2-2026
+ */
 public class CameraReset : MonoBehaviour
 {
     // what characteristic to check for
@@ -37,7 +43,7 @@ public class CameraReset : MonoBehaviour
         }
 
         //gets input from secondary button and saves it into a tmp bool
-        if (_targetDevice.TryGetFeatureValue(CommonUsages.secondaryButton, out bool pressed))
+        if (_targetDevice.TryGetFeatureValue(CommonUsages.menuButton, out bool pressed))
         {
             //checks if button was pressed and not pressed the frame earlier
             if (pressed && !_wasPressed)
