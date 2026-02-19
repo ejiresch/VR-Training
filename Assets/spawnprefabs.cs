@@ -2,28 +2,42 @@ using UnityEngine;
 using UnityEditor;
 using System.IO;
 
+/*
+ * In this class the idea is to spawn a zoo full of all existing gameobjects
+ * Changes:
+ *  - Integrated component cleaner
+ *  - Safer instantiation
+ *  - Cleaner hierarchy
+ */
+
 public class spawnprefabs : MonoBehaviour
 {
-
     public void Start()
     {
+#if UNITY_EDITOR
         BuildZoo();
+#endif
     }
 
     // Menüeintrag in Unity
     [MenuItem("Tools/Build Zoo Scene")]
     public static void BuildZoo()
     {
-        // Ordner mit Prefabs (anpassen falls nötig)
         string prefabFolder = "Assets";
 
-        // Alle Prefabs im Ordner finden
         string[] guids = AssetDatabase.FindAssets("t:Prefab", new[] { prefabFolder });
 
         if (guids.Length == 0)
         {
             Debug.LogWarning("No prefabs found!");
             return;
+        }
+
+        // Falls schon ein Zoo existiert → löschen
+        GameObject existingZoo = GameObject.Find("Zoo");
+        if (existingZoo != null)
+        {
+            Object.DestroyImmediate(existingZoo);
         }
 
         // Zoo-Root erstellen
@@ -47,19 +61,58 @@ public class spawnprefabs : MonoBehaviour
             if (prefab == null)
                 continue;
 
-            // Position im Grid berechnen
             int row = i / itemsPerRow;
             int col = i % itemsPerRow;
 
             Vector3 position = new Vector3(col * spacing, 0, row * spacing);
 
-            // Prefab instanziieren
             GameObject instance = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
+
+            if (instance == null)
+                continue;
+
             instance.transform.position = position;
             instance.transform.parent = zooRoot.transform;
             instance.name = prefab.name;
+
+            // Komponenten bereinigen
+            CleanComponents(instance);
         }
 
         Debug.Log("Zoo created with " + guids.Length + " prefabs.");
+    }
+
+    // Neue Funktion: deaktiviert alles außer MeshRenderer + MeshFilter
+    static void CleanComponents(GameObject root)
+    {
+        if (root == null)
+            return;
+
+        Component[] components = root.GetComponentsInChildren<Component>(true);
+
+        foreach (Component comp in components)
+        {
+            if (comp == null)
+                continue;
+
+            // Nie anfassen
+            if (comp is Transform)
+                continue;
+
+            // Renderer behalten
+            if (comp is MeshRenderer)
+                continue;
+
+            // MeshFilter behalten
+            if (comp is MeshFilter)
+                continue;
+
+            // Deaktivierbare Komponenten
+            Behaviour behaviour = comp as Behaviour;
+            if (behaviour != null)
+            {
+                behaviour.enabled = false;
+            }
+        }
     }
 }
