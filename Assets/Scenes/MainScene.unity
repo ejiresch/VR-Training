@@ -13047,12 +13047,12 @@ PrefabInstance:
         type: 3}
       propertyPath: linkerController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 907601201}
     - target: {fileID: 6589509890244883111, guid: afeb2a85c81aefa4aa876904cacac303,
         type: 3}
       propertyPath: rechterController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1890316095}
     - target: {fileID: 6589509890244883116, guid: afeb2a85c81aefa4aa876904cacac303,
         type: 3}
       propertyPath: m_Name
