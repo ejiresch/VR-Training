@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 using System.IO;
+using UnityEngine.WSA;
 /*
  *In this class the idea is to spawn a zoo full of all existing gameobjects
  *To do:
@@ -12,24 +13,38 @@ using System.IO;
 
 public class spawnprefabs : MonoBehaviour
 {
+    // Ordner mit Prefabs (anpassen falls nötig)
+    public string prefabFolder = "Assets/Prefabs";
+
+    // Ordner die ausgeschlossen werden sollen
+    public string[] excludedFolders;
+
     public void Start()
     {
 #if UNITY_EDITOR
         BuildZoo();
-#endif
+#endif  
     }
 
     // Menüeintrag in Unity
     [MenuItem("Tools/Build Zoo Scene")]
     public static void BuildZoo()
     {
-        // Ordner mit Prefabs (anpassen falls nötig)
-        string prefabFolder = "Assets";
+        spawnprefabs instance = FindObjectOfType<spawnprefabs>();
+
+        if (instance == null)
+        {
+            Debug.LogError("No spawnprefabs component found in scene.");
+            return;
+        }
+
+        string prefabFolder = instance.prefabFolder;
+        string[] excludedFolders = instance.excludedFolders;
 
         // Alle Prefabs im Ordner finden
         string[] guids = AssetDatabase.FindAssets("t:Prefab", new[] { prefabFolder });
 
-        if (guids.Length == 0)
+        if (guids == null || guids.Length == 0)
         {
             Debug.LogWarning("No prefabs found!");
             return;
@@ -45,45 +60,121 @@ public class spawnprefabs : MonoBehaviour
         // Zoo-Root erstellen
         GameObject zooRoot = new GameObject("Zoo");
 
-        // Boden erstellen
-        GameObject ground = GameObject.CreatePrimitive(PrimitiveType.Plane);
-        ground.name = "Ground";
-        ground.transform.parent = zooRoot.transform;
-        ground.transform.position = Vector3.zero;
-
         // Grid-Einstellungen
         int itemsPerRow = 5;
         float spacing = 5f;
 
+        int spawnedCount = 0;
+
+        // Dictionary für Folder-Parent Objekte
+        System.Collections.Generic.Dictionary<string, GameObject> folderParents =
+            new System.Collections.Generic.Dictionary<string, GameObject>();
+
         for (int i = 0; i < guids.Length; i++)
         {
             string path = AssetDatabase.GUIDToAssetPath(guids[i]);
+
+            if (string.IsNullOrEmpty(path))
+            {
+                Debug.LogWarning("Invalid path for GUID: " + guids[i]);
+                continue;
+            }
+
+            // Prüfen ob Prefab in ausgeschlossenem Ordner liegt
+            bool isExcluded = false;
+
+            if (excludedFolders != null)
+            {
+                foreach (string folder in excludedFolders)
+                {
+                    if (!string.IsNullOrEmpty(folder) && path.StartsWith(folder))
+                    {
+                        isExcluded = true;
+                        break;
+                    }
+                }
+            }
+
+            if (isExcluded)
+                continue;
+
             GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>(path);
 
             if (prefab == null)
+            {
+                Debug.LogWarning("Could not load prefab at path: " + path);
                 continue;
+            }
+
+            // ===== REKURSIVE ORDNERSTRUKTUR =====
+
+            string relativePath = path.Replace(prefabFolder + "/", "");
+
+            // Windows-Fix: Backslashes normalisieren
+            relativePath = relativePath.Replace("\\", "/");
+
+            string directoryPath = Path.GetDirectoryName(relativePath);
+
+            // Auch hier normalisieren
+            if (!string.IsNullOrEmpty(directoryPath))
+                directoryPath = directoryPath.Replace("\\", "/");
+
+            GameObject currentParent = zooRoot;
+
+            if (!string.IsNullOrEmpty(directoryPath))
+            {
+                string[] folders = directoryPath.Split('/');
+
+                string cumulativePath = "";
+
+                foreach (string folder in folders)
+                {
+                    if (string.IsNullOrEmpty(folder))
+                        continue;
+
+                    cumulativePath = string.IsNullOrEmpty(cumulativePath)
+                        ? folder
+                        : cumulativePath + "/" + folder;
+
+                    if (!folderParents.ContainsKey(cumulativePath))
+                    {
+                        GameObject newParent = new GameObject(folder);
+                        newParent.transform.parent = currentParent.transform;
+                        folderParents.Add(cumulativePath, newParent);
+                    }
+
+                    currentParent = folderParents[cumulativePath];
+                }
+            }
+
+            GameObject parentObject = currentParent;
 
             // Position im Grid berechnen
-            int row = i / itemsPerRow;
-            int col = i % itemsPerRow;
+            int row = spawnedCount / itemsPerRow;
+            int col = spawnedCount % itemsPerRow;
 
             Vector3 position = new Vector3(col * spacing, 0, row * spacing);
 
             // Prefab instanziieren
-            GameObject instance = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
+            GameObject instanceObj = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
 
-            if (instance == null)
+            if (instanceObj == null)
+            {
+                Debug.LogWarning("Could not instantiate prefab: " + prefab.name);
                 continue;
+            }
 
-            instance.transform.position = position;
-            instance.transform.parent = zooRoot.transform;
-            instance.name = prefab.name;
+            instanceObj.transform.position = position;
+            instanceObj.transform.parent = parentObject.transform;
+            instanceObj.name = prefab.name;
 
             // Komponenten bereinigen
-            CleanComponents(instance);
+            CleanComponents(instanceObj);
+
+            spawnedCount++;
         }
 
-        Debug.Log("Zoo created with " + guids.Length + " prefabs.");
+        Debug.Log("Zoo created with " + spawnedCount + " prefabs.");
     }
 
     // Neue Funktion: Komponenten bereinigen + Rigidbody auf kinematic
