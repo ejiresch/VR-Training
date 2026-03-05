@@ -173,7 +173,6 @@ public class spawnprefabs : MonoBehaviour
 
             spawnedCount++;
         }
-
         Debug.Log("Zoo created with " + spawnedCount + " prefabs.");
     }
 
