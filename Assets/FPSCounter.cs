@@ -15,6 +15,6 @@ public class FPSCounter : MonoBehaviour
     void FPSUpdate()
     {
         fps = (int)(1f / Time.unscaledDeltaTime);
-        fpsText.text = fps.ToString()+" fps";
+        fpsText.text = fps.ToString()+" fps | " + "Version: " + Application.version;
     }
 }
