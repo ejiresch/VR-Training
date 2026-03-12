@@ -59,30 +59,34 @@ public class ConnectorObject : InteractableObject
     }
     // Kann implementiert werden um Objekte wieder zu entfernen
     public virtual void Disconnect() {
-        GameObject anchorPoint = aStore.GetLatestConnectedObject();
-        if (anchorPoint.transform.childCount > 0)
+        GameObject anchorPoint;
+        try
         {
-            GameObject go = anchorPoint.transform.gameObject;
-            if (go)
+            anchorPoint = aStore.GetLatestConnectedObject();
+            if (anchorPoint.transform.childCount > 0)
             {
-                try
+                GameObject go = anchorPoint.transform.gameObject;
+                if (go)
                 {
-                    Connectible connectible = anchorPoint.GetComponent<Connectible>();
-                    connectible.SetOnDropFunc((x)=>{ return x.GetComponent<Rigidbody>().isKinematic = false; });
-                    connectible.GetComponent<Connectible>().SetOnDropFunc((x)=>{ return x.transform.parent = ProcessHandler.Instance.transform; });
-                    go.transform.parent = aStore.GetLatestConnectedParent();
-                    go.GetComponent<Rigidbody>().isKinematic = false;
-                    foreach (Collider collider in go.GetComponentsInChildren<Collider>()) collider.enabled = true;
-                    go.GetComponent<XRBaseInteractable>().interactionLayers = InteractionLayerMask.GetMask("Default");
-                    taskfinished = true;
-                }
-                catch (Exception e)
-                {
-                    Debug.LogError(e);
-                }
+                    try
+                    {
+                        Connectible connectible = anchorPoint.GetComponent<Connectible>();
+                        connectible.SetOnDropFunc((x) => { return x.GetComponent<Rigidbody>().isKinematic = false; });
+                        connectible.GetComponent<Connectible>().SetOnDropFunc((x) => { return x.transform.parent = ProcessHandler.Instance.transform; });
+                        go.transform.parent = aStore.GetLatestConnectedParent();
+                        go.GetComponent<Rigidbody>().isKinematic = false;
+                        foreach (Collider collider in go.GetComponentsInChildren<Collider>()) collider.enabled = true;
+                        go.GetComponent<XRBaseInteractable>().interactionLayers = InteractionLayerMask.GetMask("Default");
+                        taskfinished = true;
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.LogError(e);
+                    }
 
+                }
             }
-        }
+        } catch (NullReferenceException nre) {}
         aStore.RemoveObj();
     }
     // Startet den Preview (Rote Vorzeige)
