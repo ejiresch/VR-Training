@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+
 // Stellt ein Teil eines CompoundObjects dar
 public class CompundPart : InteractableObject
 {
@@ -11,7 +11,7 @@ public class CompundPart : InteractableObject
     void Awake()
     {
         taskFocus = false;
-        GetComponent<XRGrabInteractable>().enabled = false;
+        GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().enabled = false;
     }
     // Wird aufgerufen wenn das Objekt losgelassen wird
     public override void OnDrop()
@@ -32,7 +32,7 @@ public class CompundPart : InteractableObject
     {
         if (taskFocus)
         {
-            GetComponent<XRGrabInteractable>().enabled = true;
+            GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().enabled = true;
         }
     }
 

@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+
 // Objects that have this script, send reports upon colliding with other interactibles
 [RequireComponent(typeof(InteractableHandler))]
 public class InteractableObject : MonoBehaviour, OnDropFunctions
@@ -12,12 +12,12 @@ public class InteractableObject : MonoBehaviour, OnDropFunctions
     private LayerMask lmGrabbable = ~0;
     private List<Func<GameObject, bool>> onDropFunctions = new List<Func<GameObject, bool>>();
     protected bool taskfinished = false;
-    private XRGrabInteractable xrObject;
+    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable xrObject;
     public void SetGrabbable(bool grab)
     {
         if (xrObject == null)
         {
-            xrObject = gameObject.GetComponent<XRGrabInteractable>();
+            xrObject = gameObject.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
         }
         xrObject.interactionLayers = grab ? lmGrabbable.value : lmNotGrabbable.value;
     }

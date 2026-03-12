@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 // Loads needed Processes and Assets into the Scene
 public class SceneLoader : MonoBehaviour
@@ -12,7 +13,7 @@ public class SceneLoader : MonoBehaviour
     // Uses the pid to load a certain Process
     public void LoadProcess(int pid)
     {
-
+        
         foreach(ProcessScriptableObject p in processes)
         {
             string[] temp = p.name.Split('_');
@@ -26,10 +27,13 @@ public class SceneLoader : MonoBehaviour
         GameObject[] tools = selectedProcess.toolList;
         Transform patientSpawn = ProcessHandler.Instance.GetPatientSpawn();
         GameObject com = selectedProcess.GetCompound();
+        UnityEngine.Debug.Log("GameObjekt" + com.name);
         GameObject patientModel = Instantiate(selectedProcess.GetPatientModel(),patientSpawn);
         if (com != null)
         {
+            UnityEngine.Debug.Log("1GameObjekt" + com.name);
             GameObject inst = Instantiate(com);
+            UnityEngine.Debug.Log("2GameObjekt" + com.name);
             patientModel.GetComponent<ConnectorObject>().ForceConnect(inst);
             ProcessHandler.Instance.SetCompoundOb(inst);
             toolList.Add(inst);

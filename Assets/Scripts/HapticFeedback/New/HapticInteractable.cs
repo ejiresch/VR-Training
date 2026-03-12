@@ -16,7 +16,7 @@ public class Haptic
 
     public void TriggerHaptic(BaseInteractionEventArgs eventArgs)
     {
-        if (eventArgs.interactorObject is XRBaseControllerInteractor controllerInteractor)
+        if (eventArgs.interactorObject is UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInputInteractor controllerInteractor)
         {
             TriggerHaptic(controllerInteractor.xrController);
             //Debug.Log("Haptik");
@@ -51,7 +51,7 @@ public class HapticInteractable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        XRBaseInteractable interactable = GetComponent<XRBaseInteractable>();
+        UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable interactable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable>();
         interactable.activated.AddListener(hapticOnActivated.TriggerHaptic);
         interactable.hoverEntered.AddListener(hapticHoverEntered.TriggerHaptic);
         interactable.hoverExited.AddListener(hapticHoverExited.TriggerHaptic);

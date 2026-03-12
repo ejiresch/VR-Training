@@ -73,7 +73,7 @@ public class ConnectorObject : InteractableObject
                     go.transform.parent = aStore.GetLatestConnectedParent();
                     go.GetComponent<Rigidbody>().isKinematic = false;
                     foreach (Collider collider in go.GetComponentsInChildren<Collider>()) collider.enabled = true;
-                    go.GetComponent<XRBaseInteractable>().interactionLayers = InteractionLayerMask.GetMask("Default");
+                    go.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable>().interactionLayers = InteractionLayerMask.GetMask("Default");
                     taskfinished = true;
                 }
                 catch (Exception e)

@@ -53,10 +53,10 @@ public class HandHandler : MonoBehaviour
         bool isActive = !controls.activeSelf;
         controls.SetActive(isActive);
 
-        var right_hand_ray = right_ray_interactor.GetComponent<UnityEngine.XR.Interaction.Toolkit.XRInteractorLineVisual>(); // Deaktiviert die Rays beim aktivieren des Control-Help-Panels
+        var right_hand_ray = right_ray_interactor.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactors.Visuals.XRInteractorLineVisual>(); // Deaktiviert die Rays beim aktivieren des Control-Help-Panels
         right_hand_ray.gameObject.SetActive(!isActive);
 
-        var left_hand_ray = left_ray_interactor.GetComponent<UnityEngine.XR.Interaction.Toolkit.XRInteractorLineVisual>();
+        var left_hand_ray = left_ray_interactor.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactors.Visuals.XRInteractorLineVisual>();
         left_hand_ray.gameObject.SetActive(!isActive);
     }
 
