@@ -11,8 +11,7 @@ public class InputReader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //We will try to Initialize the InputReader here, but all components may not be loaded
-        InitializeInputReader();
+        StartCoroutine(CheckDevices());
     }
 
     //This will try to initialize the InputReader by getting all the devices and printing them to the debugger.
@@ -27,10 +26,11 @@ public class InputReader : MonoBehaviour
             inputDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue);
             //Debug.Log(inputDevice.name + " " + triggerValue);
 
-            ////Debug.Log(inputDevice.name + " " + inputDevice.characteristics);
+            //Debug.Log(inputDevice.name + " " + inputDevice.characteristics);
         }
     }
 
+    /*
     // Update is called once per frame
     void Update()
     {
@@ -38,6 +38,21 @@ public class InputReader : MonoBehaviour
         if (inputDevices.Count < 2) // how 3, 2 controllers, 1 goggle?
         {
             InitializeInputReader();
+        }
+    }
+    */
+
+    private IEnumerator CheckDevices()
+    {
+        while (true)
+        {
+            //We should have a total of 3 Input Devices. If it's less, then we try to initialize them again.
+            if (inputDevices.Count < 2) // how 3, 2 controllers, 1 goggle?
+            {
+                InitializeInputReader();
+            }
+            yield return new WaitForSeconds(3);
+            //print("check devices");
         }
     }
 }

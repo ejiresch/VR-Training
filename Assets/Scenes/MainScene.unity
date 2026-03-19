@@ -4804,6 +4804,7 @@ GameObject:
   - component: {fileID: 734318842}
   - component: {fileID: 734318841}
   - component: {fileID: 734318840}
+  - component: {fileID: 734318843}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -4858,6 +4859,20 @@ Transform:
   - {fileID: 1955457812}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &734318843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734318839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c814d9367bafd834a93937a0a3267f95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllerCharacteristics: 64
+  cameraTransform: {fileID: 995543150}
 --- !u!1 &740801617
 GameObject:
   m_ObjectHideFlags: 0
@@ -5029,7 +5044,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   m_TreatSelectionAsValidState: 0
-  m_SmoothMovement: 0
+  m_SmoothMovement: 1
   m_FollowTightness: 10
   m_SnapThresholdDistance: 10
   m_Reticle: {fileID: 0}
@@ -5037,7 +5052,7 @@ MonoBehaviour:
   m_StopLineAtFirstRaycastHit: 1
   m_StopLineAtSelection: 0
   m_SnapEndpointIfAvailable: 1
-  m_LineBendRatio: 0.5
+  m_LineBendRatio: 1
   m_BendingEnabledInteractionLayers:
     m_Bits: 4294967295
   m_OverrideInteractorLineOrigin: 1
@@ -5478,7 +5493,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   m_TreatSelectionAsValidState: 0
-  m_SmoothMovement: 0
+  m_SmoothMovement: 1
   m_FollowTightness: 10
   m_SnapThresholdDistance: 10
   m_Reticle: {fileID: 0}
@@ -5486,7 +5501,7 @@ MonoBehaviour:
   m_StopLineAtFirstRaycastHit: 1
   m_StopLineAtSelection: 0
   m_SnapEndpointIfAvailable: 1
-  m_LineBendRatio: 0.5
+  m_LineBendRatio: 1
   m_BendingEnabledInteractionLayers:
     m_Bits: 4294967295
   m_OverrideInteractorLineOrigin: 1
@@ -13032,12 +13047,12 @@ PrefabInstance:
         type: 3}
       propertyPath: linkerController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 907601201}
     - target: {fileID: 6589509890244883111, guid: afeb2a85c81aefa4aa876904cacac303,
         type: 3}
       propertyPath: rechterController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1890316095}
     - target: {fileID: 6589509890244883116, guid: afeb2a85c81aefa4aa876904cacac303,
         type: 3}
       propertyPath: m_Name
