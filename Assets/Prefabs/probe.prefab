@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 6018021381275689484}
   - component: {fileID: -5239123822088834352}
   m_Layer: 0
-  m_Name: sonde
+  m_Name: probe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
