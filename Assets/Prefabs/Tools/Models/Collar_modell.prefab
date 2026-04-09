@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 7438806309675284065}
   - component: {fileID: 7813783018263375066}
   m_Layer: 0
-  m_Name: band_modell
+  m_Name: Collar_modell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

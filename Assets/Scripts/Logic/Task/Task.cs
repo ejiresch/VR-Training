@@ -338,7 +338,7 @@ public abstract class Task : MonoBehaviour
                 break;
         }
 
-        RectTransform cb = GameObject.Find("ControllerBelegung").GetComponent<RectTransform>();
+        RectTransform cb = GameObject.Find("Controller_Configuration").GetComponent<RectTransform>();
         cb.localScale = new Vector3(1.2f,1.2f,1.2f);
         cb.localPosition = CONTROLLER_BELEGUNG_POSITION_TEMPLATE_1;
 
