@@ -312,10 +312,10 @@ public abstract class Task : MonoBehaviour
 
     protected void controllerBelegungSetup()
     {        
-        RawImage cB_full = GameObject.Find("ControllerBelegungFull").GetComponent<RawImage>();
-        RawImage cB_UseButton = GameObject.Find("ControllerBelegung_UseButton").GetComponent<RawImage>();
-        RawImage cB_HoldButton = GameObject.Find("ControllerBelegung_HoldButton").GetComponent<RawImage>();
-        RawImage cB_AButton = GameObject.Find("ControllerBelegung_AButton").GetComponent<RawImage>();
+        RawImage cB_full = GameObject.Find("Controller_Configuration_Full").GetComponent<RawImage>();
+        RawImage cB_UseButton = GameObject.Find("Controller_Configuration_UseButton").GetComponent<RawImage>();
+        RawImage cB_HoldButton = GameObject.Find("Controller_Configuration_HoldButton").GetComponent<RawImage>();
+        RawImage cB_AButton = GameObject.Find("Controller_Configuration_AButton").GetComponent<RawImage>();
 
         cB_full.enabled = false;
         cB_UseButton.enabled = false;
