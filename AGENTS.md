@@ -2,7 +2,7 @@
 - Project name: VR-Training
 - Unity version: Unity 2022.3.45f1
 - Active game object:
-  - Name: Tutorial
+  - Name: Line
   - Tag: Untagged
-  - Layer: UI
+  - Layer: Interactable
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

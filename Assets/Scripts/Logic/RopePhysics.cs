@@ -2,14 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Simulates a rope using Verlet integration.
+/// Fixes included:
+/// - Proper anchoring (pos + oldPos)
+/// - No hard snapping inside constraint solver
+/// - Stable constraint distribution
+/// - Reduced jitter and rebound
+/// </summary>
 public class RopePhysics : MonoBehaviour
 {
+    [Header("Rope Setup")]
+
+    /// <summary>Starting point of the rope (fixed).</summary>
     public Transform startPoint;
+
+    /// <summary>Optional end point of the rope (fixed if assigned).</summary>
     public Transform endPoint;
+
+    /// <summary>Number of segments (nodes) in the rope.</summary>
     public int ropesections = 15;
+
+    /// <summary>Gravity applied to the rope.</summary>
     public float gravity = -9.81f;
+
+    /// <summary>Length between each rope node.</summary>
     public float ropeNodeLength = 0.5f;
+
+    /// <summary>Visual width of the rope.</summary>
     public float ropeWidth = 0.2f;
+
+    [Header("Stability")]
+
+    /// <summary>How stiff the rope is (0–1).</summary>
+    public float stiffness = 0.5f;
+
+    /// <summary>Number of constraint solver iterations.</summary>
+    public int constraintIterations = 15;
+
+    /// <summary>Velocity damping to reduce jitter.</summary>
+    public float damping = 0.98f;
 
     private List<RopeNode> nodes = new List<RopeNode>();
     private LineRenderer lineRenderer;
@@ -22,8 +54,7 @@ public class RopePhysics : MonoBehaviour
 
         for (int i = 0; i < ropesections; i++)
         {
-            RopeNode n = new RopeNode(ropeNodePos);
-            nodes.Add(n);
+            nodes.Add(new RopeNode(ropeNodePos));
             ropeNodePos.y -= ropeNodeLength;
         }
     }
@@ -32,20 +63,23 @@ public class RopePhysics : MonoBehaviour
     {
         UpdateRopeSimulation();
 
-        // Fix first node to start point
-        RopeNode firstNode = nodes[0];
-        firstNode.pos = startPoint.position;
-        nodes[0] = firstNode;
+        // ✅ Anchor BOTH ends BEFORE constraint solving
+        ApplyAnchors();
 
-        // Apply constraints multiple times
-        for (int i = 0; i < 50; i++)
+        // ✅ Solve constraints multiple times for stability
+        for (int i = 0; i < constraintIterations; i++)
         {
-            MaximumStretch();
+            ApplyConstraints();
+            ApplyAnchors(); // re-apply anchors each iteration
         }
 
         DisplayRope();
     }
 
+    /// <summary>
+    /// Applies Verlet integration.
+    /// Uses previous position to simulate velocity.
+    /// </summary>
     private void UpdateRopeSimulation()
     {
         Vector3 gravityVec = new Vector3(0f, gravity, 0f);
@@ -53,53 +87,96 @@ public class RopePhysics : MonoBehaviour
 
         for (int i = 1; i < nodes.Count; i++)
         {
-            RopeNode current = nodes[i];
+            RopeNode node = nodes[i];
 
-            Vector3 velocity = current.pos - current.oldPos;
-            velocity *= 0.99f; // damping
+            // Calculate velocity
+            Vector3 velocity = node.pos - node.oldPos;
 
-            current.oldPos = current.pos;
-            current.pos += velocity;
-            current.pos += gravityVec * t * t;
+            // Apply damping to reduce jitter
+            velocity *= damping;
 
-            nodes[i] = current;
+            // Store current position
+            node.oldPos = node.pos;
+
+            // Apply motion
+            node.pos += velocity;
+            node.pos += gravityVec * t * t;
+
+            nodes[i] = node;
         }
     }
 
-    private void MaximumStretch()
+    /// <summary>
+    /// Ensures anchor nodes do not introduce fake velocity.
+    /// IMPORTANT: must set BOTH pos and oldPos.
+    /// </summary>
+    private void ApplyAnchors()
+    {
+        // Start point anchor
+        RopeNode first = nodes[0];
+        first.pos = startPoint.position;
+        first.oldPos = startPoint.position; // prevents fake velocity
+        nodes[0] = first;
+
+        // End point anchor (if assigned)
+        if (endPoint != null)
+        {
+            int lastIndex = nodes.Count - 1;
+            RopeNode last = nodes[lastIndex];
+            last.pos = endPoint.position;
+            last.oldPos = endPoint.position; // prevents drift/offset
+            nodes[lastIndex] = last;
+        }
+    }
+
+    /// <summary>
+    /// Applies distance constraints between nodes.
+    /// Keeps segments at constant length.
+    /// FIXES:
+    /// - No hard snapping inside solver
+    /// - Balanced correction between nodes
+    /// - Uses stiffness to prevent jitter
+    /// </summary>
+    private void ApplyConstraints()
     {
         for (int i = 0; i < nodes.Count - 1; i++)
         {
-            RopeNode top = nodes[i];
-            RopeNode bot = nodes[i + 1];
+            RopeNode nodeA = nodes[i];
+            RopeNode nodeB = nodes[i + 1];
 
-            float dist = Vector3.Distance(top.pos, bot.pos);
+            float dist = Vector3.Distance(nodeA.pos, nodeB.pos);
             float error = dist - ropeNodeLength;
 
-            Vector3 changeDir = (top.pos - bot.pos).normalized;
-            Vector3 change = changeDir * error;
+            Vector3 dir = (nodeA.pos - nodeB.pos).normalized;
+            Vector3 change = dir * error * stiffness;
 
+            // If first node → only move B (A is anchored)
             if (i == 0)
             {
-                bot.pos += change;
-                nodes[i + 1] = bot;
+                nodeB.pos += change;
+                nodes[i + 1] = nodeB;
             }
+            // If last node is anchored → only move A
             else if (i + 1 == nodes.Count - 1 && endPoint != null)
             {
-                bot.pos = endPoint.position;
-                nodes[i + 1] = bot;
+                nodeA.pos -= change;
+                nodes[i] = nodeA;
             }
             else
             {
-                bot.pos += change * 0.5f;
-                top.pos -= change * 0.5f;
+                // Distribute correction evenly
+                nodeA.pos -= change * 0.5f;
+                nodeB.pos += change * 0.5f;
 
-                nodes[i + 1] = bot;
-                nodes[i] = top;
+                nodes[i] = nodeA;
+                nodes[i + 1] = nodeB;
             }
         }
     }
 
+    /// <summary>
+    /// Renders the rope using LineRenderer.
+    /// </summary>
     private void DisplayRope()
     {
         lineRenderer.startWidth = ropeWidth;
@@ -116,6 +193,10 @@ public class RopePhysics : MonoBehaviour
         lineRenderer.SetPositions(positions);
     }
 
+    /// <summary>
+    /// Represents a rope node.
+    /// Stores current and previous position.
+    /// </summary>
     public struct RopeNode
     {
         public Vector3 pos;
