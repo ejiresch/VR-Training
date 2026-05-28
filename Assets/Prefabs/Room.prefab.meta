@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/Room.prefab.meta
 guid: 232b597e032ed4a46aaba3387e071b7d
+========
+guid: 7fc49b0e83d38ad428efbc6f7b8ce928
+>>>>>>>> feat/CamPosChangeReload:Assets/Prefabs/Player_essentials/XR Origin.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
