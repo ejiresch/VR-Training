@@ -347,9 +347,12 @@ public abstract class Task : MonoBehaviour
     protected void controllerBelegungSetup(float size, Vector3 controllerBelegungPosition_Template) 
     {
         controllerBelegungSetup();
-        RectTransform cb = GameObject.Find("ControllerBelegung").GetComponent<RectTransform>();
-        cb.localScale = new Vector3(size, size, size);
-        cb.localPosition = controllerBelegungPosition_Template;
+        try
+        {
+            RectTransform cb = GameObject.Find("ControllerBelegung").GetComponent<RectTransform>();
+            cb.localScale = new Vector3(size, size, size);
+            cb.localPosition = controllerBelegungPosition_Template;
+        } catch (NullReferenceException nre) {}
     }
 
         public void setDescription(String description)
