@@ -8,9 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MenuScene.unity
     guid: a7ec0b26124434e4096247969e06a27d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: 9559ed948bcfa8b4b8069c99be5b9d09
+  - enabled: 0
+    path: Assets/Samples/XR Hands/1.5.1/HandVisualizer/HandVisualizer.unity
+    guid: ab7acf0d9677fbe4db51bc36647d4fcb
+  - enabled: 1
+    path: Assets/Samples/XR Hands/1.5.1/Gestures/HandGestures.unity
+    guid: cd792f2302b8b6f4c9f264e2a4503e15
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 29ae344b1e6a7944185c407743d2c475,
       type: 2}
