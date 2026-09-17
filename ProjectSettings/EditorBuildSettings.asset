@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: 9559ed948bcfa8b4b8069c99be5b9d09
-  - enabled: 0
+  - enabled: 1
     path: Assets/Samples/XR Hands/1.5.1/HandVisualizer/HandVisualizer.unity
     guid: ab7acf0d9677fbe4db51bc36647d4fcb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Samples/XR Hands/1.5.1/Gestures/HandGestures.unity
     guid: cd792f2302b8b6f4c9f264e2a4503e15
   m_configObjects:
