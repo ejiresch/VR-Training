@@ -15,7 +15,7 @@ MonoBehaviour:
   pName: Wundheilung
   description: Wundheilung der Prototyp
   toolList:
-  - {fileID: 919132149155446097, guid: 65f6add9cc1175c45afb7f5e2306fa99, type: 3}
+  - {fileID: 8224948884925101722, guid: b402d7e57ab57254f95e480e9c1b4a3b, type: 3}
   - {fileID: 6645954436737465285, guid: cc7554a1bbbb5a74f95193c95880e7ca, type: 3}
   - {fileID: 919132149155446097, guid: 12af3e1e1e1b1a14cac3930ef1762c06, type: 3}
   - {fileID: 25342028895097354, guid: b3971484ff98fa24e848c124755ef131, type: 3}
