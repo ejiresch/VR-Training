@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tName: 
-  description: Ziehe Handschuhe an.
+  description: "Desinfiziere deine H\xE4nde"
   spawnedTools: []
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0

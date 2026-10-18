@@ -33,8 +33,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8409726949559730010}
-  - {fileID: 2126352926538421669}
   - {fileID: 8623612002921949322}
+  - {fileID: 5662134954211031390}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &8067539617474181091
@@ -222,7 +222,7 @@ Transform:
   m_GameObject: {fileID: 6798675946320431428}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.01207, y: 0.045028, z: -0.0037562}
+  m_LocalPosition: {x: -0.01207, y: 0.0476, z: -0.0037562}
   m_LocalScale: {x: 0.02397433, y: 0.023974335, z: 0.02397433}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -299,7 +299,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0000005, y: 1, z: 1.0000005}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &7136222420212719101
+--- !u!1 &8369826270172056321
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -307,47 +307,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2126352926538421669}
-  - component: {fileID: 2405135917842442619}
-  - component: {fileID: 6634002502409585274}
-  - component: {fileID: 322111251807829119}
-  m_Layer: 9
-  m_Name: Cube
+  - component: {fileID: 5662134954211031390}
+  - component: {fileID: 1204836363011354588}
+  - component: {fileID: 3786670496429241286}
+  - component: {fileID: 3347562194122524937}
+  m_Layer: 0
+  m_Name: Sphere
   m_TagString: touchMaterial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2126352926538421669
+--- !u!4 &5662134954211031390
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7136222420212719101}
+  m_GameObject: {fileID: 8369826270172056321}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.0461, z: 0}
-  m_LocalScale: {x: -0.0079031, y: -0.0079031, z: -0.0079031}
+  m_LocalScale: {x: 0.0033499992, y: 0.00335, z: 0.0033499992}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2321329145862573976}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2405135917842442619
+--- !u!33 &1204836363011354588
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7136222420212719101}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &6634002502409585274
+  m_GameObject: {fileID: 8369826270172056321}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &3786670496429241286
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7136222420212719101}
+  m_GameObject: {fileID: 8369826270172056321}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -361,7 +361,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 03fa306be4bb4044d9f5773e99841403, type: 2}
+  - {fileID: 2100000, guid: 2d7335edef2bd7f4793d7782822bcf11, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -383,13 +383,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &322111251807829119
-BoxCollider:
+--- !u!135 &3347562194122524937
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7136222420212719101}
+  m_GameObject: {fileID: 8369826270172056321}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -402,5 +402,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0000005, y: 1, z: 1.0000005}
+  m_Radius: 0.50000024
   m_Center: {x: 0, y: 0, z: 0}

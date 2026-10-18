@@ -53,5 +53,7 @@ MonoBehaviour:
   objectHighlight: {fileID: 0}
   stencilMask: {fileID: 0}
   showControllerBelegung: 0
-  connector: {fileID: 0}
-  connectible: {fileID: 0}
+  connector: {fileID: 7514032580759661692, guid: 9e8553f41cf98dc438f964b2a98e319e,
+    type: 3}
+  connectible: {fileID: 8224948884925101722, guid: b402d7e57ab57254f95e480e9c1b4a3b,
+    type: 3}

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tName: 
-  description: Wechsle die Handschue
+  description: Wechsle die Handschuhe
   spawnedTools: []
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0
