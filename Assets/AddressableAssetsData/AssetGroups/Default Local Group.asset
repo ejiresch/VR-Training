@@ -16,10 +16,15 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 67ab0be7d0780ae408ad1b3e2c2f5b95
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 2de500d9247d2c0428b43b9cff699998
+    m_Address: Assets/Art/Materials/used/HandschuhVerpackung.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: fbba51c1e5281e4429771cf2a9e9cc24, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: f4f4386ff037fad44b1239a9aee6c65e, type: 2}
     - {fileID: 11400000, guid: 85b56531b25b7a44c9dfa81245d466ed, type: 2}
+    - {fileID: 11400000, guid: f4f4386ff037fad44b1239a9aee6c65e, type: 2}
