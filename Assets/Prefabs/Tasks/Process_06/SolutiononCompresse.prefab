@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3014575500898781901}
-  - component: {fileID: -4630884076103709600}
+  - component: {fileID: 659103078327456164}
   m_Layer: 0
   m_Name: SolutiononCompresse
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-4630884076103709600
+--- !u!114 &659103078327456164
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,11 +41,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4003840576196579463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6476568b40475a4a84f4e08225cf24e, type: 3}
+  m_Script: {fileID: 11500000, guid: 8198ead50cb480547acaa696fe31380d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tName: 
-  description: Apply the Solution to the compresse
+  description: "Gib die L\xF6sung auf die Compresse"
   spawnedTools: []
   warningMessage_BeideHaende: 0
   warningMessage_KanueleFesthalten: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
   objectHighlight: {fileID: 0}
   stencilMask: {fileID: 0}
   showControllerBelegung: 0
-  connector: {fileID: 7514032580759661692, guid: 9e8553f41cf98dc438f964b2a98e319e,
+  touchObject: {fileID: 8224948884925101722, guid: b402d7e57ab57254f95e480e9c1b4a3b,
     type: 3}
-  connectible: {fileID: 8224948884925101722, guid: b402d7e57ab57254f95e480e9c1b4a3b,
+  touchTarget: {fileID: 7514032580759661692, guid: 9e8553f41cf98dc438f964b2a98e319e,
     type: 3}
