@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 4135137413277357132}
   - component: {fileID: -2408723391286711096}
   - component: {fileID: 6111964858333270934}
+  - component: {fileID: -1745121633468477437}
   m_Layer: 0
   m_Name: Wound_irrigation_Solution
   m_TagString: Untagged
@@ -438,6 +439,19 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &-1745121633468477437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8224948884925101722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fdffe610b2c86141ab1195d87608bd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGrabbed: 0
 --- !u!1001 &7502070844258619084
 PrefabInstance:
   m_ObjectHideFlags: 0
