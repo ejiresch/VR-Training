@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07aaccfa1bc2417d8fbd0d9e2e102c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_XRHandTrackingEvents: {fileID: 513866637}
+  m_XRHandTrackingEvents: {fileID: 0}
   m_RootTransform: {fileID: 2468282021181825328}
   m_JointTransformReferences:
   - m_XRHandJointID: 1
@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21096d6d8059a5343a1f2b4d050e4789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_XRHandTrackingEvents: {fileID: 513866637}
+  m_XRHandTrackingEvents: {fileID: 0}
   m_HandMeshRenderer: {fileID: 1317669517487522681}
   m_ShowMeshWhenTrackingIsAcquired: 1
   m_HideMeshWhenTrackingIsLost: 1
@@ -548,7 +548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf93899325d5df74eb9176e097ee3d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HandTrackingEvents: {fileID: 513866637}
+  m_HandTrackingEvents: {fileID: 0}
   m_HandShapeOrPose: {fileID: 11400000, guid: 201e5d377563ef14ba2af87226046e90, type: 2}
   m_TargetTransform: {fileID: 2321527512367231968}
   m_Background: {fileID: 0}
