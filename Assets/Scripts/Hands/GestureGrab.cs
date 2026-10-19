@@ -11,11 +11,23 @@ public class GestureGrab : MonoBehaviour
     {
         Debug.Log("Gesture performed");
 
-        if (directInteractor == null || grabbedObject != null)
+        if (directInteractor == null)
+        {
+            Debug.Log("Direct Interactor is null");
             return;
+        }
+        
+
+        if(grabbedObject != null)
+        {
+            Debug.Log(grabbedObject.name);
+            return;
+        }
+            
 
         foreach (var target in directInteractor.interactablesHovered)
         {
+            Debug.Log(target.ToString());
             if (target is XRGrabInteractable grab)
             {
                 directInteractor.interactionManager.SelectEnter(
@@ -24,6 +36,7 @@ public class GestureGrab : MonoBehaviour
                 );
 
                 grabbedObject = grab;
+                Debug.Log("Grab = " + grabbedObject.name);
                 return;
             }
         }
@@ -42,5 +55,10 @@ public class GestureGrab : MonoBehaviour
         );
 
         grabbedObject = null;
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.gameObject.name);
     }
 }
