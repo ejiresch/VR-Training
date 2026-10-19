@@ -6,7 +6,8 @@ public class GestureGrab : MonoBehaviour
     [SerializeField] private XRDirectInteractor directInteractor;
 
     private XRGrabInteractable grabbedObject;
-
+    private XRGrabInteractable target;
+    private bool grabable;
     public void OnGesturePerformed()
     {
         Debug.Log("Gesture performed");
@@ -24,21 +25,17 @@ public class GestureGrab : MonoBehaviour
             return;
         }
             
-
-        foreach (var target in directInteractor.interactablesHovered)
+        Debug.Log(target.ToString());
+        if (target is XRGrabInteractable grab && grabable)
         {
-            Debug.Log(target.ToString());
-            if (target is XRGrabInteractable grab)
-            {
-                directInteractor.interactionManager.SelectEnter(
-                    (UnityEngine.XR.Interaction.Toolkit.IXRSelectInteractor)directInteractor,
-                    (UnityEngine.XR.Interaction.Toolkit.IXRSelectInteractable)grab
-                );
+            directInteractor.interactionManager.SelectEnter(
+                (UnityEngine.XR.Interaction.Toolkit.IXRSelectInteractor)directInteractor,
+                (UnityEngine.XR.Interaction.Toolkit.IXRSelectInteractable)grab
+            );
 
-                grabbedObject = grab;
-                Debug.Log("Grab = " + grabbedObject.name);
-                return;
-            }
+            grabbedObject = grab;
+            Debug.Log("Grab = " + grabbedObject.name);
+            return;
         }
     }
 
@@ -58,7 +55,14 @@ public class GestureGrab : MonoBehaviour
     }
 
     public void OnCollisionEnter(Collision collision)
-    {
+    { 
         Debug.Log(collision.gameObject.name);
+        target = collision.gameObject.GetComponent<XRGrabInteractable>();
+        grabable = true;
+    }
+
+    public void OnCollisionExit(Collision collision)
+    {
+        grabable = false;
     }
 }
