@@ -34,6 +34,7 @@ public class GestureGrab : MonoBehaviour
             );
 
             grabbedObject = grab;
+            grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
             Debug.Log("Grab = " + grabbedObject.name);
             return;
         }
@@ -52,6 +53,7 @@ public class GestureGrab : MonoBehaviour
         );
 
         grabbedObject = null;
+        grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
     }
 
     public void OnCollisionEnter(Collision collision)
