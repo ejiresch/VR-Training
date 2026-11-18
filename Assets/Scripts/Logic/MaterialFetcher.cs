@@ -46,12 +46,6 @@ public class MaterialFetcher : MonoBehaviour
         }
         foreach (Transform t in providedObject.transform)
         {   
-            Debug.Log(t.tag);
-            Debug.Log(t.name);
-            if(t.tag == tag)
-            {
-                Debug.Log("found obj");
-            }
             if (t.childCount > 0)
                 MaterialChange(t.gameObject, target, tag);
             if (t.tag == tag)

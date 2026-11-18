@@ -21,9 +21,7 @@ public class TouchHand : InteractableObject
             {
                 if (matHand != null)
                 {
-                    Debug.Log("matHand not null");
                     matF.MaterialChange(matHand, touchTarget, "handTrackMatHand");
-                    Debug.Log("changed mat");
                 } else
                 {
                     foreach (GameObject h in hands)
