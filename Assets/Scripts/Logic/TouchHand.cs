@@ -10,6 +10,7 @@ public class TouchHand : InteractableObject
 {
     private GameObject touchTarget;
     private List<GameObject> hands;
+    public GameObject matHand;
     public bool hasfinished = false;
     private void OnTriggerEnter(Collider other)
     {
@@ -18,11 +19,16 @@ public class TouchHand : InteractableObject
             MaterialFetcher matF = GetComponent<MaterialFetcher>();
             if (matF != null)
             {
-                foreach(GameObject h in hands)
+                if (matHand != null)
                 {
-                    matF.MaterialChange(h, touchTarget, "touchMaterial");
+                    matF.MaterialChange(matHand, touchTarget, "touchMaterial");
+                } else
+                {
+                    foreach (GameObject h in hands)
+                    {
+                        matF.MaterialChange(h, touchTarget, "touchMaterial");
+                    }
                 }
-                
             }
             if (!taskfinished)
             {
