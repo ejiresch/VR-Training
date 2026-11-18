@@ -36,8 +36,22 @@ public class MaterialFetcher : MonoBehaviour
     /// <param name="tag"> Tag den die Komponente hat dessen Material gesucht und gesetzt wird. </param>
     public void MaterialChange(GameObject providedObject, GameObject target, string tag)
     {
-        foreach (Transform t in providedObject.transform)
+        Debug.Log(providedObject.name);
+        if(providedObject.tag == tag)
         {
+            Material otherMat = GetComponent<MaterialFetcher>().Fetch(target, "touchMaterial");
+            List<Material> mats = new List<Material>();
+            mats.Add(otherMat);
+            providedObject.GetComponent<SkinnedMeshRenderer>().SetMaterials(mats);
+        }
+        foreach (Transform t in providedObject.transform)
+        {   
+            Debug.Log(t.tag);
+            Debug.Log(t.name);
+            if(t.tag == tag)
+            {
+                Debug.Log("found obj");
+            }
             if (t.childCount > 0)
                 MaterialChange(t.gameObject, target, tag);
             if (t.tag == tag)
