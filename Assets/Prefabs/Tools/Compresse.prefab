@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 7062477016772558584}
   - component: {fileID: 2380189673232188925}
   - component: {fileID: -7166220874842069769}
-  - component: {fileID: -4986514369518627050}
+  - component: {fileID: 5480247746054016024}
   m_Layer: 0
   m_Name: Compresse
   m_TagString: Untagged
@@ -506,7 +506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrabbed: 0
---- !u!114 &-4986514369518627050
+--- !u!114 &5480247746054016024
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -515,11 +515,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7514032580759661692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fa49e9d80289d84aaccbc9a0f19d18d, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c682f4548ac6f044b206856d6957084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGrabbed: 0
-  toggleReference: {fileID: -2439264783773714294, guid: 0be0028c24f2a4c14a96b6aa39055933,
-    type: 3}
-  distance: 1
-  hasToBeUsed: 1
